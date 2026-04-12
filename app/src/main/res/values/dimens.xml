@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">6dp</dimen>
+    <dimen name="space_s">12dp</dimen>
+    <dimen name="space_m">16dp</dimen>
+    <dimen name="space_l">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+
+    <dimen name="radius_s">12dp</dimen>
+    <dimen name="radius_m">16dp</dimen>
+    <dimen name="radius_l">24dp</dimen>
+    <dimen name="button_min_height">48dp</dimen>
+    <dimen name="splash_logo_size">184dp</dimen>
+    <dimen name="list_thumb_s">72dp</dimen>
+    <dimen name="list_thumb_m">88dp</dimen>
+</resources>
+
+

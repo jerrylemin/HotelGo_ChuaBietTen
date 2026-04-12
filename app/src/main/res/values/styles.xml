@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Hotel.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/radius_m</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardBackgroundColor">@color/surface_card</item>
+    </style>
+
+    <style name="Widget.Hotel.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextColor">?attr/colorOnSurface</item>
+        <item name="subtitleTextColor">?attr/colorOnSurfaceVariant</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Hotel.ToolbarTitle</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.Hotel.BodySmall</item>
+    </style>
+
+    <style name="TextAppearance.Hotel.SectionTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.Hotel.ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="TextAppearance.Hotel.Display" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="TextAppearance.Hotel.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+
+    <style name="TextAppearance.Hotel.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+
+    <style name="Widget.Hotel.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/brand_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/radius_s</item>
+        <item name="android:minHeight">@dimen/button_min_height</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Widget.Hotel.Button.Secondary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/brand_secondary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/radius_s</item>
+        <item name="android:minHeight">@dimen/button_min_height</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Widget.Hotel.Button.Danger" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/danger</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/radius_s</item>
+        <item name="android:minHeight">@dimen/button_min_height</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Widget.Hotel.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/brand_primary</item>
+        <item name="android:textColor">@color/brand_primary</item>
+        <item name="cornerRadius">@dimen/radius_s</item>
+        <item name="android:minHeight">@dimen/button_min_height</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+</resources>

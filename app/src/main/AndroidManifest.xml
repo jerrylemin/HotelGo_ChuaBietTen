@@ -57,6 +57,15 @@
             android:name=".ui.features.VoucherActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.features.RoomCrudActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.CheckInOutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.AddOnItemsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.features.ProfileActivity"
             android:exported="false" />
         <activity

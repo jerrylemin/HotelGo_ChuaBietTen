@@ -24,6 +24,9 @@
             android:name=".ui.features.BookingActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.features.BookingHistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.features.ProfileActivity"
             android:exported="false" />
         <activity

@@ -27,6 +27,36 @@
             android:name=".ui.features.BookingHistoryActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.features.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.PayOSReturnActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="payos-return"
+                    android:scheme="hotelapp" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="payos-cancel"
+                    android:scheme="hotelapp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.features.VoucherActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.features.ProfileActivity"
             android:exported="false" />
         <activity

@@ -66,6 +66,12 @@
             android:name=".ui.features.AddOnItemsActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.features.ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.IssueReportActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.features.ProfileActivity"
             android:exported="false" />
         <activity

@@ -19,10 +19,19 @@ output-metadata.json
 
 # IntelliJ
 *.iml
-.idea/
+.idea/*
+.idea/caches/
+.idea/shelf/
+.idea/workspace.xml
 misc.xml
 deploymentTargetDropDown.xml
 render.experimental.xml
+!.idea/.gitignore
+!.idea/AndroidProjectSystem.xml
+!.idea/compiler.xml
+!.idea/gradle.xml
+!.idea/misc.xml
+!.idea/runConfigurations.xml
 
 # Keystore files
 *.jks

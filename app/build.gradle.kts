@@ -9,16 +9,26 @@ val localPropertiesFile = rootProject.file("local.properties")
 if (localPropertiesFile.exists()) {
     localPropertiesFile.inputStream().use { localProperties.load(it) }
 }
-val supabaseUrl = localProperties.getProperty("SUPABASE_URL", "")
-val supabaseAnonKey = localProperties.getProperty("SUPABASE_ANON_KEY", "")
-val payosClientId = localProperties.getProperty("PAYOS_CLIENT_ID", "")
-val payosApiKey = localProperties.getProperty("PAYOS_API_KEY", "")
-val payosChecksumKey = localProperties.getProperty("PAYOS_CHECKSUM_KEY", "")
-val payosBaseUrl = localProperties.getProperty("PAYOS_BASE_URL", "https://api-merchant.payos.vn")
-val payosReturnUrl = localProperties.getProperty("PAYOS_RETURN_URL", "hotelapp://payos-return")
-val payosCancelUrl = localProperties.getProperty("PAYOS_CANCEL_URL", "hotelapp://payos-cancel")
-val googleWebClientId = localProperties.getProperty("GOOGLE_WEB_CLIENT_ID", "")
-    .ifBlank { "573206626596-gv1btnudau56dm0pog4sit1j4cq6d9m7.apps.googleusercontent.com" }
+
+fun resolveConfig(name: String, defaultValue: String = ""): String {
+    return localProperties.getProperty(name)?.trim()?.takeIf { it.isNotEmpty() }
+        ?: providers.environmentVariable(name).orNull?.trim()?.takeIf { it.isNotEmpty() }
+        ?: providers.gradleProperty(name).orNull?.trim()?.takeIf { it.isNotEmpty() }
+        ?: defaultValue
+}
+
+val supabaseUrl = resolveConfig("SUPABASE_URL")
+val supabaseAnonKey = resolveConfig("SUPABASE_ANON_KEY")
+val payosClientId = resolveConfig("PAYOS_CLIENT_ID")
+val payosApiKey = resolveConfig("PAYOS_API_KEY")
+val payosChecksumKey = resolveConfig("PAYOS_CHECKSUM_KEY")
+val payosBaseUrl = resolveConfig("PAYOS_BASE_URL", "https://api-merchant.payos.vn")
+val payosReturnUrl = resolveConfig("PAYOS_RETURN_URL", "hotelapp://payos-return")
+val payosCancelUrl = resolveConfig("PAYOS_CANCEL_URL", "hotelapp://payos-cancel")
+val googleWebClientId = resolveConfig(
+    "GOOGLE_WEB_CLIENT_ID",
+    "573206626596-gv1btnudau56dm0pog4sit1j4cq6d9m7.apps.googleusercontent.com"
+)
 
 android {
     namespace = "com.example.hotelapp_test2"

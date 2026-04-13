@@ -12,10 +12,10 @@
     <string name="main_header_subtitle">Choose the feature you need today</string>
     <string name="main_profile_button">Profile</string>
     <string name="main_logout_button">Log out</string>
-    <string name="main_search_hint">Search profile and notification tools...</string>
-    <string name="main_highlight_title">Notification center</string>
-    <string name="main_highlight_body">Review recent updates and manage alert preferences in one place.</string>
-    <string name="main_highlight_button">Open notifications</string>
+    <string name="main_search_hint">Search rooms, vouchers, guests...</string>
+    <string name="main_highlight_title">Featured poster</string>
+    <string name="main_highlight_body">Create a recommendation poster to attract bookings faster.</string>
+    <string name="main_highlight_button">Create poster</string>
 
     <string name="auth_title">Account</string>
     <string name="auth_toolbar_title">Sign in / Register</string>

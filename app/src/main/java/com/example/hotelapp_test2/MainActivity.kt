@@ -19,8 +19,8 @@ import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.FeatureAdapter
 import com.example.hotelapp_test2.ui.GridSpacingItemDecoration
 import com.example.hotelapp_test2.ui.auth.AuthActivity
-import com.example.hotelapp_test2.ui.features.NotificationsActivity
 import com.example.hotelapp_test2.ui.features.ProfileActivity
+import com.example.hotelapp_test2.ui.features.RecommendationPosterActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textfield.TextInputEditText
@@ -71,7 +71,7 @@ class MainActivity : BaseActivity() {
         recyclerView.addItemDecoration(GridSpacingItemDecoration(2, spacing, true))
 
         highlightCard.setOnClickListener {
-            startActivity(Intent(this, NotificationsActivity::class.java))
+            startActivity(Intent(this, RecommendationPosterActivity::class.java))
         }
 
         val searchEdit = findViewById<TextInputEditText>(R.id.searchEdit)
@@ -140,7 +140,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun updateRoleUi() {
-        highlightCard.visibility = View.VISIBLE
+        highlightCard.visibility = if (currentRole == FeatureRole.ADMIN) View.VISIBLE else View.GONE
         applyFilters()
     }
 }

@@ -1,0 +1,15 @@
+{
+  "published_at_utc": "2026-04-08T09:23:37.973924+00:00",
+  "bucket": "hotel-catalog",
+  "hotel_id": "koi_resort_residence_da_nang_inclusive_spa_access",
+  "hotel_folder": "KoiResortAndResidenceDaNang",
+  "image_upload_count": 97,
+  "hotel_room_count": 11,
+  "legacy_room_seed_count": 11,
+  "hotel_synthetic_fields": [
+    "contact.email",
+    "contact.phone",
+    "contact.website",
+    "policy_notes"
+  ]
+}

@@ -1,0 +1,796 @@
+{
+  "schema_version": "1.0",
+  "hotel_slug": "dolce_by_wyndham_hanoi_golden_lake",
+  "room_count": 9,
+  "rooms": [
+    {
+      "room_id": "inferred:golden_deluxe_king",
+      "name": "Golden Deluxe King",
+      "slug": "golden_deluxe_king",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 3050000.0,
+        "original_amount": 3600000.0,
+        "discounted_amount": 3050000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/golden_deluxe_king/golden_deluxe_king_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/-1/06e5db31b28153d762b6b7b6989b660c.jpg?ca=18&ce=1&s=1024x768",
+          "title": "Golden Deluxe King",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_deluxe_king/golden_deluxe_king_01.jpg"
+        }
+      ],
+      "short_description": "Golden Deluxe King | 32 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_deluxe_king/golden_deluxe_king_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_deluxe_king/golden_deluxe_king_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:premier_lake_view_king",
+      "name": "Premier Lake View King",
+      "slug": "premier_lake_view_king",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 4450000.0,
+        "original_amount": 5250000.0,
+        "discounted_amount": 4450000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 38 m²/409 ft²",
+        "square_meters": 38.0,
+        "square_feet": 409.0
+      },
+      "view": "Lake view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/premier_lake_view_king/premier_lake_view_king_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/-1/18ef7676872ba480a8c6c6d7e38cdbfe.jpg?ca=17&ce=1&s=1024x768",
+          "title": "Premier Lake View King",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_king/premier_lake_view_king_01.jpg"
+        },
+        {
+          "local_path": "images/premier_lake_view_king/premier_lake_view_king_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/-1/621c1e1dfca5653d528d7bc23ecb2ca5.jpg?ca=18&ce=1&s=1024x768",
+          "title": "Premier Lake View King",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_king/premier_lake_view_king_02.jpg"
+        }
+      ],
+      "short_description": "Premier Lake View King | 38 m² | Lake view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_king/premier_lake_view_king_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_king/premier_lake_view_king_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_king/premier_lake_view_king_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:premier_lake_view_twin",
+      "name": "Premier Lake View Twin",
+      "slug": "premier_lake_view_twin",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 4450000.0,
+        "original_amount": 5250000.0,
+        "discounted_amount": 4450000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 38 m²/409 ft²",
+        "square_meters": 38.0,
+        "square_feet": 409.0
+      },
+      "view": "Lake view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/premier_lake_view_twin/premier_lake_view_twin_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/-1/2cb43ef5c3ceb9abc9ceca5c06e5aff1.jpg?ca=17&ce=1&s=1024x768",
+          "title": "Premier Lake View Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_twin/premier_lake_view_twin_01.jpg"
+        }
+      ],
+      "short_description": "Premier Lake View Twin | 38 m² | Lake view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_twin/premier_lake_view_twin_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_twin/premier_lake_view_twin_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:golden_classic_king",
+      "name": "Golden Classic King",
+      "slug": "golden_classic_king",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 2100000.0,
+        "original_amount": 2500000.0,
+        "discounted_amount": 2100000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 28 m²/301 ft²",
+        "square_meters": 28.0,
+        "square_feet": 301.4
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/golden_classic_king/golden_classic_king_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/958423562/356a5f031dd9019d83c95c1d90c7597d.jpg?ce=0&s=1024x768",
+          "title": "Golden Classic King",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_classic_king/golden_classic_king_01.jpg"
+        }
+      ],
+      "short_description": "Golden Classic King | 28 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_classic_king/golden_classic_king_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_classic_king/golden_classic_king_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:imperial_penthouse",
+      "name": "Imperial Penthouse",
+      "slug": "imperial_penthouse",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 8450000.0,
+        "original_amount": 9950000.0,
+        "discounted_amount": 8450000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 28 m²/301 ft²",
+        "square_meters": 28.0,
+        "square_feet": 301.4
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/imperial_penthouse/imperial_penthouse_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/-1/cbd8f2595dbfb41ead62d7932e96b372.jpg?ca=18&ce=1&s=1024x768",
+          "title": "Imperial Penthouse",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/imperial_penthouse/imperial_penthouse_01.jpg"
+        },
+        {
+          "local_path": "images/imperial_penthouse/imperial_penthouse_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/-1/cc57816589dadc1c504d42da4c335405.jpg?ca=18&ce=1&s=1024x768",
+          "title": "Imperial Penthouse",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/imperial_penthouse/imperial_penthouse_02.jpg"
+        }
+      ],
+      "short_description": "Imperial Penthouse | 28 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/imperial_penthouse/imperial_penthouse_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/imperial_penthouse/imperial_penthouse_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/imperial_penthouse/imperial_penthouse_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:golden_executive_twin_guestroom",
+      "name": "Golden Executive Twin - Guestroom",
+      "slug": "golden_executive_twin_guestroom",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 4300000.0,
+        "original_amount": 5050000.0,
+        "discounted_amount": 4300000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 38 m²/409 ft²",
+        "square_meters": 38.0,
+        "square_feet": 409.0
+      },
+      "view": null,
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/golden_executive_twin_guestroom/golden_executive_twin_guestroom_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18391692/235498853/29dcb065f8c6ec072497f9bcd2c40cce.jpg?ca=17&ce=1&s=1024x768",
+          "title": "Golden Executive Twin - Guestroom",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_executive_twin_guestroom/golden_executive_twin_guestroom_01.jpg"
+        }
+      ],
+      "short_description": "Golden Executive Twin - Guestroom | 38 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_executive_twin_guestroom/golden_executive_twin_guestroom_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_executive_twin_guestroom/golden_executive_twin_guestroom_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:executive_suite",
+      "name": "Executive Suite",
+      "slug": "executive_suite",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 6100000.0,
+        "original_amount": 7200000.0,
+        "discounted_amount": 6100000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Synthetic estimate: 40 m²/431 ft²",
+        "square_meters": 40.0,
+        "square_feet": 430.6
+      },
+      "view": null,
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Dining table",
+        "Free bottled water",
+        "Mini bar",
+        "Seating area",
+        "Sofa",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/executive_suite/executive_suite_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/-1/84205ba6fa6cc8ceba8c7438e7ed062c.jpg?ca=18&ce=1&s=1024x768",
+          "title": "Executive Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/executive_suite/executive_suite_01.jpg"
+        }
+      ],
+      "short_description": "Executive Suite | 40 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/executive_suite/executive_suite_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/executive_suite/executive_suite_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:golden_deluxe_twin",
+      "name": "Golden Deluxe Twin",
+      "slug": "golden_deluxe_twin",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 3050000.0,
+        "original_amount": 3600000.0,
+        "discounted_amount": 3050000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/golden_deluxe_twin/golden_deluxe_twin_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/-1/028efc922479b11d21792cc8897f1b83.jpg?ca=17&ce=1&s=1024x768",
+          "title": "Golden Deluxe Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_deluxe_twin/golden_deluxe_twin_01.jpg"
+        }
+      ],
+      "short_description": "Golden Deluxe Twin | 32 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_deluxe_twin/golden_deluxe_twin_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_deluxe_twin/golden_deluxe_twin_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:golden_suite_guestroom",
+      "name": "Golden Suite - Guestroom",
+      "slug": "golden_suite_guestroom",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 6650000.0,
+        "original_amount": 7850000.0,
+        "discounted_amount": 6650000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Synthetic estimate: 52 m²/560 ft²",
+        "square_meters": 52.0,
+        "square_feet": 559.7
+      },
+      "view": null,
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Dining table",
+        "Free bottled water",
+        "Mini bar",
+        "Seating area",
+        "Sofa",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/golden_suite_guestroom/golden_suite_guestroom_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/18533918/-1/423d89ad4c54847f24f87196232095bf.jpg?ca=17&ce=1&s=1024x768",
+          "title": "Golden Suite - Guestroom",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_suite_guestroom/golden_suite_guestroom_01.jpg"
+        }
+      ],
+      "short_description": "Golden Suite - Guestroom | 52 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_suite_guestroom/golden_suite_guestroom_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_suite_guestroom/golden_suite_guestroom_01.jpg"
+      ]
+    }
+  ]
+}

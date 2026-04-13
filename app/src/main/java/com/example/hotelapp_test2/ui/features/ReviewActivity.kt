@@ -1,4 +1,4 @@
-package com.example.hotelapp_test2.ui.features
+﻿package com.example.hotelapp_test2.ui.features
 
 import android.os.Bundle
 import android.widget.RatingBar

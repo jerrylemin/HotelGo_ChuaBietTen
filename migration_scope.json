@@ -1,0 +1,7 @@
+{
+  "migrate_firestore": true,
+  "migrate_firebase_auth": true,
+  "migrate_firebase_storage": false,
+  "supabase_schema": "public",
+  "overwrite_existing_data": false
+}

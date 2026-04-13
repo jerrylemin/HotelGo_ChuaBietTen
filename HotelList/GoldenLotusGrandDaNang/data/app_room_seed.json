@@ -1,0 +1,103 @@
+[
+  {
+    "id": "catalog:golden_lotus_grand_da_nang:deluxe_room_with_bathtub_and_balcony_afternoon_tea_included",
+    "code": "GoldenLotusGrandDaNang-deluxe_room_with_bathtub_and_balcony_afternoon_tea_included",
+    "type": "Deluxe Room with Bathtub and Balcony - Afternoon Tea Included - Golden Lotus Grand Da Nang",
+    "price": 2350000.0,
+    "rating": 9.3,
+    "reviewCount": 8931,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/deluxe_room_with_bathtub_and_balcony_afternoon_tea_included/deluxe_room_with_bathtub_and_balcony_afternoon_tea_included_01.jpg"
+    ],
+    "createdAt": 1775640149777
+  },
+  {
+    "id": "catalog:golden_lotus_grand_da_nang:panoramic_suite_afternoon_tea_included",
+    "code": "GoldenLotusGrandDaNang-panoramic_suite_afternoon_tea_included",
+    "type": "Panoramic Suite - Afternoon Tea Included - Golden Lotus Grand Da Nang",
+    "price": 5100000.0,
+    "rating": 9.3,
+    "reviewCount": 8931,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/panoramic_suite_afternoon_tea_included/panoramic_suite_afternoon_tea_included_01.jpg"
+    ],
+    "createdAt": 1775640149777
+  },
+  {
+    "id": "catalog:golden_lotus_grand_da_nang:deluxe_city_view_room_with_balcony_afternoon_tea_included",
+    "code": "GoldenLotusGrandDaNang-deluxe_city_view_room_with_balcony_afternoon_tea_included",
+    "type": "Deluxe City View Room with Balcony - Afternoon Tea Included - Golden Lotus Grand Da Nang",
+    "price": 2450000.0,
+    "rating": 9.3,
+    "reviewCount": 8931,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/deluxe_city_view_room_with_balcony_afternoon_tea_included/deluxe_city_view_room_with_balcony_afternoon_tea_included_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/deluxe_city_view_room_with_balcony_afternoon_tea_included/deluxe_city_view_room_with_balcony_afternoon_tea_included_02.jpg"
+    ],
+    "createdAt": 1775640149777
+  },
+  {
+    "id": "catalog:golden_lotus_grand_da_nang:superior_city_view_room_afternoon_tea_included",
+    "code": "GoldenLotusGrandDaNang-superior_city_view_room_afternoon_tea_included",
+    "type": "Superior City View Room - Afternoon Tea Included - Golden Lotus Grand Da Nang",
+    "price": 2050000.0,
+    "rating": 9.3,
+    "reviewCount": 8931,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/superior_city_view_room_afternoon_tea_included/superior_city_view_room_afternoon_tea_included_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/superior_city_view_room_afternoon_tea_included/superior_city_view_room_afternoon_tea_included_02.jpg"
+    ],
+    "createdAt": 1775640149777
+  },
+  {
+    "id": "catalog:golden_lotus_grand_da_nang:executive_triple_room_afternoon_tea_included",
+    "code": "GoldenLotusGrandDaNang-executive_triple_room_afternoon_tea_included",
+    "type": "Executive Triple Room - Afternoon Tea Included - Golden Lotus Grand Da Nang",
+    "price": 3350000.0,
+    "rating": 9.3,
+    "reviewCount": 8931,
+    "status": "available",
+    "capacity": 3,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/executive_triple_room_afternoon_tea_included/executive_triple_room_afternoon_tea_included_01.jpg"
+    ],
+    "createdAt": 1775640149777
+  },
+  {
+    "id": "catalog:golden_lotus_grand_da_nang:family_suite_afternoon_tea_included",
+    "code": "GoldenLotusGrandDaNang-family_suite_afternoon_tea_included",
+    "type": "Family Suite - Afternoon Tea Included - Golden Lotus Grand Da Nang",
+    "price": 5100000.0,
+    "rating": 9.3,
+    "reviewCount": 8931,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/family_suite_afternoon_tea_included/family_suite_afternoon_tea_included_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/family_suite_afternoon_tea_included/family_suite_afternoon_tea_included_02.jpg"
+    ],
+    "createdAt": 1775640149777
+  },
+  {
+    "id": "catalog:golden_lotus_grand_da_nang:2_bedroom_suite_afternoon_tea_included",
+    "code": "GoldenLotusGrandDaNang-2_bedroom_suite_afternoon_tea_included",
+    "type": "2-Bedroom Suite - Afternoon Tea Included - Golden Lotus Grand Da Nang",
+    "price": 6150000.0,
+    "rating": 9.3,
+    "reviewCount": 8931,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/GoldenLotusGrandDaNang/images/2_bedroom_suite_afternoon_tea_included/2_bedroom_suite_afternoon_tea_included_01.jpg"
+    ],
+    "createdAt": 1775640149777
+  }
+]

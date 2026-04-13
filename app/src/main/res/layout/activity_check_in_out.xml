@@ -38,9 +38,9 @@
                     android:padding="@dimen/space_m">
 
                     <TextView
-                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:text="@string/checkin_title" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -82,19 +82,21 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/checkin_button" />
+                        android:text="@string/checkin_button" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/checkOutButton"
-                            style="@style/Widget.Hotel.Button.Secondary"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/space_s"
                             android:layout_weight="1"
-                            android:text="@string/checkout_button" />
+                    style="@style/Widget.Hotel.Button.Secondary"
+                    android:text="@string/checkout_button" />
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
+
+

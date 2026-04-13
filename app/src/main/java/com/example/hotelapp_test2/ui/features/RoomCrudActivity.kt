@@ -1,8 +1,7 @@
-package com.example.hotelapp_test2.ui.features
+﻿package com.example.hotelapp_test2.ui.features
 
 import android.net.Uri
 import android.os.Bundle
-import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.hotelapp_test2.BuildConfig
 import com.example.hotelapp_test2.R
@@ -14,9 +13,10 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.google.android.material.textfield.TextInputEditText
+import android.widget.TextView
+import java.util.UUID
 import java.net.HttpURLConnection
 import java.net.URL
-import java.util.UUID
 
 class RoomCrudActivity : BaseActivity() {
     private val selectedImages = mutableListOf<Uri>()
@@ -87,9 +87,7 @@ class RoomCrudActivity : BaseActivity() {
                 return@setOnClickListener
             }
             if (selectedImages.isNotEmpty()) {
-                uploadImages(
-                    code,
-                    selectedImages,
+                uploadImages(code, selectedImages,
                     onSuccess = { uploaded ->
                         val allImages = (uploaded + manualImages).distinct()
                         val room = Room(
@@ -137,9 +135,7 @@ class RoomCrudActivity : BaseActivity() {
                 return@setOnClickListener
             }
             if (selectedImages.isNotEmpty()) {
-                uploadImages(
-                    code,
-                    selectedImages,
+                uploadImages(code, selectedImages,
                     onSuccess = { uploaded ->
                         val allImages = (uploaded + manualImages).distinct()
                         val room = Room(

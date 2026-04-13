@@ -1,7 +1,6 @@
-package com.example.hotelapp_test2.ui.features
+﻿package com.example.hotelapp_test2.ui.features
 
 import android.os.Bundle
-import android.widget.TextView
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.model.AppNotification
@@ -12,6 +11,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
+import android.widget.TextView
 
 class BookingActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

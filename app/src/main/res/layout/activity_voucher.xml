@@ -38,9 +38,9 @@
                     android:padding="@dimen/space_m">
 
                     <TextView
-                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:text="@string/voucher_apply_title" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -87,9 +87,9 @@
                     android:padding="@dimen/space_m">
 
                     <TextView
-                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:text="@string/voucher_list_title" />
 
                     <TextView
@@ -117,10 +117,10 @@
                     android:padding="@dimen/space_m">
 
                     <TextView
-                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/voucher_create_title" />
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                            android:text="@string/voucher_create_title" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/voucherCreateCodeLayout"
@@ -128,7 +128,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/voucher_code_hint">
+                            android:hint="@string/voucher_code_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/voucherCreateCode"
@@ -142,7 +142,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/voucher_type_hint">
+                            android:hint="@string/voucher_type_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/voucherCreateType"
@@ -156,7 +156,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/voucher_value_hint">
+                            android:hint="@string/voucher_value_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/voucherCreateValue"
@@ -171,7 +171,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/voucher_min_spend_hint">
+                            android:hint="@string/voucher_min_spend_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/voucherCreateMinSpend"
@@ -186,7 +186,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/voucher_end_hint">
+                            android:hint="@string/voucher_end_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/voucherCreateEnd"
@@ -199,9 +199,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_m"
-                        android:text="@string/voucher_create" />
+                            android:text="@string/voucher_create" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
+
+

@@ -1,0 +1,471 @@
+{
+  "schema_version": "1.0",
+  "hotel_slug": "aquamarine_cam_ranh_by_swandor_all_inclusive",
+  "room_count": 5,
+  "rooms": [
+    {
+      "room_id": "inferred:deluxe_ocean_twin_view_with_balcony",
+      "name": "Deluxe Ocean Twin View with Balcony",
+      "slug": "deluxe_ocean_twin_view_with_balcony",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 2850000.0,
+        "original_amount": 3350000.0,
+        "discounted_amount": 2850000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": "Ocean view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/deluxe_ocean_twin_view_with_balcony/deluxe_ocean_twin_view_with_balcony_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49495642/792082690/2f4206db04eca57df62d89e94c111e73.jpg?ce=3&s=1024x768",
+          "title": "Deluxe Ocean Twin View with Balcony",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_twin_view_with_balcony/deluxe_ocean_twin_view_with_balcony_01.jpg"
+        },
+        {
+          "local_path": "images/deluxe_ocean_twin_view_with_balcony/deluxe_ocean_twin_view_with_balcony_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49495642/792082690/f7358298c43fbbbaa78d51e5133b2b5a.jpg?ce=3&s=1024x768",
+          "title": "Deluxe Ocean Twin View with Balcony",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_twin_view_with_balcony/deluxe_ocean_twin_view_with_balcony_02.jpg"
+        }
+      ],
+      "short_description": "Deluxe Ocean Twin View with Balcony | 32 m² | Ocean view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_twin_view_with_balcony/deluxe_ocean_twin_view_with_balcony_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_twin_view_with_balcony/deluxe_ocean_twin_view_with_balcony_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_twin_view_with_balcony/deluxe_ocean_twin_view_with_balcony_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:deluxe_family_connecting_room_with_seaview",
+      "name": "Deluxe Family Connecting Room with Seaview",
+      "slug": "deluxe_family_connecting_room_with_seaview",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 4550000.0,
+        "original_amount": 5350000.0,
+        "discounted_amount": 4550000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Synthetic estimate: 40 m²/431 ft²",
+        "square_meters": 40.0,
+        "square_feet": 430.6
+      },
+      "view": "Sea view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Extra bedding",
+        "Family seating area",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/deluxe_family_connecting_room_with_seaview/deluxe_family_connecting_room_with_seaview_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49495642/1276665015/c296f1407bddffc8e8617b2384ba1e92.jpg?ce=3&s=1024x768",
+          "title": "Deluxe Family Connecting Room with Seaview",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_family_connecting_room_with_seaview/deluxe_family_connecting_room_with_seaview_01.jpg"
+        }
+      ],
+      "short_description": "Deluxe Family Connecting Room with Seaview | 40 m² | Sea view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_family_connecting_room_with_seaview/deluxe_family_connecting_room_with_seaview_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_family_connecting_room_with_seaview/deluxe_family_connecting_room_with_seaview_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:deluxe_ocean_king_view_with_balcony",
+      "name": "Deluxe Ocean King View with Balcony",
+      "slug": "deluxe_ocean_king_view_with_balcony",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 2850000.0,
+        "original_amount": 3350000.0,
+        "discounted_amount": 2850000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": "Ocean view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/deluxe_ocean_king_view_with_balcony/deluxe_ocean_king_view_with_balcony_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49495642/778417745/e77a38b62882c8284ccd3b42350a36b6.jpg?ce=3&s=1024x768",
+          "title": "Deluxe Ocean King View with Balcony",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_king_view_with_balcony/deluxe_ocean_king_view_with_balcony_01.jpg"
+        },
+        {
+          "local_path": "images/deluxe_ocean_king_view_with_balcony/deluxe_ocean_king_view_with_balcony_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49495642/778417745/4f23e9c27ea1780159455d771ebf34d7.jpg?ce=3&s=1024x768",
+          "title": "Deluxe Ocean King View with Balcony",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_king_view_with_balcony/deluxe_ocean_king_view_with_balcony_02.jpg"
+        }
+      ],
+      "short_description": "Deluxe Ocean King View with Balcony | 32 m² | Ocean view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_king_view_with_balcony/deluxe_ocean_king_view_with_balcony_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_king_view_with_balcony/deluxe_ocean_king_view_with_balcony_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_ocean_king_view_with_balcony/deluxe_ocean_king_view_with_balcony_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:suite_seafront_view",
+      "name": "Suite Seafront View",
+      "slug": "suite_seafront_view",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 6200000.0,
+        "original_amount": 7300000.0,
+        "discounted_amount": 6200000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Synthetic estimate: 52 m²/560 ft²",
+        "square_meters": 52.0,
+        "square_feet": 559.7
+      },
+      "view": "Sea view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Dining table",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "Seating area",
+        "Sofa",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/suite_seafront_view/suite_seafront_view_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49495642/792094260/c24a570989adaa9453774e15620576bd.jpg?ce=3&s=1024x768",
+          "title": "Suite Seafront View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/suite_seafront_view/suite_seafront_view_01.jpg"
+        },
+        {
+          "local_path": "images/suite_seafront_view/suite_seafront_view_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49495642/792094260/d1697405c4bf8b693c7400843994351a.jpg?ce=3&s=1024x768",
+          "title": "Suite Seafront View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/suite_seafront_view/suite_seafront_view_02.jpg"
+        }
+      ],
+      "short_description": "Suite Seafront View | 52 m² | Sea view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/suite_seafront_view/suite_seafront_view_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/suite_seafront_view/suite_seafront_view_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/suite_seafront_view/suite_seafront_view_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:deluxe_triple_room_with_balcony_and_sea_view",
+      "name": "Deluxe Triple Room with Balcony and Sea View",
+      "slug": "deluxe_triple_room_with_balcony_and_sea_view",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 2850000.0,
+        "original_amount": 3350000.0,
+        "discounted_amount": 2850000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 3,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": "Sea view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/deluxe_triple_room_with_balcony_and_sea_view/deluxe_triple_room_with_balcony_and_sea_view_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49495642/928608099/0b2afc0fb661987d76ac34bf72b6915f.jpg?ce=3&s=1024x768",
+          "title": "Deluxe Triple Room with Balcony and Sea View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_triple_room_with_balcony_and_sea_view/deluxe_triple_room_with_balcony_and_sea_view_01.jpg"
+        },
+        {
+          "local_path": "images/deluxe_triple_room_with_balcony_and_sea_view/deluxe_triple_room_with_balcony_and_sea_view_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49495642/928608099/a40a890a303f704168e141e06b9cdc90.jpg?ce=3&s=1024x768",
+          "title": "Deluxe Triple Room with Balcony and Sea View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_triple_room_with_balcony_and_sea_view/deluxe_triple_room_with_balcony_and_sea_view_02.jpg"
+        }
+      ],
+      "short_description": "Deluxe Triple Room with Balcony and Sea View | 32 m² | Sea view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 3,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_triple_room_with_balcony_and_sea_view/deluxe_triple_room_with_balcony_and_sea_view_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_triple_room_with_balcony_and_sea_view/deluxe_triple_room_with_balcony_and_sea_view_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/AquamarineResortHotelAllInclusive/images/deluxe_triple_room_with_balcony_and_sea_view/deluxe_triple_room_with_balcony_and_sea_view_02.jpg"
+      ]
+    }
+  ]
+}

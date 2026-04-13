@@ -1,4 +1,4 @@
-package com.example.hotelapp_test2.ui.features
+﻿package com.example.hotelapp_test2.ui.features
 
 import android.content.Intent
 import android.net.Uri
@@ -59,6 +59,7 @@ class PaymentActivity : BaseActivity() {
                             submitButton.isEnabled = true
                         },
                         onError = {
+                            // Van cho phep mo checkout de demo duoc lien tuc.
                             openPayOSCheckout(link.checkoutUrl)
                             submitButton.isEnabled = true
                         }

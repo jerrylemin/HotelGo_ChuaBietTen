@@ -1,0 +1,103 @@
+{
+  "started_at": "2026-03-03T17:28:14.771131+00:00",
+  "warnings": [
+    "Cutover freeze time has not been reached yet (2026-03-05T22:00:00+07:00). Data may change after migration run."
+  ],
+  "errors": [],
+  "firestore": {
+    "addOns": {
+      "table": "add_ons",
+      "firestore_docs": 3,
+      "migrated_docs": 3,
+      "failed_docs": 0,
+      "postgres_rows": 3,
+      "warnings": []
+    },
+    "bookings": {
+      "table": "bookings",
+      "firestore_docs": 3,
+      "migrated_docs": 3,
+      "failed_docs": 0,
+      "postgres_rows": 3,
+      "warnings": []
+    },
+    "issues": {
+      "table": "issues",
+      "firestore_docs": 1,
+      "migrated_docs": 1,
+      "failed_docs": 0,
+      "postgres_rows": 1,
+      "warnings": []
+    },
+    "meta": {
+      "table": "meta",
+      "firestore_docs": 1,
+      "migrated_docs": 1,
+      "failed_docs": 0,
+      "postgres_rows": 1,
+      "warnings": []
+    },
+    "notifications": {
+      "table": "notifications",
+      "firestore_docs": 4,
+      "migrated_docs": 4,
+      "failed_docs": 0,
+      "postgres_rows": 4,
+      "warnings": []
+    },
+    "posters": {
+      "table": "posters",
+      "firestore_docs": 2,
+      "migrated_docs": 2,
+      "failed_docs": 0,
+      "postgres_rows": 2,
+      "warnings": []
+    },
+    "reviews": {
+      "table": "reviews",
+      "firestore_docs": 2,
+      "migrated_docs": 2,
+      "failed_docs": 0,
+      "postgres_rows": 2,
+      "warnings": []
+    },
+    "rooms": {
+      "table": "rooms",
+      "firestore_docs": 4,
+      "migrated_docs": 4,
+      "failed_docs": 0,
+      "postgres_rows": 4,
+      "warnings": []
+    },
+    "users": {
+      "table": "users",
+      "firestore_docs": 6,
+      "migrated_docs": 6,
+      "failed_docs": 0,
+      "postgres_rows": 6,
+      "warnings": []
+    },
+    "vouchers": {
+      "table": "vouchers",
+      "firestore_docs": 3,
+      "migrated_docs": 3,
+      "failed_docs": 0,
+      "postgres_rows": 3,
+      "warnings": []
+    }
+  },
+  "auth": {
+    "created": 4,
+    "skipped": 0,
+    "failed": 0,
+    "warnings": []
+  },
+  "storage": {
+    "copied": 0,
+    "missing_source": 1,
+    "skipped": 1,
+    "failed": 0,
+    "warnings": []
+  },
+  "finished_at": "2026-03-03T17:28:23.959269+00:00"
+}

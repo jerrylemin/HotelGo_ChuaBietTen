@@ -1,0 +1,3100 @@
+{
+  "schema_version": "1.0",
+  "hotel_slug": "saigon_prince_hotel",
+  "room_count": 10,
+  "rooms": [
+    {
+      "room_id": "3114189",
+      "name": "Club Suite",
+      "slug": "club_suite",
+      "provider": "agoda",
+      "source_room_id": "3114189",
+      "price": {
+        "currency": "VND",
+        "current_amount": 6850000.0,
+        "original_amount": 8100000.0,
+        "discounted_amount": 6850000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "1 king bed",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "1 king bed",
+                    "symbol": "king-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 1,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Room size: 55 m²/592 ft²",
+        "square_meters": 55.0,
+        "square_feet": 592.0
+      },
+      "view": null,
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Accessible by elevator",
+        "Air conditioning",
+        "Alarm clock",
+        "Alcohol",
+        "Baby cot (upon request)",
+        "Bathrobes",
+        "Bathtub",
+        "Blackout curtains",
+        "Carpeting",
+        "Closet",
+        "Clothes rack",
+        "Coffee/tea maker",
+        "Complimentary tea",
+        "DVD/CD player",
+        "Daily housekeeping",
+        "Desk",
+        "Dining table",
+        "Dishwasher",
+        "Electric kettle",
+        "Executive lounge access",
+        "Fold-up bed",
+        "Free bottled water",
+        "Fruits/snacks",
+        "Hair dryer",
+        "Hypoallergenic",
+        "In-room safe box",
+        "Internet access – wireless",
+        "Ironing facilities",
+        "Kettle",
+        "LAN Internet in room [free]",
+        "Linens",
+        "Mini bar",
+        "Mirror",
+        "Pool facilities",
+        "Private bathroom",
+        "Safety/security feature",
+        "Satellite/cable channels",
+        "Seating area",
+        "Separate dining area",
+        "Sewing kit",
+        "Shoeshine kit",
+        "Shower",
+        "Sleep comfort items",
+        "Slippers",
+        "Smoke detector",
+        "Sofa",
+        "Soundproofing",
+        "Streaming service like Netflix",
+        "TV",
+        "TV [flat screen]",
+        "Telephone",
+        "Toiletries",
+        "Towels",
+        "Trash cans",
+        "Trouser press",
+        "Wake-up service",
+        "Wi-Fi [free]",
+        "Window",
+        "Window that opens"
+      ],
+      "bathroom_amenities": [
+        "Bathrobes",
+        "Bathtub",
+        "Hair dryer",
+        "Mirror",
+        "Private bathroom",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [
+        {
+          "name": "Kitchen",
+          "amenities": [
+            "Electric kettle"
+          ]
+        },
+        {
+          "name": "Bathroom and toiletries",
+          "amenities": [
+            "Bathrobes",
+            "Bathtub",
+            "Hair dryer",
+            "Mirror",
+            "Private bathroom",
+            "Shower",
+            "Toiletries",
+            "Towels"
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "amenities": [
+            "DVD/CD player",
+            "Internet access – wireless",
+            "LAN Internet in room [free]",
+            "Pool facilities",
+            "Satellite/cable channels",
+            "Streaming service like Netflix",
+            "Telephone",
+            "TV",
+            "TV [flat screen]",
+            "Wi-Fi [free]"
+          ]
+        },
+        {
+          "name": "Comforts",
+          "amenities": [
+            "Air conditioning",
+            "Alarm clock",
+            "Blackout curtains",
+            "Executive lounge access",
+            "Hypoallergenic",
+            "Linens",
+            "Sleep comfort items",
+            "Slippers",
+            "Soundproofing",
+            "Wake-up service"
+          ]
+        },
+        {
+          "name": "Dining, drinking, and snacking",
+          "amenities": [
+            "Alcohol",
+            "Coffee/tea maker",
+            "Complimentary tea",
+            "Dining table",
+            "Dishwasher",
+            "Free bottled water",
+            "Fruits/snacks",
+            "Kettle",
+            "Mini bar"
+          ]
+        },
+        {
+          "name": "Services and conveniences",
+          "amenities": [
+            "Daily housekeeping"
+          ]
+        },
+        {
+          "name": "Layout and furnishings",
+          "amenities": [
+            "Carpeting",
+            "Desk",
+            "Fold-up bed",
+            "Seating area",
+            "Separate dining area",
+            "Sofa",
+            "Trash cans",
+            "Window",
+            "Window that opens"
+          ]
+        },
+        {
+          "name": "Clothing and laundry",
+          "amenities": [
+            "Closet",
+            "Clothes rack",
+            "Ironing facilities",
+            "Sewing kit",
+            "Shoeshine kit",
+            "Trouser press"
+          ]
+        },
+        {
+          "name": "For the kids",
+          "amenities": [
+            "Baby cot (upon request)"
+          ]
+        },
+        {
+          "name": "Safety and security features",
+          "amenities": [
+            "Accessible by elevator",
+            "In-room safe box",
+            "Safety/security feature",
+            "Smoke detector"
+          ]
+        }
+      ],
+      "image_count": 14,
+      "images": [
+        {
+          "local_path": "images/club_suite/club_suite_01.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1289649447/6d37c36031ab6d42448eebca477683ed.jpeg?ce=3",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_01.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_02.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1134046118/ca53b99e268366e545107ce55e44b755.jpeg?ce=2",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_02.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_03.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615361548.jpg?k=c4878c79424ae4161baa4c66e023b795950ffefbdcbfacb63da939b3a5a61b03&o=",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_03.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_04.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/3114189/e82b3eebdfbbadf088f90ed414de4194.jpg?ce=2",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_04.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_05.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/3114189/085dfe8ad0dfcc90457c27be0999852d.png?ce=2",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_05.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_06.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/3114189/5887d79bb8034f79c0a71825c5aaa114.jpg?ce=2",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_06.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_07.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/700513206.jpg?k=537d4cced0dd772c66c8cdb967559d0b5d29e6dbb96a089804cbd1444b5aeec5&o=",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_07.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_08.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/3114189/d55dcc9ddff53734fd2edef165fbd15c.png?ce=2",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_08.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_09.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/6832966f1dcbe03f5dabde8b84189ee8.jpg?ce=0",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_09.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_10.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1289649447/8e91438d28f4b82818c9f90cf51e472c.jpeg?ce=3",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_10.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_11.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/518f6a4a3b78add5be5c192a8c02699c.jpg?ce=0",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_11.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_12.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1289649447/412c36892f2f87afa5f77a6a66d85a5e.jpeg?ce=3",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_12.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_13.jpg",
+          "source_url": "https://pix8.agoda.net/property/36192142/603573936/771932b3dd6d6966130761b7eaf5989e.jpeg?ce=0",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_13.jpg"
+        },
+        {
+          "local_path": "images/club_suite/club_suite_14.jpg",
+          "source_url": "https://pix8.agoda.net/property/36192142/603573936/d122034aa06ffcacc2f5894f00d5ef84.jpeg?ce=0",
+          "title": "Club Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_14.jpg"
+        }
+      ],
+      "short_description": "Room size: 55 m²/592 ft² | 1 king bed",
+      "tags": [
+        "1 king bed",
+        "Breakfast included",
+        "Room size: 55 m²/592 ft²"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-sqm",
+          "title": "Room size: 55 m²/592 ft²",
+          "isAvailable": true,
+          "id": 2,
+          "informationBadgeText": "Extra spacious room",
+          "value": 0.0,
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "1 king bed",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_03.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_04.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_05.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_06.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_07.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_08.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_09.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_10.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_11.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_12.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_13.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_14.jpg"
+      ]
+    },
+    {
+      "room_id": "20240141",
+      "name": "Club Room",
+      "slug": "club_room",
+      "provider": "agoda",
+      "source_room_id": "20240141",
+      "price": {
+        "currency": "VND",
+        "current_amount": 4150000.0,
+        "original_amount": 4900000.0,
+        "discounted_amount": 4150000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "1 double bed or 2 single beds",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "1 double bed",
+                    "symbol": "double-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Layout 2",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "2 single beds",
+                    "symbol": "single-bed",
+                    "quantity": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Room size: 30 m²/323 ft²",
+        "square_meters": 30.0,
+        "square_feet": 323.0
+      },
+      "view": "River view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Accessible by elevator",
+        "Air conditioning",
+        "Alarm clock",
+        "Alcohol",
+        "Baby cot (upon request)",
+        "Bathrobes",
+        "Bathroom phone",
+        "Bathtub",
+        "Blackout curtains",
+        "Carpeting",
+        "Closet",
+        "Clothes rack",
+        "Coffee/tea maker",
+        "Complimentary tea",
+        "Concierge",
+        "Desk",
+        "Dining table",
+        "Electric kettle",
+        "Executive lounge access",
+        "Free bottled water",
+        "Free instant coffee",
+        "Fruits/snacks",
+        "Hair dryer",
+        "Hypoallergenic",
+        "In-room safe box",
+        "Interconnecting room(s) available",
+        "Internet access – wireless",
+        "Ironing facilities",
+        "LAN Internet in room [free]",
+        "Linens",
+        "Mini bar",
+        "Mirror",
+        "Non-smoking",
+        "Pool facilities",
+        "Private bathroom",
+        "Roll-in shower",
+        "Safety/security feature",
+        "Satellite/cable channels",
+        "Seating area",
+        "Shower",
+        "Sleep comfort items",
+        "Slippers",
+        "Smoke detector",
+        "Socket near the bed",
+        "Streaming service like Netflix",
+        "TV",
+        "TV [flat screen]",
+        "Telephone",
+        "Toiletries",
+        "Towels",
+        "Trash cans",
+        "Trouser press",
+        "Wake-up service",
+        "Walk-in shower",
+        "Wi-Fi [free]",
+        "Window",
+        "Window that opens",
+        "Wooden/parqueted flooring"
+      ],
+      "bathroom_amenities": [
+        "Bathrobes",
+        "Bathroom phone",
+        "Bathtub",
+        "Hair dryer",
+        "Mirror",
+        "Private bathroom",
+        "Shower",
+        "Toiletries",
+        "Towels",
+        "Walk-in shower"
+      ],
+      "facility_groups": [
+        {
+          "name": "Accessibility",
+          "amenities": [
+            "Roll-in shower"
+          ]
+        },
+        {
+          "name": "Kitchen",
+          "amenities": [
+            "Electric kettle"
+          ]
+        },
+        {
+          "name": "Bathroom and toiletries",
+          "amenities": [
+            "Bathrobes",
+            "Bathroom phone",
+            "Bathtub",
+            "Hair dryer",
+            "Mirror",
+            "Private bathroom",
+            "Shower",
+            "Toiletries",
+            "Towels",
+            "Walk-in shower"
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "amenities": [
+            "Internet access – wireless",
+            "LAN Internet in room [free]",
+            "Pool facilities",
+            "Satellite/cable channels",
+            "Streaming service like Netflix",
+            "Telephone",
+            "TV",
+            "TV [flat screen]",
+            "Wi-Fi [free]"
+          ]
+        },
+        {
+          "name": "Comforts",
+          "amenities": [
+            "Air conditioning",
+            "Alarm clock",
+            "Blackout curtains",
+            "Concierge",
+            "Executive lounge access",
+            "Hypoallergenic",
+            "Linens",
+            "Sleep comfort items",
+            "Slippers",
+            "Socket near the bed",
+            "Wake-up service"
+          ]
+        },
+        {
+          "name": "Dining, drinking, and snacking",
+          "amenities": [
+            "Alcohol",
+            "Coffee/tea maker",
+            "Complimentary tea",
+            "Dining table",
+            "Free bottled water",
+            "Free instant coffee",
+            "Fruits/snacks",
+            "Mini bar"
+          ]
+        },
+        {
+          "name": "Layout and furnishings",
+          "amenities": [
+            "Carpeting",
+            "Desk",
+            "Interconnecting room(s) available",
+            "Seating area",
+            "Trash cans",
+            "Window",
+            "Window that opens",
+            "Wooden/parqueted flooring"
+          ]
+        },
+        {
+          "name": "Clothing and laundry",
+          "amenities": [
+            "Closet",
+            "Clothes rack",
+            "Ironing facilities",
+            "Trouser press"
+          ]
+        },
+        {
+          "name": "For the kids",
+          "amenities": [
+            "Baby cot (upon request)"
+          ]
+        },
+        {
+          "name": "Safety and security features",
+          "amenities": [
+            "Accessible by elevator",
+            "In-room safe box",
+            "Non-smoking",
+            "Safety/security feature",
+            "Smoke detector"
+          ]
+        }
+      ],
+      "image_count": 12,
+      "images": [
+        {
+          "local_path": "images/club_room/club_room_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/019884b70c1cffe885e9360b59a26450.jpg?ce=0",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_01.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_02.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615370613.jpg?k=83c4087d19377a3f92bbb811be800a8e8ccf2e4473f156e1b64fe7c2d8c54b00&o=",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_02.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_03.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/a72a6bd357533906ca6b4e0fd5e633ea.jpg?ce=0",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_03.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_04.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615370895.jpg?k=13f7ead63b679de614cf9116a7c71ca4ee9761a8e70a45409ddc078c16377086&o=",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_04.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_05.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/0/777f45d55391b10f8739780a59bd8351.jpeg?ce=0",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_05.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_06.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615370869.jpg?k=b13af7f29c08e21ca33e9df11d3dab4b77219d93c26f06bc6e8b259f1921fffe&o=",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_06.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_07.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/0/c7ad39e46bc708b0afbe7f67c2d3250f.jpeg",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_07.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_08.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/58c9f8dda47d0731fa2af9a2eca5d080.jpg?ce=0",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_08.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_09.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/0/26a7bf4c4a2766d1523c09fc11b73476.jpeg?ce=0",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_09.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_10.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/563585459/6847fd7b244b3fd3d9ee65cb71698fcd.jpeg?ce=0",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_10.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_11.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/820c97d9f4dc37c8b82e97a3c23c3ab7.jpg?ce=0",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_11.jpg"
+        },
+        {
+          "local_path": "images/club_room/club_room_12.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/0/93cbdc8a9c1bb48deb2875f351b746da.jpeg?ce=0",
+          "title": "Club Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_12.jpg"
+        }
+      ],
+      "short_description": "Room size: 30 m²/323 ft² | River view | 1 double bed or 2 single beds",
+      "tags": [
+        "1 double bed or 2 single beds",
+        "Breakfast included",
+        "River view",
+        "Room size: 30 m²/323 ft²"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-sqm",
+          "title": "Room size: 30 m²/323 ft²",
+          "isAvailable": true,
+          "id": 2,
+          "informationBadgeText": "Spacious room",
+          "value": 0.0,
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-views",
+          "title": "River view",
+          "isAvailable": true,
+          "id": 1,
+          "value": 0.0,
+          "associatedFilters": [
+            "ocean-view",
+            "mountain-view",
+            "lake-view",
+            "pool-view"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "1 double bed or 2 single beds",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_03.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_04.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_05.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_06.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_07.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_08.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_09.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_10.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_11.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_12.jpg"
+      ]
+    },
+    {
+      "room_id": "9514898",
+      "name": "Apartment",
+      "slug": "apartment",
+      "provider": "agoda",
+      "source_room_id": "9514898",
+      "price": {
+        "currency": "VND",
+        "current_amount": 8650000.0,
+        "original_amount": 10200000.0,
+        "discounted_amount": 8650000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "1 king bed",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "1 king bed",
+                    "symbol": "king-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 1,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Room size: 95 m²/1023 ft²",
+        "square_meters": 95.0,
+        "square_feet": 1023.0
+      },
+      "view": "City view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Accessible by elevator",
+        "Air conditioning",
+        "Alarm clock",
+        "Alcohol",
+        "Baby cot (upon request)",
+        "Balcony/terrace",
+        "Bathrobes",
+        "Bathtub",
+        "Blackout curtains",
+        "Books/DVDs/music for children",
+        "Carpeting",
+        "Closet",
+        "Clothes rack",
+        "Coffee/tea maker",
+        "Complimentary tea",
+        "Concierge",
+        "DVD/CD player",
+        "Daily newspaper",
+        "Desk",
+        "Dining table",
+        "Electric kettle",
+        "Executive lounge access",
+        "Free bottled water",
+        "Free instant coffee",
+        "Fruits/snacks",
+        "Full kitchen",
+        "Hair dryer",
+        "Hypoallergenic",
+        "In-room safe box",
+        "Interconnecting room(s) available",
+        "Internet access – wireless",
+        "Ironing facilities",
+        "Kitchenware",
+        "Microwave",
+        "Mini bar",
+        "Mirror",
+        "Non-smoking",
+        "Pool facilities",
+        "Private bathroom",
+        "Refrigerator",
+        "Safety/security feature",
+        "Satellite/cable channels",
+        "Seating area",
+        "Separate dining area",
+        "Shower",
+        "Sleep comfort items",
+        "Slippers",
+        "Smoke detector",
+        "Sofa",
+        "TV",
+        "TV [flat screen]",
+        "Telephone",
+        "Toiletries",
+        "Towels",
+        "Trash cans",
+        "Trouser press",
+        "Wake-up service",
+        "Washing machine",
+        "Wi-Fi [free]",
+        "Window",
+        "Window that opens",
+        "Wine glasses"
+      ],
+      "bathroom_amenities": [
+        "Bathrobes",
+        "Bathtub",
+        "Hair dryer",
+        "Mirror",
+        "Private bathroom",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [
+        {
+          "name": "Kitchen",
+          "amenities": [
+            "Electric kettle"
+          ]
+        },
+        {
+          "name": "Bathroom and toiletries",
+          "amenities": [
+            "Bathrobes",
+            "Bathtub",
+            "Hair dryer",
+            "Mirror",
+            "Private bathroom",
+            "Shower",
+            "Toiletries",
+            "Towels"
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "amenities": [
+            "Books/DVDs/music for children",
+            "DVD/CD player",
+            "Internet access – wireless",
+            "Pool facilities",
+            "Satellite/cable channels",
+            "Telephone",
+            "TV",
+            "TV [flat screen]",
+            "Wi-Fi [free]"
+          ]
+        },
+        {
+          "name": "Comforts",
+          "amenities": [
+            "Air conditioning",
+            "Alarm clock",
+            "Blackout curtains",
+            "Concierge",
+            "Daily newspaper",
+            "Executive lounge access",
+            "Hypoallergenic",
+            "Sleep comfort items",
+            "Slippers",
+            "Wake-up service"
+          ]
+        },
+        {
+          "name": "Dining, drinking, and snacking",
+          "amenities": [
+            "Alcohol",
+            "Coffee/tea maker",
+            "Complimentary tea",
+            "Dining table",
+            "Free bottled water",
+            "Free instant coffee",
+            "Fruits/snacks",
+            "Full kitchen",
+            "Kitchenware",
+            "Microwave",
+            "Mini bar",
+            "Refrigerator",
+            "Wine glasses"
+          ]
+        },
+        {
+          "name": "Layout and furnishings",
+          "amenities": [
+            "Balcony/terrace",
+            "Carpeting",
+            "Desk",
+            "Interconnecting room(s) available",
+            "Seating area",
+            "Separate dining area",
+            "Sofa",
+            "Trash cans",
+            "Window",
+            "Window that opens"
+          ]
+        },
+        {
+          "name": "Clothing and laundry",
+          "amenities": [
+            "Closet",
+            "Clothes rack",
+            "Ironing facilities",
+            "Trouser press",
+            "Washing machine"
+          ]
+        },
+        {
+          "name": "For the kids",
+          "amenities": [
+            "Baby cot (upon request)"
+          ]
+        },
+        {
+          "name": "Safety and security features",
+          "amenities": [
+            "Accessible by elevator",
+            "In-room safe box",
+            "Non-smoking",
+            "Safety/security feature",
+            "Smoke detector"
+          ]
+        }
+      ],
+      "image_count": 10,
+      "images": [
+        {
+          "local_path": "images/apartment/apartment_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/2e7fd8abaac3bc5a4e4424640d162262.jpg?ce=0",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_01.jpg"
+        },
+        {
+          "local_path": "images/apartment/apartment_02.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/688786223.jpg?k=b1464680f4dd5419d428af55bc7e6009b39cebfd4cb24539736fcc1f7be0a4ee&o=",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_02.jpg"
+        },
+        {
+          "local_path": "images/apartment/apartment_03.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615372036.jpg?k=f432ab160530eb2d16d1d2377a76d4282370a2fc1dca5c084df1b6b4a827d995&o=",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_03.jpg"
+        },
+        {
+          "local_path": "images/apartment/apartment_04.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/98ea10945f7365cbcd74f87029146086.jpg?ce=0",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_04.jpg"
+        },
+        {
+          "local_path": "images/apartment/apartment_05.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615372017.jpg?k=7cf7ddb84ff86a14021300ca53f853025a58a9eae063d2c841727e405b0dc21a&o=",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_05.jpg"
+        },
+        {
+          "local_path": "images/apartment/apartment_06.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/964405267/aa65e96df1f498c476ef9001a6012c18.jpeg?ce=2",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_06.jpg"
+        },
+        {
+          "local_path": "images/apartment/apartment_07.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/964405267/45512166fe39143975de7538d171e398.jpeg?ce=2",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_07.jpg"
+        },
+        {
+          "local_path": "images/apartment/apartment_08.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/f703149bcafbd2c662fda2ebd0d546b6.jpg?ce=0",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_08.jpg"
+        },
+        {
+          "local_path": "images/apartment/apartment_09.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/964405267/0d8aacef4e13e96cc17ae1b74a0e6373.jpeg?ce=2",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_09.jpg"
+        },
+        {
+          "local_path": "images/apartment/apartment_10.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/964405978/31d950e9c7450b48401beed673124a41.jpeg?ce=0",
+          "title": "Apartment",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_10.jpg"
+        }
+      ],
+      "short_description": "Room size: 95 m²/1023 ft² | City view | 1 king bed",
+      "tags": [
+        "1 king bed",
+        "Breakfast included",
+        "City view",
+        "Room size: 95 m²/1023 ft²"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-sqm",
+          "title": "Room size: 95 m²/1023 ft²",
+          "isAvailable": true,
+          "id": 2,
+          "informationBadgeText": "Extra spacious room",
+          "value": 0.0,
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-views",
+          "title": "City view",
+          "isAvailable": true,
+          "id": 1,
+          "value": 0.0,
+          "associatedFilters": [
+            "ocean-view",
+            "mountain-view",
+            "lake-view",
+            "pool-view"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "1 king bed",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_03.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_04.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_05.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_06.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_07.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_08.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_09.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_10.jpg"
+      ]
+    },
+    {
+      "room_id": "71813319",
+      "name": "Club Grand Suite",
+      "slug": "club_grand_suite",
+      "provider": "agoda",
+      "source_room_id": "71813319",
+      "price": {
+        "currency": "VND",
+        "current_amount": 8250000.0,
+        "original_amount": 9750000.0,
+        "discounted_amount": 8250000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "1 super king bed",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "1 super king bed",
+                    "symbol": "super-king-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 2,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Room size: 55 m²/592 ft²",
+        "square_meters": 55.0,
+        "square_feet": 592.0
+      },
+      "view": "City view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Accessible by elevator",
+        "Air conditioning",
+        "Alarm clock",
+        "Alcohol",
+        "Baby cot (upon request)",
+        "Bathrobes",
+        "Bathroom phone",
+        "Bathtub",
+        "Blackout curtains",
+        "Carpeting",
+        "Closet",
+        "Clothes rack",
+        "Coffee/tea maker",
+        "Complimentary tea",
+        "DVD/CD player",
+        "Daily housekeeping",
+        "Desk",
+        "Dining table",
+        "Dishwasher",
+        "Electric kettle",
+        "Executive lounge access",
+        "Fold-up bed",
+        "Free bottled water",
+        "Free instant coffee",
+        "Fruits/snacks",
+        "Hair dryer",
+        "High floor",
+        "Hypoallergenic",
+        "In-room safe box",
+        "Interconnecting room(s) available",
+        "Internet access – wireless",
+        "Ironing facilities",
+        "Kettle",
+        "LAN Internet in room [free]",
+        "Linens",
+        "Mini bar",
+        "Mirror",
+        "Pool facilities",
+        "Private bathroom",
+        "Safety/security feature",
+        "Satellite/cable channels",
+        "Seating area",
+        "Separate dining area",
+        "Shower",
+        "Sleep comfort items",
+        "Slippers",
+        "Smoke detector",
+        "Sofa",
+        "Soundproofing",
+        "Streaming service like Netflix",
+        "TV",
+        "TV [flat screen]",
+        "Telephone",
+        "Toiletries",
+        "Towels",
+        "Trash cans",
+        "Trouser press",
+        "Wake-up service",
+        "Wi-Fi [free]",
+        "Window",
+        "Window that opens"
+      ],
+      "bathroom_amenities": [
+        "Bathrobes",
+        "Bathroom phone",
+        "Bathtub",
+        "Hair dryer",
+        "Mirror",
+        "Private bathroom",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [
+        {
+          "name": "Kitchen",
+          "amenities": [
+            "Electric kettle"
+          ]
+        },
+        {
+          "name": "Bathroom and toiletries",
+          "amenities": [
+            "Bathrobes",
+            "Bathroom phone",
+            "Bathtub",
+            "Hair dryer",
+            "Mirror",
+            "Private bathroom",
+            "Shower",
+            "Toiletries",
+            "Towels"
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "amenities": [
+            "DVD/CD player",
+            "Internet access – wireless",
+            "LAN Internet in room [free]",
+            "Pool facilities",
+            "Satellite/cable channels",
+            "Streaming service like Netflix",
+            "Telephone",
+            "TV",
+            "TV [flat screen]",
+            "Wi-Fi [free]"
+          ]
+        },
+        {
+          "name": "Comforts",
+          "amenities": [
+            "Air conditioning",
+            "Alarm clock",
+            "Blackout curtains",
+            "Executive lounge access",
+            "Hypoallergenic",
+            "Linens",
+            "Sleep comfort items",
+            "Slippers",
+            "Soundproofing",
+            "Wake-up service"
+          ]
+        },
+        {
+          "name": "Dining, drinking, and snacking",
+          "amenities": [
+            "Alcohol",
+            "Coffee/tea maker",
+            "Complimentary tea",
+            "Dining table",
+            "Dishwasher",
+            "Free bottled water",
+            "Free instant coffee",
+            "Fruits/snacks",
+            "Kettle",
+            "Mini bar"
+          ]
+        },
+        {
+          "name": "Services and conveniences",
+          "amenities": [
+            "Daily housekeeping"
+          ]
+        },
+        {
+          "name": "Layout and furnishings",
+          "amenities": [
+            "Carpeting",
+            "Desk",
+            "Fold-up bed",
+            "High floor",
+            "Interconnecting room(s) available",
+            "Seating area",
+            "Separate dining area",
+            "Sofa",
+            "Trash cans",
+            "Window",
+            "Window that opens"
+          ]
+        },
+        {
+          "name": "Clothing and laundry",
+          "amenities": [
+            "Closet",
+            "Clothes rack",
+            "Ironing facilities",
+            "Trouser press"
+          ]
+        },
+        {
+          "name": "For the kids",
+          "amenities": [
+            "Baby cot (upon request)"
+          ]
+        },
+        {
+          "name": "Safety and security features",
+          "amenities": [
+            "Accessible by elevator",
+            "In-room safe box",
+            "Safety/security feature",
+            "Smoke detector"
+          ]
+        }
+      ],
+      "image_count": 10,
+      "images": [
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/0bc25c28dc74d2bb64513b81f2a405fa.jpg?ce=0",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_01.jpg"
+        },
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_02.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615371575.jpg?k=fa9c1458aaa9f6b52866481a859d415015f37bf1e3fd2c01fa169152f5f6a9d6&o=",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_02.jpg"
+        },
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_03.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615371763.jpg?k=72633a077e303b147d57a67ea97ccfb5693d9edf0b1112f49a92913d91c47373&o=",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_03.jpg"
+        },
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_04.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1289649465/42f9bb04b58150f85bfd9464bb2fd5e1.jpeg?ce=3",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_04.jpg"
+        },
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_05.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615371669.jpg?k=9b300570ae06907534dbe4146b22ad958a27d969e33ba3ddcf0d0afcc84c0c45&o=",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_05.jpg"
+        },
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_06.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/71813319/1b3e4c6e11cb164b974a1ee7ad8f7ef2.jpg?ce=2",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_06.jpg"
+        },
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_07.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/ffaaee36ae4fa5b87879da828305e81e.jpg?ce=0",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_07.jpg"
+        },
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_08.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1289649465/ec980a699c9892ca68ca7cb92c3f84bf.jpeg?ce=3",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_08.jpg"
+        },
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_09.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/ffe09ebdd04d3ce8b5fd836c201a48ad.jpg?ce=0",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_09.jpg"
+        },
+        {
+          "local_path": "images/club_grand_suite/club_grand_suite_10.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/71813319/4e42d6d29800db066e6bcaeaa143c57d.jpg?ce=2",
+          "title": "Club Grand Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_10.jpg"
+        }
+      ],
+      "short_description": "Room size: 55 m²/592 ft² | City view | 1 super king bed",
+      "tags": [
+        "1 super king bed",
+        "Breakfast included",
+        "City view",
+        "Room size: 55 m²/592 ft²"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-sqm",
+          "title": "Room size: 55 m²/592 ft²",
+          "isAvailable": true,
+          "id": 2,
+          "informationBadgeText": "Extra spacious room",
+          "value": 0.0,
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-views",
+          "title": "City view",
+          "isAvailable": true,
+          "id": 1,
+          "value": 0.0,
+          "associatedFilters": [
+            "ocean-view",
+            "mountain-view",
+            "lake-view",
+            "pool-view"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "1 super king bed",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_03.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_04.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_05.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_06.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_07.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_08.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_09.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_10.jpg"
+      ]
+    },
+    {
+      "room_id": "20240137",
+      "name": "Executive Double or Twin",
+      "slug": "executive_double_or_twin",
+      "provider": "agoda",
+      "source_room_id": "20240137",
+      "price": {
+        "currency": "VND",
+        "current_amount": 4250000.0,
+        "original_amount": 5000000.0,
+        "discounted_amount": 4250000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "1 double bed or 2 single beds",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "1 double bed",
+                    "symbol": "double-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Layout 2",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "2 single beds",
+                    "symbol": "single-bed",
+                    "quantity": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Room size: 30 m²/323 ft²",
+        "square_meters": 30.0,
+        "square_feet": 323.0
+      },
+      "view": "City view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Accessible by elevator",
+        "Air conditioning",
+        "Alarm clock",
+        "Alcohol",
+        "Baby cot (upon request)",
+        "Bathrobes",
+        "Bathroom phone",
+        "Bathtub",
+        "Blackout curtains",
+        "Carpeting",
+        "Closet",
+        "Clothes rack",
+        "Coffee/tea maker",
+        "Complimentary tea",
+        "DVD/CD player",
+        "Daily housekeeping",
+        "Desk",
+        "Dining table",
+        "Electric kettle",
+        "Free bottled water",
+        "Fruits/snacks",
+        "Hair dryer",
+        "Hypoallergenic",
+        "In-room safe box",
+        "Interconnecting room(s) available",
+        "Internet access – wireless",
+        "Ironing facilities",
+        "LAN Internet in room [free]",
+        "Linens",
+        "Mini bar",
+        "Mirror",
+        "Pool facilities",
+        "Private bathroom",
+        "Roll-in shower",
+        "Safety/security feature",
+        "Satellite/cable channels",
+        "Seating area",
+        "Separate dining area",
+        "Shower",
+        "Sleep comfort items",
+        "Slippers",
+        "Smoke detector",
+        "Socket near the bed",
+        "Sofa",
+        "Soundproofing",
+        "Streaming service like Netflix",
+        "TV",
+        "TV [flat screen]",
+        "Telephone",
+        "Toiletries",
+        "Towels",
+        "Trash cans",
+        "Trouser press",
+        "Wake-up service",
+        "Walk-in shower",
+        "Wi-Fi [free]",
+        "Window",
+        "Window that opens",
+        "Wooden/parqueted flooring"
+      ],
+      "bathroom_amenities": [
+        "Bathrobes",
+        "Bathroom phone",
+        "Bathtub",
+        "Hair dryer",
+        "Mirror",
+        "Private bathroom",
+        "Shower",
+        "Toiletries",
+        "Towels",
+        "Walk-in shower"
+      ],
+      "facility_groups": [
+        {
+          "name": "Accessibility",
+          "amenities": [
+            "Roll-in shower"
+          ]
+        },
+        {
+          "name": "Kitchen",
+          "amenities": [
+            "Electric kettle"
+          ]
+        },
+        {
+          "name": "Bathroom and toiletries",
+          "amenities": [
+            "Bathrobes",
+            "Bathroom phone",
+            "Bathtub",
+            "Hair dryer",
+            "Mirror",
+            "Private bathroom",
+            "Shower",
+            "Toiletries",
+            "Towels",
+            "Walk-in shower"
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "amenities": [
+            "DVD/CD player",
+            "Internet access – wireless",
+            "LAN Internet in room [free]",
+            "Pool facilities",
+            "Satellite/cable channels",
+            "Streaming service like Netflix",
+            "Telephone",
+            "TV",
+            "TV [flat screen]",
+            "Wi-Fi [free]"
+          ]
+        },
+        {
+          "name": "Comforts",
+          "amenities": [
+            "Air conditioning",
+            "Alarm clock",
+            "Blackout curtains",
+            "Hypoallergenic",
+            "Linens",
+            "Sleep comfort items",
+            "Slippers",
+            "Socket near the bed",
+            "Soundproofing",
+            "Wake-up service"
+          ]
+        },
+        {
+          "name": "Dining, drinking, and snacking",
+          "amenities": [
+            "Alcohol",
+            "Coffee/tea maker",
+            "Complimentary tea",
+            "Dining table",
+            "Free bottled water",
+            "Fruits/snacks",
+            "Mini bar"
+          ]
+        },
+        {
+          "name": "Services and conveniences",
+          "amenities": [
+            "Daily housekeeping"
+          ]
+        },
+        {
+          "name": "Layout and furnishings",
+          "amenities": [
+            "Carpeting",
+            "Desk",
+            "Interconnecting room(s) available",
+            "Seating area",
+            "Separate dining area",
+            "Sofa",
+            "Trash cans",
+            "Window",
+            "Window that opens",
+            "Wooden/parqueted flooring"
+          ]
+        },
+        {
+          "name": "Clothing and laundry",
+          "amenities": [
+            "Closet",
+            "Clothes rack",
+            "Ironing facilities",
+            "Trouser press"
+          ]
+        },
+        {
+          "name": "For the kids",
+          "amenities": [
+            "Baby cot (upon request)"
+          ]
+        },
+        {
+          "name": "Safety and security features",
+          "amenities": [
+            "Accessible by elevator",
+            "In-room safe box",
+            "Safety/security feature",
+            "Smoke detector"
+          ]
+        }
+      ],
+      "image_count": 10,
+      "images": [
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/d55e8c6e5d20ec3508c5f22660d17e28.jpg?ce=0",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_01.jpg"
+        },
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_02.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615369632.jpg?k=44b03be2e568f99e376c3a8f2a53aa8ca21bdf7d38e7c22bf0c6f212301f73ad&o=",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_02.jpg"
+        },
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_03.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/910410913/3846ac47d3fa38003fe7fffb44174fdb.jpeg?ce=0",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_03.jpg"
+        },
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_04.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/741750596.jpg?k=7234733ab00b72f791c1a73adf30d70ad0adbc2d017341b047665e8e037e369c&o=",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_04.jpg"
+        },
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_05.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/20240137/fcb306134c3a4a6e369c87407a9b43fa.jpg?ce=2",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_05.jpg"
+        },
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_06.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/20240137/be3c6a30aff813899503cb784bd13170.jpg?ce=2",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_06.jpg"
+        },
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_07.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/20240137/97ee5da85c069749754c9be8252eacc3.jpg?ce=2",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_07.jpg"
+        },
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_08.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/700844008.jpg?k=0c064981055ae755fe4260834e6fa098129c7037e748e6af96e9f02515d12576&o=",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_08.jpg"
+        },
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_09.jpg",
+          "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/615370136.jpg?k=9312516ac6daa4d5ea4ea015616ea87d9ad7bcfd490a91bc881f9d3b915f0d69&o=",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_09.jpg"
+        },
+        {
+          "local_path": "images/executive_double_or_twin/executive_double_or_twin_10.jpg",
+          "source_url": "https://pix8.agoda.net/property/36192142/603569799/d2ea46610761537f4ae48f7d0984c387.jpeg?ce=0",
+          "title": "Executive Double or Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_10.jpg"
+        }
+      ],
+      "short_description": "Room size: 30 m²/323 ft² | City view | 1 double bed or 2 single beds",
+      "tags": [
+        "1 double bed or 2 single beds",
+        "City view",
+        "Room size: 30 m²/323 ft²"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-sqm",
+          "title": "Room size: 30 m²/323 ft²",
+          "isAvailable": true,
+          "id": 2,
+          "informationBadgeText": "Spacious room",
+          "value": 0.0,
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-views",
+          "title": "City view",
+          "isAvailable": true,
+          "id": 1,
+          "value": 0.0,
+          "associatedFilters": [
+            "ocean-view",
+            "mountain-view",
+            "lake-view",
+            "pool-view"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "1 double bed or 2 single beds",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_03.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_04.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_05.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_06.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_07.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_08.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_09.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_10.jpg"
+      ]
+    },
+    {
+      "room_id": "3114186",
+      "name": "Premier Double or Twin Room",
+      "slug": "premier_double_or_twin_room",
+      "provider": "agoda",
+      "source_room_id": "3114186",
+      "price": {
+        "currency": "VND",
+        "current_amount": 3900000.0,
+        "original_amount": 4600000.0,
+        "discounted_amount": 3900000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "2 single beds or 1 double bed",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "2 single beds",
+                    "symbol": "single-bed",
+                    "quantity": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Layout 2",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "1 double bed",
+                    "symbol": "double-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 2,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Room size: 30 m²/323 ft²",
+        "square_meters": 30.0,
+        "square_feet": 323.0
+      },
+      "view": "City view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Accessible by elevator",
+        "Air conditioning",
+        "Alarm clock",
+        "Alcohol",
+        "Baby cot (upon request)",
+        "Bathrobes",
+        "Bathroom phone",
+        "Bathtub",
+        "Bathtub grab bar",
+        "Blackout curtains",
+        "Carpeting",
+        "Closet",
+        "Clothes rack",
+        "Coffee/tea maker",
+        "Complimentary tea",
+        "DVD/CD player",
+        "Daily housekeeping",
+        "Desk",
+        "Dining table",
+        "Dishwasher",
+        "Electric kettle",
+        "Fold-up bed",
+        "Free bottled water",
+        "Fruits/snacks",
+        "Hair dryer",
+        "High floor",
+        "Hypoallergenic",
+        "In-room safe box",
+        "Interconnecting room(s) available",
+        "Internet access – wireless",
+        "Ironing facilities",
+        "Kettle",
+        "LAN Internet in room [free]",
+        "Linens",
+        "Mini bar",
+        "Mirror",
+        "Pool facilities",
+        "Private bathroom",
+        "Roll-in shower",
+        "Safety/security feature",
+        "Satellite/cable channels",
+        "Seating area",
+        "Separate dining area",
+        "Shower",
+        "Sleep comfort items",
+        "Slippers",
+        "Smoke detector",
+        "Soundproofing",
+        "Streaming service like Netflix",
+        "TV",
+        "TV [flat screen]",
+        "Telephone",
+        "Toiletries",
+        "Towels",
+        "Transfer shower",
+        "Trash cans",
+        "Trouser press",
+        "Wake-up service",
+        "Wi-Fi [free]",
+        "Window",
+        "Window that opens"
+      ],
+      "bathroom_amenities": [
+        "Bathrobes",
+        "Bathroom phone",
+        "Bathtub",
+        "Hair dryer",
+        "Mirror",
+        "Private bathroom",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [
+        {
+          "name": "Accessibility",
+          "amenities": [
+            "Bathtub grab bar",
+            "Roll-in shower",
+            "Transfer shower"
+          ]
+        },
+        {
+          "name": "Kitchen",
+          "amenities": [
+            "Electric kettle"
+          ]
+        },
+        {
+          "name": "Bathroom and toiletries",
+          "amenities": [
+            "Bathrobes",
+            "Bathroom phone",
+            "Bathtub",
+            "Hair dryer",
+            "Mirror",
+            "Private bathroom",
+            "Shower",
+            "Toiletries",
+            "Towels"
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "amenities": [
+            "DVD/CD player",
+            "Internet access – wireless",
+            "LAN Internet in room [free]",
+            "Pool facilities",
+            "Satellite/cable channels",
+            "Streaming service like Netflix",
+            "Telephone",
+            "TV",
+            "TV [flat screen]",
+            "Wi-Fi [free]"
+          ]
+        },
+        {
+          "name": "Comforts",
+          "amenities": [
+            "Air conditioning",
+            "Alarm clock",
+            "Blackout curtains",
+            "Hypoallergenic",
+            "Linens",
+            "Sleep comfort items",
+            "Slippers",
+            "Soundproofing",
+            "Wake-up service"
+          ]
+        },
+        {
+          "name": "Dining, drinking, and snacking",
+          "amenities": [
+            "Alcohol",
+            "Coffee/tea maker",
+            "Complimentary tea",
+            "Dining table",
+            "Dishwasher",
+            "Free bottled water",
+            "Fruits/snacks",
+            "Kettle",
+            "Mini bar"
+          ]
+        },
+        {
+          "name": "Services and conveniences",
+          "amenities": [
+            "Daily housekeeping"
+          ]
+        },
+        {
+          "name": "Layout and furnishings",
+          "amenities": [
+            "Carpeting",
+            "Desk",
+            "Fold-up bed",
+            "High floor",
+            "Interconnecting room(s) available",
+            "Seating area",
+            "Separate dining area",
+            "Trash cans",
+            "Window",
+            "Window that opens"
+          ]
+        },
+        {
+          "name": "Clothing and laundry",
+          "amenities": [
+            "Closet",
+            "Clothes rack",
+            "Ironing facilities",
+            "Trouser press"
+          ]
+        },
+        {
+          "name": "For the kids",
+          "amenities": [
+            "Baby cot (upon request)"
+          ]
+        },
+        {
+          "name": "Safety and security features",
+          "amenities": [
+            "Accessible by elevator",
+            "In-room safe box",
+            "Safety/security feature",
+            "Smoke detector"
+          ]
+        }
+      ],
+      "image_count": 9,
+      "images": [
+        {
+          "local_path": "images/premier_double_or_twin_room/premier_double_or_twin_room_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/afd3ec188060bb646ca44717cc50d704.jpg?ce=0",
+          "title": "Premier Double or Twin Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_01.jpg"
+        },
+        {
+          "local_path": "images/premier_double_or_twin_room/premier_double_or_twin_room_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/c7363ae01b22f5331e498f5b238515a1.jpg?ce=0",
+          "title": "Premier Double or Twin Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_02.jpg"
+        },
+        {
+          "local_path": "images/premier_double_or_twin_room/premier_double_or_twin_room_03.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/d28264f61eb704029d9b157f526d07ee.jpg?ce=0",
+          "title": "Premier Double or Twin Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_03.jpg"
+        },
+        {
+          "local_path": "images/premier_double_or_twin_room/premier_double_or_twin_room_04.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/0/e7df871722834aa6fcf850762c72418f.jpeg?ce=0",
+          "title": "Premier Double or Twin Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_04.jpg"
+        },
+        {
+          "local_path": "images/premier_double_or_twin_room/premier_double_or_twin_room_05.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/055cc007d53b1deb8952df7c36127320.jpg?ce=0",
+          "title": "Premier Double or Twin Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_05.jpg"
+        },
+        {
+          "local_path": "images/premier_double_or_twin_room/premier_double_or_twin_room_06.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/4b1e855539ba356c0ed9edee56678570.jpg?ce=0",
+          "title": "Premier Double or Twin Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_06.jpg"
+        },
+        {
+          "local_path": "images/premier_double_or_twin_room/premier_double_or_twin_room_07.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/10991/-1/3d239fb1883d80ae0468ca6deb2ff432.jpg?ce=0",
+          "title": "Premier Double or Twin Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_07.jpg"
+        },
+        {
+          "local_path": "images/premier_double_or_twin_room/premier_double_or_twin_room_08.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/0/38ec706d5731ba1618cd6a5553a39c73.jpeg?ce=0",
+          "title": "Premier Double or Twin Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_08.jpg"
+        },
+        {
+          "local_path": "images/premier_double_or_twin_room/premier_double_or_twin_room_09.jpg",
+          "source_url": "https://pix8.agoda.net/property/25403053/349796163/2f92418d2c71d4f03e1549a8476f5a59.jpg?ca=19&ce=1",
+          "title": "Premier Double or Twin Room",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_09.jpg"
+        }
+      ],
+      "short_description": "Room size: 30 m²/323 ft² | City view | 2 single beds or 1 double bed",
+      "tags": [
+        "2 single beds or 1 double bed",
+        "City view",
+        "Room size: 30 m²/323 ft²"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-sqm",
+          "title": "Room size: 30 m²/323 ft²",
+          "isAvailable": true,
+          "id": 2,
+          "informationBadgeText": "Spacious room",
+          "value": 0.0,
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-views",
+          "title": "City view",
+          "isAvailable": true,
+          "id": 1,
+          "value": 0.0,
+          "associatedFilters": [
+            "ocean-view",
+            "mountain-view",
+            "lake-view",
+            "pool-view"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "2 single beds or 1 double bed",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_03.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_04.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_05.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_06.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_07.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_08.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_09.jpg"
+      ]
+    },
+    {
+      "room_id": "229471019",
+      "name": "Premier Grand View",
+      "slug": "premier_grand_view",
+      "provider": "agoda",
+      "source_room_id": "229471019",
+      "price": {
+        "currency": "VND",
+        "current_amount": 3900000.0,
+        "original_amount": 4600000.0,
+        "discounted_amount": 3900000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "1 double bed",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "1 double bed",
+                    "symbol": "double-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Room size: 30 m²/323 ft²",
+        "square_meters": 30.0,
+        "square_feet": 323.0
+      },
+      "view": "City view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 4,
+      "images": [
+        {
+          "local_path": "images/premier_grand_view/premier_grand_view_01.jpg",
+          "source_url": "https://pix8.agoda.net/property/17242789/229471019/b583112ace3f2bc69d7c83cb803b7627.jpeg?ce=3",
+          "title": "Premier Grand View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_01.jpg"
+        },
+        {
+          "local_path": "images/premier_grand_view/premier_grand_view_02.jpg",
+          "source_url": "https://pix8.agoda.net/property/17242789/229471019/e5dc1cf8c224c3ff95d29b3c04df646d.jpeg?ce=3",
+          "title": "Premier Grand View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_02.jpg"
+        },
+        {
+          "local_path": "images/premier_grand_view/premier_grand_view_03.jpg",
+          "source_url": "https://pix8.agoda.net/property/17242789/229471019/71ed6c18f69afcca18f6a8fa23264663.jpeg?ce=3",
+          "title": "Premier Grand View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_03.jpg"
+        },
+        {
+          "local_path": "images/premier_grand_view/premier_grand_view_04.jpg",
+          "source_url": "https://pix8.agoda.net/property/17242789/229471019/0c69503055c6d8af8862a8e5b58940b2.jpeg?ce=3",
+          "title": "Premier Grand View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_04.jpg"
+        }
+      ],
+      "short_description": "Room size: 30 m²/323 ft² | City view | 1 double bed",
+      "tags": [
+        "1 double bed",
+        "City view",
+        "Room size: 30 m²/323 ft²"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-sqm",
+          "title": "Room size: 30 m²/323 ft²",
+          "isAvailable": true,
+          "id": 2,
+          "informationBadgeText": "Spacious room",
+          "value": 0.0,
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-views",
+          "title": "City view",
+          "isAvailable": true,
+          "id": 1,
+          "value": 0.0,
+          "associatedFilters": [
+            "ocean-view",
+            "mountain-view",
+            "lake-view",
+            "pool-view"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "1 double bed",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_03.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_04.jpg"
+      ]
+    },
+    {
+      "room_id": "638185167",
+      "name": "Club Double or Twin Room (Grand View)",
+      "slug": "club_double_or_twin_room_grand_view",
+      "provider": "agoda",
+      "source_room_id": "638185167",
+      "price": {
+        "currency": "VND",
+        "current_amount": 4050000.0,
+        "original_amount": 4800000.0,
+        "discounted_amount": 4050000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "1 queen bed",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Bedroom 2:",
+                "beds": [
+                  {
+                    "name": "1 queen bed",
+                    "symbol": "queen-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 28 m²/301 ft²",
+        "square_meters": 28.0,
+        "square_feet": 301.4
+      },
+      "view": "River view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Baby cot (upon request)",
+        "Bathrobes",
+        "Closet",
+        "Coffee/tea maker",
+        "Desk",
+        "Dishwasher",
+        "Electric kettle",
+        "Fold-up bed",
+        "Free bottled water",
+        "Hair dryer",
+        "In-room safe box",
+        "Internet access – wireless",
+        "Kettle",
+        "LAN Internet in room [free]",
+        "Linens",
+        "Mini bar",
+        "Mirror",
+        "Mobility accessibility",
+        "Non-smoking",
+        "Private bathroom",
+        "Satellite/cable channels",
+        "Shower",
+        "Slippers",
+        "TV",
+        "TV [flat screen]",
+        "Telephone",
+        "Toiletries",
+        "Towels",
+        "Wi-Fi [free]",
+        "Window"
+      ],
+      "bathroom_amenities": [
+        "Bathrobes",
+        "Hair dryer",
+        "Mirror",
+        "Private bathroom",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [
+        {
+          "name": "Accessibility",
+          "amenities": [
+            "Mobility accessibility"
+          ]
+        },
+        {
+          "name": "Kitchen",
+          "amenities": [
+            "Electric kettle"
+          ]
+        },
+        {
+          "name": "Bathroom and toiletries",
+          "amenities": [
+            "Bathrobes",
+            "Hair dryer",
+            "Mirror",
+            "Private bathroom",
+            "Shower",
+            "Toiletries",
+            "Towels"
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "amenities": [
+            "Internet access – wireless",
+            "LAN Internet in room [free]",
+            "Satellite/cable channels",
+            "Telephone",
+            "TV",
+            "TV [flat screen]",
+            "Wi-Fi [free]"
+          ]
+        },
+        {
+          "name": "Comforts",
+          "amenities": [
+            "Air conditioning",
+            "Linens",
+            "Slippers"
+          ]
+        },
+        {
+          "name": "Dining, drinking, and snacking",
+          "amenities": [
+            "Coffee/tea maker",
+            "Dishwasher",
+            "Free bottled water",
+            "Kettle",
+            "Mini bar"
+          ]
+        },
+        {
+          "name": "Layout and furnishings",
+          "amenities": [
+            "Desk",
+            "Fold-up bed",
+            "Window"
+          ]
+        },
+        {
+          "name": "Clothing and laundry",
+          "amenities": [
+            "Closet"
+          ]
+        },
+        {
+          "name": "For the kids",
+          "amenities": [
+            "Baby cot (upon request)"
+          ]
+        },
+        {
+          "name": "Safety and security features",
+          "amenities": [
+            "In-room safe box",
+            "Non-smoking"
+          ]
+        }
+      ],
+      "image_count": 4,
+      "images": [
+        {
+          "local_path": "images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_01.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1134046116/914a13bfb8389a33189fb0384cfa4a34.jpeg?ce=2",
+          "title": "Club Double or Twin Room (Grand View)",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_01.jpg"
+        },
+        {
+          "local_path": "images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_02.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1134046116/f0deb470f736c1d334c917474770ba38.jpeg?ce=2",
+          "title": "Club Double or Twin Room (Grand View)",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_02.jpg"
+        },
+        {
+          "local_path": "images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_03.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1134046116/d076c486f0a1b7a5815ca07ad58e571e.jpeg?ce=2",
+          "title": "Club Double or Twin Room (Grand View)",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_03.jpg"
+        },
+        {
+          "local_path": "images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_04.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1134046116/5adaf4e0d2ae291726799819718fa48d.jpeg?ce=2",
+          "title": "Club Double or Twin Room (Grand View)",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_04.jpg"
+        }
+      ],
+      "short_description": "River view | 1 queen bed",
+      "tags": [
+        "1 queen bed",
+        "Breakfast included",
+        "River view"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-views",
+          "title": "River view",
+          "isAvailable": true,
+          "id": 1,
+          "value": 0.0,
+          "associatedFilters": [
+            "ocean-view",
+            "mountain-view",
+            "lake-view",
+            "pool-view"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "1 queen bed",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_03.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_04.jpg"
+      ]
+    },
+    {
+      "room_id": "1135635894",
+      "name": "Room Deluxe Executive",
+      "slug": "room_deluxe_executive",
+      "provider": "agoda",
+      "source_room_id": "1135635894",
+      "price": {
+        "currency": "VND",
+        "current_amount": 4300000.0,
+        "original_amount": 5050000.0,
+        "discounted_amount": 4300000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "1 double bed",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "1 double bed",
+                    "symbol": "double-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": "City view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Baby cot (upon request)",
+        "Bathrobes",
+        "Closet",
+        "Coffee/tea maker",
+        "Desk",
+        "Dishwasher",
+        "Electric kettle",
+        "Fold-up bed",
+        "Free bottled water",
+        "Hair dryer",
+        "In-room safe box",
+        "Internet access – wireless",
+        "Kettle",
+        "LAN Internet in room [free]",
+        "Linens",
+        "Mini bar",
+        "Mirror",
+        "Non-smoking",
+        "Private bathroom",
+        "Satellite/cable channels",
+        "Separate shower/bathtub",
+        "Shower",
+        "Slippers",
+        "TV",
+        "TV [flat screen]",
+        "Telephone",
+        "Toiletries",
+        "Towels",
+        "Wi-Fi [free]",
+        "Window"
+      ],
+      "bathroom_amenities": [
+        "Bathrobes",
+        "Hair dryer",
+        "Mirror",
+        "Private bathroom",
+        "Separate shower/bathtub",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [
+        {
+          "name": "Kitchen",
+          "amenities": [
+            "Electric kettle"
+          ]
+        },
+        {
+          "name": "Bathroom and toiletries",
+          "amenities": [
+            "Bathrobes",
+            "Hair dryer",
+            "Mirror",
+            "Private bathroom",
+            "Separate shower/bathtub",
+            "Shower",
+            "Toiletries",
+            "Towels"
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "amenities": [
+            "Internet access – wireless",
+            "LAN Internet in room [free]",
+            "Satellite/cable channels",
+            "Telephone",
+            "TV",
+            "TV [flat screen]",
+            "Wi-Fi [free]"
+          ]
+        },
+        {
+          "name": "Comforts",
+          "amenities": [
+            "Air conditioning",
+            "Linens",
+            "Slippers"
+          ]
+        },
+        {
+          "name": "Dining, drinking, and snacking",
+          "amenities": [
+            "Coffee/tea maker",
+            "Dishwasher",
+            "Free bottled water",
+            "Kettle",
+            "Mini bar"
+          ]
+        },
+        {
+          "name": "Layout and furnishings",
+          "amenities": [
+            "Desk",
+            "Fold-up bed",
+            "Window"
+          ]
+        },
+        {
+          "name": "Clothing and laundry",
+          "amenities": [
+            "Closet"
+          ]
+        },
+        {
+          "name": "For the kids",
+          "amenities": [
+            "Baby cot (upon request)"
+          ]
+        },
+        {
+          "name": "Safety and security features",
+          "amenities": [
+            "In-room safe box",
+            "Non-smoking"
+          ]
+        }
+      ],
+      "image_count": 3,
+      "images": [
+        {
+          "local_path": "images/room_deluxe_executive/room_deluxe_executive_01.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1134046119/667ea6a9e2d18fc9a72105e42d5c8de3.jpeg?ce=2",
+          "title": "Room Deluxe Executive",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_01.jpg"
+        },
+        {
+          "local_path": "images/room_deluxe_executive/room_deluxe_executive_02.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1134046119/3d4192b53e9c21d0bb43c7f131b4b482.jpeg?ce=2",
+          "title": "Room Deluxe Executive",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_02.jpg"
+        },
+        {
+          "local_path": "images/room_deluxe_executive/room_deluxe_executive_03.jpg",
+          "source_url": "https://pix8.agoda.net/property/10991/1134046119/3a1ba8795302529a5bba910ca5d76ac7.jpeg?ce=2",
+          "title": "Room Deluxe Executive",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_03.jpg"
+        }
+      ],
+      "short_description": "City view | 1 double bed",
+      "tags": [
+        "1 double bed",
+        "City view"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-views",
+          "title": "City view",
+          "isAvailable": true,
+          "id": 1,
+          "value": 0.0,
+          "associatedFilters": [
+            "ocean-view",
+            "mountain-view",
+            "lake-view",
+            "pool-view"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "1 double bed",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_03.jpg"
+      ]
+    },
+    {
+      "room_id": "229471018",
+      "name": "PREMIER DELUXE",
+      "slug": "premier_deluxe",
+      "provider": "agoda",
+      "source_room_id": "229471018",
+      "price": {
+        "currency": "VND",
+        "current_amount": 3900000.0,
+        "original_amount": 4600000.0,
+        "discounted_amount": 3900000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": "1 double bed",
+        "layouts": [
+          {
+            "title": "Layout 1",
+            "bedrooms": [
+              {
+                "title": "Common space:",
+                "beds": [
+                  {
+                    "name": "1 double bed",
+                    "symbol": "double-bed",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Room size: 30 m²/323 ft²",
+        "square_meters": 30.0,
+        "square_feet": 323.0
+      },
+      "view": "City view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 3,
+      "images": [
+        {
+          "local_path": "images/premier_deluxe/premier_deluxe_01.jpg",
+          "source_url": "https://pix8.agoda.net/property/17242789/229471018/98a9311cdba478dafd9e71cd873eaff4.jpeg?ce=3",
+          "title": "PREMIER DELUXE",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_01.jpg"
+        },
+        {
+          "local_path": "images/premier_deluxe/premier_deluxe_02.jpg",
+          "source_url": "https://pix8.agoda.net/property/17242789/229471018/3d84db4b8a633fcbb10448fcce7bd1be.jpeg?ce=3",
+          "title": "PREMIER DELUXE",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_02.jpg"
+        },
+        {
+          "local_path": "images/premier_deluxe/premier_deluxe_03.jpg",
+          "source_url": "https://pix8.agoda.net/property/17242789/229471018/8f21cb856f6081089cf47707c59b01da.jpeg?ce=3",
+          "title": "PREMIER DELUXE",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_03.jpg"
+        }
+      ],
+      "short_description": "Room size: 30 m²/323 ft² | City view | 1 double bed",
+      "tags": [
+        "1 double bed",
+        "City view",
+        "Room size: 30 m²/323 ft²"
+      ],
+      "raw_features": [
+        {
+          "symbol": "ficon-sqm",
+          "title": "Room size: 30 m²/323 ft²",
+          "isAvailable": true,
+          "id": 2,
+          "informationBadgeText": "Spacious room",
+          "value": 0.0,
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-views",
+          "title": "City view",
+          "isAvailable": true,
+          "id": 1,
+          "value": 0.0,
+          "associatedFilters": [
+            "ocean-view",
+            "mountain-view",
+            "lake-view",
+            "pool-view"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        },
+        {
+          "symbol": "ficon-bed",
+          "title": "1 double bed",
+          "isAvailable": true,
+          "id": 15,
+          "value": 0.0,
+          "associatedFilters": [
+            "twin-bed",
+            "double-bed"
+          ],
+          "targetType": 0,
+          "hasDescription": false
+        }
+      ],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": false,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_02.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_03.jpg"
+      ]
+    }
+  ]
+}

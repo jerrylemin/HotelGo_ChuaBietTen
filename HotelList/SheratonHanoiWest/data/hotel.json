@@ -1,0 +1,636 @@
+{
+  "schema_version": "1.0",
+  "folder_name": "SheratonHanoiWest",
+  "provider": "agoda",
+  "source_url": "https://www.agoda.com/vi-vn/sheraton-hanoi-west/hotel/hanoi-vn.html?countryId=38&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-04-17&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=VND&isFreeOccSearch=false&flightSearchCriteria=%5Bobject%20Object%5D&los=1&searchrequestid=fe25619c-782b-4f11-9849-c036877cd3ad",
+  "secondary_payload_url": "https://www.agoda.com/api/cronos/property/BelowFoldParams/GetSecondaryData?countryId=38&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-04-17&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=VND&isFreeOccSearch=false&flightSearchCriteria=%5Bobject+Object%5D&los=1&searchrequestid=fe25619c-782b-4f11-9849-c036877cd3ad&hotel_id=237603&all=false&isHostPropertiesEnabled=false",
+  "fetched_at_utc": "2026-04-08T08:08:45.795713+00:00",
+  "source_hotel_id": "237603",
+  "name": "Sheraton Hanoi West",
+  "display_name": "Sheraton Hanoi West",
+  "slug": "sheraton_hanoi_west",
+  "accommodation_type": "Hotel",
+  "star_rating": 5.0,
+  "awards": {
+    "text": "Awards and Accolades",
+    "gold_circle_year": null,
+    "gold_circle_award_text": ""
+  },
+  "address": {
+    "full": "36 Le Duc Tho street, Tu Liem ward, My Dinh, Hanoi, Vietnam, 10000",
+    "line_1": "36 Le Duc Tho street, Tu Liem ward",
+    "area": "My Dinh",
+    "district": "My Dinh",
+    "city": "Hanoi",
+    "country": "Vietnam",
+    "postal_code": "10000"
+  },
+  "coordinates": {
+    "latitude": 21.02740478515625,
+    "longitude": 105.76764678955078
+  },
+  "review": {
+    "score": "8.9",
+    "score_text": "Excellent",
+    "review_count": 136,
+    "formatted_review_count": null,
+    "provider_list": "332,3038"
+  },
+  "description": {
+    "overview_html": "<b>Experience Luxury at <b>Sheraton Hanoi West</b>: Your Gateway to Vietnam's Capital</b><br><br>Nestled in the scenic surroundings of Hanoi, Vietnam, the <b>Sheraton Hanoi West</b> stands as a beacon of luxury and comfort. Located just 10 kilometers from the vibrant city center, this exquisite five-star hotel offers an ideal retreat for travelers seeking both relaxation and adventure. Built in 2011, the hotel boasts modern architecture and elegant interiors that reflect the rich cultural heritage of the region, ensuring a memorable stay for every guest.\n\nConveniently situated, the <b>Sheraton Hanoi West</b> is a mere 30 minutes from the airport, making it an accessible choice for both business and leisure travelers. The hotel welcomes guests with a seamless check-in process from 3:00 PM and provides a leisurely check-out time until 12:00 PM, allowing you to maximize your time in this enchanting city. Families will appreciate the hotel's child policy, which permits children aged 1 to 11 to stay free of charge, making it a perfect destination for those traveling with little ones. Immerse yourself in the charm of Hanoi while enjoying the unparalleled hospitality of <b>Sheraton Hanoi West</b>.<br><br><b>Unwind and Indulge in Endless Entertainment at West Hanoi Residences</b><br><br>At West Hanoi Residences, your entertainment needs are taken care of with an array of exceptional facilities. Step into a world of relaxation and rejuvenation at the spa, where skilled therapists offer a range of indulgent treatments to soothe your mind and body. Immerse yourself in pure bliss as you soak in the hot tub, unwind in the sauna, or detoxify in the steam room. \n\nFor those seeking a more vibrant atmosphere, the bar is the perfect spot to kick back and enjoy a refreshing drink. The shared lounge/TV area provides a cozy setting for socializing and catching up on your favorite shows. Explore the beautifully landscaped garden, a tranquil oasis where you can take a leisurely stroll or find a peaceful spot to read a book. Don't forget to visit the gift/souvenir shop, where you can find unique mementos to remember your stay at West Hanoi Residences. \n\nWith its diverse range of entertainment facilities, West Hanoi Residences ensures that every moment of your stay is filled with relaxation, enjoyment, and unforgettable memories.<br><br><b>Stay Active and Energized at West Hanoi Residences</b><br><br>At West Hanoi Residences, we understand the importance of staying active and energized during your stay. That's why we offer an array of top-notch sports facilities to cater to all your fitness needs. Our state-of-the-art fitness center is equipped with modern equipment, allowing you to maintain your workout routine even while traveling. Whether you prefer cardio exercises or strength training, our free 24-hour fitness center has got you covered.\n\nFor those who enjoy outdoor activities, our tennis courts provide the perfect opportunity to challenge your friends or family to a friendly match. The well-maintained courts offer a fantastic playing surface and are suitable for players of all skill levels. After an intense game, you can cool off and relax in our refreshing outdoor pool. Take a dip in the crystal-clear water or simply lounge by the poolside bar, sipping on a refreshing cocktail while soaking up the sun.\n\nWith our range of sports facilities, you can stay active, have fun, and unwind during your stay at West Hanoi Residences. Whether you're a fitness enthusiast or simply looking for a way to relax and rejuvenate, our hotel has everything you need to make the most of your time in Hanoi, Vietnam.<br><br><b>Exceptional Convenience Facilities at <b>Sheraton Hanoi West</b></b><br><br>At <b>Sheraton Hanoi West</b>, guests enjoy a seamless and comfortable stay with a range of thoughtful convenience facilities designed to cater to their every need. The hotel offers 24-hour room service, ensuring that delicious meals and refreshments are always just a call away, no matter the time of day or night. Daily housekeeping maintains a pristine environment, allowing guests to relax in a clean and welcoming space throughout their visit. For added peace of mind, safety deposit boxes are available in-room, providing secure storage for valuables.<br><br><b>Convenient Transport Facilities at West Hanoi Residences</b><br><br>At West Hanoi Residences, we understand the importance of seamless travel experiences for our guests. That's why we offer a range of transport facilities to ensure your journey is hassle-free from the moment you arrive. \n\nFor those flying into Hanoi, our airport transfer service is available to pick you up and drop you off at the hotel. This convenient service allows you to relax and enjoy the ride, knowing that you'll be taken care of upon arrival. \n\nIf you're looking to explore the city and its surroundings, our tour desk can help you plan and book exciting excursions. Whether it's a cultural tour, a food adventure, or a day trip to nearby attractions, our knowledgeable staff will assist you in creating memorable experiences. \n\nFor guests with their own vehicles, we provide a car park onsite. You can rest easy knowing that your car is safe and secure while you enjoy your stay. Additionally, we offer self-parking options, allowing you to easily access your vehicle whenever needed. \n\nIf you prefer not to drive, our shuttle service is available to transport you to popular destinations within the city. Whether you're heading to the shopping district, business centers, or tourist attractions, our reliable shuttle service will ensure you reach your destination comfortably and on time. \n\nFor those who prefer the convenience of taxis, our hotel offers a taxi service for easy transportation around Hanoi. Our friendly staff will assist you in arranging a taxi whenever you need one. \n\nBest of all, our transport facilities are complimentary, including the car park, shuttle service, and taxi service. You can enjoy the convenience without worrying about additional charges. \n\nAt West Hanoi Residences, we strive to make your stay as comfortable and convenient as possible. With our comprehensive range of transport facilities, you can explore Hanoi with ease and peace of mind.<br><br><b>Exceptional Dining Facilities at <b>Sheraton Hanoi West</b></b><br><br>At <b>Sheraton Hanoi West</b>, guests are treated to a variety of convenient and luxurious dining options designed to enhance their stay. The hotel offers a delightful breakfast buffet each morning, featuring a wide array of delicious dishes to start your day on a perfect note. Whether you prefer a hearty meal or a light bite, the breakfast spread caters to all tastes and preferences.\n\nFor those seeking relaxation or a quick refreshment, the on-site coffee shop provides a cozy ambiance where you can enjoy expertly brewed coffee and light snacks throughout the day. Additionally, the hotel’s 24-hour room service ensures that guests can indulge in their favorite meals and beverages at any time, in the comfort and privacy of their room. Daily housekeeping further guarantees a clean, comfortable, and inviting environment, making every dining experience at <b>Sheraton Hanoi West</b> truly exceptional.<br><br><b>Luxurious Room Options at <b>Sheraton Hanoi West</b> for Every Stay</b><br><br>Discover a diverse range of elegant accommodations at <b>Sheraton Hanoi West</b>, including the Premier King, Deluxe Twin, and Studio Club rooms, each offering a comfortable and stylish retreat with city views. For larger groups or families, the 3 Bedroom Suite and 4 Bedroom Suite provide spacious living areas across 133 and 184 square meters respectively, featuring multiple bedrooms to cater to your needs. The 2 Bedroom Suite and 1 Bedroom Suite also offer generous space and privacy, perfect for both leisure and business travelers seeking a more personalized experience.\n\nBooking these rooms through Agoda ensures you receive the best prices available, along with a hassle-free booking process. Enjoy the convenience of easy reservations, exclusive deals, and secure transactions, making your stay at <b>Sheraton Hanoi West</b> not only luxurious but also seamless from start to finish. Whether you're traveling solo, as a couple, or with family, these room options promise comfort, style, and value at every turn.<br><br><b>Discovering My Dinh: The Heartbeat of Modern Hanoi</b><br><br>Nestled in the bustling landscape of Hanoi, My Dinh is a vibrant district that beautifully marries the old with the new. Known for its rapid development and urban charm, this area is home to the My Dinh National Stadium, where passionate crowds gather to cheer for their favorite football teams and enjoy electrifying events. The surrounding streets are lined with contemporary cafes, trendy shops, and local eateries, offering a taste of both traditional Vietnamese cuisine and modern culinary delights. As you stroll through My Dinh, you’ll find a lively atmosphere that reflects the dynamic spirit of the city, making it an ideal spot for both locals and visitors alike.\n\nBeyond its sports and shopping, My Dinh is also a gateway to cultural exploration. Just a short distance away, you can immerse yourself in the rich history of Hanoi by visiting landmarks such as the Ho Chi Minh Mausoleum and the serene One Pillar Pagoda. The district is well-connected to the rest of the city, making it easy to venture out and discover the enchanting blend of history, culture, and modernity that defines Hanoi. Whether you’re seeking an adrenaline rush at a local football match or a peaceful moment in a nearby park, My Dinh offers a diverse array of experiences that capture the essence of Vietnam’s capital.<br><br><b>Getting to <b>Sheraton Hanoi West</b> from Nearby Airports</b><br><br>Traveling to <b>Sheraton Hanoi West</b> from the nearest airport, Noi Bai International Airport (HAN), is a straightforward and pleasant journey that sets the tone for your stay in Vietnam's vibrant capital. As you exit the airport, you'll find various transportation options at your disposal. The most convenient way is to take a taxi or a ride-hailing service, such as Grab, which is widely used in Vietnam. The drive typically takes around 30 to 45 minutes, depending on traffic, and will take you through bustling streets and scenic views of Hanoi, allowing you to soak in the local atmosphere even before you check in.\n\nFor those who prefer a more structured approach, the airport also offers shuttle bus services that connect to various parts of the city, including My Dinh. The shuttle buses are a cost-effective option and provide a comfortable ride. However, be mindful of the bus schedules and potential stops along the way, as this could extend your travel time. Whichever method you choose, the journey to <b>Sheraton Hanoi West</b> promises to be a delightful introduction to the charm and culture of Hanoi.<br><br><b>Discover the Vibrant Surroundings of West Hanoi Residences</b><br><br>Nestled in the heart of Hanoi, West Hanoi Residences offers easy access to a variety of landmarks and attractions that will enhance your stay in Vietnam. Just a stone's throw away from the hotel, you'll find Trung tâm y tế Nam Từ Liêm, a modern medical center that ensures convenience and peace of mind for any healthcare needs.\n\nSports enthusiasts will be delighted to know that the renowned My Dinh National Stadium is also within close proximity to the hotel. This state-of-the-art stadium has hosted numerous international sporting events, making it a must-visit for sports fans. Whether you're catching a thrilling football match or attending a live concert, My Dinh National Stadium promises an unforgettable experience.\n\nFor those looking to indulge in some retail therapy, Vm+ 199 hồ tùng mậu and Vm+ TDP số 5 mễ trì hạ are just a short distance away. These vibrant shopping centers offer a wide range of stores, from trendy fashion boutiques to local artisan shops. Immerse yourself in the bustling atmosphere as you explore the latest fashion trends or pick up unique souvenirs to commemorate your trip.\n\nWith its convenient location near these landmarks and attractions, West Hanoi Residences is the perfect base for exploring the vibrant city of Hanoi. Whether you're seeking cultural experiences, exciting sporting events, or retail therapy, you'll find it all within reach of this exceptional hotel.<br><br><b>A Culinary Adventure Awaits</b><br><br>When it comes to dining options, West Hanoi Residences is surrounded by a plethora of tantalizing choices. Just steps away from the hotel, you'll find Duck 34 Restaurant 1, where you can indulge in mouthwatering Vietnamese delicacies. For those craving a sizzling barbecue experience, King BBQ Ham Nghi is the place to be. Sona Indian Cuisine &amp; Asian Food Restaurant - Cafe - Bar offers a fusion of flavors, combining traditional Indian dishes with a modern twist. If you're in the mood for authentic Korean barbecue, Matchandeul Bbq Restaurant and Baek Jeong Korean BBQ Restaurant are both highly recommended. Tokyo Dining Cafe is perfect for sushi lovers, while Koreana Restaurant serves up delectable Korean dishes. For a taste of local Vietnamese cuisine, head to Lackah Restaurant or Good Morning Restaurant Hanoi. And if you have a sweet tooth, don't miss out on the delightful pastries and teas at Alafolie Bakery - Tea Room. With such a diverse array of dining options, your culinary adventure in Hanoi starts right at your doorstep.<br><br><b>Shop 'til You Drop at West Hanoi Residences</b><br><br>Located in the vibrant city of Hanoi, West Hanoi Residences offers easy access to a variety of shopping landmarks. Just a short distance away, you'll find Follow me Hanoi - Day Tours, where you can embark on exciting guided tours to explore the city's hidden gems. For art enthusiasts, Heritage Space Ha Noi is a must-visit, showcasing contemporary artworks and hosting regular exhibitions and events. If you're in the mood for some retail therapy, The Garden Shopping Center is just a stone's throw away, offering a wide range of local and international brands. Whether you're seeking cultural experiences, artistic inspiration, or a shopping spree, West Hanoi Residences is the perfect base to indulge in all that Hanoi has to offer.<br><br><b>Exceptional Service and Facilities at West Hanoi Residences</b><br><br>West Hanoi Residences is a hotel that truly goes above and beyond to provide exceptional service and top-notch facilities to its guests. With an overall rating of 7.6, it is evident that guests have had a positive experience during their stay.\n\nOne aspect that stands out is the staff performance, which has been rated an impressive 8.9. The hotel's dedicated and friendly staff members are always ready to assist guests with any requests or inquiries, ensuring that their needs are met promptly and efficiently. Whether it's providing recommendations for local attractions or assisting with transportation arrangements, the staff at West Hanoi Residences consistently goes the extra mile to ensure a memorable stay for every guest.\n\nIn addition to the outstanding service, the hotel also boasts excellent facilities. With a rating of 8.0 for facilities, guests can expect a wide range of amenities that cater to their comfort and convenience. The hotel features well-appointed rooms that offer a perfect blend of modern design and cozy ambiance, providing a comfortable retreat after a long day of exploring the vibrant city of Hanoi. Furthermore, the hotel offers a variety of facilities such as a fitness center, swimming pool, and spa, allowing guests to relax and rejuvenate during their stay.\n\nOverall, West Hanoi Residences is a hotel that truly stands out for its exceptional service, top-notch facilities, and friendly staff. Whether you're traveling for business or leisure, this hotel is sure to exceed your expectations and provide a memorable stay in Hanoi, Vietnam.",
+    "overview_text": "Experience Luxury at Sheraton Hanoi West: Your Gateway to Vietnam's Capital\nNestled in the scenic surroundings of Hanoi, Vietnam, the Sheraton Hanoi West stands as a beacon of luxury and comfort. Located just 10 kilometers from the vibrant city center, this exquisite five-star hotel offers an ideal retreat for travelers seeking both relaxation and adventure. Built in 2011, the hotel boasts modern architecture and elegant interiors that reflect the rich cultural heritage of the region, ensuring a memorable stay for every guest.\nConveniently situated, the Sheraton Hanoi West is a mere 30 minutes from the airport, making it an accessible choice for both business and leisure travelers. The hotel welcomes guests with a seamless check-in process from 3:00 PM and provides a leisurely check-out time until 12:00 PM, allowing you to maximize your time in this enchanting city. Families will appreciate the hotel's child policy, which permits children aged 1 to 11 to stay free of charge, making it a perfect destination for those traveling with little ones. Immerse yourself in the charm of Hanoi while enjoying the unparalleled hospitality of Sheraton Hanoi West.\nUnwind and Indulge in Endless Entertainment at West Hanoi Residences\nAt West Hanoi Residences, your entertainment needs are taken care of with an array of exceptional facilities. Step into a world of relaxation and rejuvenation at the spa, where skilled therapists offer a range of indulgent treatments to soothe your mind and body. Immerse yourself in pure bliss as you soak in the hot tub, unwind in the sauna, or detoxify in the steam room.\nFor those seeking a more vibrant atmosphere, the bar is the perfect spot to kick back and enjoy a refreshing drink. The shared lounge/TV area provides a cozy setting for socializing and catching up on your favorite shows. Explore the beautifully landscaped garden, a tranquil oasis where you can take a leisurely stroll or find a peaceful spot to read a book. Don't forget to visit the gift/souvenir shop, where you can find unique mementos to remember your stay at West Hanoi Residences.\nWith its diverse range of entertainment facilities, West Hanoi Residences ensures that every moment of your stay is filled with relaxation, enjoyment, and unforgettable memories.\nStay Active and Energized at West Hanoi Residences\nAt West Hanoi Residences, we understand the importance of staying active and energized during your stay. That's why we offer an array of top-notch sports facilities to cater to all your fitness needs. Our state-of-the-art fitness center is equipped with modern equipment, allowing you to maintain your workout routine even while traveling. Whether you prefer cardio exercises or strength training, our free 24-hour fitness center has got you covered.\nFor those who enjoy outdoor activities, our tennis courts provide the perfect opportunity to challenge your friends or family to a friendly match. The well-maintained courts offer a fantastic playing surface and are suitable for players of all skill levels. After an intense game, you can cool off and relax in our refreshing outdoor pool. Take a dip in the crystal-clear water or simply lounge by the poolside bar, sipping on a refreshing cocktail while soaking up the sun.\nWith our range of sports facilities, you can stay active, have fun, and unwind during your stay at West Hanoi Residences. Whether you're a fitness enthusiast or simply looking for a way to relax and rejuvenate, our hotel has everything you need to make the most of your time in Hanoi, Vietnam.\nExceptional Convenience Facilities at Sheraton Hanoi West\nAt Sheraton Hanoi West, guests enjoy a seamless and comfortable stay with a range of thoughtful convenience facilities designed to cater to their every need. The hotel offers 24-hour room service, ensuring that delicious meals and refreshments are always just a call away, no matter the time of day or night. Daily housekeeping maintains a pristine environment, allowing guests to relax in a clean and welcoming space throughout their visit. For added peace of mind, safety deposit boxes are available in-room, providing secure storage for valuables.\nConvenient Transport Facilities at West Hanoi Residences\nAt West Hanoi Residences, we understand the importance of seamless travel experiences for our guests. That's why we offer a range of transport facilities to ensure your journey is hassle-free from the moment you arrive.\nFor those flying into Hanoi, our airport transfer service is available to pick you up and drop you off at the hotel. This convenient service allows you to relax and enjoy the ride, knowing that you'll be taken care of upon arrival.\nIf you're looking to explore the city and its surroundings, our tour desk can help you plan and book exciting excursions. Whether it's a cultural tour, a food adventure, or a day trip to nearby attractions, our knowledgeable staff will assist you in creating memorable experiences.\nFor guests with their own vehicles, we provide a car park onsite. You can rest easy knowing that your car is safe and secure while you enjoy your stay. Additionally, we offer self-parking options, allowing you to easily access your vehicle whenever needed.\nIf you prefer not to drive, our shuttle service is available to transport you to popular destinations within the city. Whether you're heading to the shopping district, business centers, or tourist attractions, our reliable shuttle service will ensure you reach your destination comfortably and on time.\nFor those who prefer the convenience of taxis, our hotel offers a taxi service for easy transportation around Hanoi. Our friendly staff will assist you in arranging a taxi whenever you need one.\nBest of all, our transport facilities are complimentary, including the car park, shuttle service, and taxi service. You can enjoy the convenience without worrying about additional charges.\nAt West Hanoi Residences, we strive to make your stay as comfortable and convenient as possible. With our comprehensive range of transport facilities, you can explore Hanoi with ease and peace of mind.\nExceptional Dining Facilities at Sheraton Hanoi West\nAt Sheraton Hanoi West, guests are treated to a variety of convenient and luxurious dining options designed to enhance their stay. The hotel offers a delightful breakfast buffet each morning, featuring a wide array of delicious dishes to start your day on a perfect note. Whether you prefer a hearty meal or a light bite, the breakfast spread caters to all tastes and preferences.\nFor those seeking relaxation or a quick refreshment, the on-site coffee shop provides a cozy ambiance where you can enjoy expertly brewed coffee and light snacks throughout the day. Additionally, the hotel’s 24-hour room service ensures that guests can indulge in their favorite meals and beverages at any time, in the comfort and privacy of their room. Daily housekeeping further guarantees a clean, comfortable, and inviting environment, making every dining experience at Sheraton Hanoi West truly exceptional.\nLuxurious Room Options at Sheraton Hanoi West for Every Stay\nDiscover a diverse range of elegant accommodations at Sheraton Hanoi West, including the Premier King, Deluxe Twin, and Studio Club rooms, each offering a comfortable and stylish retreat with city views. For larger groups or families, the 3 Bedroom Suite and 4 Bedroom Suite provide spacious living areas across 133 and 184 square meters respectively, featuring multiple bedrooms to cater to your needs. The 2 Bedroom Suite and 1 Bedroom Suite also offer generous space and privacy, perfect for both leisure and business travelers seeking a more personalized experience.\nBooking these rooms through Agoda ensures you receive the best prices available, along with a hassle-free booking process. Enjoy the convenience of easy reservations, exclusive deals, and secure transactions, making your stay at Sheraton Hanoi West not only luxurious but also seamless from start to finish. Whether you're traveling solo, as a couple, or with family, these room options promise comfort, style, and value at every turn.\nDiscovering My Dinh: The Heartbeat of Modern Hanoi\nNestled in the bustling landscape of Hanoi, My Dinh is a vibrant district that beautifully marries the old with the new. Known for its rapid development and urban charm, this area is home to the My Dinh National Stadium, where passionate crowds gather to cheer for their favorite football teams and enjoy electrifying events. The surrounding streets are lined with contemporary cafes, trendy shops, and local eateries, offering a taste of both traditional Vietnamese cuisine and modern culinary delights. As you stroll through My Dinh, you’ll find a lively atmosphere that reflects the dynamic spirit of the city, making it an ideal spot for both locals and visitors alike.\nBeyond its sports and shopping, My Dinh is also a gateway to cultural exploration. Just a short distance away, you can immerse yourself in the rich history of Hanoi by visiting landmarks such as the Ho Chi Minh Mausoleum and the serene One Pillar Pagoda. The district is well-connected to the rest of the city, making it easy to venture out and discover the enchanting blend of history, culture, and modernity that defines Hanoi. Whether you’re seeking an adrenaline rush at a local football match or a peaceful moment in a nearby park, My Dinh offers a diverse array of experiences that capture the essence of Vietnam’s capital.\nGetting to Sheraton Hanoi West from Nearby Airports\nTraveling to Sheraton Hanoi West from the nearest airport, Noi Bai International Airport (HAN), is a straightforward and pleasant journey that sets the tone for your stay in Vietnam's vibrant capital. As you exit the airport, you'll find various transportation options at your disposal. The most convenient way is to take a taxi or a ride-hailing service, such as Grab, which is widely used in Vietnam. The drive typically takes around 30 to 45 minutes, depending on traffic, and will take you through bustling streets and scenic views of Hanoi, allowing you to soak in the local atmosphere even before you check in.\nFor those who prefer a more structured approach, the airport also offers shuttle bus services that connect to various parts of the city, including My Dinh. The shuttle buses are a cost-effective option and provide a comfortable ride. However, be mindful of the bus schedules and potential stops along the way, as this could extend your travel time. Whichever method you choose, the journey to Sheraton Hanoi West promises to be a delightful introduction to the charm and culture of Hanoi.\nDiscover the Vibrant Surroundings of West Hanoi Residences\nNestled in the heart of Hanoi, West Hanoi Residences offers easy access to a variety of landmarks and attractions that will enhance your stay in Vietnam. Just a stone's throw away from the hotel, you'll find Trung tâm y tế Nam Từ Liêm, a modern medical center that ensures convenience and peace of mind for any healthcare needs.\nSports enthusiasts will be delighted to know that the renowned My Dinh National Stadium is also within close proximity to the hotel. This state-of-the-art stadium has hosted numerous international sporting events, making it a must-visit for sports fans. Whether you're catching a thrilling football match or attending a live concert, My Dinh National Stadium promises an unforgettable experience.\nFor those looking to indulge in some retail therapy, Vm+ 199 hồ tùng mậu and Vm+ TDP số 5 mễ trì hạ are just a short distance away. These vibrant shopping centers offer a wide range of stores, from trendy fashion boutiques to local artisan shops. Immerse yourself in the bustling atmosphere as you explore the latest fashion trends or pick up unique souvenirs to commemorate your trip.\nWith its convenient location near these landmarks and attractions, West Hanoi Residences is the perfect base for exploring the vibrant city of Hanoi. Whether you're seeking cultural experiences, exciting sporting events, or retail therapy, you'll find it all within reach of this exceptional hotel.\nA Culinary Adventure Awaits\nWhen it comes to dining options, West Hanoi Residences is surrounded by a plethora of tantalizing choices. Just steps away from the hotel, you'll find Duck 34 Restaurant 1, where you can indulge in mouthwatering Vietnamese delicacies. For those craving a sizzling barbecue experience, King BBQ Ham Nghi is the place to be. Sona Indian Cuisine & Asian Food Restaurant - Cafe - Bar offers a fusion of flavors, combining traditional Indian dishes with a modern twist. If you're in the mood for authentic Korean barbecue, Matchandeul Bbq Restaurant and Baek Jeong Korean BBQ Restaurant are both highly recommended. Tokyo Dining Cafe is perfect for sushi lovers, while Koreana Restaurant serves up delectable Korean dishes. For a taste of local Vietnamese cuisine, head to Lackah Restaurant or Good Morning Restaurant Hanoi. And if you have a sweet tooth, don't miss out on the delightful pastries and teas at Alafolie Bakery - Tea Room. With such a diverse array of dining options, your culinary adventure in Hanoi starts right at your doorstep.\nShop 'til You Drop at West Hanoi Residences\nLocated in the vibrant city of Hanoi, West Hanoi Residences offers easy access to a variety of shopping landmarks. Just a short distance away, you'll find Follow me Hanoi - Day Tours, where you can embark on exciting guided tours to explore the city's hidden gems. For art enthusiasts, Heritage Space Ha Noi is a must-visit, showcasing contemporary artworks and hosting regular exhibitions and events. If you're in the mood for some retail therapy, The Garden Shopping Center is just a stone's throw away, offering a wide range of local and international brands. Whether you're seeking cultural experiences, artistic inspiration, or a shopping spree, West Hanoi Residences is the perfect base to indulge in all that Hanoi has to offer.\nExceptional Service and Facilities at West Hanoi Residences\nWest Hanoi Residences is a hotel that truly goes above and beyond to provide exceptional service and top-notch facilities to its guests. With an overall rating of 7.6, it is evident that guests have had a positive experience during their stay.\nOne aspect that stands out is the staff performance, which has been rated an impressive 8.9. The hotel's dedicated and friendly staff members are always ready to assist guests with any requests or inquiries, ensuring that their needs are met promptly and efficiently. Whether it's providing recommendations for local attractions or assisting with transportation arrangements, the staff at West Hanoi Residences consistently goes the extra mile to ensure a memorable stay for every guest.\nIn addition to the outstanding service, the hotel also boasts excellent facilities. With a rating of 8.0 for facilities, guests can expect a wide range of amenities that cater to their comfort and convenience. The hotel features well-appointed rooms that offer a perfect blend of modern design and cozy ambiance, providing a comfortable retreat after a long day of exploring the vibrant city of Hanoi. Furthermore, the hotel offers a variety of facilities such as a fitness center, swimming pool, and spa, allowing guests to relax and rejuvenate during their stay.\nOverall, West Hanoi Residences is a hotel that truly stands out for its exceptional service, top-notch facilities, and friendly staff. Whether you're traveling for business or leisure, this hotel is sure to exceed your expectations and provide a memorable stay in Hanoi, Vietnam."
+  },
+  "check_in": {
+    "from": "15:00",
+    "until": null
+  },
+  "check_out": {
+    "until": "12:00"
+  },
+  "contact": {
+    "phone": "+84-000-6106-0606",
+    "email": "reservations+sheraton_hanoi_west@catalog.hotelgo.demo",
+    "website": "https://www.agoda.com/vi-vn/sheraton-hanoi-west/hotel/hanoi-vn.html?countryId=38&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-04-17&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=VND&isFreeOccSearch=false&flightSearchCriteria=%5Bobject%20Object%5D&los=1&searchrequestid=fe25619c-782b-4f11-9849-c036877cd3ad"
+  },
+  "highlights": {
+    "location_highlight": null,
+    "things_youll_love": [
+      "Airport transfer",
+      "Daily housekeeping",
+      "Bar",
+      "Concierge"
+    ],
+    "nearby_highlights": []
+  },
+  "general_amenities": [
+    "Air conditioning",
+    "Air conditioning in public area",
+    "Bar",
+    "Bathrobes",
+    "Breakfast [buffet]",
+    "Car park [on-site]",
+    "Coffee shop",
+    "Concierge",
+    "Daily housekeeping",
+    "Facilities for disabled guests",
+    "Hair dryer",
+    "In-room safe box",
+    "Laundromat",
+    "On-site accessible self parking",
+    "Private bathroom",
+    "Professional-grade sanitizing services",
+    "Room service [24-hour]",
+    "Safety deposit boxes",
+    "Safety/security feature",
+    "Separate shower/bathtub",
+    "Slippers"
+  ],
+  "featured_amenities": [
+    "Airport transfer",
+    "Bar",
+    "Concierge",
+    "Daily housekeeping"
+  ],
+  "breakfast": {
+    "available_cuisines": [
+      "Asian",
+      "Continental"
+    ],
+    "charge": {
+      "raw": "550000 VND",
+      "amount": 550000.0,
+      "currency": "VND"
+    }
+  },
+  "restaurants": [],
+  "policies": {
+    "guest_policies": {
+      "extraBedPolicy": "Extra beds are dependent on the room you choose. Please check the individual room capacity for more details.",
+      "minimumAgeOfGuest": "All children are welcome.",
+      "infantPolicy": {
+        "ageDescription": "Infant 0-0 year(s)",
+        "policy": "Stay for free if using existing bedding.",
+        "additionalInfo": "Baby cot/crib available upon request"
+      },
+      "childPolicy": {
+        "ageDescription": "Children 1-11 year(s)",
+        "policy": "Stay for free if using existing bedding.",
+        "additionalInfo": "If you need an extra bed, it will incur an additional charge."
+      },
+      "adultChildPolicy": {
+        "ageDescription": "Guests 12 years and older are considered as adults",
+        "additionalInfo": "Must use an extra bed which will incur an additional charge."
+      }
+    },
+    "child_policies": [
+      {
+        "isInfant": true,
+        "policy": "Infant 0-0 year(s)",
+        "description": "Stay for free if using existing bedding. Note, if you need a cot, it may incur an extra charge and is subject to availability."
+      },
+      {
+        "isInfant": false,
+        "policy": "Children 1-11 year(s)",
+        "description": "Stay for free if using existing bedding."
+      }
+    ],
+    "extra_bed_policies": [
+      {
+        "type": 1,
+        "description": "Extra beds are dependent on the room you choose. Please check the individual room capacity for more details."
+      }
+    ],
+    "other_policies": [
+      "Property offers Check Out for Children/UNICEF program. Voluntary participation offered during your stay.",
+      "When booking more than 5 rooms, different policies and additional supplements may apply."
+    ]
+  },
+  "important_notes": [],
+  "useful_info": [
+    {
+      "name": "Check-in/Check-out",
+      "items": [
+        {
+          "title": "Check-in from",
+          "description": "15:00",
+          "icon": "ficon-express-check-in-check-out"
+        },
+        {
+          "title": "Check-out until",
+          "description": "12:00",
+          "icon": "ficon-express-check-in-check-out"
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "items": [
+        {
+          "title": "Distance from city center",
+          "description": "10 km",
+          "icon": "ficon-distance-from-city-center"
+        },
+        {
+          "title": "Travel time to airport (minutes)",
+          "description": "30",
+          "icon": "ficon-time-to-airport"
+        },
+        {
+          "title": "Airport transfer fee",
+          "description": "1665000 VND",
+          "icon": "ficon-airport-transfer"
+        }
+      ]
+    },
+    {
+      "name": "Extras",
+      "items": [
+        {
+          "title": "Breakfast charge (unless included in room price)",
+          "description": "550000 VND",
+          "icon": "ficon-free-breakfast"
+        }
+      ]
+    },
+    {
+      "name": "The property",
+      "items": [
+        {
+          "title": "Year property opened",
+          "description": "2011",
+          "icon": "ficon-year-hotel-built"
+        },
+        {
+          "title": "Number of floors",
+          "description": "19",
+          "icon": "ficon-number-of-floors"
+        },
+        {
+          "title": "Room voltage",
+          "description": "220",
+          "icon": "ficon-room-voltage"
+        },
+        {
+          "title": "Non-smoking rooms/floors",
+          "description": "yes",
+          "icon": "ficon-non-smoking-room"
+        },
+        {
+          "title": "Number of restaurants",
+          "description": "1",
+          "icon": "ficon-restaurant"
+        },
+        {
+          "title": "Number of bars/lounges",
+          "description": "2",
+          "icon": "ficon-mini-bar"
+        },
+        {
+          "title": "License Id / Local Tax ID/ Entity Name",
+          "description": "6400000",
+          "icon": "ficon-tax-id"
+        }
+      ]
+    }
+  ],
+  "property_facts": {
+    "distance_from_city_center": "10 km",
+    "travel_time_to_airport_minutes": "30",
+    "airport_transfer_fee": {
+      "raw": "1665000 VND",
+      "amount": 1665000.0,
+      "currency": "VND"
+    },
+    "daily_internet_fee": null,
+    "year_opened": "2011",
+    "most_recent_renovation": null,
+    "number_of_floors": "19",
+    "number_of_rooms": null,
+    "number_of_restaurants": "1",
+    "number_of_bars_lounges": "2",
+    "room_voltage": "220",
+    "parking_fee": null
+  },
+  "images": [
+    {
+      "local_path": "images/hotel/hotel_01.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/8a15fe5e9e5855f86a84a5353d64a189.jpeg?ce=3&s=1024x768",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_01.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_02.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/b90e1ef4e3292c0c31e326290dd4c2ce.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_02.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_03.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/3c2401b687800e4453d66ba592e83b6d.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_03.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_04.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/237603/-1/294b104948ee50eb72ce0884ec798561.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_04.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_05.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/03967cea5e82bc5ab18db6562fe46569.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_05.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_06.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/b4f096d98355d0e6d5111ddfba0e8ee3.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_06.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_07.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/f5784bf80b6028a375ce0d4df5085580.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_07.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_08.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/e719431bdef21849533fd0878a21291d.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_08.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_09.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/237603/-1/c1691a7695319c4efaac083fe9ab2581.jpg?ce=0&s=1024x768",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_09.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_10.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/d7355705977fea7d57bf2719a066f2e4.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_10.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_11.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/237603/-1/977a3aaacbd428e97fcc344062ee319b.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_11.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_12.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/a6ce407583e5700b3865bef2c5270159.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_12.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_13.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/877897740eb02b9287aebd13a666c72e.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_13.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_14.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/237603/-1/be0e88ab3451ec7e567d35604f3173ae.jpg?ce=0&s=1024x768",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_14.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_15.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/ab6092d73fd591a12092b28943953c99.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_15.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_16.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/5c84150ea775a61459a15ca78d0a72fe.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_16.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_17.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/237603/-1/4808691daf9347e12fc0d8c09c69ae57.jpg?ce=0&s=1024x768",
+      "title": "Executive lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_17.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_18.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/6dc7d925d4840482b1c3459df776b4e7.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_18.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_19.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/4d8a7fec8e66ac76cb05b360bc75ddba.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_19.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_20.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/7dc08d2066b2f8f251aa1fd87b2b708f.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_20.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_21.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/76dc8ea55f44dfd8d974bcf5a4c75a71.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_21.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_22.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/2b5961b5f92e971fa05d315cd7957f63.jpeg?ce=3&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_22.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_23.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/1480c786cf25a9ece27c8974f64f5950.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_23.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_24.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/237603/0/c61503cd814a448d0c877ec5f53f2aaa.jpg?ce=0&s=1024x768",
+      "title": "Garden",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_24.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_25.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/237603/-1/f4eb4c40ad81d318d053333390ce3f88.jpg?ce=0&s=1024x768",
+      "title": "Executive lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_25.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_26.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/221db92a1c525bdb80af38fc2daf28cc.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_26.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_27.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/e782878892a13460b4d4ad2f5729b502.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_27.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_28.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/f6bebfbb8b21f9c2e5660300b659f1c5.jpeg?ce=3&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_28.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_29.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/0eda6e226b7ad6f7ab73c4b3ebb62816.jpeg?ce=3&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_29.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_30.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/237603/-1/37bf3894c6efc3506cbcf215863a8199.jpg?ce=0&s=1024x768",
+      "title": "Business center",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_30.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_31.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/c9dc668e6c5a300c76d5ae6ddc43ac4f.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_31.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_32.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/0b308b14daeee3264a8f6f320e725122.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_32.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_33.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/ced78618d7fbf25b2f31269e6b13139d.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_33.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_34.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/bfceb6bd4d5acbdbda2c7a44b84af490.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_34.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_35.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/237603/-1/cfcfc990bbc9dad1c42fa2e33e36eac3.jpg?ce=0&s=1024x768",
+      "title": "Garden",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_35.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_36.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/4c055578c3fcb7b70d1eaeb75653b5bd.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_36.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_37.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/65717639/0/b2c6fc664ff1fb6e5e2ac3b4a09af497.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_37.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_38.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/25432/31e27e15a609aafd4bec1cc538329520.jpg?ce=0&s=1024x768",
+      "title": "Vietnam Museum of Ethnology - 3.58 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_38.jpg"
+    }
+  ],
+  "room_grid_probe": {
+    "attempted": true,
+    "url": "https://www.agoda.com/api/v1/property/room-grid",
+    "request_payload": {
+      "hotelId": 237603
+    },
+    "status_code": 400,
+    "response_body_preview": "The api key used is invalid. Please contact agoda to get a valid key.",
+    "accessible": false,
+    "blocked_reason": "invalid_api_key"
+  },
+  "short_description": "Sheraton Hanoi West • Hanoi • 5.0 stars • review 8.9",
+  "room_count": 9,
+  "policy_notes": [
+    "Check-in from 15:00.",
+    "Check-out until 12:00.",
+    "Breakfast inclusion may vary by booking date.",
+    "Catalog-only pricing was estimated for demo completeness."
+  ],
+  "synthetic_fields": [
+    "contact.email",
+    "contact.phone",
+    "contact.website",
+    "policy_notes"
+  ],
+  "catalog_quality": {
+    "synthetic_fields": [
+      "contact.email",
+      "contact.phone",
+      "contact.website",
+      "policy_notes"
+    ],
+    "has_uploaded_images": true,
+    "room_count": 9
+  },
+  "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_01.jpg",
+  "gallery_image_urls": [
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_01.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_02.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_03.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_04.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_05.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_06.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_07.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_08.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_09.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_10.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_11.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_12.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_13.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_14.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_15.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_16.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_17.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_18.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_19.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_20.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_21.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_22.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_23.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_24.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_25.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_26.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_27.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_28.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_29.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_30.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_31.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_32.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_33.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_34.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_35.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_36.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_37.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SheratonHanoiWest/images/hotel/hotel_38.jpg"
+  ]
+}

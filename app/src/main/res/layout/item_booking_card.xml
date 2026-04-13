@@ -35,9 +35,9 @@
 
                 <TextView
                     android:id="@+id/bookingItemRoom"
-                    style="@style/TextAppearance.Hotel.SectionTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TextAppearance.Hotel.SectionTitle"
                     android:text="@string/booking_room_label"
                     android:textColor="@color/text_primary"
                     android:textSize="16sp"
@@ -115,11 +115,11 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/bookingAdminCancel"
-                style="@style/Widget.Hotel.Button.Danger"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_s"
                 android:layout_weight="1"
+                style="@style/Widget.Hotel.Button.Danger"
                 android:text="@string/booking_admin_cancel" />
         </LinearLayout>
     </LinearLayout>

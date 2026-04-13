@@ -1,0 +1,76 @@
+{
+  "firebase_bucket": "hotelapp-test2.appspot.com",
+  "supabase_bucket_default": "rooms",
+  "public_read": true,
+  "mappings": [
+    {
+      "name": "room_images",
+      "enabled": true,
+      "source": {
+        "collection": "rooms",
+        "field": "images",
+        "type": "array_url_or_path"
+      },
+      "firebase": {
+        "path_prefixes": [
+          "rooms/",
+          "room/"
+        ],
+        "url_patterns": [
+          "https://firebasestorage.googleapis.com/",
+          "https://storage.googleapis.com/",
+          "gs://hotelapp-test2.appspot.com/"
+        ]
+      },
+      "supabase": {
+        "bucket": "rooms",
+        "target_prefix": "",
+        "preserve_relative_path": true
+      },
+      "write_back_firestore_url": false
+    },
+    {
+      "name": "poster_images",
+      "enabled": true,
+      "source": {
+        "collection": "posters",
+        "field": "imageUrl",
+        "type": "single_url_or_path"
+      },
+      "firebase": {
+        "path_prefixes": [
+          "posters/",
+          "poster/"
+        ],
+        "url_patterns": [
+          "https://firebasestorage.googleapis.com/",
+          "https://storage.googleapis.com/",
+          "gs://hotelapp-test2.appspot.com/"
+        ]
+      },
+      "supabase": {
+        "bucket": "posters",
+        "target_prefix": "",
+        "preserve_relative_path": true
+      },
+      "write_back_firestore_url": false
+    },
+    {
+      "name": "app_logo",
+      "enabled": true,
+      "source": {
+        "mode": "static_object_list",
+        "objects": [
+          "rooms/logo.png"
+        ]
+      },
+      "supabase": {
+        "bucket": "rooms",
+        "target_prefix": "",
+        "preserve_relative_path": true
+      }
+    }
+  ],
+  "create_missing_supabase_buckets": true,
+  "ignore_missing_source_object": true
+}

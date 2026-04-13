@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface_base">#1A1512</color>
+    <color name="surface_card">#261F1A</color>
+    <color name="surface_muted">#2D241E</color>
+    <color name="text_primary">#F5EEE6</color>
+    <color name="text_secondary">#CBBBAE</color>
+    <color name="brand_primary">#2DD4BF</color>
+    <color name="brand_primary_dark">#14B8A6</color>
+    <color name="brand_secondary">#60A5FA</color>
+    <color name="brand_tertiary">#134E4A</color>
+    <color name="accent_gold">#FBBF24</color>
+    <color name="danger">#F87171</color>
+</resources>

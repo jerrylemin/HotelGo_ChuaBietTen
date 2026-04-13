@@ -1,0 +1,1765 @@
+{
+  "schema_version": "1.0",
+  "folder_name": "NewOrientHotelDaNang",
+  "provider": "agoda",
+  "source_url": "https://www.agoda.com/vi-vn/new-orient-hotel-da-nang/hotel/da-nang-vn.html?countryId=38&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-04-17&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=VND&isFreeOccSearch=false&flightSearchCriteria=%5Bobject%20Object%5D&tspTypes=1,8&los=1&searchrequestid=92013c7d-d72b-4654-9723-10ecd9e137a4",
+  "secondary_payload_url": "https://www.agoda.com/api/cronos/property/BelowFoldParams/GetSecondaryData?countryId=38&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-04-17&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=VND&isFreeOccSearch=false&flightSearchCriteria=%5Bobject+Object%5D&tspTypes=1%2C8&los=1&searchrequestid=92013c7d-d72b-4654-9723-10ecd9e137a4&hotel_id=2911802&all=false&isHostPropertiesEnabled=false",
+  "fetched_at_utc": "2026-04-08T08:10:11.685086+00:00",
+  "source_hotel_id": "2911802",
+  "name": "New Orient Hotel Da Nang",
+  "display_name": "New Orient Hotel Da Nang",
+  "slug": "new_orient_hotel_da_nang",
+  "accommodation_type": "Hotel",
+  "star_rating": 4.5,
+  "awards": {
+    "text": "Awards and Accolades",
+    "gold_circle_year": "2025",
+    "gold_circle_award_text": "Gold Circle Award Winner"
+  },
+  "address": {
+    "full": "20 Dong Da, Hải Châu, Da Nang, Vietnam, 550000",
+    "line_1": "20 Dong Da",
+    "area": "Hải Châu",
+    "district": "Hải Châu",
+    "city": "Da Nang",
+    "country": "Vietnam",
+    "postal_code": "550000"
+  },
+  "coordinates": {
+    "latitude": 16.0824699401855,
+    "longitude": 108.221397399902
+  },
+  "review": {
+    "score": "9.2",
+    "score_text": "Exceptional",
+    "review_count": 6849,
+    "formatted_review_count": null,
+    "provider_list": "332,3038"
+  },
+  "description": {
+    "overview_html": "<b>Experience Luxury and Convenience at <b>New Orient Hotel Da Nang</b></b><br><br>Welcome to <b>New Orient Hotel Da Nang</b>, a 4.5-star oasis nestled in the heart of Da Nang, Vietnam. With its prime location just 1 km from the city center, this hotel offers the perfect blend of tranquility and accessibility. Step inside and immerse yourself in a world of luxury and comfort.\n\n<b>New Orient Hotel Da Nang</b> boasts a total of 99 elegantly appointed rooms, each designed with your utmost comfort in mind. Whether you're traveling for business or leisure, you'll find everything you need for a memorable stay. The hotel was last renovated in 2021, ensuring that all facilities are modern, stylish, and up to date.\n\nCheck-in is available from 02:00 PM, allowing you to settle in and start your vacation at your own pace. The friendly and attentive staff will be there to welcome you and assist with any requests you may have. When it's time to bid farewell, check-out is until 12:00 PM, giving you plenty of time to savor your last moments in this beautiful city.\n\n<b>New Orient Hotel Da Nang</b> was built in 2017, showcasing contemporary architecture and a design that seamlessly blends traditional Vietnamese elements with modern aesthetics. Its strategic location also means that it's only a short 15-minute drive away from the airport, making it an ideal choice for travelers seeking convenience and efficiency.\n\nFamilies traveling with children will appreciate the hotel's child policy. Children between the ages of 6 to 11 can stay free of charge, allowing you to create lasting memories together without any additional costs. Experience the warmth and hospitality of <b>New Orient Hotel Da Nang</b>, where luxury, convenience, and family-friendly services await.<br><br><b>Unwind and Indulge at <b>New Orient Hotel Da Nang</b>'s Entertainment Facilities</b><br><br>At <b>New Orient Hotel Da Nang</b>, guests are invited to unwind and indulge in a range of entertainment facilities that are sure to enhance their stay. Whether you're looking to relax or have a fun-filled evening, this hotel has something for everyone.\n\nStart your evening off with a visit to the hotel's stylish bar, where you can enjoy a refreshing cocktail or a glass of wine. The bar provides a cozy and sophisticated ambiance, perfect for socializing or simply enjoying a quiet drink.\n\nFor those who love to dance the night away, <b>New Orient Hotel Da Nang</b> features a vibrant nightclub. With its energetic atmosphere and top-notch music selection, this nightclub is the perfect place to let loose and have a memorable night out.\n\nIf you're in need of some pampering, the hotel offers a salon and spa where you can indulge in a variety of treatments. From massages to facials, you'll leave feeling rejuvenated and refreshed.\n\nFor ultimate relaxation, take advantage of the hotel's hot tub, sauna, and steam room. These facilities provide the perfect opportunity to unwind and melt away any stress or tension.\n\nIf you're in the mood for some outdoor relaxation, the hotel's garden is the ideal spot. Take a leisurely stroll or find a quiet corner to read a book and enjoy the peaceful surroundings.\n\nFor those who love to sing their hearts out, <b>New Orient Hotel Da Nang</b> also offers karaoke facilities. Gather your friends and showcase your singing talents in a private and entertaining setting.\n\nWith its wide range of entertainment facilities, <b>New Orient Hotel Da Nang</b> ensures that every guest has a memorable and enjoyable stay. Whether you're seeking relaxation, fun, or a combination of both, this hotel has it all.<br><br><b>Stay Active and Energized at <b>New Orient Hotel Da Nang</b>'s Sports Facilities</b><br><br>At <b>New Orient Hotel Da Nang</b>, we understand the importance of staying active and energized during your vacation. That's why we offer a range of top-notch sports facilities to cater to all your fitness needs.\n\nStart your day with a refreshing swim in our outdoor pool, surrounded by lush greenery and comfortable loungers. Take a dip and soak up the sun as you enjoy the breathtaking views of the city. If you prefer a more relaxed atmosphere, our poolside bar is just a few steps away, where you can sip on a refreshing cocktail or indulge in a light snack.\n\nFor those who prefer a workout indoors, our free fitness center is equipped with state-of-the-art equipment to help you stay in shape. Open 24 hours a day, you can fit in a workout whenever it suits your schedule. Whether you're looking to lift weights, do cardio exercises, or engage in a high-intensity interval training session, our fitness center has everything you need to break a sweat.\n\nAnd of course, being located just steps away from the beach, you have the perfect opportunity to engage in water sports or simply enjoy a leisurely stroll along the shore. Feel the sand between your toes and let the ocean breeze invigorate your senses as you take in the beauty of Da Nang's coastline.\n\nAt <b>New Orient Hotel Da Nang</b>, we believe in providing our guests with the best facilities to ensure a memorable stay. Stay active, rejuvenate your mind and body, and create lasting memories at our exceptional sports facilities.<br><br><b>Convenience Facilities at <b>New Orient Hotel Da Nang</b></b><br><br><b>New Orient Hotel Da Nang</b> offers a range of convenient facilities to ensure a comfortable and hassle-free stay for its guests. From the moment you arrive, you'll be greeted by friendly staff who are ready to assist you with any requests or inquiries. The hotel provides a laundry service and dry cleaning facilities, making it easy for guests to keep their clothes fresh and clean throughout their stay. Additionally, the daily housekeeping service ensures that your room is always tidy and well-maintained.\n\nFor those who prefer to dine in the comfort of their own room, <b>New Orient Hotel Da Nang</b> offers room service, allowing guests to enjoy delicious meals without having to leave their room. Safety deposit boxes are available at the front desk, providing peace of mind for guests who wish to store their valuable belongings securely. The concierge service is also on hand to assist with any travel arrangements or recommendations for local attractions.\n\nStay connected during your stay with the hotel's Wi-Fi in public areas, as well as free Wi-Fi in all rooms. Whether you need to catch up on work emails or simply browse the internet, you can do so effortlessly. For smokers, there is a designated smoking area where you can enjoy a cigarette without inconveniencing others. Lastly, the hotel offers luggage storage for guests who need a secure place to store their belongings before check-in or after check-out. With these convenience facilities, <b>New Orient Hotel Da Nang</b> ensures that guests have everything they need for a comfortable and enjoyable stay.<br><br><b>Convenient Transport Facilities at <b>New Orient Hotel Da Nang</b></b><br><br>At <b>New Orient Hotel Da Nang</b>, we understand the importance of seamless travel experiences for our guests. That's why we offer a range of convenient transport facilities to ensure your stay with us is hassle-free. \n\nFor those arriving by air, our airport transfer service is available to pick you up and drop you off at Da Nang International Airport. Sit back and relax as our professional drivers take care of your transportation needs. \n\nExploring the city is made easy with our shuttle service, which provides convenient transportation to popular attractions and shopping areas in Da Nang. If you prefer to explore at your own pace, we also offer a car park free of charge, allowing you to conveniently park your vehicle during your stay. \n\nTo further enhance your travel experience, our hotel provides a taxi service and ticket service. Whether you need a ride to a specific destination or assistance with booking tickets for local attractions, our friendly staff is here to assist you. \n\nAt <b>New Orient Hotel Da Nang</b>, we strive to make your stay as comfortable and convenient as possible. Take advantage of our comprehensive transport facilities and enjoy a stress-free experience during your time in Da Nang.<br><br><b>Indulge in a Culinary Journey at <b>New Orient Hotel Da Nang</b></b><br><br>At <b>New Orient Hotel Da Nang</b>, dining is an experience that will delight your taste buds and leave you craving for more. With a range of dining facilities to choose from, you'll never run out of options during your stay.\n\nStart your day with a scrumptious breakfast buffet at the hotel's restaurant, where you can savor a variety of delectable dishes from around the world. From freshly baked pastries to a selection of hot and cold items, there's something to please every palate. If you prefer a lighter meal, the continental breakfast is the perfect choice.\n\nFor a quick caffeine fix or a relaxing afternoon, head to the hotel's cozy coffee shop. Indulge in a cup of aromatic coffee or choose from a selection of teas and refreshing beverages. The coffee shop also offers a range of snacks and light bites to satisfy your cravings.\n\nIf you prefer to dine in the comfort of your room, the hotel offers convenient room service. Choose from a diverse menu featuring both local and international cuisines, and have your meal delivered right to your doorstep. Whether it's a hearty dinner or a late-night snack, the room service at <b>New Orient Hotel Da Nang</b> has got you covered.\n\nFor those who enjoy outdoor dining, the hotel provides BBQ facilities where you can grill your favorite meats and vegetables. Gather with friends or family and enjoy a delightful BBQ feast while taking in the scenic views of Da Nang.\n\nIf you have any special dietary requirements, the hotel also caters to specific needs. With a halal restaurant and a kosher restaurant on-site, guests can enjoy delicious meals prepared according to their dietary preferences.\n\nWith daily housekeeping, you can rest assured that your dining experience will be accompanied by a clean and well-maintained environment. Additionally, the hotel offers grocery deliveries, ensuring that you have access to fresh ingredients and snacks throughout your stay.\n\nAt <b>New Orient Hotel Da Nang</b>, dining is not just about satisfying your hunger, but also about creating unforgettable memories. With a wide range of dining facilities and services, your culinary journey here will be nothing short of extraordinary.<br><br><b>Luxurious and Diverse Room Options at <b>New Orient Hotel Da Nang</b></b><br><br>Discover a range of beautifully appointed rooms at <b>New Orient Hotel Da Nang</b>, crafted to suit every traveler’s preference. Choose from the cozy Deluxe Double City View or the versatile Deluxe Twin City View, each spanning 32 square meters and offering comfortable bedding options. For those seeking extra space and relaxation, the Premier Deluxe rooms provide 35 square meters with the choice of a King or Twin beds, while the Suite Double Room offers a spacious 50 square meters for added comfort. For a touch of elegance, the Loft with Bathtub provides 60 square meters of luxury, perfect for unwinding in style.\n\nTravelers looking for more room and amenities can opt for the generous Apartment Double, covering 90 square meters with two King Beds, or the Suite with Balcony for a refined experience. The hotel also offers various options without views, such as the Superior Double or Twin Room and Standard Double or Twin Room, both around 30 square meters. For those who prefer scenic vistas, the Premier Deluxe River View with Balcony and Deluxe Double or Twin Pool View rooms are ideal choices. Booking through Agoda guarantees you the best prices and a seamless, hassle-free experience, making your stay in Da Nang truly memorable.<br><br><b>Discover the Vibrant Neighborhood of Hội Châu in Da Nang</b><br><br>Nestled in the heart of Da Nang, Vietnam, the neighborhood of Hội Châu is a vibrant and bustling area that offers a perfect blend of cultural heritage and modern attractions. With its strategic location along the Han River, Hội Châu is known for its stunning waterfront views and picturesque bridges, making it a popular spot for locals and tourists alike.\n\nOne of the highlights of Hội Châu is its rich history and cultural significance. The neighborhood is home to several historical landmarks, including the iconic Dragon Bridge, which is not only an architectural marvel but also a symbol of good luck and prosperity. Visitors can witness the awe-inspiring dragon-shaped bridge come to life as it breathes fire and water every weekend night.\n\nIn addition to its historical charm, Hội Châu also offers a vibrant culinary scene. Food enthusiasts will be delighted by the array of local street food stalls and restaurants serving up mouthwatering Vietnamese delicacies. From savory banh mi sandwiches to flavorful pho and fresh seafood, there is something to satisfy every palate. After indulging in the local cuisine, visitors can take a leisurely stroll along the riverfront promenade, enjoying the cool breeze and admiring the city skyline.<br><br><b>Convenient Transportation Options from the Airport to <b>New Orient Hotel Da Nang</b></b><br><br><b>New Orient Hotel Da Nang</b>, located in the vibrant H?i Châu district of Da Nang, Vietnam, offers a variety of convenient transportation options for guests arriving at the nearby airports. The hotel is easily accessible from both Da Nang International Airport and Chu Lai International Airport, ensuring a hassle-free journey to your destination.\n\nIf you are arriving at Da Nang International Airport, the most convenient way to reach <b>New Orient Hotel Da Nang</b> is by taxi. Taxis are readily available outside the airport terminal, and the journey to the hotel takes approximately 15 minutes, depending on traffic conditions. Alternatively, you can also arrange for a private transfer with the hotel in advance, ensuring a seamless and comfortable journey to your accommodation.\n\nFor those arriving at Chu Lai International Airport, the easiest way to get to <b>New Orient Hotel Da Nang</b> is by booking a private transfer or arranging for a taxi. The journey from Chu Lai International Airport to the hotel takes approximately 1.5 to 2 hours, depending on traffic conditions. It is recommended to book a transfer in advance to avoid any inconvenience upon arrival.\n\n<b>New Orient Hotel Da Nang</b> offers a convenient and accessible location for travelers, with various transportation options available to ensure a smooth and enjoyable journey from the nearby airports. Whether you choose to take a taxi or arrange for a private transfer, you can look forward to a comfortable and convenient arrival at this stylish hotel in the heart of Da Nang.<br><br><b>Explore the Rich Heritage and Modern Wonders near <b>New Orient Hotel Da Nang</b></b><br><br>Nestled in the heart of Da Nang, <b>New Orient Hotel Da Nang</b> offers easy access to a plethora of landmarks and attractions that showcase the city's rich heritage and modern wonders. Just a short distance away, you'll find the Da Nang Museum of Cham Sculpture, where you can immerse yourself in the ancient Cham civilization through its impressive collection of sculptures and artifacts.\n\nFor those seeking spiritual enlightenment, the serene Phap Lam Pagoda is a must-visit. Adorned with intricate Buddhist architecture, this sacred site offers a peaceful respite from the bustling city. Additionally, the Da Nang Cathedral, also known as the Rooster Church, is an architectural gem that stands as a testament to the city's French colonial past.\n\nFor a taste of Da Nang's modern attractions, head over to the Sun World Danang Wonders. This amusement park promises a day of fun and excitement with thrilling rides, entertaining shows, and vibrant street performances. If you're looking for a bird's eye view of Da Nang, take a ride on the iconic Sun Wheel, the tallest Ferris wheel in Vietnam, offering breathtaking panoramic views of the city and its surroundings.\n\nHistory buffs will appreciate the Ho Chi Minh and the Fifth Military Zone Museum, which showcases the life and revolutionary activities of Vietnam's beloved leader, Ho Chi Minh. Meanwhile, the Museum of Sa Huynh &amp; Champa Culture provides a fascinating insight into the ancient Sa Huynh and Champa civilizations through its extensive collection of artifacts.\n\nIf you're in the mood for some relaxation, the nearby Red Beach offers a tranquil escape with its pristine white sand and crystal-clear waters. Whether you're seeking cultural immersion or thrilling adventures, the surrounding landmarks and attractions near <b>New Orient Hotel Da Nang</b> have something for everyone, making it an ideal base for your Da Nang exploration.<br><br><b>Convenient Public Transport Stations near <b>New Orient Hotel Da Nang</b></b><br><br>Located just a short distance from the Da Nang Railway Station, <b>New Orient Hotel Da Nang</b> offers an ideal base for exploring the vibrant city of Da Nang. With its strategic location, guests can easily access various public transport stations nearby, ensuring hassle-free travel throughout the city and beyond.\n\nOne of the most convenient public transport stations near the hotel is the Da Nang Railway Station itself. Situated within walking distance, this station provides easy connections to other major cities in Vietnam, making it a convenient option for travelers arriving or departing by train. From here, guests can also take advantage of the local bus services that operate in the area, allowing them to explore Da Nang's attractions and nearby destinations with ease.\n\nAnother notable public transport station near <b>New Orient Hotel Da Nang</b> is the Da Nang Bus Station. Situated just a short drive away, this station offers a wide network of bus routes that connect various parts of the city. Whether you're planning to visit the iconic Marble Mountains, the beautiful My Khe Beach, or the bustling Han Market, the Da Nang Bus Station provides a convenient and affordable way to reach these popular attractions. With regular bus services and a well-connected network, guests can easily navigate Da Nang's vibrant streets and immerse themselves in the local culture and charm.<br><br><b>A Gastronomic Adventure Awaits</b><br><br><b>New Orient Hotel Da Nang</b> is surrounded by a plethora of dining options that will satisfy even the most discerning palates. Just a stone's throw away from the hotel, you'll find Pizza 4P's Hoang Van Thu, known for their delectable wood-fired pizzas and cozy atmosphere. For a taste of authentic Vietnamese cuisine, head over to Banh mi - Mi AA - Happy Bread or Tre Viet cuisine, where you can indulge in flavorful banh mi sandwiches and traditional dishes bursting with local flavors. If you're in the mood for a nostalgic dining experience, Khong Gian Xua is the place to be, with its charming decor and mouthwatering Vietnamese specialties. For those craving a juicy steak, Olivia's Prime Steakhouse is a must-visit, offering top-quality cuts cooked to perfection. Limoncello Danang - Pizza &amp; Restaurant is another fantastic option, serving up delicious Italian fare including their signature pizzas. LUK LAK Restaurant is a great choice for those seeking a fusion of Vietnamese and international flavors, while Memory Lounge offers a cozy ambiance and a menu of international delights. If you're looking for a fine dining experience, Red Sky Steakhouse is the place to be, with its elegant setting and exquisite steaks. Lastly, Hue Ngon Restaurant is a must-visit for those wanting to explore the unique flavors of Hue cuisine. With such a diverse range of restaurants just moments away, <b>New Orient Hotel Da Nang</b> is the perfect base for a gastronomic adventure in Da Nang.<br><br><b>Shop 'til you drop at <b>New Orient Hotel Da Nang</b>'s surrounding shopping landmarks</b><br><br>Located in the heart of Da Nang, <b>New Orient Hotel Da Nang</b> is surrounded by an array of shopping landmarks that are sure to delight any shopaholic. Indochina Riverside Mall offers a diverse range of shops and boutiques, perfect for picking up stylish clothing and accessories. Veston Tran is a must-visit for those in search of tailored suits and elegant formal wear. Indochina Riverside Towers is home to a variety of shops and restaurants, providing a convenient one-stop destination for all your shopping and dining needs. Pheva Chocolate is a paradise for chocolate lovers, offering a tempting selection of handmade chocolates and treats. Byfas Premium Tailoring is renowned for its high-quality tailoring services, allowing you to create custom-made clothing that fits you perfectly. Kitsch Stores is a treasure trove of unique and quirky items, perfect for finding one-of-a-kind souvenirs. Vinh Trung Plaza is a popular shopping mall that houses a wide range of shops, from fashion and beauty to electronics and home decor. Nhat Hoa Silk Co., Ltd specializes in silk products, offering a wide range of beautiful silk garments and accessories. Danang Bazaar is a bustling marketplace where you can find a variety of local products, including handicrafts, textiles, and traditional Vietnamese items. Finally, Da Nang Souvenirs &amp; Cafe is the perfect place to pick up souvenirs to remember your trip, while also enjoying a cup of Vietnamese coffee. With these shopping landmarks just a stone's throw away from <b>New Orient Hotel Da Nang</b>, you'll have plenty of opportunities to indulge in some retail therapy during your stay.<br><br><b>Affordable Luxury: Experience Da Nang at a Great Price</b><br><br>Located in the heart of Da Nang, New Orient Hotel offers an unbeatable combination of luxury and affordability. With an average price of just $55 per night, this hotel provides exceptional value for money compared to the city's average room rate of $74. \n\nStep into the world of comfort and elegance as you enter the beautifully designed rooms at New Orient Hotel. Each room is tastefully furnished with modern amenities, ensuring a relaxing and enjoyable stay. From plush beds to spacious bathrooms, every detail has been carefully curated to provide the utmost comfort for guests.\n\nNot only does New Orient Hotel offer great value for money, but it also boasts a prime location. Situated in the heart of Da Nang, this hotel allows you to easily explore the city's vibrant attractions, including the famous My Khe Beach and the majestic Marble Mountains. Whether you're a business traveler or a leisure seeker, New Orient Hotel is the perfect choice for those looking to experience the best of Da Nang without breaking the bank. Book your stay today and indulge in affordable luxury at <b>New Orient Hotel Da Nang</b>.<br><br><b>Fantastic Services and Friendly Staff at <b>New Orient Hotel Da Nang</b></b><br><br>Guests at <b>New Orient Hotel Da Nang</b> have consistently praised the hotel's exceptional services and friendly staff. The hotel's staff members are described as extremely friendly and helpful, providing a warm and welcoming atmosphere for guests. The breakfast at the hotel is highly regarded, with guests enjoying a delicious and satisfying meal to start their day. The rooms are spacious, comfortable, and clean, ensuring a good night's sleep for all guests. The rooftop bar and swimming pool are additional highlights, offering a relaxing and enjoyable experience. With its great services, nice staff, and fantastic breakfast, <b>New Orient Hotel Da Nang</b> is a top choice for travelers visiting Da Nang.<br><br><b>A Haven of Excellence: <b>New Orient Hotel Da Nang</b>'s Stellar Customer Reviews</b><br><br>With a remarkable overall rating of 9.3, <b>New Orient Hotel Da Nang</b> has earned a well-deserved reputation for excellence among its guests. This luxurious hotel in Da Nang, Vietnam, has garnered high praise for its exceptional value, top-notch facilities, impeccable cleanliness, convenient location, and outstanding staff performance. \n\nOne of the standout features of <b>New Orient Hotel Da Nang</b> is its exceptional value. Guests have consistently praised the hotel for providing a high-quality experience at an affordable price. From the moment you step into the elegant lobby, you'll be greeted with warm hospitality and a sense of luxury that exceeds expectations. The hotel's commitment to providing excellent value is evident in every aspect of your stay, from the comfortable and well-appointed rooms to the wide range of amenities available for guests to enjoy.\n\nThe hotel's impressive facilities also contribute to its outstanding reputation. With a rating of 9.2 for facilities, <b>New Orient Hotel Da Nang</b> offers a wealth of amenities designed to enhance your stay. Whether you're looking to relax by the sparkling swimming pool, unwind with a rejuvenating spa treatment, or stay active at the well-equipped fitness center, this hotel has something for everyone. The attention to detail and commitment to providing a memorable experience are evident in every aspect of the hotel's facilities, ensuring that guests have everything they need for a truly enjoyable stay.\n\nFurthermore, <b>New Orient Hotel Da Nang</b> sets itself apart with its exceptional cleanliness. With a rating of 9.4 for cleanliness, the hotel's dedicated housekeeping team ensures that every corner of the property is spotless, creating a pristine and inviting atmosphere. From the immaculate rooms to the well-maintained common areas, guests can rest assured that their comfort and well-being are of the utmost importance to the hotel's staff.\n\nThe hotel's convenient location also adds to its appeal, with a rating of 9.0. Situated in the heart of Da Nang, guests have easy access to the city's vibrant attractions, stunning beaches, and delicious local cuisine. Whether you're looking to explore the ancient wonders of Hoi An, discover the breathtaking beauty of the Marble Mountains, or simply soak up the sun on My Khe Beach, <b>New Orient Hotel Da Nang</b> serves as the perfect base for your adventures.\n\nLast but certainly not least, the staff performance at <b>New Orient Hotel Da Nang</b> is truly exceptional, earning a remarkable rating of 9.5. From the moment you arrive, you'll be greeted by a team of friendly and attentive staff who go above and beyond to ensure your every need is met. Guests consistently praise the hotel's staff for their professionalism, efficiency, and genuine care, making every interaction a delightful experience.\n\nWith its exceptional value, impressive facilities, impeccable cleanliness, convenient location, and outstanding staff performance, <b>New Orient Hotel Da Nang</b> has rightfully earned its stellar customer reviews. Whether you're traveling for business or leisure, this hotel promises an unforgettable stay that exceeds expectations at every turn.",
+    "overview_text": "Experience Luxury and Convenience at New Orient Hotel Da Nang\nWelcome to New Orient Hotel Da Nang, a 4.5-star oasis nestled in the heart of Da Nang, Vietnam. With its prime location just 1 km from the city center, this hotel offers the perfect blend of tranquility and accessibility. Step inside and immerse yourself in a world of luxury and comfort.\nNew Orient Hotel Da Nang boasts a total of 99 elegantly appointed rooms, each designed with your utmost comfort in mind. Whether you're traveling for business or leisure, you'll find everything you need for a memorable stay. The hotel was last renovated in 2021, ensuring that all facilities are modern, stylish, and up to date.\nCheck-in is available from 02:00 PM, allowing you to settle in and start your vacation at your own pace. The friendly and attentive staff will be there to welcome you and assist with any requests you may have. When it's time to bid farewell, check-out is until 12:00 PM, giving you plenty of time to savor your last moments in this beautiful city.\nNew Orient Hotel Da Nang was built in 2017, showcasing contemporary architecture and a design that seamlessly blends traditional Vietnamese elements with modern aesthetics. Its strategic location also means that it's only a short 15-minute drive away from the airport, making it an ideal choice for travelers seeking convenience and efficiency.\nFamilies traveling with children will appreciate the hotel's child policy. Children between the ages of 6 to 11 can stay free of charge, allowing you to create lasting memories together without any additional costs. Experience the warmth and hospitality of New Orient Hotel Da Nang, where luxury, convenience, and family-friendly services await.\nUnwind and Indulge at New Orient Hotel Da Nang's Entertainment Facilities\nAt New Orient Hotel Da Nang, guests are invited to unwind and indulge in a range of entertainment facilities that are sure to enhance their stay. Whether you're looking to relax or have a fun-filled evening, this hotel has something for everyone.\nStart your evening off with a visit to the hotel's stylish bar, where you can enjoy a refreshing cocktail or a glass of wine. The bar provides a cozy and sophisticated ambiance, perfect for socializing or simply enjoying a quiet drink.\nFor those who love to dance the night away, New Orient Hotel Da Nang features a vibrant nightclub. With its energetic atmosphere and top-notch music selection, this nightclub is the perfect place to let loose and have a memorable night out.\nIf you're in need of some pampering, the hotel offers a salon and spa where you can indulge in a variety of treatments. From massages to facials, you'll leave feeling rejuvenated and refreshed.\nFor ultimate relaxation, take advantage of the hotel's hot tub, sauna, and steam room. These facilities provide the perfect opportunity to unwind and melt away any stress or tension.\nIf you're in the mood for some outdoor relaxation, the hotel's garden is the ideal spot. Take a leisurely stroll or find a quiet corner to read a book and enjoy the peaceful surroundings.\nFor those who love to sing their hearts out, New Orient Hotel Da Nang also offers karaoke facilities. Gather your friends and showcase your singing talents in a private and entertaining setting.\nWith its wide range of entertainment facilities, New Orient Hotel Da Nang ensures that every guest has a memorable and enjoyable stay. Whether you're seeking relaxation, fun, or a combination of both, this hotel has it all.\nStay Active and Energized at New Orient Hotel Da Nang's Sports Facilities\nAt New Orient Hotel Da Nang, we understand the importance of staying active and energized during your vacation. That's why we offer a range of top-notch sports facilities to cater to all your fitness needs.\nStart your day with a refreshing swim in our outdoor pool, surrounded by lush greenery and comfortable loungers. Take a dip and soak up the sun as you enjoy the breathtaking views of the city. If you prefer a more relaxed atmosphere, our poolside bar is just a few steps away, where you can sip on a refreshing cocktail or indulge in a light snack.\nFor those who prefer a workout indoors, our free fitness center is equipped with state-of-the-art equipment to help you stay in shape. Open 24 hours a day, you can fit in a workout whenever it suits your schedule. Whether you're looking to lift weights, do cardio exercises, or engage in a high-intensity interval training session, our fitness center has everything you need to break a sweat.\nAnd of course, being located just steps away from the beach, you have the perfect opportunity to engage in water sports or simply enjoy a leisurely stroll along the shore. Feel the sand between your toes and let the ocean breeze invigorate your senses as you take in the beauty of Da Nang's coastline.\nAt New Orient Hotel Da Nang, we believe in providing our guests with the best facilities to ensure a memorable stay. Stay active, rejuvenate your mind and body, and create lasting memories at our exceptional sports facilities.\nConvenience Facilities at New Orient Hotel Da Nang\nNew Orient Hotel Da Nang offers a range of convenient facilities to ensure a comfortable and hassle-free stay for its guests. From the moment you arrive, you'll be greeted by friendly staff who are ready to assist you with any requests or inquiries. The hotel provides a laundry service and dry cleaning facilities, making it easy for guests to keep their clothes fresh and clean throughout their stay. Additionally, the daily housekeeping service ensures that your room is always tidy and well-maintained.\nFor those who prefer to dine in the comfort of their own room, New Orient Hotel Da Nang offers room service, allowing guests to enjoy delicious meals without having to leave their room. Safety deposit boxes are available at the front desk, providing peace of mind for guests who wish to store their valuable belongings securely. The concierge service is also on hand to assist with any travel arrangements or recommendations for local attractions.\nStay connected during your stay with the hotel's Wi-Fi in public areas, as well as free Wi-Fi in all rooms. Whether you need to catch up on work emails or simply browse the internet, you can do so effortlessly. For smokers, there is a designated smoking area where you can enjoy a cigarette without inconveniencing others. Lastly, the hotel offers luggage storage for guests who need a secure place to store their belongings before check-in or after check-out. With these convenience facilities, New Orient Hotel Da Nang ensures that guests have everything they need for a comfortable and enjoyable stay.\nConvenient Transport Facilities at New Orient Hotel Da Nang\nAt New Orient Hotel Da Nang, we understand the importance of seamless travel experiences for our guests. That's why we offer a range of convenient transport facilities to ensure your stay with us is hassle-free.\nFor those arriving by air, our airport transfer service is available to pick you up and drop you off at Da Nang International Airport. Sit back and relax as our professional drivers take care of your transportation needs.\nExploring the city is made easy with our shuttle service, which provides convenient transportation to popular attractions and shopping areas in Da Nang. If you prefer to explore at your own pace, we also offer a car park free of charge, allowing you to conveniently park your vehicle during your stay.\nTo further enhance your travel experience, our hotel provides a taxi service and ticket service. Whether you need a ride to a specific destination or assistance with booking tickets for local attractions, our friendly staff is here to assist you.\nAt New Orient Hotel Da Nang, we strive to make your stay as comfortable and convenient as possible. Take advantage of our comprehensive transport facilities and enjoy a stress-free experience during your time in Da Nang.\nIndulge in a Culinary Journey at New Orient Hotel Da Nang\nAt New Orient Hotel Da Nang, dining is an experience that will delight your taste buds and leave you craving for more. With a range of dining facilities to choose from, you'll never run out of options during your stay.\nStart your day with a scrumptious breakfast buffet at the hotel's restaurant, where you can savor a variety of delectable dishes from around the world. From freshly baked pastries to a selection of hot and cold items, there's something to please every palate. If you prefer a lighter meal, the continental breakfast is the perfect choice.\nFor a quick caffeine fix or a relaxing afternoon, head to the hotel's cozy coffee shop. Indulge in a cup of aromatic coffee or choose from a selection of teas and refreshing beverages. The coffee shop also offers a range of snacks and light bites to satisfy your cravings.\nIf you prefer to dine in the comfort of your room, the hotel offers convenient room service. Choose from a diverse menu featuring both local and international cuisines, and have your meal delivered right to your doorstep. Whether it's a hearty dinner or a late-night snack, the room service at New Orient Hotel Da Nang has got you covered.\nFor those who enjoy outdoor dining, the hotel provides BBQ facilities where you can grill your favorite meats and vegetables. Gather with friends or family and enjoy a delightful BBQ feast while taking in the scenic views of Da Nang.\nIf you have any special dietary requirements, the hotel also caters to specific needs. With a halal restaurant and a kosher restaurant on-site, guests can enjoy delicious meals prepared according to their dietary preferences.\nWith daily housekeeping, you can rest assured that your dining experience will be accompanied by a clean and well-maintained environment. Additionally, the hotel offers grocery deliveries, ensuring that you have access to fresh ingredients and snacks throughout your stay.\nAt New Orient Hotel Da Nang, dining is not just about satisfying your hunger, but also about creating unforgettable memories. With a wide range of dining facilities and services, your culinary journey here will be nothing short of extraordinary.\nLuxurious and Diverse Room Options at New Orient Hotel Da Nang\nDiscover a range of beautifully appointed rooms at New Orient Hotel Da Nang, crafted to suit every traveler’s preference. Choose from the cozy Deluxe Double City View or the versatile Deluxe Twin City View, each spanning 32 square meters and offering comfortable bedding options. For those seeking extra space and relaxation, the Premier Deluxe rooms provide 35 square meters with the choice of a King or Twin beds, while the Suite Double Room offers a spacious 50 square meters for added comfort. For a touch of elegance, the Loft with Bathtub provides 60 square meters of luxury, perfect for unwinding in style.\nTravelers looking for more room and amenities can opt for the generous Apartment Double, covering 90 square meters with two King Beds, or the Suite with Balcony for a refined experience. The hotel also offers various options without views, such as the Superior Double or Twin Room and Standard Double or Twin Room, both around 30 square meters. For those who prefer scenic vistas, the Premier Deluxe River View with Balcony and Deluxe Double or Twin Pool View rooms are ideal choices. Booking through Agoda guarantees you the best prices and a seamless, hassle-free experience, making your stay in Da Nang truly memorable.\nDiscover the Vibrant Neighborhood of Hội Châu in Da Nang\nNestled in the heart of Da Nang, Vietnam, the neighborhood of Hội Châu is a vibrant and bustling area that offers a perfect blend of cultural heritage and modern attractions. With its strategic location along the Han River, Hội Châu is known for its stunning waterfront views and picturesque bridges, making it a popular spot for locals and tourists alike.\nOne of the highlights of Hội Châu is its rich history and cultural significance. The neighborhood is home to several historical landmarks, including the iconic Dragon Bridge, which is not only an architectural marvel but also a symbol of good luck and prosperity. Visitors can witness the awe-inspiring dragon-shaped bridge come to life as it breathes fire and water every weekend night.\nIn addition to its historical charm, Hội Châu also offers a vibrant culinary scene. Food enthusiasts will be delighted by the array of local street food stalls and restaurants serving up mouthwatering Vietnamese delicacies. From savory banh mi sandwiches to flavorful pho and fresh seafood, there is something to satisfy every palate. After indulging in the local cuisine, visitors can take a leisurely stroll along the riverfront promenade, enjoying the cool breeze and admiring the city skyline.\nConvenient Transportation Options from the Airport to New Orient Hotel Da Nang\nNew Orient Hotel Da Nang, located in the vibrant H?i Châu district of Da Nang, Vietnam, offers a variety of convenient transportation options for guests arriving at the nearby airports. The hotel is easily accessible from both Da Nang International Airport and Chu Lai International Airport, ensuring a hassle-free journey to your destination.\nIf you are arriving at Da Nang International Airport, the most convenient way to reach New Orient Hotel Da Nang is by taxi. Taxis are readily available outside the airport terminal, and the journey to the hotel takes approximately 15 minutes, depending on traffic conditions. Alternatively, you can also arrange for a private transfer with the hotel in advance, ensuring a seamless and comfortable journey to your accommodation.\nFor those arriving at Chu Lai International Airport, the easiest way to get to New Orient Hotel Da Nang is by booking a private transfer or arranging for a taxi. The journey from Chu Lai International Airport to the hotel takes approximately 1.5 to 2 hours, depending on traffic conditions. It is recommended to book a transfer in advance to avoid any inconvenience upon arrival.\nNew Orient Hotel Da Nang offers a convenient and accessible location for travelers, with various transportation options available to ensure a smooth and enjoyable journey from the nearby airports. Whether you choose to take a taxi or arrange for a private transfer, you can look forward to a comfortable and convenient arrival at this stylish hotel in the heart of Da Nang.\nExplore the Rich Heritage and Modern Wonders near New Orient Hotel Da Nang\nNestled in the heart of Da Nang, New Orient Hotel Da Nang offers easy access to a plethora of landmarks and attractions that showcase the city's rich heritage and modern wonders. Just a short distance away, you'll find the Da Nang Museum of Cham Sculpture, where you can immerse yourself in the ancient Cham civilization through its impressive collection of sculptures and artifacts.\nFor those seeking spiritual enlightenment, the serene Phap Lam Pagoda is a must-visit. Adorned with intricate Buddhist architecture, this sacred site offers a peaceful respite from the bustling city. Additionally, the Da Nang Cathedral, also known as the Rooster Church, is an architectural gem that stands as a testament to the city's French colonial past.\nFor a taste of Da Nang's modern attractions, head over to the Sun World Danang Wonders. This amusement park promises a day of fun and excitement with thrilling rides, entertaining shows, and vibrant street performances. If you're looking for a bird's eye view of Da Nang, take a ride on the iconic Sun Wheel, the tallest Ferris wheel in Vietnam, offering breathtaking panoramic views of the city and its surroundings.\nHistory buffs will appreciate the Ho Chi Minh and the Fifth Military Zone Museum, which showcases the life and revolutionary activities of Vietnam's beloved leader, Ho Chi Minh. Meanwhile, the Museum of Sa Huynh & Champa Culture provides a fascinating insight into the ancient Sa Huynh and Champa civilizations through its extensive collection of artifacts.\nIf you're in the mood for some relaxation, the nearby Red Beach offers a tranquil escape with its pristine white sand and crystal-clear waters. Whether you're seeking cultural immersion or thrilling adventures, the surrounding landmarks and attractions near New Orient Hotel Da Nang have something for everyone, making it an ideal base for your Da Nang exploration.\nConvenient Public Transport Stations near New Orient Hotel Da Nang\nLocated just a short distance from the Da Nang Railway Station, New Orient Hotel Da Nang offers an ideal base for exploring the vibrant city of Da Nang. With its strategic location, guests can easily access various public transport stations nearby, ensuring hassle-free travel throughout the city and beyond.\nOne of the most convenient public transport stations near the hotel is the Da Nang Railway Station itself. Situated within walking distance, this station provides easy connections to other major cities in Vietnam, making it a convenient option for travelers arriving or departing by train. From here, guests can also take advantage of the local bus services that operate in the area, allowing them to explore Da Nang's attractions and nearby destinations with ease.\nAnother notable public transport station near New Orient Hotel Da Nang is the Da Nang Bus Station. Situated just a short drive away, this station offers a wide network of bus routes that connect various parts of the city. Whether you're planning to visit the iconic Marble Mountains, the beautiful My Khe Beach, or the bustling Han Market, the Da Nang Bus Station provides a convenient and affordable way to reach these popular attractions. With regular bus services and a well-connected network, guests can easily navigate Da Nang's vibrant streets and immerse themselves in the local culture and charm.\nA Gastronomic Adventure Awaits\nNew Orient Hotel Da Nang is surrounded by a plethora of dining options that will satisfy even the most discerning palates. Just a stone's throw away from the hotel, you'll find Pizza 4P's Hoang Van Thu, known for their delectable wood-fired pizzas and cozy atmosphere. For a taste of authentic Vietnamese cuisine, head over to Banh mi - Mi AA - Happy Bread or Tre Viet cuisine, where you can indulge in flavorful banh mi sandwiches and traditional dishes bursting with local flavors. If you're in the mood for a nostalgic dining experience, Khong Gian Xua is the place to be, with its charming decor and mouthwatering Vietnamese specialties. For those craving a juicy steak, Olivia's Prime Steakhouse is a must-visit, offering top-quality cuts cooked to perfection. Limoncello Danang - Pizza & Restaurant is another fantastic option, serving up delicious Italian fare including their signature pizzas. LUK LAK Restaurant is a great choice for those seeking a fusion of Vietnamese and international flavors, while Memory Lounge offers a cozy ambiance and a menu of international delights. If you're looking for a fine dining experience, Red Sky Steakhouse is the place to be, with its elegant setting and exquisite steaks. Lastly, Hue Ngon Restaurant is a must-visit for those wanting to explore the unique flavors of Hue cuisine. With such a diverse range of restaurants just moments away, New Orient Hotel Da Nang is the perfect base for a gastronomic adventure in Da Nang.\nShop 'til you drop at New Orient Hotel Da Nang's surrounding shopping landmarks\nLocated in the heart of Da Nang, New Orient Hotel Da Nang is surrounded by an array of shopping landmarks that are sure to delight any shopaholic. Indochina Riverside Mall offers a diverse range of shops and boutiques, perfect for picking up stylish clothing and accessories. Veston Tran is a must-visit for those in search of tailored suits and elegant formal wear. Indochina Riverside Towers is home to a variety of shops and restaurants, providing a convenient one-stop destination for all your shopping and dining needs. Pheva Chocolate is a paradise for chocolate lovers, offering a tempting selection of handmade chocolates and treats. Byfas Premium Tailoring is renowned for its high-quality tailoring services, allowing you to create custom-made clothing that fits you perfectly. Kitsch Stores is a treasure trove of unique and quirky items, perfect for finding one-of-a-kind souvenirs. Vinh Trung Plaza is a popular shopping mall that houses a wide range of shops, from fashion and beauty to electronics and home decor. Nhat Hoa Silk Co., Ltd specializes in silk products, offering a wide range of beautiful silk garments and accessories. Danang Bazaar is a bustling marketplace where you can find a variety of local products, including handicrafts, textiles, and traditional Vietnamese items. Finally, Da Nang Souvenirs & Cafe is the perfect place to pick up souvenirs to remember your trip, while also enjoying a cup of Vietnamese coffee. With these shopping landmarks just a stone's throw away from New Orient Hotel Da Nang, you'll have plenty of opportunities to indulge in some retail therapy during your stay.\nAffordable Luxury: Experience Da Nang at a Great Price\nLocated in the heart of Da Nang, New Orient Hotel offers an unbeatable combination of luxury and affordability. With an average price of just $55 per night, this hotel provides exceptional value for money compared to the city's average room rate of $74.\nStep into the world of comfort and elegance as you enter the beautifully designed rooms at New Orient Hotel. Each room is tastefully furnished with modern amenities, ensuring a relaxing and enjoyable stay. From plush beds to spacious bathrooms, every detail has been carefully curated to provide the utmost comfort for guests.\nNot only does New Orient Hotel offer great value for money, but it also boasts a prime location. Situated in the heart of Da Nang, this hotel allows you to easily explore the city's vibrant attractions, including the famous My Khe Beach and the majestic Marble Mountains. Whether you're a business traveler or a leisure seeker, New Orient Hotel is the perfect choice for those looking to experience the best of Da Nang without breaking the bank. Book your stay today and indulge in affordable luxury at New Orient Hotel Da Nang.\nFantastic Services and Friendly Staff at New Orient Hotel Da Nang\nGuests at New Orient Hotel Da Nang have consistently praised the hotel's exceptional services and friendly staff. The hotel's staff members are described as extremely friendly and helpful, providing a warm and welcoming atmosphere for guests. The breakfast at the hotel is highly regarded, with guests enjoying a delicious and satisfying meal to start their day. The rooms are spacious, comfortable, and clean, ensuring a good night's sleep for all guests. The rooftop bar and swimming pool are additional highlights, offering a relaxing and enjoyable experience. With its great services, nice staff, and fantastic breakfast, New Orient Hotel Da Nang is a top choice for travelers visiting Da Nang.\nA Haven of Excellence: New Orient Hotel Da Nang's Stellar Customer Reviews\nWith a remarkable overall rating of 9.3, New Orient Hotel Da Nang has earned a well-deserved reputation for excellence among its guests. This luxurious hotel in Da Nang, Vietnam, has garnered high praise for its exceptional value, top-notch facilities, impeccable cleanliness, convenient location, and outstanding staff performance.\nOne of the standout features of New Orient Hotel Da Nang is its exceptional value. Guests have consistently praised the hotel for providing a high-quality experience at an affordable price. From the moment you step into the elegant lobby, you'll be greeted with warm hospitality and a sense of luxury that exceeds expectations. The hotel's commitment to providing excellent value is evident in every aspect of your stay, from the comfortable and well-appointed rooms to the wide range of amenities available for guests to enjoy.\nThe hotel's impressive facilities also contribute to its outstanding reputation. With a rating of 9.2 for facilities, New Orient Hotel Da Nang offers a wealth of amenities designed to enhance your stay. Whether you're looking to relax by the sparkling swimming pool, unwind with a rejuvenating spa treatment, or stay active at the well-equipped fitness center, this hotel has something for everyone. The attention to detail and commitment to providing a memorable experience are evident in every aspect of the hotel's facilities, ensuring that guests have everything they need for a truly enjoyable stay.\nFurthermore, New Orient Hotel Da Nang sets itself apart with its exceptional cleanliness. With a rating of 9.4 for cleanliness, the hotel's dedicated housekeeping team ensures that every corner of the property is spotless, creating a pristine and inviting atmosphere. From the immaculate rooms to the well-maintained common areas, guests can rest assured that their comfort and well-being are of the utmost importance to the hotel's staff.\nThe hotel's convenient location also adds to its appeal, with a rating of 9.0. Situated in the heart of Da Nang, guests have easy access to the city's vibrant attractions, stunning beaches, and delicious local cuisine. Whether you're looking to explore the ancient wonders of Hoi An, discover the breathtaking beauty of the Marble Mountains, or simply soak up the sun on My Khe Beach, New Orient Hotel Da Nang serves as the perfect base for your adventures.\nLast but certainly not least, the staff performance at New Orient Hotel Da Nang is truly exceptional, earning a remarkable rating of 9.5. From the moment you arrive, you'll be greeted by a team of friendly and attentive staff who go above and beyond to ensure your every need is met. Guests consistently praise the hotel's staff for their professionalism, efficiency, and genuine care, making every interaction a delightful experience.\nWith its exceptional value, impressive facilities, impeccable cleanliness, convenient location, and outstanding staff performance, New Orient Hotel Da Nang has rightfully earned its stellar customer reviews. Whether you're traveling for business or leisure, this hotel promises an unforgettable stay that exceeds expectations at every turn."
+  },
+  "check_in": {
+    "from": "14:00",
+    "until": null
+  },
+  "check_out": {
+    "until": "12:00"
+  },
+  "contact": {
+    "phone": "+84-000-2361-7864",
+    "email": "reservations+new_orient_hotel_da_nang@catalog.hotelgo.demo",
+    "website": "https://www.agoda.com/vi-vn/new-orient-hotel-da-nang/hotel/da-nang-vn.html?countryId=38&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-04-17&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=VND&isFreeOccSearch=false&flightSearchCriteria=%5Bobject%20Object%5D&tspTypes=1,8&los=1&searchrequestid=92013c7d-d72b-4654-9723-10ecd9e137a4"
+  },
+  "highlights": {
+    "location_highlight": "Inside city center",
+    "things_youll_love": [
+      "Airport transfer",
+      "Free Wi-Fi in all rooms!",
+      "Daily housekeeping",
+      "Bar"
+    ],
+    "nearby_highlights": [
+      "Sights and Monuments",
+      "Dragon Bridge",
+      "Shopping and Markets",
+      "My Khe Beach"
+    ]
+  },
+  "general_amenities": [
+    "A la carte breakfast",
+    "A la carte in restaurant",
+    "Accessible by elevator",
+    "Accessible vanities",
+    "Air conditioning",
+    "Air conditioning in public area",
+    "Airport transfer",
+    "Alarm clock",
+    "Allergy-free rooms",
+    "Anti-viral cleaning products",
+    "Asian breakfast",
+    "Asian cuisine in restaurant",
+    "Audio-visual equipment for special events",
+    "BBQ facilities",
+    "Baby amenities (upon request)",
+    "Bar",
+    "Bathrobes",
+    "Bathroom phone",
+    "Body scrub",
+    "Body thermometer",
+    "Body wrap",
+    "Breakfast [buffet]",
+    "Breakfast [continental]",
+    "Breakfast in room",
+    "Breakfast takeaway service",
+    "Buffet in restaurant",
+    "Buzzer/wireless intercom",
+    "CCTV in common areas",
+    "CCTV outside property",
+    "Car park [free of charge]",
+    "Car park [nearby]",
+    "Carpeting",
+    "Cashless payment service",
+    "Check-in [24-hour]",
+    "Chinese [Mandarin]",
+    "Cleaning products",
+    "Closet",
+    "Clothes rack",
+    "Coffee shop",
+    "Coffee/tea in restaurant",
+    "Coffee/tea maker",
+    "Complimentary tea",
+    "Concierge",
+    "Currency exchange",
+    "Daily disinfection in all rooms",
+    "Daily housekeeping",
+    "Desk",
+    "Desserts in restaurant",
+    "Doctor/nurse on call",
+    "Doorman",
+    "Dressing room",
+    "Dry cleaning",
+    "Electric kettle",
+    "Elevator",
+    "English",
+    "Face coverings on staff",
+    "Facilities for disabled guests",
+    "Family room",
+    "Family/child friendly",
+    "Fire extinguisher",
+    "First aid kit",
+    "Fitness center",
+    "Food delivery",
+    "Foot bath",
+    "Free Wi-Fi in all rooms!",
+    "Free bottled water",
+    "Free face masks",
+    "Free instant coffee",
+    "Front desk [24-hour]",
+    "Garden",
+    "Grocery delivery",
+    "Grooming service",
+    "Guest rooms seal after sanitization",
+    "Gym/fitness",
+    "Hair dryer",
+    "Hand sanitizer",
+    "Happy hour",
+    "High chair",
+    "Hot tub",
+    "Hot water linen and laundry washing",
+    "Hotel room service app",
+    "In-room safe box",
+    "Individual air conditioning",
+    "Individually-wrapped food options",
+    "Indoor venue for special events",
+    "Internet",
+    "Internet services",
+    "Ironing service",
+    "Karaoke",
+    "Kids club",
+    "Kids meal",
+    "Kids safety features",
+    "Kitchen",
+    "Korean",
+    "Laundry service",
+    "Luggage storage",
+    "Massage",
+    "Meeting/banquet facilities",
+    "Meetings",
+    "Mini bar",
+    "Mirror",
+    "Nightclub",
+    "Non-smoking",
+    "Non-smoking rooms",
+    "On-site entertainment",
+    "Physical distancing of at least 1 meter",
+    "Playground",
+    "Pool with view",
+    "Poolside bar",
+    "Private bathroom",
+    "Private entrance",
+    "Professional-grade sanitizing services",
+    "Projector/LED display",
+    "Protective screens in common areas",
+    "Pub crawl",
+    "Restaurant breakfast",
+    "Restaurant dinner",
+    "Restaurant lunch",
+    "Restaurants",
+    "Roll-in shower",
+    "Room decorations",
+    "Room sanitization opt-out available",
+    "Room service",
+    "Rooms sanitized between stays",
+    "Safe dining setup",
+    "Safety deposit boxes",
+    "Safety/security feature",
+    "Salad in restaurant",
+    "Salon",
+    "Sanitized kitchen and tableware items",
+    "Satellite/cable channels",
+    "Sauna",
+    "Scale",
+    "Seating area",
+    "Security [24-hour]",
+    "Seminars",
+    "Sewing kit",
+    "Shared stationery removed",
+    "Shower",
+    "Shuttle service",
+    "Sleep comfort items",
+    "Slippers",
+    "Smoke alarms",
+    "Smoke detector",
+    "Smoke-free property",
+    "Smoking area",
+    "Snack bar",
+    "Socket near the bed",
+    "Sofa",
+    "Solarium",
+    "Soundproofing",
+    "Soup in restaurant",
+    "Spa",
+    "Spa/sauna",
+    "Staff trained in safety protocol",
+    "Steamroom",
+    "Sterilizing equipment",
+    "Swimming pool",
+    "Swimming pool [kids]",
+    "Swimming pool [outdoor]",
+    "Taxi service",
+    "Telephone",
+    "Temperature check for guests and staff",
+    "Terrace",
+    "Ticket services",
+    "Toiletries",
+    "Tours",
+    "Towels",
+    "Trash cans",
+    "Valet parking",
+    "Vegetarian restaurant",
+    "Vietnamese",
+    "Wake-up service",
+    "Wheelchair accessible",
+    "Wi-Fi [free]",
+    "Wi-Fi for special events",
+    "Wi-Fi in public areas",
+    "Window",
+    "Wooden/parqueted flooring",
+    "Xerox/fax in business center"
+  ],
+  "featured_amenities": [
+    "Airport transfer",
+    "Bar",
+    "Daily housekeeping",
+    "Free Wi-Fi in all rooms!"
+  ],
+  "breakfast": {
+    "available_cuisines": [
+      "American",
+      "Asian",
+      "Continental",
+      "Buffet"
+    ],
+    "charge": {
+      "raw": "250000 VND",
+      "amount": 250000.0,
+      "currency": "VND"
+    }
+  },
+  "restaurants": [
+    {
+      "id": 104598,
+      "name": "Bistecca",
+      "servings": [
+        "Buffet",
+        "A-la-carte"
+      ],
+      "cuisines": [
+        "Asian",
+        "European",
+        "Italian",
+        "Vietnamese",
+        "Pizza",
+        "Steakhouse"
+      ]
+    }
+  ],
+  "policies": {
+    "guest_policies": {
+      "extraBedPolicy": "Extra beds are dependent on the room you choose. Please check the individual room capacity for more details.",
+      "minimumAgeOfGuest": "All children are welcome."
+    },
+    "child_policies": [],
+    "extra_bed_policies": [
+      {
+        "type": 1,
+        "description": "Extra beds are dependent on the room you choose. Please check the individual room capacity for more details."
+      }
+    ],
+    "other_policies": [
+      "Please inform the property regarding the number of children, age, meal plan, and extra bed requirements prior to arrival.",
+      "Guest aged 12 and over requires additional bedding at VND 500,000 per night",
+      "Children 6-11 years old will be charged VND 170,000 per child per night when using the existing bed",
+      "Children 0 - 5 years old stay for free if using the existing bed.",
+      "When booking more than 5 rooms, different policies and additional supplements may apply."
+    ]
+  },
+  "important_notes": [],
+  "useful_info": [
+    {
+      "name": "Check-in/Check-out",
+      "items": [
+        {
+          "title": "Check-in from",
+          "description": "14:00",
+          "icon": "ficon-express-check-in-check-out"
+        },
+        {
+          "title": "Check-out until",
+          "description": "12:00",
+          "icon": "ficon-express-check-in-check-out"
+        },
+        {
+          "title": "Reception open until",
+          "description": "00:00",
+          "icon": "ficon-24hour-frontdesk"
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "items": [
+        {
+          "title": "Distance from city center",
+          "description": "1 km",
+          "icon": "ficon-distance-from-city-center"
+        },
+        {
+          "title": "Travel time to airport (minutes)",
+          "description": "15",
+          "icon": "ficon-time-to-airport"
+        },
+        {
+          "title": "Airport transfer fee",
+          "description": "372000 VND",
+          "icon": "ficon-airport-transfer"
+        }
+      ]
+    },
+    {
+      "name": "Extras",
+      "items": [
+        {
+          "title": "Breakfast charge (unless included in room price)",
+          "description": "250000 VND",
+          "icon": "ficon-free-breakfast"
+        }
+      ]
+    },
+    {
+      "name": "The property",
+      "items": [
+        {
+          "title": "Year property opened",
+          "description": "2017",
+          "icon": "ficon-year-hotel-built"
+        },
+        {
+          "title": "Number of floors",
+          "description": "10",
+          "icon": "ficon-number-of-floors"
+        },
+        {
+          "title": "Number of rooms",
+          "description": "99",
+          "icon": "ficon-number-of-rooms"
+        },
+        {
+          "title": "Most recent renovation",
+          "description": "2021",
+          "icon": "ficon-year-hotel-last-renovated"
+        },
+        {
+          "title": "Number of restaurants",
+          "description": "1",
+          "icon": "ficon-restaurant"
+        },
+        {
+          "title": "Number of bars/lounges",
+          "description": "2",
+          "icon": "ficon-mini-bar"
+        }
+      ]
+    },
+    {
+      "name": "Parking",
+      "items": [
+        {
+          "title": "Daily parking fee",
+          "description": "0 VND",
+          "icon": "ficon-car-park"
+        }
+      ]
+    }
+  ],
+  "property_facts": {
+    "distance_from_city_center": "1 km",
+    "travel_time_to_airport_minutes": "15",
+    "airport_transfer_fee": {
+      "raw": "372000 VND",
+      "amount": 372000.0,
+      "currency": "VND"
+    },
+    "daily_internet_fee": null,
+    "year_opened": "2017",
+    "most_recent_renovation": "2021",
+    "number_of_floors": "10",
+    "number_of_rooms": "99",
+    "number_of_restaurants": "1",
+    "number_of_bars_lounges": "2",
+    "room_voltage": null,
+    "parking_fee": {
+      "raw": "0 VND",
+      "amount": 0.0,
+      "currency": "VND"
+    }
+  },
+  "images": [
+    {
+      "local_path": "images/hotel/hotel_01.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/0/cdf34542c16dadcf33c0e67e04c9dde0.jpg?ce=2&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_01.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_02.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/715163411.jpg?k=9ad8d013eefa6c4e134bb22f4d4cc0318a4f97fc296ecf04e6fe3ff968ae8966&o=",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_02.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_03.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/172736433.jpg?k=57888e3b6efb11113df3f0c83eaf7a6bc73e4e4aa791f17445b545347923166c&o=",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_03.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_04.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/3042815fd8a8c18ad2fca41c877ddaa0.jpg?ce=0&s=1024x768",
+      "title": "Food and beverages",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_04.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_05.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/28dabad152ef2d6be9d02c8ea327cf5a.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_05.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_06.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/c13805933bb67d485a9406b9bd636eab.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_06.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_07.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/77755b958ff17a13d42497fb94f11480.jpg?ce=0&s=1024x768",
+      "title": "Kid’s club",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_07.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_08.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/684437884.jpg?k=70a55173139246f5ccf44beb76869d13152864de34efd5c1838285f4f07fcb23&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_08.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_09.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/3b52e3ab3cc2c4ce1069210ef0b2b030.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_09.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_10.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/63683c26681ed16eb797f7588cee9228.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_10.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_11.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/2f49754e269ba028b4c40619072df106.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_11.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_12.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/6ca8afc11bb471dff8b185c9035339ae.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_12.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_13.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/9ffc9982e9493e81308cf2fec1f407d4.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_13.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_14.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/a0e3e346bfebf277623888c4fd967a2d.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_14.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_15.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/0/142bc207dcac6051da353671c20964ac.jpg?ce=2&s=1024x768",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_15.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_16.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/38f2dd8f04acfa177f549a1f4d03fa28.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_16.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_17.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/173538329.jpg?k=848dd2b6c9e93117b7f22d80ff7d16454caf97698f2a4ad5e14b8f0e17f7f5cf&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_17.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_18.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/a772b6a87f1a82efda9481aacbcfb8a6.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_18.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_19.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/85eb0ef66198f768e8abded59b044aa9.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_19.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_20.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/68f6de745d125516f6490fae7d19c798.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_20.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_21.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/9b192863c10af9571c5546df384ecf92.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_21.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_22.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/d92655d7fe8d9ded5b4684eb8338a874.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_22.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_23.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/f3678fec672413b9ec837c91a581effe.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_23.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_24.jpg",
+      "source_url": "https://pix8.agoda.net/property/83099545/0/4d34ad41f56704cef60bdcb638c701b0.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_24.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_25.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/c5178d42cda78e339bdda430d2241c64.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_25.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_26.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/19571a660016f335ac539d683204f574.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_26.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_27.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/1d2807b4de09eb4ed64222af46e656b1.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_27.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_28.jpg",
+      "source_url": "https://pix8.agoda.net/property/2911802/769653392/06e7fbcf4a3a046288fad57c3b784d36.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_28.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_29.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/f61b3c1ee247cfdc4bb6a356bb50eb64.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_29.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_30.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/d5231eb7e8a43504fc5c91c9563d76dd.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Swimming pool [outdoor]",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_30.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_31.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/a3328806add7c5c50852bd62b99cdc58.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_31.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_32.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/e132bac7db127a92c769442b553caeda.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_32.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_33.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/708c24056c1f211b130c8890598467f5.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_33.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_34.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/0b1d96f260438b056272494324617405.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_34.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_35.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/dc46ec070923a2c5359d992a0e737b02.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_35.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_36.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/53d1dea4a139eace22b0d946c5ec9a2f.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_36.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_37.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/223267328.jpg?k=cdb8309520b89beb075eeb0a37cc8010f4e555fe665188180b5735f2e02e8c9d&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_37.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_38.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/0/eaf6626664767cf6ecf15c5c96a39918.jpg?ce=2&s=1024x768",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_38.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_39.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/4adac69d39f673a8bffed9c73755ec21.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_39.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_40.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/540250720.jpg?k=be46f7b2df758dfbf5d5a8b43b5f035ff80438d2579320f39a0002ee7f061bab&o=",
+      "title": "Balcony/terrace",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_40.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_41.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/9658641925506b8b06133709c84acb01.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_41.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_42.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/123520355.jpg?k=8d2e637eb60604a4065fd8b53e05dbdc37565988b04e7ba5453d72f7906fef6a&o=",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_42.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_43.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/713416777.jpg?k=5ac8a4b0f3220039abeeb2c36bbb2bcdadf94d61062b03887ea8e671cb5f8f01&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_43.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_44.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/173538355.jpg?k=8f51bac4940fe41dd58a8d61254e2ab4858b36dac6d8f6a2f01e8a01c5fce665&o=",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_44.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_45.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/b4f0ce6fd1178eb079a741abb48ff308.jpg?ce=0&s=1024x768",
+      "title": "Bar",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_45.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_46.jpg",
+      "source_url": "https://pix8.agoda.net/property/2911802/867355838/0b866f138c0cc225a49b6eec3c51465e.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_46.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_47.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/1228638cb3fc5db047fc4b45ce17c5fb.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_47.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_48.jpg",
+      "source_url": "https://pix8.agoda.net/property/83099545/0/b97da3c3da4e16712e4a4b54ebc74205.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_48.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_49.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/1e196219f26934d1c6f09eba275f515f.jpg?ce=0&s=1024x768",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_49.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_50.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/466256266.jpg?k=6a0e1d2315734cdec4091a726ebe004a7ea8e62853fad32df3c931ffa6a32b22&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_50.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_51.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/11cbffc02db986b0ae36d308c148783e.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_51.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_52.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/de6d62fcf51b9c38af99eed08ad63c8a.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_52.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_53.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/484219962.jpg?k=116e1b189bbd7816e566e7e8bde93252af5a4074f25199a7692c4ac18f59c2dd&o=",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_53.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_54.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/09ccd4f5b8d453c55ff08fff025c91dd.jpg?ca=13&ce=1&s=1024x768",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_54.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_55.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/0/e788a713c3bafd3b43446284c1a6a218.jpg?ce=2&s=1024x768",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_55.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_56.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/f5b9aed2f632050074975a28ebe09470.jpg?ce=0&s=1024x768",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_56.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_57.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/24ff4152a7c8338fe52d81ae5ab5dfe8.jpg?ca=9&ce=1&s=1024x768",
+      "title": "Swimming pool [outdoor]",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_57.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_58.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/efe7fa7c3b9b21a7c367a9ec5d86dec2.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_58.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_59.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/8d6401be0addffeb3146561442755d5a.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_59.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_60.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/640179425.jpg?k=d4c7926c07aa91e1bdbff1ee517312619088aca541c8c0ea93dbb8913bff98b7&o=",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_60.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_61.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/01ad3205bf435bd8ddfef0052befb413.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_61.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_62.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/173538426.jpg?k=295757a221fc0a2af5655fa1a80ee225cb36661614a6d7af960b996e18ada7bf&o=",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_62.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_63.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/1560eae299017c178c03564406f4cae3.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Fitness center",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_63.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_64.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/8c09e5c73d37bdbb73608e891c0f6fbe.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_64.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_65.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/0c7358bfb367ef35ca899f95a48e1b96.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_65.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_66.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/779570914.jpg?k=70c72d9e5bbec52d97c84701e0bf62831acc7973220aedf0b0cd0e47923108c9&o=",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_66.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_67.jpg",
+      "source_url": "https://pix8.agoda.net/property/83099545/0/5886a30c3cf5d75ac2b6a32bcbb7ce74.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_67.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_68.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/173538394.jpg?k=1ee7531dab9bce2b8e7857fc140e3808eac9bfe9cd7b8ca9076c40c43c2cc056&o=",
+      "title": "Massage",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_68.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_69.jpg",
+      "source_url": "https://pix8.agoda.net/property/83099545/0/376c1d99710f66fd72e1b2798e2fcc6c.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_69.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_70.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/0/72bab0cdb624480e348a54e2ca019998.jpg?ce=2&s=1024x768",
+      "title": "Balcony/terrace",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_70.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_71.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/714622860.jpg?k=5cdb654861fc44233363201ff9ebadd3182b9a32da89e8c28c4046f7034bede5&o=",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_71.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_72.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/451881a09d0a65bc70b49cb0fc92682f.jpg?ca=13&ce=1&s=1024x768",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_72.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_73.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/fe9c94be2f494d8ea539af741cb74d94.jpg?ce=0&s=1024x768",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_73.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_74.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/466256629.jpg?k=b30d930d336031c04592677ade271bcb06055f20fd59521fa26ee1091cebda06&o=",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_74.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_75.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/38114e93e92147651083822b84a8a58c.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_75.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_76.jpg",
+      "source_url": "https://pix8.agoda.net/property/2911802/0/d0a3b726afc322c0a3e8639e5bb3c387.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_76.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_77.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/d080470172363fdc648e7a58e6b1cb37.jpg?ce=0&s=1024x768",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_77.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_78.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/0/5491c21ac02d02c12f54dc57be918db3.jpg?ce=2&s=1024x768",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_78.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_79.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/50c9af0186cab45c02ea0a517c482fc0.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_79.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_80.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/466256207.jpg?k=e6c92243a2590620b80e8528e607b80cce07bde461c2581d44c9a9d1ff4d4267&o=",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_80.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_81.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/158293548.jpg?k=0f5a2d4e53cc5b4b69fc612f3744b97f9cfe9d6950345ad9ceca41d4882d41b3&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_81.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_82.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/b8d318fb3a76ae4eed03c97ea043ff36.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_82.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_83.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/4f93fcafd323d7d17eae48015565707e.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_83.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_84.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/540250148.jpg?k=23acda9abd24a5b9f5cc6fdff70e88b00246141f037108a72d5b5271b2f8a022&o=",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_84.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_85.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/510574810.jpg?k=95c832fea5749f540c78bec983c04a0e0ef8c32695284f3dec410d82648ba2e8&o=",
+      "title": "Fitness center",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_85.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_86.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/223249453.jpg?k=f57fa879ecc9298d65e40bc5a84c176eea24dba7d0148983f1dd68aa6feb98fa&o=",
+      "title": "Food and beverages",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_86.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_87.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/e920942c9166ff7268e400505d67585d.jpg?ca=9&ce=1&s=1024x768",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_87.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_88.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/b78e9fd4ec04e0fc6ec8df33649db54e.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_88.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_89.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/eafc2c0e6da0b1e722752f8937139fd1.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_89.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_90.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/505908085.jpg?k=3adb7b5a401d4b433ae919b99c0f2cbc2b10409edb9896bd0bc287c8f35d3d69&o=",
+      "title": "Balcony/terrace",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_90.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_91.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/a3d0e885456b7e4f4271fd78a0298ce2.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_91.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_92.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/223267340.jpg?k=c239f6442e5b88ae39d303728079d545a7a4a2e184ab1f9a67421f37915d0d06&o=",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_92.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_93.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/09ce914e7ecc2465f168e75723e461ee.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_93.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_94.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/30e80c82f6a0b618186dbeb92e69a6ed.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_94.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_95.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/582954896.jpg?k=741bc2954590611ae00ae4f9d8c6ddf4dbf1537a86471deeb32b5f89a4efb5bf&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_95.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_96.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/532501797.jpg?k=2151b16ce198f61b731a0a7729857c33423b0e03396430378fc11b621c86eac1&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_96.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_97.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/713409585.jpg?k=f5f6c588bca9baae97ca97fd63d140f11aab3b425f2c37f9e4051999f12e228c&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_97.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_98.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/e135d180ebef724f289ca10ebdb669bd.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_98.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_99.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/223249452.jpg?k=c100a2efdd35e431fb16e49f860bb70939c7e87651bdd352491666cc296bb06b&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_99.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_100.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/715164637.jpg?k=030fd037306ef3711ca3ac7cd6b2748bce9d47840680e837e1d3cb9c88deda06&o=",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_100.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_101.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/e1b7ef8cf94b7fd4a5f3f8c65ef98bd1.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_101.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_102.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/d7570357725649886793a98eb2bc88d4.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_102.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_103.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/0/7ae77ca41a31d39563e585a3d2d2833d.jpg?ce=2&s=1024x768",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_103.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_104.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/93986a1ca2da2cba89e1f5575de7e991.jpg?ca=9&ce=1&s=1024x768",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_104.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_105.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/aab1121432a3997b12773645c703eed7.jpg?ca=13&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_105.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_106.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/293c0726d3f2513094c094722616bf0f.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_106.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_107.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/173538412.jpg?k=8ca7bd482c1d39f32abad326e0d20e277defe2d9a0db761262feca7a9b7dbb4c&o=",
+      "title": "Sauna",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_107.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_108.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/779570915.jpg?k=53d4240c5f1221b6fdb28f63e596f93daf3578afc918d9ffba057c3457e43651&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_108.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_109.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/577393908.jpg?k=6c30bd61fdff2406dcc19e4a1b98bc452b0320c1535b4ed941a7f7c2bb2d48b2&o=",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_109.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_110.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/510574808.jpg?k=2d2fab5413ba6f66876359c1e8dca03e654dd64fa05eecb1a76b122fb972a46e&o=",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_110.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_111.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/6b6177c0f731428dfe6fca02d9004af9.jpg?ca=13&ce=1&s=1024x768",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_111.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_112.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/0/b5ebbeb2a3c62bf8eca7ac32a2cf3432.jpg?ce=2&s=1024x768",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_112.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_113.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/60cadcf3e490682313ca9ddf5b8f9abd.jpg?ce=0&s=1024x768",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_113.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_114.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/7413d4779be7f21219900a707235c4f3.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_114.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_115.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/172742994.jpg?k=a1ddd3225429a7e447f8ba41df0cb221a2754fefc91eff79f79b0e5fad5d4332&o=",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_115.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_116.jpg",
+      "source_url": "https://pix8.agoda.net/property/83099545/0/d21d83c9aba19c78cb1fab92e79a7239.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_116.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_117.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/684437471.jpg?k=2bad380333e5ed07206fba255fcc60238f3cf0e786d312f9856759e0e73a00f9&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_117.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_118.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/466256272.jpg?k=dc8e23fd5f76bb0464ad3df5c1de9286e2671d52768f766d63c722474841312f&o=",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_118.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_119.jpg",
+      "source_url": "https://pix8.agoda.net/property/2911802/867355957/7714a102731c430a26afb17f91ce24ae.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_119.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_120.jpg",
+      "source_url": "https://pix8.agoda.net/property/60329017/0/a10c9a98adb796dde035827a9fe73ec2.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_120.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_121.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/466255706.jpg?k=a6583242d57db8396a3c79bb632c5eb816d0bbad776c7e30c8839d972048d178&o=",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_121.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_122.jpg",
+      "source_url": "https://pix8.agoda.net/property/2911802/0/f119567026ca394ae723c0b7077db6fa.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_122.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_123.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/684436756.jpg?k=0205a922f4fe2b93c2345b9b20fe7d1f4544d712fb5883ab6ba689637106a796&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_123.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_124.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/90afbd66903939dc7e7eebc946209248.jpg?ca=9&ce=1&s=1024x768",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_124.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_125.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/964dffe6c8ddeb3c93ff80b4c133ced9.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_125.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_126.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/5263307499710fcadf172105b45be616.jpg?ce=0&s=1024x768",
+      "title": "Floor plans",
+      "group": "Other",
+      "group_id": "other",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_126.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_127.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/0/96a11ad1b9054ad02acff399eaeb2691.jpg?ce=3&s=1024x768",
+      "title": "Public areas",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_127.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_128.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/561228843.jpg?k=0bd8704325543ed51cc7b3d49f034587ed50fe8f19ffb05ebb0b2c9ff7a08380&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_128.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_129.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/158293731.jpg?k=0972386b31352fa8e2f217612fcc5863ffb4a34d2f83ed520a733df3247f08bb&o=",
+      "title": "Kid’s club",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_129.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_130.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/779570907.jpg?k=a5c1ee16f81fa979794981f3aad85436f51f4e2ad4a3d5951111af305a992e60&o=",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_130.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_131.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/4e6684eddc4dc4b645c5aa199b304732.jpg?ce=0&s=1024x768",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_131.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_132.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/715164641.jpg?k=0bea4092517610b42b8ba965972119e2c53cb72321c754d4c3b7a029bcb80e4f&o=",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_132.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_133.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/532501795.jpg?k=b5a1ded91f735a901dab34a491742aff01265b19d2e896bfbbae8725da0a25b5&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_133.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_134.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/8fed3cbbfa216d9a984fe4bc9a868458.jpg?ce=0&s=1024x768",
+      "title": "Poolside bar",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_134.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_135.jpg",
+      "source_url": "https://pix8.agoda.net/property/65513496/0/87418ab2b758edbffd5d78e315840656.jpeg?ce=0&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_135.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_136.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/755948361.jpg?k=39646e6cbacbcb68e2b16f8022575bec1945963c52f24b008ccce2f72038d9a6&o=",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_136.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_137.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/2911802/-1/68f9cbfd2f079897e7ac7488239bb900.jpg?ce=0&s=1024x768",
+      "title": "Playground",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_137.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_138.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/713433462.jpg?k=9ee7fe3dd4e4047ca4728e50314a4b53c8823c5724724a2d0bdc053b54612fcf&o=",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_138.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_139.jpg",
+      "source_url": "https://pix8.agoda.net/property/69695444/0/f6d1b33bb6a3d2d81fed4eb631b71f9a.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_139.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_140.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/38127/43747db72327a420ca9c003d669d4f9d.jpg?ca=19&ce=1&s=1024x768",
+      "title": "Cao Dai Temple - 1.03 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_140.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_141.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/24364/2_24364_03.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Thuan Phuoc Bridge - 1.09 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_141.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_142.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/24360/2_24360.jpg?ca=6&ce=1&s=1024x768",
+      "title": "Han River Bridge - 1.66 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_142.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_143.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/40748/2_40748_03.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Da Nang Catheral - 1.76 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_143.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_144.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/147722/0c74a84a1cd4095a112223cc2c2ba063.jpg?ce=0&s=1024x768",
+      "title": "DHC Marina - 2.43 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_144.jpg"
+    }
+  ],
+  "room_grid_probe": {
+    "attempted": true,
+    "url": "https://www.agoda.com/api/v1/property/room-grid",
+    "request_payload": {
+      "hotelId": 2911802
+    },
+    "status_code": 400,
+    "response_body_preview": "The api key used is invalid. Please contact agoda to get a valid key.",
+    "accessible": false,
+    "blocked_reason": "invalid_api_key"
+  },
+  "short_description": "New Orient Hotel Da Nang • Da Nang • 4.5 stars • review 9.2",
+  "room_count": 12,
+  "policy_notes": [
+    "Check-in from 14:00.",
+    "Check-out until 12:00.",
+    "Breakfast inclusion may vary by booking date.",
+    "Catalog-only pricing was estimated for demo completeness."
+  ],
+  "synthetic_fields": [
+    "contact.email",
+    "contact.phone",
+    "contact.website",
+    "policy_notes"
+  ],
+  "catalog_quality": {
+    "synthetic_fields": [
+      "contact.email",
+      "contact.phone",
+      "contact.website",
+      "policy_notes"
+    ],
+    "has_uploaded_images": true,
+    "room_count": 12
+  },
+  "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_01.jpg",
+  "gallery_image_urls": [
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_01.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_02.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_03.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_04.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_05.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_06.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_07.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_08.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_09.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_10.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_11.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_12.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_13.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_14.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_15.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_16.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_17.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_18.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_19.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_20.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_21.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_22.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_23.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_24.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_25.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_26.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_27.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_28.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_29.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_30.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_31.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_32.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_33.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_34.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_35.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_36.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_37.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_38.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_39.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_40.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_41.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_42.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_43.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_44.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_45.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_46.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_47.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_48.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_49.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_50.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_51.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_52.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_53.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_54.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_55.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_56.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_57.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_58.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_59.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_60.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_61.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_62.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_63.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_64.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_65.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_66.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_67.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_68.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_69.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_70.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_71.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_72.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_73.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_74.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_75.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_76.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_77.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_78.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_79.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_80.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_81.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_82.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_83.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_84.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_85.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_86.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_87.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_88.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_89.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_90.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_91.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_92.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_93.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_94.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_95.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_96.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_97.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_98.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_99.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_100.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_101.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_102.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_103.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_104.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_105.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_106.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_107.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_108.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_109.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_110.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_111.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_112.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_113.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_114.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_115.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_116.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_117.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_118.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_119.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_120.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_121.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_122.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_123.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_124.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_125.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_126.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_127.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_128.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_129.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_130.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_131.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_132.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_133.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_134.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_135.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_136.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_137.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_138.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_139.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_140.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_141.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_142.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_143.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/NewOrientHotelDaNang/images/hotel/hotel_144.jpg"
+  ]
+}

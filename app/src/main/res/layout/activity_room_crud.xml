@@ -38,9 +38,9 @@
                     android:padding="@dimen/space_m">
 
                     <TextView
-                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:text="@string/room_crud_title" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -109,17 +109,17 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/roomImagePickButton"
-                            style="@style/Widget.Hotel.Button.Outlined"
+                    style="@style/Widget.Hotel.Button.Outlined"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/room_pick_image" />
+                    android:text="@string/room_pick_image" />
 
                         <TextView
                             android:id="@+id/roomImageStatus"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/space_s"
-                            android:text="@string/room_image_none"
+                    android:text="@string/room_image_none"
                             android:textColor="@color/text_secondary"
                             android:textSize="13sp" />
                     </LinearLayout>
@@ -156,7 +156,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/room_create" />
+                        android:text="@string/room_create" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/roomUpdateButton"
@@ -164,18 +164,20 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/space_s"
                             android:layout_weight="1"
-                            android:text="@string/room_update" />
+                        android:text="@string/room_update" />
                     </LinearLayout>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/roomDeleteButton"
-                        style="@style/Widget.Hotel.Button.Danger"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
+                        style="@style/Widget.Hotel.Button.Danger"
                         android:text="@string/room_delete" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
+
+

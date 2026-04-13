@@ -38,9 +38,9 @@
                     android:padding="@dimen/space_m">
 
                     <TextView
-                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:text="@string/booking_title" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -123,9 +123,9 @@
 
                     <TextView
                         android:id="@+id/bookingSummaryTitle"
-                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:text="@string/booking_summary_title" />
 
                     <TextView
@@ -141,3 +141,5 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
+
+

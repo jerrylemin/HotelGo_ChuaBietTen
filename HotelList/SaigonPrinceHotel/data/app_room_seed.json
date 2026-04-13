@@ -1,0 +1,211 @@
+[
+  {
+    "id": "catalog:saigon_prince_hotel:club_suite",
+    "code": "SaigonPrinceHotel-club_suite",
+    "type": "Club Suite - Saigon Prince Hotel",
+    "price": 6850000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_03.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_04.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_05.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_06.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_07.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_08.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_09.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_10.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_11.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_12.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_13.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_suite/club_suite_14.jpg"
+    ],
+    "createdAt": 1775640909137
+  },
+  {
+    "id": "catalog:saigon_prince_hotel:club_room",
+    "code": "SaigonPrinceHotel-club_room",
+    "type": "Club Room - Saigon Prince Hotel",
+    "price": 4150000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_03.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_04.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_05.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_06.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_07.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_08.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_09.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_10.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_11.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_room/club_room_12.jpg"
+    ],
+    "createdAt": 1775640909137
+  },
+  {
+    "id": "catalog:saigon_prince_hotel:apartment",
+    "code": "SaigonPrinceHotel-apartment",
+    "type": "Apartment - Saigon Prince Hotel",
+    "price": 8650000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_03.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_04.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_05.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_06.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_07.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_08.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_09.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/apartment/apartment_10.jpg"
+    ],
+    "createdAt": 1775640909137
+  },
+  {
+    "id": "catalog:saigon_prince_hotel:club_grand_suite",
+    "code": "SaigonPrinceHotel-club_grand_suite",
+    "type": "Club Grand Suite - Saigon Prince Hotel",
+    "price": 8250000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_03.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_04.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_05.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_06.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_07.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_08.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_09.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_grand_suite/club_grand_suite_10.jpg"
+    ],
+    "createdAt": 1775640909137
+  },
+  {
+    "id": "catalog:saigon_prince_hotel:executive_double_or_twin",
+    "code": "SaigonPrinceHotel-executive_double_or_twin",
+    "type": "Executive Double or Twin - Saigon Prince Hotel",
+    "price": 4250000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_03.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_04.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_05.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_06.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_07.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_08.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_09.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/executive_double_or_twin/executive_double_or_twin_10.jpg"
+    ],
+    "createdAt": 1775640909137
+  },
+  {
+    "id": "catalog:saigon_prince_hotel:premier_double_or_twin_room",
+    "code": "SaigonPrinceHotel-premier_double_or_twin_room",
+    "type": "Premier Double or Twin Room - Saigon Prince Hotel",
+    "price": 3900000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_03.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_04.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_05.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_06.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_07.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_08.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_double_or_twin_room/premier_double_or_twin_room_09.jpg"
+    ],
+    "createdAt": 1775640909137
+  },
+  {
+    "id": "catalog:saigon_prince_hotel:premier_grand_view",
+    "code": "SaigonPrinceHotel-premier_grand_view",
+    "type": "Premier Grand View - Saigon Prince Hotel",
+    "price": 3900000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_03.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_grand_view/premier_grand_view_04.jpg"
+    ],
+    "createdAt": 1775640909137
+  },
+  {
+    "id": "catalog:saigon_prince_hotel:club_double_or_twin_room_grand_view",
+    "code": "SaigonPrinceHotel-club_double_or_twin_room_grand_view",
+    "type": "Club Double or Twin Room (Grand View) - Saigon Prince Hotel",
+    "price": 4050000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_03.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/club_double_or_twin_room_grand_view/club_double_or_twin_room_grand_view_04.jpg"
+    ],
+    "createdAt": 1775640909137
+  },
+  {
+    "id": "catalog:saigon_prince_hotel:room_deluxe_executive",
+    "code": "SaigonPrinceHotel-room_deluxe_executive",
+    "type": "Room Deluxe Executive - Saigon Prince Hotel",
+    "price": 4300000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/room_deluxe_executive/room_deluxe_executive_03.jpg"
+    ],
+    "createdAt": 1775640909137
+  },
+  {
+    "id": "catalog:saigon_prince_hotel:premier_deluxe",
+    "code": "SaigonPrinceHotel-premier_deluxe",
+    "type": "PREMIER DELUXE - Saigon Prince Hotel",
+    "price": 3900000.0,
+    "rating": 8.3,
+    "reviewCount": 7977,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_02.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/SaigonPrinceHotel/images/premier_deluxe/premier_deluxe_03.jpg"
+    ],
+    "createdAt": 1775640909137
+  }
+]

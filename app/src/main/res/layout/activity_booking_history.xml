@@ -39,17 +39,17 @@
 
                     <TextView
                         android:id="@+id/bookingHistoryTitle"
-                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/booking_history_title" />
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                    android:text="@string/booking_history_title" />
 
                     <TextView
                         android:id="@+id/bookingHistorySubtitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_xs"
-                        android:text="@string/booking_history_subtitle"
+                    android:text="@string/booking_history_subtitle"
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
 
@@ -65,7 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:text="@string/booking_history_empty"
+                    android:text="@string/booking_history_empty"
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
                 </LinearLayout>
@@ -73,3 +73,5 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
+
+

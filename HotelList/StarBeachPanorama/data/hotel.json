@@ -1,0 +1,1018 @@
+{
+  "schema_version": "1.0",
+  "folder_name": "StarBeachPanorama",
+  "provider": "agoda",
+  "source_url": "https://www.agoda.com/vi-vn/star-beach-panorama/hotel/nha-trang-vn.html?countryId=38&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-04-17&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=VND&isFreeOccSearch=false&flightSearchCriteria=%5Bobject%20Object%5D&tspTypes=2,8&los=1&searchrequestid=3f30f2e0-0775-43b2-a6cd-65d702076991",
+  "secondary_payload_url": "https://www.agoda.com/api/cronos/property/BelowFoldParams/GetSecondaryData?countryId=38&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-04-17&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=VND&isFreeOccSearch=false&flightSearchCriteria=%5Bobject+Object%5D&tspTypes=2%2C8&los=1&searchrequestid=3f30f2e0-0775-43b2-a6cd-65d702076991&hotel_id=13486290&all=false&isHostPropertiesEnabled=false",
+  "fetched_at_utc": "2026-04-08T08:12:56.936927+00:00",
+  "source_hotel_id": "13486290",
+  "name": "Panorama Nha Trang Star Beach",
+  "display_name": "Panorama Nha Trang Star Beach",
+  "slug": "panorama_nha_trang_star_beach",
+  "accommodation_type": "Serviced apartment",
+  "star_rating": 5.0,
+  "awards": {
+    "text": "Awards and Accolades",
+    "gold_circle_year": "2024",
+    "gold_circle_award_text": "Gold Circle Award Winner"
+  },
+  "address": {
+    "full": "02 Nguyen Thi Minh Khai, Loc Tho, Nha Trang, Vietnam, 650000",
+    "line_1": "02 Nguyen Thi Minh Khai",
+    "area": "Loc Tho",
+    "district": "Loc Tho",
+    "city": "Nha Trang",
+    "country": "Vietnam",
+    "postal_code": "650000"
+  },
+  "coordinates": {
+    "latitude": 12.2393860576236,
+    "longitude": 109.196122233868
+  },
+  "review": {
+    "score": "8.4",
+    "score_text": "Excellent",
+    "review_count": 4650,
+    "formatted_review_count": null,
+    "provider_list": "332,3038"
+  },
+  "description": {
+    "overview_html": "<b>Experience Luxury at <b>Panorama Nha Trang Star Beach</b></b><br><br>Nestled in the heart of Nha Trang, Vietnam, <b>Panorama Nha Trang Star Beach</b> is a stunning 5-star hotel that promises an unforgettable experience for both leisure and business travelers. Opened in 2020, this contemporary gem is just a stone's throw away from the vibrant city center, making it the perfect base for exploring the local culture, stunning beaches, and bustling markets. With its prime location, guests can enjoy quick access to the airport, which is just a 40-minute drive away, ensuring a hassle-free arrival and departure.\n\nThe hotel features an impressive total of 100 elegantly designed rooms, each offering breathtaking views of the azure sea or the bustling cityscape. Guests can check in from 2:00 PM and unwind in luxurious surroundings, while the check-out time is conveniently set until 12:00 PM, allowing for a leisurely departure. Families will appreciate the hotel's child policy, which allows children aged 0 to 6 to stay free of charge, making it an ideal choice for those traveling with little ones. At <b>Panorama Nha Trang Star Beach</b>, every detail is crafted to ensure a memorable stay in one of Vietnam's most picturesque destinations.<br><br><b>Entertainment at <b>Panorama Nha Trang Star Beach</b>: Relax and Unwind</b><br><br>At <b>Panorama Nha Trang Star Beach</b>, guests are invited to immerse themselves in a world of relaxation and entertainment within the inviting shared lounge and TV area. This thoughtfully designed space serves as a perfect retreat after a day of exploring the vibrant city of Nha Trang. With comfortable seating arrangements and a warm ambiance, it’s an ideal spot to unwind with friends or fellow travelers. Whether you’re looking to catch up on the latest shows, enjoy a movie night, or simply relax with a good book, this lounge offers a welcoming atmosphere that encourages social interaction and leisure.\n\nThe shared lounge and TV area is equipped with a large-screen television, providing an array of viewing options that cater to diverse tastes. Guests can gather to watch popular films, sports events, or local programs, making it a lively hub for entertainment. With its cozy furnishings and friendly environment, this space not only enhances your stay but also fosters connections with other guests, creating memorable experiences during your time at <b>Panorama Nha Trang Star Beach</b>.<br><br><b>Elevate Your Fitness Experience at <b>Panorama Nha Trang Star Beach</b></b><br><br>At <b>Panorama Nha Trang Star Beach</b>, fitness enthusiasts and casual gym-goers alike will find a haven for their workout routines. The hotel boasts a state-of-the-art fitness center that is fully equipped with modern exercise machines, free weights, and a variety of fitness accessories. Whether you prefer to break a sweat on the treadmill, build strength with resistance training, or enjoy a refreshing workout with stunning views, the fitness center provides the perfect environment to achieve your health goals. Open 24/7, you can tailor your workout schedule to fit your needs, ensuring that you never miss a session even while on vacation.\n\nBeyond the fitness center, the hotel’s prime beachfront location offers guests the perfect opportunity to engage in invigorating outdoor activities. Embrace the sun and surf as you take part in beach sports or simply enjoy a leisurely stroll along the pristine shoreline. The expansive beach area invites you to partake in beach volleyball or a refreshing swim in the turquoise waters. <b>Panorama Nha Trang Star Beach</b> encourages an active lifestyle, allowing guests to seamlessly blend fitness and leisure for a truly rejuvenating getaway.<br><br><b>Convenience Facilities at <b>Panorama Nha Trang Star Beach</b></b><br><br>At <b>Panorama Nha Trang Star Beach</b>, guests are welcomed with a suite of convenience facilities designed to enhance their stay and ensure a hassle-free experience. The hotel offers complimentary Wi-Fi throughout the premises, including free Wi-Fi in all rooms, allowing guests to stay connected with loved ones or catch up on work while enjoying the stunning views of Nha Trang. For those who prefer to surf the internet in a communal setting, Wi-Fi is also available in the public areas, providing a perfect spot to relax and plan your next adventure.\n\nUnderstanding the importance of comfort during travel, the hotel provides a reliable laundry service, making it easy for guests to refresh their wardrobe without the stress of finding local laundromats. Additionally, the daily housekeeping service ensures that your room remains pristine, allowing you to unwind in a clean and inviting environment. For added convenience, the luggage storage facility lets you explore the vibrant surroundings without the burden of your bags, making <b>Panorama Nha Trang Star Beach</b> the perfect base for a memorable getaway.<br><br><b>Seamless Travel Experience at <b>Panorama Nha Trang Star Beach</b></b><br><br>At <b>Panorama Nha Trang Star Beach</b>, your journey begins the moment you arrive. The hotel offers a convenient airport transfer service, ensuring that your transition from Cam Ranh International Airport to the hotel is smooth and hassle-free. This thoughtful service allows you to relax and enjoy the stunning coastal scenery of Nha Trang as you make your way to your luxurious retreat. The friendly staff will be on hand to assist you, making your arrival as comfortable as possible.\n\nFor those looking to explore the vibrant surroundings, the hotel provides an array of tour options that cater to various interests, from cultural excursions to thrilling water sports. Additionally, guests can easily access local attractions with the reliable taxi service available on-site, allowing you to navigate the city with ease. For those who prefer to drive, the hotel features a car park, although charges may apply. With these transport facilities, <b>Panorama Nha Trang Star Beach</b> ensures that you can enjoy a seamless travel experience, making the most of your stay in this beautiful coastal paradise.<br><br><b>Luxurious Comfort at <b>Panorama Nha Trang Star Beach</b></b><br><br>At <b>Panorama Nha Trang Star Beach</b>, each room is a sanctuary of comfort and style, designed to enhance your stay with thoughtful amenities. Enjoy the refreshing embrace of air conditioning, ensuring a pleasant atmosphere regardless of the tropical heat outside. Step out onto your private balcony or terrace, where you can soak in stunning views of the coastline while sipping on complimentary tea or coffee, prepared with the in-room coffee/tea maker. The mini bar is stocked with a selection of beverages, perfect for unwinding after a day of exploration.\n\nEvery detail in the rooms speaks to relaxation and convenience. Plush bathrobes await you after a long day, while the hair dryer and premium toiletries offer the perfect touch for your personal care routine. For entertainment, a television with satellite/cable channels provides endless viewing options, and blackout curtains allow you to create the perfect environment for a restful night’s sleep. With fresh linens and towels provided, along with a refrigerator to keep your snacks cool, your stay at <b>Panorama Nha Trang Star Beach</b> promises to be both luxurious and comfortable.<br><br><b>Savor the Flavors at <b>Panorama Nha Trang Star Beach</b>'s Coffee Shop</b><br><br>At <b>Panorama Nha Trang Star Beach</b>, guests are invited to indulge in a delightful culinary experience at the on-site coffee shop. This charming venue offers a cozy ambiance, perfect for unwinding with a freshly brewed cup of coffee or tea. Whether you’re starting your day with a warm beverage or taking a leisurely afternoon break, the coffee shop is a haven for relaxation and socializing. Here, you can enjoy a selection of light snacks and pastries that perfectly complement your drink, making it an ideal spot for both solo travelers and those looking to connect with friends or fellow guests.\n\nThe coffee shop’s inviting atmosphere is enhanced by its attentive staff, who are dedicated to providing exceptional service. With daily housekeeping ensuring that the space remains pristine and welcoming, guests can feel at ease as they savor their favorite drinks in a serene environment. Whether you’re enjoying a quiet moment with a book or catching up on the day’s adventures, the coffee shop at <b>Panorama Nha Trang Star Beach</b> is a delightful retreat that enhances your stay with its warm hospitality and delectable offerings.<br><br><b>Experience Unmatched Comfort at <b>Panorama Nha Trang Star Beach</b></b><br><br>At <b>Panorama Nha Trang Star Beach</b>, guests can choose from a diverse range of thoughtfully designed rooms that cater to every traveler's needs. The Standard Double Room offers a cozy 30 square meters of space, featuring a plush Queen Bed perfect for couples seeking a tranquil retreat. For those looking for a bit more luxury, the Deluxe Room spans 37 square meters with a sumptuous King Bed, providing an inviting atmosphere for relaxation. The Deluxe Double Room with Seaview Balcony elevates your stay with stunning ocean vistas, while the Studio Ocean View, accommodating up to four guests with two Queen Beds, is ideal for families or groups. \n\nFor an even more lavish experience, the Executive Sea View Room boasts 55 square meters of elegance with a King Bed, ensuring a memorable stay. The Deluxe Double or Twin Room with Seaview offers flexibility with options for two Single Beds or a King Bed, perfect for friends traveling together. The Sea View Quadruple Room with Balcony is a spacious choice for larger groups, while the Superior King Room and Deluxe Partial Sea View Double Room provide comfort and style. Lastly, the Executive City View King Room presents a unique perspective of Nha Trang’s vibrant cityscape. By booking your stay through Agoda, you not only secure the best prices available but also enjoy a hassle-free experience that allows you to focus on making unforgettable memories at this stunning beachfront destination.<br><br><b>Discovering Lộc Thọ: The Heart of Nha Trang's Vibrant Culture</b><br><br>Nestled in the bustling city of Nha Trang, Lộc Thọ is a vibrant district that beautifully blends traditional Vietnamese culture with modern urban life. As you stroll through its lively streets, you’ll be captivated by the sights and sounds of local markets, where vendors proudly display an array of fresh produce, seafood, and artisanal goods. The aroma of street food wafts through the air, inviting you to indulge in authentic Vietnamese delicacies, from savory bánh mì to delicious phở. This district is a culinary paradise, offering a delightful mix of local eateries and trendy cafes that cater to every palate.\n\nLộc Thọ is not just about food; it is also a hub for cultural experiences. The area is dotted with charming temples and pagodas, where you can immerse yourself in the spiritual side of Vietnamese life. The iconic Long Sơn Pagoda, with its towering white Buddha statue, is a must-visit, offering a serene escape from the hustle and bustle of the city. Additionally, Lộc Thọ is conveniently located near the stunning Nha Trang beach, making it an ideal spot for sun-seekers and water sports enthusiasts alike. With its rich tapestry of experiences, Lộc Thọ invites you to explore and discover the true essence of Nha Trang.<br><br><b>Traveling from Cam Ranh International Airport to <b>Panorama Nha Trang Star Beach</b></b><br><br>To reach the stunning <b>Panorama Nha Trang Star Beach</b> from Cam Ranh International Airport (CXR), the primary airport serving Nha Trang, travelers have several convenient options. The airport is located approximately 30 kilometers south of Nha Trang city center, making it a quick journey to this beachfront paradise. The most popular choice is to take a taxi or a ride-hailing service like Grab, which offers a comfortable and direct route to the hotel. The drive typically takes around 30 to 40 minutes, allowing you to soak in the scenic coastal views as you approach the vibrant city.\n\nAlternatively, for those looking to save on transportation costs, shuttle buses are available at the airport, providing an economical way to reach Nha Trang. These buses operate regularly and can drop you off at various points in the city, including near <b>Panorama Nha Trang Star Beach</b>. Once you arrive, you'll be greeted by the stunning architecture and breathtaking views that this hotel has to offer, setting the stage for a memorable stay in one of Vietnam's most picturesque coastal destinations.<br><br><b>Discover the Vibrant Surroundings of <b>Panorama Nha Trang Star Beach</b></b><br><br>Nestled along the stunning coastline of Nha Trang, <b>Panorama Nha Trang Star Beach</b> offers guests the perfect gateway to a myriad of captivating attractions. Just a stone's throw away, the pristine Nha Trang Beach beckons with its golden sands and azure waters, providing an idyllic setting for sunbathing, swimming, and beachside activities. For those seeking a leisurely stroll or a serene picnic, the lush expanses of Central Park offer a refreshing escape, complete with scenic pathways and vibrant greenery that invite relaxation amidst the bustle of the city.\n\nCultural enthusiasts will appreciate the proximity of historic landmarks such as St. Joseph's Parish Church and Bac Thanh Church, where the intricate architecture and tranquil ambiance provide a glimpse into the local heritage. Art lovers can indulge their creativity at the Mai Loc Photo Gallery, showcasing stunning photography that captures the essence of Nha Trang. For family-friendly fun, Phu Dong Water Park promises a day filled with excitement, while the nearby Sailing Club Nha Trang offers thrilling water sports for the adventurous. Whether you're looking to unwind at Happy Beach or enjoy a lively atmosphere at Story Beach &amp; Pool, the area surrounding <b>Panorama Nha Trang Star Beach</b> is brimming with experiences that cater to every taste.<br><br><b>Culinary Delights Surrounding <b>Panorama Nha Trang Star Beach</b></b><br><br>Guests at <b>Panorama Nha Trang Star Beach</b> are spoiled for choice when it comes to dining options, with an array of restaurants that cater to every palate. Start your culinary journey at the iconic Sailing Club Nha Trang, where you can enjoy fresh seafood and vibrant cocktails against the backdrop of stunning ocean views. For a taste of Italy, head to Pizza 4P's Nha Trang, renowned for its artisanal pizzas crafted with locally sourced ingredients. If you're looking for a rooftop experience, Skylight Nha Trang offers a unique blend of dining and nightlife, complete with panoramic views of the coastline. Beer enthusiasts will appreciate the Louisiane Brewhouse, which brews its own craft beer and serves delicious dishes in a relaxed beachfront setting. For a Mediterranean twist, Mix Greek Restaurant and Greek Souvlaki Nha Trang deliver authentic flavors that will transport you to the sun-soaked shores of Greece. Quinter Central Nha Trang and Chuon Chuon Kim Restaurant present an excellent selection of local Vietnamese cuisine, perfect for those eager to explore the region’s culinary heritage. For a refreshing break, Iced Coffee Simply Original is a must-visit for coffee lovers, while Ngon Gallery Nha Trang Restaurant rounds out the experience with a diverse menu that celebrates the best of Vietnamese gastronomy.<br><br><b>Shopping Delights Near <b>Panorama Nha Trang Star Beach</b></b><br><br>Guests at <b>Panorama Nha Trang Star Beach</b> will find themselves surrounded by a vibrant shopping scene that caters to every taste and preference. Just a short stroll away, the Nha Trang Center offers a modern shopping experience with a variety of retail outlets, dining options, and entertainment facilities, making it a perfect destination for families and friends alike. For those interested in unique souvenirs, Kim Quang's Hand Painted T-Shirts and XQ Hand Embroidery provide exquisite handcrafted items that reflect the rich culture of Vietnam. If you're looking for something special, Hoi An Tailors is renowned for creating custom-tailored clothing that fits perfectly to your style. Meanwhile, the Hoang Gia Pearl Store showcases the elegance of local pearls, offering exquisite jewelry that makes for a timeless keepsake. For a fun twist, visit Anh Thu Crocodile for unique crocodile leather goods that are both stylish and durable. Don’t miss out on the charming Tea House in Nha Trang, where you can indulge in a delightful tea experience after a day of shopping. And for those seeking relaxation, Nha Trang Beach Massage is just around the corner, providing a perfect way to unwind after a day of retail therapy. Whether you're on the hunt for fashion, souvenirs, or simply a relaxing break, the shopping landmarks near <b>Panorama Nha Trang Star Beach</b> promise an unforgettable experience.<br><br><b>Affordable Luxury at <b>Panorama Nha Trang Star Beach</b></b><br><br>Nestled along the stunning coastline of Nha Trang, <b>Panorama Nha Trang Star Beach</b> offers an exceptional escape at an average price of just $51 to $75 per night. This competitive pricing makes it an attractive option for travelers seeking comfort and style without breaking the bank. Guests can indulge in the hotel's modern amenities and breathtaking views, all while enjoying a cost-effective stay that allows for more budget flexibility to explore the vibrant local attractions and culinary delights of the area.\n\nIn comparison, the average price of a hotel room in Nha Trang hovers between $76 and $100. This means that by choosing <b>Panorama Nha Trang Star Beach</b>, guests can enjoy significant savings while still experiencing the luxury and charm that this beautiful city has to offer. Whether you're planning a romantic getaway or a fun-filled family vacation, this hotel provides an ideal balance of affordability and quality, ensuring that every traveler can experience the magic of Nha Trang without overspending.<br><br><b>Unforgettable Experiences at <b>Panorama Nha Trang Star Beach</b></b><br><br>Guests at <b>Panorama Nha Trang Star Beach</b> consistently rave about the hotel's excellent services and the warm hospitality of its staff. With friendly and helpful personnel always ready to assist, visitors feel welcomed and valued throughout their stay. The cleanliness of the rooms has also garnered high praise, ensuring that guests can relax in a comfortable and pristine environment. \n\nThe stunning beach setting adds to the allure, providing a beautiful backdrop for a memorable vacation. Guests appreciate the fantastic amenities, including a free gym and an inviting pool, which enhance their overall experience. Many have highlighted the exceptional room service, ensuring that every need is met promptly and efficiently. Whether it's lounging by the pool or enjoying the breathtaking views, guests leave with fond memories and a desire to return to this tropical paradise.<br><br><b>Exceptional Experiences Await at <b>Panorama Nha Trang Star Beach</b></b><br><br><b>Panorama Nha Trang Star Beach</b> stands out as a premier destination for travelers seeking an unforgettable getaway in the heart of Nha Trang, Vietnam. With an impressive overall rating of 8.9, this hotel not only promises comfort but also remarkable value for your money, scoring equally high at 8.9. Guests are consistently impressed by the hotel's prime location, boasting a stellar rating of 9.5, allowing easy access to the breathtaking beaches and vibrant local attractions that Nha Trang is famous for.\n\nThe facilities at <b>Panorama Nha Trang Star Beach</b> are thoughtfully designed to enhance your stay, reflected in a commendable rating of 8.6. Whether you’re lounging by the pool or indulging in the culinary delights offered at the on-site restaurant, every moment is crafted for relaxation and enjoyment. Cleanliness is a top priority here, with a solid rating of 8.7, ensuring that guests can unwind in a pristine environment. The dedicated staff further elevates the experience, earning an impressive score of 8.8 for their performance, always ready to assist and make your stay as delightful as possible. At <b>Panorama Nha Trang Star Beach</b>, the blend of stunning location, excellent facilities, and attentive service creates an extraordinary travel experience that guests rave about.",
+    "overview_text": "Experience Luxury at Panorama Nha Trang Star Beach\nNestled in the heart of Nha Trang, Vietnam, Panorama Nha Trang Star Beach is a stunning 5-star hotel that promises an unforgettable experience for both leisure and business travelers. Opened in 2020, this contemporary gem is just a stone's throw away from the vibrant city center, making it the perfect base for exploring the local culture, stunning beaches, and bustling markets. With its prime location, guests can enjoy quick access to the airport, which is just a 40-minute drive away, ensuring a hassle-free arrival and departure.\nThe hotel features an impressive total of 100 elegantly designed rooms, each offering breathtaking views of the azure sea or the bustling cityscape. Guests can check in from 2:00 PM and unwind in luxurious surroundings, while the check-out time is conveniently set until 12:00 PM, allowing for a leisurely departure. Families will appreciate the hotel's child policy, which allows children aged 0 to 6 to stay free of charge, making it an ideal choice for those traveling with little ones. At Panorama Nha Trang Star Beach, every detail is crafted to ensure a memorable stay in one of Vietnam's most picturesque destinations.\nEntertainment at Panorama Nha Trang Star Beach: Relax and Unwind\nAt Panorama Nha Trang Star Beach, guests are invited to immerse themselves in a world of relaxation and entertainment within the inviting shared lounge and TV area. This thoughtfully designed space serves as a perfect retreat after a day of exploring the vibrant city of Nha Trang. With comfortable seating arrangements and a warm ambiance, it’s an ideal spot to unwind with friends or fellow travelers. Whether you’re looking to catch up on the latest shows, enjoy a movie night, or simply relax with a good book, this lounge offers a welcoming atmosphere that encourages social interaction and leisure.\nThe shared lounge and TV area is equipped with a large-screen television, providing an array of viewing options that cater to diverse tastes. Guests can gather to watch popular films, sports events, or local programs, making it a lively hub for entertainment. With its cozy furnishings and friendly environment, this space not only enhances your stay but also fosters connections with other guests, creating memorable experiences during your time at Panorama Nha Trang Star Beach.\nElevate Your Fitness Experience at Panorama Nha Trang Star Beach\nAt Panorama Nha Trang Star Beach, fitness enthusiasts and casual gym-goers alike will find a haven for their workout routines. The hotel boasts a state-of-the-art fitness center that is fully equipped with modern exercise machines, free weights, and a variety of fitness accessories. Whether you prefer to break a sweat on the treadmill, build strength with resistance training, or enjoy a refreshing workout with stunning views, the fitness center provides the perfect environment to achieve your health goals. Open 24/7, you can tailor your workout schedule to fit your needs, ensuring that you never miss a session even while on vacation.\nBeyond the fitness center, the hotel’s prime beachfront location offers guests the perfect opportunity to engage in invigorating outdoor activities. Embrace the sun and surf as you take part in beach sports or simply enjoy a leisurely stroll along the pristine shoreline. The expansive beach area invites you to partake in beach volleyball or a refreshing swim in the turquoise waters. Panorama Nha Trang Star Beach encourages an active lifestyle, allowing guests to seamlessly blend fitness and leisure for a truly rejuvenating getaway.\nConvenience Facilities at Panorama Nha Trang Star Beach\nAt Panorama Nha Trang Star Beach, guests are welcomed with a suite of convenience facilities designed to enhance their stay and ensure a hassle-free experience. The hotel offers complimentary Wi-Fi throughout the premises, including free Wi-Fi in all rooms, allowing guests to stay connected with loved ones or catch up on work while enjoying the stunning views of Nha Trang. For those who prefer to surf the internet in a communal setting, Wi-Fi is also available in the public areas, providing a perfect spot to relax and plan your next adventure.\nUnderstanding the importance of comfort during travel, the hotel provides a reliable laundry service, making it easy for guests to refresh their wardrobe without the stress of finding local laundromats. Additionally, the daily housekeeping service ensures that your room remains pristine, allowing you to unwind in a clean and inviting environment. For added convenience, the luggage storage facility lets you explore the vibrant surroundings without the burden of your bags, making Panorama Nha Trang Star Beach the perfect base for a memorable getaway.\nSeamless Travel Experience at Panorama Nha Trang Star Beach\nAt Panorama Nha Trang Star Beach, your journey begins the moment you arrive. The hotel offers a convenient airport transfer service, ensuring that your transition from Cam Ranh International Airport to the hotel is smooth and hassle-free. This thoughtful service allows you to relax and enjoy the stunning coastal scenery of Nha Trang as you make your way to your luxurious retreat. The friendly staff will be on hand to assist you, making your arrival as comfortable as possible.\nFor those looking to explore the vibrant surroundings, the hotel provides an array of tour options that cater to various interests, from cultural excursions to thrilling water sports. Additionally, guests can easily access local attractions with the reliable taxi service available on-site, allowing you to navigate the city with ease. For those who prefer to drive, the hotel features a car park, although charges may apply. With these transport facilities, Panorama Nha Trang Star Beach ensures that you can enjoy a seamless travel experience, making the most of your stay in this beautiful coastal paradise.\nLuxurious Comfort at Panorama Nha Trang Star Beach\nAt Panorama Nha Trang Star Beach, each room is a sanctuary of comfort and style, designed to enhance your stay with thoughtful amenities. Enjoy the refreshing embrace of air conditioning, ensuring a pleasant atmosphere regardless of the tropical heat outside. Step out onto your private balcony or terrace, where you can soak in stunning views of the coastline while sipping on complimentary tea or coffee, prepared with the in-room coffee/tea maker. The mini bar is stocked with a selection of beverages, perfect for unwinding after a day of exploration.\nEvery detail in the rooms speaks to relaxation and convenience. Plush bathrobes await you after a long day, while the hair dryer and premium toiletries offer the perfect touch for your personal care routine. For entertainment, a television with satellite/cable channels provides endless viewing options, and blackout curtains allow you to create the perfect environment for a restful night’s sleep. With fresh linens and towels provided, along with a refrigerator to keep your snacks cool, your stay at Panorama Nha Trang Star Beach promises to be both luxurious and comfortable.\nSavor the Flavors at Panorama Nha Trang Star Beach's Coffee Shop\nAt Panorama Nha Trang Star Beach, guests are invited to indulge in a delightful culinary experience at the on-site coffee shop. This charming venue offers a cozy ambiance, perfect for unwinding with a freshly brewed cup of coffee or tea. Whether you’re starting your day with a warm beverage or taking a leisurely afternoon break, the coffee shop is a haven for relaxation and socializing. Here, you can enjoy a selection of light snacks and pastries that perfectly complement your drink, making it an ideal spot for both solo travelers and those looking to connect with friends or fellow guests.\nThe coffee shop’s inviting atmosphere is enhanced by its attentive staff, who are dedicated to providing exceptional service. With daily housekeeping ensuring that the space remains pristine and welcoming, guests can feel at ease as they savor their favorite drinks in a serene environment. Whether you’re enjoying a quiet moment with a book or catching up on the day’s adventures, the coffee shop at Panorama Nha Trang Star Beach is a delightful retreat that enhances your stay with its warm hospitality and delectable offerings.\nExperience Unmatched Comfort at Panorama Nha Trang Star Beach\nAt Panorama Nha Trang Star Beach, guests can choose from a diverse range of thoughtfully designed rooms that cater to every traveler's needs. The Standard Double Room offers a cozy 30 square meters of space, featuring a plush Queen Bed perfect for couples seeking a tranquil retreat. For those looking for a bit more luxury, the Deluxe Room spans 37 square meters with a sumptuous King Bed, providing an inviting atmosphere for relaxation. The Deluxe Double Room with Seaview Balcony elevates your stay with stunning ocean vistas, while the Studio Ocean View, accommodating up to four guests with two Queen Beds, is ideal for families or groups.\nFor an even more lavish experience, the Executive Sea View Room boasts 55 square meters of elegance with a King Bed, ensuring a memorable stay. The Deluxe Double or Twin Room with Seaview offers flexibility with options for two Single Beds or a King Bed, perfect for friends traveling together. The Sea View Quadruple Room with Balcony is a spacious choice for larger groups, while the Superior King Room and Deluxe Partial Sea View Double Room provide comfort and style. Lastly, the Executive City View King Room presents a unique perspective of Nha Trang’s vibrant cityscape. By booking your stay through Agoda, you not only secure the best prices available but also enjoy a hassle-free experience that allows you to focus on making unforgettable memories at this stunning beachfront destination.\nDiscovering Lộc Thọ: The Heart of Nha Trang's Vibrant Culture\nNestled in the bustling city of Nha Trang, Lộc Thọ is a vibrant district that beautifully blends traditional Vietnamese culture with modern urban life. As you stroll through its lively streets, you’ll be captivated by the sights and sounds of local markets, where vendors proudly display an array of fresh produce, seafood, and artisanal goods. The aroma of street food wafts through the air, inviting you to indulge in authentic Vietnamese delicacies, from savory bánh mì to delicious phở. This district is a culinary paradise, offering a delightful mix of local eateries and trendy cafes that cater to every palate.\nLộc Thọ is not just about food; it is also a hub for cultural experiences. The area is dotted with charming temples and pagodas, where you can immerse yourself in the spiritual side of Vietnamese life. The iconic Long Sơn Pagoda, with its towering white Buddha statue, is a must-visit, offering a serene escape from the hustle and bustle of the city. Additionally, Lộc Thọ is conveniently located near the stunning Nha Trang beach, making it an ideal spot for sun-seekers and water sports enthusiasts alike. With its rich tapestry of experiences, Lộc Thọ invites you to explore and discover the true essence of Nha Trang.\nTraveling from Cam Ranh International Airport to Panorama Nha Trang Star Beach\nTo reach the stunning Panorama Nha Trang Star Beach from Cam Ranh International Airport (CXR), the primary airport serving Nha Trang, travelers have several convenient options. The airport is located approximately 30 kilometers south of Nha Trang city center, making it a quick journey to this beachfront paradise. The most popular choice is to take a taxi or a ride-hailing service like Grab, which offers a comfortable and direct route to the hotel. The drive typically takes around 30 to 40 minutes, allowing you to soak in the scenic coastal views as you approach the vibrant city.\nAlternatively, for those looking to save on transportation costs, shuttle buses are available at the airport, providing an economical way to reach Nha Trang. These buses operate regularly and can drop you off at various points in the city, including near Panorama Nha Trang Star Beach. Once you arrive, you'll be greeted by the stunning architecture and breathtaking views that this hotel has to offer, setting the stage for a memorable stay in one of Vietnam's most picturesque coastal destinations.\nDiscover the Vibrant Surroundings of Panorama Nha Trang Star Beach\nNestled along the stunning coastline of Nha Trang, Panorama Nha Trang Star Beach offers guests the perfect gateway to a myriad of captivating attractions. Just a stone's throw away, the pristine Nha Trang Beach beckons with its golden sands and azure waters, providing an idyllic setting for sunbathing, swimming, and beachside activities. For those seeking a leisurely stroll or a serene picnic, the lush expanses of Central Park offer a refreshing escape, complete with scenic pathways and vibrant greenery that invite relaxation amidst the bustle of the city.\nCultural enthusiasts will appreciate the proximity of historic landmarks such as St. Joseph's Parish Church and Bac Thanh Church, where the intricate architecture and tranquil ambiance provide a glimpse into the local heritage. Art lovers can indulge their creativity at the Mai Loc Photo Gallery, showcasing stunning photography that captures the essence of Nha Trang. For family-friendly fun, Phu Dong Water Park promises a day filled with excitement, while the nearby Sailing Club Nha Trang offers thrilling water sports for the adventurous. Whether you're looking to unwind at Happy Beach or enjoy a lively atmosphere at Story Beach & Pool, the area surrounding Panorama Nha Trang Star Beach is brimming with experiences that cater to every taste.\nCulinary Delights Surrounding Panorama Nha Trang Star Beach\nGuests at Panorama Nha Trang Star Beach are spoiled for choice when it comes to dining options, with an array of restaurants that cater to every palate. Start your culinary journey at the iconic Sailing Club Nha Trang, where you can enjoy fresh seafood and vibrant cocktails against the backdrop of stunning ocean views. For a taste of Italy, head to Pizza 4P's Nha Trang, renowned for its artisanal pizzas crafted with locally sourced ingredients. If you're looking for a rooftop experience, Skylight Nha Trang offers a unique blend of dining and nightlife, complete with panoramic views of the coastline. Beer enthusiasts will appreciate the Louisiane Brewhouse, which brews its own craft beer and serves delicious dishes in a relaxed beachfront setting. For a Mediterranean twist, Mix Greek Restaurant and Greek Souvlaki Nha Trang deliver authentic flavors that will transport you to the sun-soaked shores of Greece. Quinter Central Nha Trang and Chuon Chuon Kim Restaurant present an excellent selection of local Vietnamese cuisine, perfect for those eager to explore the region’s culinary heritage. For a refreshing break, Iced Coffee Simply Original is a must-visit for coffee lovers, while Ngon Gallery Nha Trang Restaurant rounds out the experience with a diverse menu that celebrates the best of Vietnamese gastronomy.\nShopping Delights Near Panorama Nha Trang Star Beach\nGuests at Panorama Nha Trang Star Beach will find themselves surrounded by a vibrant shopping scene that caters to every taste and preference. Just a short stroll away, the Nha Trang Center offers a modern shopping experience with a variety of retail outlets, dining options, and entertainment facilities, making it a perfect destination for families and friends alike. For those interested in unique souvenirs, Kim Quang's Hand Painted T-Shirts and XQ Hand Embroidery provide exquisite handcrafted items that reflect the rich culture of Vietnam. If you're looking for something special, Hoi An Tailors is renowned for creating custom-tailored clothing that fits perfectly to your style. Meanwhile, the Hoang Gia Pearl Store showcases the elegance of local pearls, offering exquisite jewelry that makes for a timeless keepsake. For a fun twist, visit Anh Thu Crocodile for unique crocodile leather goods that are both stylish and durable. Don’t miss out on the charming Tea House in Nha Trang, where you can indulge in a delightful tea experience after a day of shopping. And for those seeking relaxation, Nha Trang Beach Massage is just around the corner, providing a perfect way to unwind after a day of retail therapy. Whether you're on the hunt for fashion, souvenirs, or simply a relaxing break, the shopping landmarks near Panorama Nha Trang Star Beach promise an unforgettable experience.\nAffordable Luxury at Panorama Nha Trang Star Beach\nNestled along the stunning coastline of Nha Trang, Panorama Nha Trang Star Beach offers an exceptional escape at an average price of just $51 to $75 per night. This competitive pricing makes it an attractive option for travelers seeking comfort and style without breaking the bank. Guests can indulge in the hotel's modern amenities and breathtaking views, all while enjoying a cost-effective stay that allows for more budget flexibility to explore the vibrant local attractions and culinary delights of the area.\nIn comparison, the average price of a hotel room in Nha Trang hovers between $76 and $100. This means that by choosing Panorama Nha Trang Star Beach, guests can enjoy significant savings while still experiencing the luxury and charm that this beautiful city has to offer. Whether you're planning a romantic getaway or a fun-filled family vacation, this hotel provides an ideal balance of affordability and quality, ensuring that every traveler can experience the magic of Nha Trang without overspending.\nUnforgettable Experiences at Panorama Nha Trang Star Beach\nGuests at Panorama Nha Trang Star Beach consistently rave about the hotel's excellent services and the warm hospitality of its staff. With friendly and helpful personnel always ready to assist, visitors feel welcomed and valued throughout their stay. The cleanliness of the rooms has also garnered high praise, ensuring that guests can relax in a comfortable and pristine environment.\nThe stunning beach setting adds to the allure, providing a beautiful backdrop for a memorable vacation. Guests appreciate the fantastic amenities, including a free gym and an inviting pool, which enhance their overall experience. Many have highlighted the exceptional room service, ensuring that every need is met promptly and efficiently. Whether it's lounging by the pool or enjoying the breathtaking views, guests leave with fond memories and a desire to return to this tropical paradise.\nExceptional Experiences Await at Panorama Nha Trang Star Beach\nPanorama Nha Trang Star Beach stands out as a premier destination for travelers seeking an unforgettable getaway in the heart of Nha Trang, Vietnam. With an impressive overall rating of 8.9, this hotel not only promises comfort but also remarkable value for your money, scoring equally high at 8.9. Guests are consistently impressed by the hotel's prime location, boasting a stellar rating of 9.5, allowing easy access to the breathtaking beaches and vibrant local attractions that Nha Trang is famous for.\nThe facilities at Panorama Nha Trang Star Beach are thoughtfully designed to enhance your stay, reflected in a commendable rating of 8.6. Whether you’re lounging by the pool or indulging in the culinary delights offered at the on-site restaurant, every moment is crafted for relaxation and enjoyment. Cleanliness is a top priority here, with a solid rating of 8.7, ensuring that guests can unwind in a pristine environment. The dedicated staff further elevates the experience, earning an impressive score of 8.8 for their performance, always ready to assist and make your stay as delightful as possible. At Panorama Nha Trang Star Beach, the blend of stunning location, excellent facilities, and attentive service creates an extraordinary travel experience that guests rave about."
+  },
+  "check_in": {
+    "from": "14:00",
+    "until": null
+  },
+  "check_out": {
+    "until": "12:00"
+  },
+  "contact": {
+    "phone": "+84-000-0383-3179",
+    "email": "reservations+panorama_nha_trang_star_beach@catalog.hotelgo.demo",
+    "website": "https://www.agoda.com/vi-vn/star-beach-panorama/hotel/nha-trang-vn.html?countryId=38&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-04-17&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=VND&isFreeOccSearch=false&flightSearchCriteria=%5Bobject%20Object%5D&tspTypes=2,8&los=1&searchrequestid=3f30f2e0-0775-43b2-a6cd-65d702076991"
+  },
+  "highlights": {
+    "location_highlight": "Inside city center",
+    "things_youll_love": [
+      "Airport transfer",
+      "140 meters to the beach",
+      "Free Wi-Fi in all rooms!",
+      "Daily housekeeping"
+    ],
+    "nearby_highlights": [
+      "140 meters to the beach",
+      "Beaches",
+      "Po Nagar Cham Towers",
+      "Sights and Monuments"
+    ]
+  },
+  "general_amenities": [
+    "Air conditioning",
+    "Air purifier",
+    "Airport transfer",
+    "Bathrobes",
+    "Blackout curtains",
+    "Car park [charges apply]",
+    "Closet",
+    "Clothes rack",
+    "Coffee shop",
+    "Daily disinfection in all rooms",
+    "Daily disinfection in common areas",
+    "Daily housekeeping",
+    "Desk",
+    "Electric kettle",
+    "Elevator",
+    "English",
+    "Face coverings on staff",
+    "Family room",
+    "Family/child friendly",
+    "First aid kit",
+    "Fitness center",
+    "Free Wi-Fi in all rooms!",
+    "Free bottled water",
+    "Front desk [24-hour]",
+    "Gym/fitness",
+    "Hair dryer",
+    "Hand sanitizer",
+    "In-room safe box",
+    "Internet",
+    "Internet access – wireless",
+    "Ironing facilities",
+    "Laptop safe box",
+    "Laundry service",
+    "Linens",
+    "Luggage storage",
+    "Mini bar",
+    "Non-smoking",
+    "Safe dining setup",
+    "Seating area",
+    "Security [24-hour]",
+    "Shared lounge/TV area",
+    "Shower",
+    "Slippers",
+    "Smoke-free property",
+    "Sofa",
+    "Staff trained in safety protocol",
+    "Sterilizing equipment",
+    "Swimming pool [kids]",
+    "Taxi service",
+    "Temperature check for guests and staff",
+    "Toiletries",
+    "Tours",
+    "Vietnamese",
+    "Wi-Fi [free]",
+    "Wi-Fi in public areas",
+    "Window",
+    "Wooden/parqueted flooring"
+  ],
+  "featured_amenities": [
+    "140 meters to the beach",
+    "Airport transfer",
+    "Daily housekeeping",
+    "Free Wi-Fi in all rooms!"
+  ],
+  "breakfast": {
+    "available_cuisines": [],
+    "charge": null
+  },
+  "restaurants": [],
+  "policies": {
+    "guest_policies": {
+      "extraBedPolicy": "Extra beds are dependent on the room you choose. Please check the individual room capacity for more details.",
+      "minimumAgeOfGuest": "All children are welcome.",
+      "childPolicy": {
+        "ageDescription": "Children 0-6 year(s)",
+        "policy": "Stay for free if using existing bedding.",
+        "additionalInfo": "If you need an extra bed, it will incur an additional charge."
+      },
+      "adultChildPolicy": {
+        "ageDescription": "Guests 7 years and older are considered as adults",
+        "additionalInfo": "Must use an extra bed which will incur an additional charge."
+      }
+    },
+    "child_policies": [
+      {
+        "isInfant": false,
+        "policy": "Children 0-6 year(s)",
+        "description": "Stay for free if using existing bedding."
+      }
+    ],
+    "extra_bed_policies": [
+      {
+        "type": 1,
+        "description": "Extra beds are dependent on the room you choose. Please check the individual room capacity for more details."
+      }
+    ],
+    "other_policies": [
+      "Rooftop swimming pool costs 200,000 VND per person.",
+      "Child Policy:",
+      "Children 0–5 years old stay free of charge when using existing beds (breakfast included).",
+      "Children 6–11 years old will be charged VND 125,000 per child per night when using existing beds (breakfast included).",
+      "When booking more than 5 rooms, different policies and additional supplements may apply."
+    ]
+  },
+  "important_notes": [],
+  "useful_info": [
+    {
+      "name": "Check-in/Check-out",
+      "items": [
+        {
+          "title": "Check-in from",
+          "description": "14:00",
+          "icon": "ficon-express-check-in-check-out"
+        },
+        {
+          "title": "Check-out until",
+          "description": "12:00",
+          "icon": "ficon-express-check-in-check-out"
+        },
+        {
+          "title": "Reception open until",
+          "description": "23:00",
+          "icon": "ficon-24hour-frontdesk"
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "items": [
+        {
+          "title": "Distance from city center",
+          "description": "0km",
+          "icon": "ficon-distance-from-city-center"
+        },
+        {
+          "title": "Travel time to airport (minutes)",
+          "description": "40",
+          "icon": "ficon-time-to-airport"
+        },
+        {
+          "title": "Airport transfer fee",
+          "description": "400000 VND",
+          "icon": "ficon-airport-transfer"
+        }
+      ]
+    },
+    {
+      "name": "Extras",
+      "items": [
+        {
+          "title": "Daily Internet/Wi-Fi fee",
+          "description": "0 VND",
+          "icon": "ficon-free-wifi-in-all-rooms"
+        }
+      ]
+    },
+    {
+      "name": "The property",
+      "items": [
+        {
+          "title": "Year property opened",
+          "description": "2021",
+          "icon": "ficon-year-hotel-built"
+        },
+        {
+          "title": "Number of floors",
+          "description": "40",
+          "icon": "ficon-number-of-floors"
+        },
+        {
+          "title": "Room voltage",
+          "description": "220",
+          "icon": "ficon-room-voltage"
+        },
+        {
+          "title": "Number of rooms",
+          "description": "100",
+          "icon": "ficon-number-of-rooms"
+        },
+        {
+          "title": "Number of restaurants",
+          "description": "1",
+          "icon": "ficon-restaurant"
+        }
+      ]
+    },
+    {
+      "name": "Parking",
+      "items": [
+        {
+          "title": "Daily parking fee",
+          "description": "150000 VND",
+          "icon": "ficon-car-park"
+        }
+      ]
+    }
+  ],
+  "property_facts": {
+    "distance_from_city_center": "0km",
+    "travel_time_to_airport_minutes": "40",
+    "airport_transfer_fee": {
+      "raw": "400000 VND",
+      "amount": 400000.0,
+      "currency": "VND"
+    },
+    "daily_internet_fee": {
+      "raw": "0 VND",
+      "amount": 0.0,
+      "currency": "VND"
+    },
+    "year_opened": "2021",
+    "most_recent_renovation": null,
+    "number_of_floors": "40",
+    "number_of_rooms": "100",
+    "number_of_restaurants": "1",
+    "number_of_bars_lounges": null,
+    "room_voltage": "220",
+    "parking_fee": {
+      "raw": "150000 VND",
+      "amount": 150000.0,
+      "currency": "VND"
+    }
+  },
+  "images": [
+    {
+      "local_path": "images/hotel/hotel_01.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/333322ba894ab6acd324fafbced7ad3e.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_01.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_02.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/d8183602be2644495e78b139af441f95.jpg?ca=15&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_02.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_03.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/d81874497ed9129772f185f94de6c5b3.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Swimming pool [outdoor]",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_03.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_04.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/9460013311412a1b7bfa2530d0e90b8d.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Poolside bar",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_04.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_05.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/3ab136a7a986cfa7641254a78f69bf19.jpg?ca=13&ce=1&s=1024x768",
+      "title": "Buffet",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_05.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_06.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/134/13486290/13486290_20022616090088660639.jpg?ca=10&ce=1&s=1024x768",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_06.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_07.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/694c7a228ef4956fe63093acffce4cf7.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Reception",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_07.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_08.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/b0c713fe66c6879a56938e003e82d735.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_08.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_09.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/7f3ba831928464214028ecb7cc59e890.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_09.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_10.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/cddeeb316c4cf548094f2385d19a2f50.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_10.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_11.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/6fcafe931131aaba5b8e08b6956ab49d.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_11.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_12.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/0/aa86aafd8d2441ab814b5b3c5f9c5950.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_12.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_13.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/b6da098373780313e122a1812a4b2654.jpg?ca=27&ce=0&s=1024x768",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_13.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_14.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/5a5b664b49bc029912036e77b16b0525.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_14.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_15.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/85812dd445a1aa34ec0155f37ef3c43a.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_15.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_16.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/0/d80e2e35676cc922a7d76b601443ac57.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_16.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_17.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/6e0a65c7bf7136784c6e40c111dd36c1.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_17.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_18.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/953b756e493c5b1e0fd07373156e40ec.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_18.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_19.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/6f173180a8180e73fb0c72c573cd9c44.jpg?ca=11&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_19.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_20.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/56aa5bfa9718b4e73de4f6eea2c26f9c.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_20.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_21.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/134/13486290/13486290_20022616280088661886.jpg?ca=10&ce=1&s=1024x768",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_21.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_22.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/18d57c920e2efa69583d10305863d54a.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_22.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_23.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/b810a24bd9eff03c2bb60341100f8dbf.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_23.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_24.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/bcf5e7a91ab8b248a947ac4f18206260.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_24.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_25.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/7a29587f51dcefe87fbaae4a54d91b65.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_25.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_26.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/58bd40e84af5164178c8ebe644396799.jpg?ca=13&ce=1&s=1024x768",
+      "title": "Buffet",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_26.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_27.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/75ba39a6f90a36840c9738b9c19d1552.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_27.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_28.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/3e6810d251fba7a94cb990846dfbd631.jpg?ca=28&ce=0&s=1024x768",
+      "title": "Gym/fitness",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_28.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_29.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/134/13486290/13486290_20022616280088661880.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_29.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_30.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/22d2493c2053fe0ed0f5a7e5c0e395c2.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_30.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_31.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/b433903427ccc4dced6a17b5f5fec28c.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_31.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_32.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/134/13486290/13486290_20022616280088661890.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_32.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_33.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/a8047371ec3344c1f5a40c8798080321.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_33.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_34.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/f5a6d3f76428e4a04eb9008cec8185d5.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_34.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_35.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/61c61017734848554585841d5f036801.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_35.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_36.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/f18fe615b0a628703cbfcd5670d85646.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_36.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_37.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/921d34c6587a1afee9dfd1612d159da4.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_37.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_38.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/af8d85f3f6d51e9b9fb57e10e44b446f.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_38.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_39.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/134/13486290/13486290_20022616280088661887.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_39.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_40.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/269af3489d2cfad981d66eb1bce9e726.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_40.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_41.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/4b05a1ac3d96ca33d5e4a1abb4d9568e.jpg?ca=11&ce=1&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_41.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_42.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/ddb9963f2bf047632dca690c1e589502.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_42.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_43.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/5c435656f78dbab6d2ede675283f2d43.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_43.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_44.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/66a54b94c8bdd3a3a0f838516177b757.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_44.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_45.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/0bc8a579db8d5d73336843f73baacaa9.jpg?ca=13&ce=1&s=1024x768",
+      "title": "Buffet",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_45.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_46.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/46216cc1bd67e0b434171c60421be42a.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_46.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_47.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/1caa17431d8428191cd98fbe001d3aa8.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_47.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_48.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/1766e73929e32a2e04afd4b28b9f1663.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_48.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_49.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/983f8c4d02ad1b4781e4c139453b58a3.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_49.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_50.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/6a84cb07cd0064a7d61f632d7281e497.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_50.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_51.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/35294f61aa941f028a53d04d4fd09b25.jpg?ca=10&ce=1&s=1024x768",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_51.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_52.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/a179cbd8b2fbd67bace87a440e947b96.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_52.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_53.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/4a4fe820b0bcf664efc7da99c7f120ac.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Kitchen",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_53.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_54.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/13a8551f77133fd74e32ef4cdd7d3ed4.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_54.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_55.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/48f85600b7cdec43f8def984bb4d8088.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_55.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_56.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/c66bb895bf90f1d56304222c87f60ded.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_56.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_57.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/134/13486290/13486290_20022615590088659744.png?ca=10&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_57.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_58.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/54a93cca36449f6d679c4e9f97e09c5e.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_58.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_59.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/134/13486290/13486290_20022616280088661882.jpg?ca=10&ce=1&s=1024x768",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_59.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_60.jpg",
+      "source_url": "https://pix8.agoda.net/property/13486290/0/1e265568eaef86aed0cbe339b2b08daa.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_60.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_61.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/18924dd9e03bfc8a2079ba409095b846.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Kitchen",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_61.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_62.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/12d9301a0eb6868710c0f5d6a880b8d7.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_62.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_63.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/0bf2e5fe41db89d0fa9a2921d64ae29d.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_63.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_64.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/57ce19325b8ee738ff1649ab1b245b23.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_64.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_65.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/5ce14abfab878baa1ac0acc1ff0ddeb0.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_65.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_66.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/781ff1dc3465054bc6e2bef532e02a81.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_66.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_67.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/007bdb01980d09001c93c9d1f6a73231.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_67.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_68.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/134/13486290/13486290_20022616280088661883.jpg?ca=10&ce=1&s=1024x768",
+      "title": "Bedroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_68.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_69.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/13486290/-1/73281afe1927e3cc82b0e89425332c7a.jpg?ca=10&ce=1&s=1024x768",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_69.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_70.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/33926dc0657b6ca5988393a4205f3d61.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_70.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_71.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/434065c3110c64d63a19c6404502481a.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_71.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_72.jpg",
+      "source_url": "https://pix8.agoda.net/property/32755451/0/ebc7cc9c122d1d5b891a8ddabde9d2e9.jpeg?ce=2&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_72.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_73.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/22351/2_22351_02.jpg?ca=6&ce=1&s=1024x768",
+      "title": "Nha Trang beach - 130 m from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_73.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_74.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/245116/506671c548a8b2c5f52715b7af7c1c9f.jpg?ce=0&s=1024x768",
+      "title": "Thap Tram Huong - 1.18 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_74.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_75.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/24786/2_24786.jpg?ca=6&ce=1&s=1024x768",
+      "title": "Nha Trang Cathedral - 1.19 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_75.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_76.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/22349/2_22349_03.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Giant White Buddha Nha Trang - 2.16 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_76.jpg"
+    }
+  ],
+  "room_grid_probe": {
+    "attempted": true,
+    "url": "https://www.agoda.com/api/v1/property/room-grid",
+    "request_payload": {
+      "hotelId": 13486290
+    },
+    "status_code": 400,
+    "response_body_preview": "The api key used is invalid. Please contact agoda to get a valid key.",
+    "accessible": false,
+    "blocked_reason": "invalid_api_key"
+  },
+  "short_description": "Panorama Nha Trang Star Beach • Nha Trang • 5.0 stars • review 8.4",
+  "room_count": 9,
+  "policy_notes": [
+    "Check-in from 14:00.",
+    "Check-out until 12:00.",
+    "Breakfast inclusion may vary by booking date.",
+    "Catalog-only pricing was estimated for demo completeness."
+  ],
+  "synthetic_fields": [
+    "contact.email",
+    "contact.phone",
+    "contact.website",
+    "policy_notes"
+  ],
+  "catalog_quality": {
+    "synthetic_fields": [
+      "contact.email",
+      "contact.phone",
+      "contact.website",
+      "policy_notes"
+    ],
+    "has_uploaded_images": true,
+    "room_count": 9
+  },
+  "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_01.jpg",
+  "gallery_image_urls": [
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_01.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_02.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_03.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_04.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_05.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_06.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_07.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_08.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_09.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_10.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_11.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_12.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_13.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_14.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_15.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_16.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_17.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_18.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_19.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_20.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_21.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_22.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_23.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_24.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_25.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_26.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_27.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_28.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_29.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_30.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_31.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_32.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_33.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_34.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_35.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_36.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_37.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_38.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_39.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_40.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_41.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_42.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_43.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_44.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_45.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_46.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_47.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_48.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_49.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_50.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_51.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_52.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_53.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_54.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_55.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_56.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_57.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_58.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_59.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_60.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_61.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_62.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_63.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_64.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_65.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_66.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_67.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_68.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_69.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_70.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_71.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_72.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_73.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_74.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_75.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/StarBeachPanorama/images/hotel/hotel_76.jpg"
+  ]
+}

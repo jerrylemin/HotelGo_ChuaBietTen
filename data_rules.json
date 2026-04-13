@@ -1,0 +1,5 @@
+{
+  "keep_firebase_document_id_as_primary_key": true,
+  "convert_epoch_millis_to_timestamptz": true,
+  "empty_string_to_null": false
+}

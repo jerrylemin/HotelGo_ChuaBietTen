@@ -1,0 +1,330 @@
+{
+  "schema_version": "1.0",
+  "provider": "agoda",
+  "hotel_folder": "SaigonPrinceHotel",
+  "hotel_slug": "saigon_prince_hotel",
+  "source_url": "https://www.agoda.com/vi-vn/saigon-prince-hotel/hotel/ho-chi-minh-city-vn.html?ds=lDfTdgd1CBrtgYUH",
+  "secondary_payload_url": "https://www.agoda.com/api/cronos/property/BelowFoldParams/GetSecondaryData?ds=lDfTdgd1CBrtgYUH&hotel_id=10991&all=false&isHostPropertiesEnabled=false",
+  "source_hotel_id": "10991",
+  "fetched_at_utc": "2026-04-08T06:00:18.799853+00:00",
+  "raw_files": {
+    "page_html": "raw/agoda_page.html",
+    "secondary_payload": "raw/agoda_room_payload.json",
+    "import_log": "raw/import_log.txt"
+  },
+  "room_grid_probe": {
+    "attempted": true,
+    "url": "https://www.agoda.com/api/v1/property/room-grid",
+    "request_payload": {
+      "hotelId": 10991
+    },
+    "status_code": 400,
+    "response_body_preview": "The api key used is invalid. Please contact agoda to get a valid key.",
+    "accessible": false,
+    "blocked_reason": "invalid_api_key"
+  },
+  "field_sources": [
+    {
+      "field": "hotel.name",
+      "source_path": "hotelInfo.name",
+      "source_type": "direct"
+    },
+    {
+      "field": "hotel.star_rating",
+      "source_path": "hotelInfo.starRating.value",
+      "source_type": "direct"
+    },
+    {
+      "field": "hotel.address.full",
+      "source_path": "hotelInfo.address.full",
+      "source_type": "direct"
+    },
+    {
+      "field": "hotel.coordinates",
+      "source_path": "mapParams.latlng",
+      "source_type": "direct"
+    },
+    {
+      "field": "hotel.review.score",
+      "source_path": "reviews.combinedReview.score.score",
+      "source_type": "direct"
+    },
+    {
+      "field": "hotel.description",
+      "source_path": "aboutHotel.hotelDesc.overview",
+      "source_type": "direct"
+    },
+    {
+      "field": "hotel.check_in.from",
+      "source_path": "aboutHotel.usefulInfoGroups[].items[Check-in from]",
+      "source_type": "direct"
+    },
+    {
+      "field": "hotel.check_out.until",
+      "source_path": "aboutHotel.usefulInfoGroups[].items[Check-out until]",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_suite.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_suite.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.club_suite.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_suite.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_room.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_room.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.club_room.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_room.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.apartment.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.apartment.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.apartment.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.apartment.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_grand_suite.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_grand_suite.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.club_grand_suite.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_grand_suite.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.executive_double_or_twin.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.executive_double_or_twin.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.executive_double_or_twin.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.executive_double_or_twin.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.premier_double_or_twin_room.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.premier_double_or_twin_room.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.premier_double_or_twin_room.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.premier_double_or_twin_room.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.premier_grand_view.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.premier_grand_view.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.premier_grand_view.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.premier_grand_view.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_double_or_twin_room_grand_view.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_double_or_twin_room_grand_view.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.club_double_or_twin_room_grand_view.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.club_double_or_twin_room_grand_view.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.room_deluxe_executive.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.room_deluxe_executive.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.room_deluxe_executive.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.room_deluxe_executive.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.premier_deluxe.name",
+      "source_path": "datelessMasterRoomInfo[].name",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.premier_deluxe.room_size",
+      "source_path": "datelessMasterRoomInfo[].features[]",
+      "source_type": "derived"
+    },
+    {
+      "field": "rooms.premier_deluxe.bed_configuration",
+      "source_path": "datelessMasterRoomInfo[].bedConfigurationSummary / bedroomLayouts",
+      "source_type": "direct"
+    },
+    {
+      "field": "rooms.premier_deluxe.amenities",
+      "source_path": "datelessMasterRoomInfo[].facilityGroups",
+      "source_type": "direct"
+    }
+  ],
+  "blocked_fields": [
+    {
+      "field": "rooms[*].price.current_amount",
+      "reason": "Agoda room-grid endpoint returned invalid_api_key during probe."
+    },
+    {
+      "field": "rooms[*].price.original_amount",
+      "reason": "Agoda room-grid endpoint returned invalid_api_key during probe."
+    },
+    {
+      "field": "rooms[*].price.discounted_amount",
+      "reason": "Agoda room-grid endpoint returned invalid_api_key during probe."
+    },
+    {
+      "field": "rooms[*].cancellation_policy",
+      "reason": "No public offer payload was accessible from the probe completed in this run."
+    },
+    {
+      "field": "rooms[*].max_capacity",
+      "reason": "No structured capacity field was found in datelessMasterRoomInfo."
+    },
+    {
+      "field": "hotel.contact.phone",
+      "reason": "No public phone field was found in the accessible Agoda payload."
+    },
+    {
+      "field": "hotel.contact.email",
+      "reason": "No public email field was found in the accessible Agoda payload."
+    }
+  ],
+  "inferred_fields": [
+    {
+      "field": "rooms.club_suite.breakfast_included",
+      "source_type": "inferred",
+      "reason": "Marked true from aboutHotel.hotelPolicy policy note that explicitly lists 'Club room' among room types with Club Lounge breakfast benefits.",
+      "source_path": "aboutHotel.hotelPolicy.policyNotes"
+    },
+    {
+      "field": "rooms.club_room.breakfast_included",
+      "source_type": "inferred",
+      "reason": "Marked true from aboutHotel.hotelPolicy policy note that explicitly lists 'Club room' among room types with Club Lounge breakfast benefits.",
+      "source_path": "aboutHotel.hotelPolicy.policyNotes"
+    },
+    {
+      "field": "rooms.apartment.breakfast_included",
+      "source_type": "inferred",
+      "reason": "Marked true from aboutHotel.hotelPolicy policy note that explicitly lists 'Apartments' among room types with Club Lounge breakfast benefits.",
+      "source_path": "aboutHotel.hotelPolicy.policyNotes"
+    },
+    {
+      "field": "rooms.club_grand_suite.breakfast_included",
+      "source_type": "inferred",
+      "reason": "Marked true from aboutHotel.hotelPolicy policy note that explicitly lists 'Club room' among room types with Club Lounge breakfast benefits.",
+      "source_path": "aboutHotel.hotelPolicy.policyNotes"
+    },
+    {
+      "field": "rooms.club_double_or_twin_room_grand_view.breakfast_included",
+      "source_type": "inferred",
+      "reason": "Marked true from aboutHotel.hotelPolicy policy note that explicitly lists 'Club room' among room types with Club Lounge breakfast benefits.",
+      "source_path": "aboutHotel.hotelPolicy.policyNotes"
+    }
+  ]
+}

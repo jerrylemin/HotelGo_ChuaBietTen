@@ -1,0 +1,13 @@
+.gradle/
+.kotlin/
+build/
+app/build/
+local.properties
+*.iml
+.idea/workspace.xml
+.idea/caches/
+.idea/shelf/
+.idea/.name
+.idea/vcs.xml
+.idea/deviceManager.xml
+.idea/deploymentTargetSelector.xml

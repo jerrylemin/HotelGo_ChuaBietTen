@@ -1,0 +1,1948 @@
+{
+  "schema_version": "1.0",
+  "folder_name": "LotteLegendHotelSaigon",
+  "provider": "agoda",
+  "source_url": "https://www.agoda.com/vi-vn/lotte-legend-hotel-saigon/hotel/ho-chi-minh-city-vn.html",
+  "secondary_payload_url": "https://www.agoda.com/api/cronos/property/BelowFoldParams/GetSecondaryData?hotel_id=902&all=false&isHostPropertiesEnabled=false",
+  "fetched_at_utc": "2026-04-08T08:05:11.829226+00:00",
+  "source_hotel_id": "902",
+  "name": "LOTTE HOTEL SAIGON",
+  "display_name": "LOTTE HOTEL SAIGON",
+  "slug": "lotte_hotel_saigon",
+  "accommodation_type": "Hotel",
+  "star_rating": 5.0,
+  "awards": {
+    "text": "Awards and Accolades",
+    "gold_circle_year": "2025",
+    "gold_circle_award_text": "Gold Circle Award Winner"
+  },
+  "address": {
+    "full": "2A-4A Ton Duc Thang Street, Saigon Ward, District 1, Ho Chi Minh City, Vietnam,                     ",
+    "line_1": "2A-4A Ton Duc Thang Street, Saigon Ward",
+    "area": "District 1",
+    "district": "District 1",
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "postal_code": "                    "
+  },
+  "coordinates": {
+    "latitude": 10.77868889,
+    "longitude": 106.7067972
+  },
+  "review": {
+    "score": "9.0",
+    "score_text": "Excellent",
+    "review_count": 9968,
+    "formatted_review_count": null,
+    "provider_list": "332,3038"
+  },
+  "description": {
+    "overview_html": "<b>Experience Luxury and Convenience at <b>LOTTE HOTEL SAIGON</b></b><br><br>Located in the heart of Ho Chi Minh City, <b>LOTTE HOTEL SAIGON</b> offers a five-star experience that combines luxury and convenience. With its prime location just 0.35 km from the city center, this hotel is the perfect choice for both business and leisure travelers. The hotel's close proximity to the airport, only 25 minutes away, ensures a hassle-free journey for guests.\n\n<b>LOTTE HOTEL SAIGON</b> boasts a total of 283 elegantly designed rooms, providing a comfortable and stylish retreat for guests. Each room is thoughtfully furnished and equipped with modern amenities to meet the needs of discerning travelers. The hotel was built in 2001 and underwent a renovation in 2014, ensuring that guests enjoy the best of both classic and contemporary design.\n\nCheck-in at <b>LOTTE HOTEL SAIGON</b> begins at 02:00 PM, allowing guests to settle in and start their stay with ease. The check-out time is until 12:00 PM, giving guests ample time to pack up and prepare for their departure. The hotel's efficient and friendly staff are always ready to assist guests, ensuring a smooth and pleasant check-in and check-out process.\n\nFamilies traveling with children will find <b>LOTTE HOTEL SAIGON</b> to be a welcoming destination. The hotel's child policy allows children between the ages of 5 to 11 to stay free of charge, making it an ideal choice for family vacations. The hotel also offers a range of amenities and services tailored to meet the needs of young guests, ensuring a memorable and enjoyable stay for the whole family.\n\nExperience the epitome of luxury and convenience at <b>LOTTE HOTEL SAIGON</b>. Whether you're visiting Ho Chi Minh City for business or leisure, this five-star hotel provides the perfect base for exploring the vibrant city and enjoying a comfortable stay. Book your stay at <b>LOTTE HOTEL SAIGON</b> and indulge in the finest hospitality Vietnam has to offer.<br><br><b>Unwind and Indulge in a World of Entertainment at <b>LOTTE HOTEL SAIGON</b></b><br><br><b>LOTTE HOTEL SAIGON</b> in Ho Chi Minh City offers an array of entertainment facilities that will make your stay truly unforgettable. Step into a world of luxury and relaxation as you explore the hotel's diverse options for entertainment and leisure.\n\nIndulge in some retail therapy at the shops located within the hotel premises, where you can find a variety of high-end brands and unique souvenirs to take back home. After a long day of exploring the city, unwind at the hotel's bar and enjoy a refreshing cocktail or a glass of wine in a stylish and sophisticated setting.\n\nFor those seeking ultimate relaxation, the hotel boasts a salon, massage services, and a spa where you can pamper yourself with rejuvenating treatments. Immerse yourself in a state of tranquility as you make use of the sauna, steam room, and solarium facilities, which are designed to soothe your body and mind.\n\nIf you're looking to connect with nature, take a stroll through the hotel's lush garden, where you can find a peaceful retreat amidst the bustling city. For a cozy and social atmosphere, head to the shared lounge/TV area, where you can relax, mingle with fellow guests, and catch up on your favorite shows.\n\nAdditionally, the hotel also features a gift/souvenir shop, allowing you to conveniently purchase unique mementos to commemorate your stay at <b>LOTTE HOTEL SAIGON</b>. With its extensive range of entertainment facilities, <b>LOTTE HOTEL SAIGON</b> ensures that every guest's needs are met, making it the perfect choice for a memorable stay in Ho Chi Minh City.<br><br><b>Stay Active and Refreshed at <b>LOTTE HOTEL SAIGON</b>'s Sports Facilities</b><br><br><b>LOTTE HOTEL SAIGON</b> is a haven for sports enthusiasts, offering a wide range of top-notch sports facilities to keep you active and refreshed during your stay. Dive into the luxurious indoor pool, where you can swim laps or simply relax in the crystal-clear waters. For those who prefer to soak up the sun, the hotel also boasts a stunning outdoor pool surrounded by lush greenery, perfect for a refreshing dip on a hot day. \n\nIf you're looking to maintain your fitness routine while traveling, <b>LOTTE HOTEL SAIGON</b> has you covered. Their state-of-the-art fitness center is equipped with the latest cardio and strength training equipment, ensuring you can get a full workout no matter your fitness level. Additionally, the hotel offers complimentary access to their free fitness center, so you can stay active without any extra cost.\n\nFor those who love the great outdoors, <b>LOTTE HOTEL SAIGON</b> provides access to scenic hiking trails. Explore the surrounding nature and immerse yourself in the beauty of Vietnam's landscapes. After an invigorating hike, head over to the poolside bar, where you can enjoy a refreshing beverage while basking in the sun. Whether you're a fitness enthusiast or simply looking for a relaxing way to unwind, <b>LOTTE HOTEL SAIGON</b>'s sports facilities are sure to exceed your expectations.<br><br><b>Convenience at Your Fingertips: <b>LOTTE HOTEL SAIGON</b>'s Exceptional Facilities</b><br><br><b>LOTTE HOTEL SAIGON</b> in Ho Chi Minh City is renowned for its exceptional convenience facilities, ensuring that guests have everything they need for a comfortable and hassle-free stay. With a wide range of services available 24/7, this hotel goes above and beyond to cater to the needs of its guests.\n\nOne of the standout features of <b>LOTTE HOTEL SAIGON</b> is its 24-hour room service. Whether you're craving a late-night snack or a full meal, the hotel's dedicated team is always ready to deliver delicious dishes straight to your room. Additionally, the laundry service and dry cleaning options make it effortless to keep your wardrobe fresh and clean throughout your stay.\n\nFor added peace of mind, <b>LOTTE HOTEL SAIGON</b> offers safety deposit boxes to securely store your valuables. The hotel's concierge is also available to assist with any requests or recommendations, ensuring that you make the most of your time in Ho Chi Minh City. With Wi-Fi available in both public areas and all rooms, staying connected is a breeze.\n\nOther convenient facilities at <b>LOTTE HOTEL SAIGON</b> include express check-in/check-out for a seamless arrival and departure process, luggage storage for those who want to explore the city without their bags, and a well-stocked convenience store for any last-minute essentials. With daily housekeeping, you can rest assured that your room will always be tidy and comfortable.\n\nWhether you're visiting for business or leisure, <b>LOTTE HOTEL SAIGON</b>'s exceptional convenience facilities will exceed your expectations and enhance your stay in Ho Chi Minh City.<br><br><b>Convenient Transport Facilities at <b>LOTTE HOTEL SAIGON</b></b><br><br><b>LOTTE HOTEL SAIGON</b> offers a range of transport facilities to ensure a hassle-free stay for its guests. For those arriving by air, the hotel provides airport transfer services, making the journey to and from the airport seamless and convenient. Additionally, guests can take advantage of the shuttle service, which operates at scheduled times, to explore the city's attractions or visit nearby shopping areas. \n\nFor guests who prefer to drive, <b>LOTTE HOTEL SAIGON</b> offers valet parking and a spacious car park onsite. The car park is free of charge for hotel guests, providing peace of mind for those traveling with their own vehicles. Alternatively, the hotel also offers car hire services, allowing guests to explore the city at their own pace. \n\nTo further enhance the guest experience, the hotel provides a taxi service for easy transportation around the city. For those looking to book tours or purchase tickets to attractions, <b>LOTTE HOTEL SAIGON</b> offers a ticket service, ensuring that guests can conveniently plan their itinerary. With its comprehensive range of transport facilities, <b>LOTTE HOTEL SAIGON</b> ensures that guests can travel with ease and make the most of their time in Ho Chi Minh City.<br><br><b>Luxurious Room Facilities at <b>LOTTE HOTEL SAIGON</b></b><br><br>Indulge in the ultimate comfort and luxury at <b>LOTTE HOTEL SAIGON</b>, where every detail has been carefully designed to ensure a memorable stay. Each room is equipped with state-of-the-art amenities, including air conditioning to keep you cool and comfortable throughout your stay. Wrap yourself in the softness of the complimentary bathrobes provided, perfect for lounging after a long day of exploring the vibrant city of Ho Chi Minh. Stay up-to-date with the latest news and happenings with the daily newspaper delivered right to your room. Get ready for a night out with ease, thanks to the convenient hair dryer available in every room. Quench your thirst or enjoy a midnight snack from the well-stocked mini bar. And when you're ready to unwind, sit back and relax while watching your favorite shows on the satellite/cable TV. At <b>LOTTE HOTEL SAIGON</b>, your comfort and convenience are our top priorities.<br><br><b>Indulge in Culinary Delights at <b>LOTTE HOTEL SAIGON</b></b><br><br>At <b>LOTTE HOTEL SAIGON</b>, guests can embark on a gastronomic journey like no other with an array of exceptional dining facilities. From the convenience of 24-hour room service to the vibrant atmosphere of the coffee shop, there is something to satisfy every craving. The hotel's restaurant offers a delightful menu of international and local cuisines, prepared by skilled chefs using only the finest ingredients. Whether you choose to dine in the elegant restaurant or enjoy a meal in the comfort of your room with room service, you can expect impeccable service and delectable flavors. Start your day off right with a sumptuous breakfast buffet, featuring a variety of dishes to suit all tastes. The daily housekeeping ensures that the dining areas are always clean and inviting, providing a pleasant ambiance for your dining experience.<br><br><b>Luxurious and Spacious Rooms at <b>LOTTE HOTEL SAIGON</b></b><br><br>Experience the epitome of luxury and comfort at <b>LOTTE HOTEL SAIGON</b>, located in the heart of Ho Chi Minh City. With a wide range of room types to choose from, guests are guaranteed a memorable stay. From the Deluxe King City View and Deluxe King River View rooms, offering breathtaking views of the city skyline and Saigon River, to the Deluxe Twin City View and Deluxe Twin River View rooms, perfect for families or friends traveling together, <b>LOTTE HOTEL SAIGON</b> has something for everyone.\n\nBooking your stay at <b>LOTTE HOTEL SAIGON</b> through Agoda ensures that you not only get the best prices but also a hassle-free experience. With Agoda's user-friendly platform, you can easily browse through the room options, compare prices, and make your reservation in just a few clicks. Whether you're traveling for business or leisure, Agoda guarantees a seamless booking process, allowing you to focus on enjoying your stay at <b>LOTTE HOTEL SAIGON</b>.<br><br><b>Discover the Vibrant District 1 in Ho Chi Minh City</b><br><br>Welcome to the heart of Ho Chi Minh City, where the bustling District 1 awaits you. Known as the city's financial and commercial hub, this vibrant district is a melting pot of history, culture, and modernity. With its central location, District 1 is the perfect base for exploring all that Ho Chi Minh City has to offer.\n\nImmerse yourself in the rich history of the city with a visit to iconic landmarks such as the Notre-Dame Cathedral Basilica of Saigon and the Central Post Office, both stunning architectural masterpieces. Take a stroll along the famous Nguyen Hue Walking Street, a pedestrian-only boulevard lined with shops, cafes, and street performers, offering a lively atmosphere day and night.\n\nFood lovers will be in paradise in District 1, as it is home to a wide range of culinary delights. From street food stalls serving up delicious banh mi and pho, to upscale restaurants offering exquisite Vietnamese and international cuisine, there is something to satisfy every palate. Don't forget to explore the vibrant local markets, such as Ben Thanh Market, where you can indulge in fresh produce, local handicrafts, and souvenirs.\n\nAfter a day of exploring, retreat to the comfort of <b>LOTTE HOTEL SAIGON</b>, located in the heart of District 1. With its luxurious accommodations, world-class amenities, and impeccable service, this hotel offers the perfect oasis amidst the bustling city. Whether you're here for business or leisure, <b>LOTTE HOTEL SAIGON</b> is the ideal choice for an unforgettable stay in Ho Chi Minh City.<br><br><b>Convenient Transportation from Ho Chi Minh City Airports to <b>LOTTE HOTEL SAIGON</b></b><br><br>Welcome to <b>LOTTE HOTEL SAIGON</b>, a luxurious and elegant hotel located in the heart of Ho Chi Minh City's District 1. Getting to our hotel from the nearby airports is quick and hassle-free, ensuring a smooth start to your stay in this vibrant city.\n\nIf you are arriving at Tan Son Nhat International Airport, the most convenient option to reach <b>LOTTE HOTEL SAIGON</b> is by taxi. Taxis are readily available outside the airport terminals, and the journey to the hotel takes approximately 30 minutes, depending on the traffic. Make sure to choose reputable taxi companies such as Vinasun or Mai Linh for a reliable and comfortable ride.\n\nAlternatively, if you prefer public transportation, you can take a bus from the airport to District 1. Bus number 109 operates between Tan Son Nhat International Airport and the city center, including stops near <b>LOTTE HOTEL SAIGON</b>. The bus runs from early morning until late at night, offering an affordable and convenient option for travelers.\n\nFor those arriving at Long Thanh International Airport, which is currently under construction, the most convenient way to reach <b>LOTTE HOTEL SAIGON</b> is by booking a private transfer or taxi. The journey from Long Thanh International Airport to the hotel takes approximately 1 hour, depending on the traffic conditions.\n\nWhichever airport you arrive at, <b>LOTTE HOTEL SAIGON</b> is easily accessible, allowing you to start your visit to Ho Chi Minh City with ease and comfort. Our hotel offers a luxurious and sophisticated ambiance, with spacious rooms, exceptional dining options, and world-class amenities. Whether you are traveling for business or leisure, <b>LOTTE HOTEL SAIGON</b> is the perfect choice for a memorable stay in the heart of this bustling city.<br><br><b>Discover the Vibrant Surroundings of <b>LOTTE HOTEL SAIGON</b></b><br><br>Located in the heart of Ho Chi Minh City, <b>LOTTE HOTEL SAIGON</b> offers easy access to some of the city's most iconic landmarks and attractions. Just a short distance away, you will find the Central Post Office, a magnificent colonial building that showcases stunning architecture. Explore its interior and admire the grandeur of its design while sending a postcard to your loved ones.\n\nFor history enthusiasts, a visit to The Independence Palace is a must. This historical landmark played a significant role in Vietnam's history and offers a glimpse into the country's past. Marvel at the architecture and walk through the rooms where important decisions were made.\n\nSaigon Notre Dame Cathedral is another nearby attraction that should not be missed. Admire the intricate French Gothic architecture and step inside to witness the serene atmosphere of this religious site.\n\nFor a panoramic view of the city, head to Bitexco Financial Tower. This towering skyscraper offers an observation deck where you can enjoy breathtaking views of Ho Chi Minh City's skyline.\n\nIf you're a fan of the arts, make sure to catch a show at the Saigon Opera House (Ho Chi Minh Municipal Theater). This stunning building hosts a variety of performances, including ballets, concerts, and theatrical productions.\n\nHo Chi Minh Squares, A O Show - Lune Production, Bui Vien Street, Notre Dame Square, and Golden Dragon Water Puppet Theater are also within close proximity, offering a range of entertainment options and cultural experiences.\n\nWith its prime location, <b>LOTTE HOTEL SAIGON</b> provides the perfect base to explore these captivating landmarks and attractions, ensuring an unforgettable stay in Ho Chi Minh City.<br><br><b>A Vibrant Culinary Scene Just Steps Away</b><br><br><b>LOTTE HOTEL SAIGON</b> is surrounded by an array of diverse and enticing dining options. For craft beer enthusiasts, Pasteur Street Brewing Company is a must-visit, offering a wide selection of locally brewed beers. For those craving authentic Vietnamese cuisine, Propaganda Vietnamese Bistro and Quan Nem Restaurant are perfect choices, serving up traditional dishes bursting with flavors. If you're in the mood for a cozy and charming dining experience, Cuc Gach Quan Restaurant and Den Long - Home Cooked Vietnamese Restaurant are highly recommended. For steak lovers, B3 Steakhouse &amp; Craft Beer is the place to be, combining juicy cuts of meat with a great selection of craft beers. And for a taste of Japanese cuisine, Miyama - Modern Tokyo Restaurant Cafe is the go-to spot. Whether you're in the mood for classic Vietnamese pho or a refreshing poke bowl, Pho Quynh and Poke Saigon offer delicious options. With such a vibrant culinary scene right at your doorstep, you'll never run out of dining choices during your stay at <b>LOTTE HOTEL SAIGON</b>.<br><br><b>Shop 'til you drop in the heart of Ho Chi Minh City</b><br><br>Located in the bustling heart of Ho Chi Minh City, <b>LOTTE HOTEL SAIGON</b> is surrounded by a plethora of shopping landmarks that will satisfy even the most avid shopaholics. Just a stone's throw away from the hotel, you'll find Vincom Shopping Center, a modern mall offering a wide range of international and local brands. For those looking to immerse themselves in the city's vibrant art scene, Urban Gallery is just a short walk away, showcasing contemporary Vietnamese artworks. Bookworms will delight in a visit to Phuong Nam Bookshop, where you can browse through an extensive collection of books and literary treasures. Fashion enthusiasts can explore Sapa, a boutique store known for its unique and ethically sourced clothing and accessories. Ipa-nima and Ginkgo Concept Store are also nearby, offering trendy and eclectic fashion pieces. L'usine, a chic concept store and cafe, is perfect for a mid-shopping break, serving up delicious coffee and delectable pastries. Art lovers can visit The Sun Art Gallery, which features a diverse range of contemporary artworks. And for those in search of tailor-made clothing, Cao Vinh Tailors is just around the corner, renowned for their craftsmanship and attention to detail. With such a variety of shopping landmarks surrounding <b>LOTTE HOTEL SAIGON</b>, guests are sure to have an unforgettable retail experience.<br><br><b>Luxury at an Affordable Price: <b>LOTTE HOTEL SAIGON</b> vs. Average Hotel Prices in Ho Chi Minh City</b><br><br>Indulge in a truly luxurious experience at <b>LOTTE HOTEL SAIGON</b> without breaking the bank. With an average price of $154 per room, this 5-star hotel offers unparalleled comfort and elegance that will exceed your expectations. Compared to the average price of a hotel room in Ho Chi Minh City, which stands at $62, <b>LOTTE HOTEL SAIGON</b> provides exceptional value for money.\n\nAt <b>LOTTE HOTEL SAIGON</b>, you can immerse yourself in a world of opulence and sophistication without compromising on affordability. Each room is meticulously designed with modern amenities and stylish furnishings, ensuring a comfortable stay. From spacious suites to cozy deluxe rooms, there is an option to suit every traveler's needs and preferences.\n\nNot only does <b>LOTTE HOTEL SAIGON</b> offer exceptional accommodation, but it also boasts a wide range of facilities and services that will enhance your stay. Take a dip in the rooftop infinity pool while enjoying panoramic views of the city, or pamper yourself with a rejuvenating spa treatment at the luxurious onsite spa. With multiple dining options offering a variety of cuisines, you can savor exquisite dishes without leaving the hotel.\n\nExperience the epitome of luxury at <b>LOTTE HOTEL SAIGON</b>, where affordability meets elegance. Book your stay today and discover why this hotel is the perfect choice for discerning travelers seeking an unforgettable experience in Ho Chi Minh City.<br><br><b>Superb Hotel with Friendly and Professional Staff</b><br><br><b>LOTTE HOTEL SAIGON</b> in Ho Chi Minh City is a superb hotel that offers a fantastic value for guests. With its prime location in downtown, guests can easily explore the city's attractions and landmarks. The hotel's staff are highly praised for their friendliness, kindness, and professionalism. They go above and beyond to ensure that guests have a memorable stay. The rooms at <b>LOTTE HOTEL SAIGON</b> are clean and spacious, providing a comfortable and relaxing environment. Additionally, the hotel features a beautiful structure and a pool that is loved by both adults and kids. Guests also rave about the delicious food served at the hotel. Whether you're traveling for business or leisure, <b>LOTTE HOTEL SAIGON</b> is the perfect choice for a remarkable stay in Ho Chi Minh City.<br><br><b>Exceptional Customer Ratings at <b>LOTTE HOTEL SAIGON</b></b><br><br><b>LOTTE HOTEL SAIGON</b> in Ho Chi Minh City has received exceptional customer ratings, making it a top choice for travelers seeking a luxurious and memorable stay. With an overall rating of 8.9, guests have consistently praised the hotel for its outstanding service and commitment to excellence.\n\nOne of the key highlights of <b>LOTTE HOTEL SAIGON</b> is its excellent value for money, with a rating of 8.7. Guests have found that the hotel offers a range of amenities and services that exceed their expectations, all at a reasonable price. From the moment you step into the hotel, you will be greeted by a warm and welcoming atmosphere, ensuring that every penny spent is well worth it.\n\nFurthermore, <b>LOTTE HOTEL SAIGON</b> boasts impressive facilities, earning a rating of 8.8. Whether you're looking to relax by the pool, work out in the fitness center, or indulge in a rejuvenating spa treatment, the hotel has it all. The state-of-the-art facilities are well-maintained and provide guests with the perfect setting to unwind and enjoy their stay.\n\nThe hotel's commitment to cleanliness is evident in its exceptional rating of 9.2. Guests have consistently praised the impeccable housekeeping services, ensuring that every corner of the hotel is spotless. Whether it's the rooms, common areas, or dining establishments, you can expect a pristine and hygienic environment throughout your stay.\n\n<b>LOTTE HOTEL SAIGON</b>'s prime location also contributes to its high rating of 8.9. Situated in the heart of Ho Chi Minh City, the hotel offers convenient access to popular attractions, shopping centers, and vibrant nightlife. Whether you're a leisure or business traveler, you'll appreciate the hotel's central location, making it easy to explore the city and its cultural treasures.\n\nComfort is another aspect that guests have raved about, with a rating of 8.7. The spacious and well-appointed rooms provide a tranquil sanctuary, allowing guests to relax and recharge after a day of exploration. The plush bedding, modern amenities, and attention to detail ensure a comfortable and enjoyable stay.\n\nLastly, the staff at <b>LOTTE HOTEL SAIGON</b> have consistently received high praise, earning a rating of 9.1 for their exceptional performance. Guests have commended the friendly and attentive service provided by the hotel's staff, who go above and beyond to cater to every need. From the moment of arrival to departure, you can expect personalized and professional service that will make your stay truly memorable.\n\nIn conclusion, <b>LOTTE HOTEL SAIGON</b> has garnered outstanding customer ratings in various categories, ensuring a memorable and enjoyable stay for every guest. With its exceptional value, impressive facilities, impeccable cleanliness, prime location, comfortable rooms, and exceptional staff performance, the hotel truly stands out as a top choice in Ho Chi Minh City.",
+    "overview_text": "Experience Luxury and Convenience at LOTTE HOTEL SAIGON\nLocated in the heart of Ho Chi Minh City, LOTTE HOTEL SAIGON offers a five-star experience that combines luxury and convenience. With its prime location just 0.35 km from the city center, this hotel is the perfect choice for both business and leisure travelers. The hotel's close proximity to the airport, only 25 minutes away, ensures a hassle-free journey for guests.\nLOTTE HOTEL SAIGON boasts a total of 283 elegantly designed rooms, providing a comfortable and stylish retreat for guests. Each room is thoughtfully furnished and equipped with modern amenities to meet the needs of discerning travelers. The hotel was built in 2001 and underwent a renovation in 2014, ensuring that guests enjoy the best of both classic and contemporary design.\nCheck-in at LOTTE HOTEL SAIGON begins at 02:00 PM, allowing guests to settle in and start their stay with ease. The check-out time is until 12:00 PM, giving guests ample time to pack up and prepare for their departure. The hotel's efficient and friendly staff are always ready to assist guests, ensuring a smooth and pleasant check-in and check-out process.\nFamilies traveling with children will find LOTTE HOTEL SAIGON to be a welcoming destination. The hotel's child policy allows children between the ages of 5 to 11 to stay free of charge, making it an ideal choice for family vacations. The hotel also offers a range of amenities and services tailored to meet the needs of young guests, ensuring a memorable and enjoyable stay for the whole family.\nExperience the epitome of luxury and convenience at LOTTE HOTEL SAIGON. Whether you're visiting Ho Chi Minh City for business or leisure, this five-star hotel provides the perfect base for exploring the vibrant city and enjoying a comfortable stay. Book your stay at LOTTE HOTEL SAIGON and indulge in the finest hospitality Vietnam has to offer.\nUnwind and Indulge in a World of Entertainment at LOTTE HOTEL SAIGON\nLOTTE HOTEL SAIGON in Ho Chi Minh City offers an array of entertainment facilities that will make your stay truly unforgettable. Step into a world of luxury and relaxation as you explore the hotel's diverse options for entertainment and leisure.\nIndulge in some retail therapy at the shops located within the hotel premises, where you can find a variety of high-end brands and unique souvenirs to take back home. After a long day of exploring the city, unwind at the hotel's bar and enjoy a refreshing cocktail or a glass of wine in a stylish and sophisticated setting.\nFor those seeking ultimate relaxation, the hotel boasts a salon, massage services, and a spa where you can pamper yourself with rejuvenating treatments. Immerse yourself in a state of tranquility as you make use of the sauna, steam room, and solarium facilities, which are designed to soothe your body and mind.\nIf you're looking to connect with nature, take a stroll through the hotel's lush garden, where you can find a peaceful retreat amidst the bustling city. For a cozy and social atmosphere, head to the shared lounge/TV area, where you can relax, mingle with fellow guests, and catch up on your favorite shows.\nAdditionally, the hotel also features a gift/souvenir shop, allowing you to conveniently purchase unique mementos to commemorate your stay at LOTTE HOTEL SAIGON. With its extensive range of entertainment facilities, LOTTE HOTEL SAIGON ensures that every guest's needs are met, making it the perfect choice for a memorable stay in Ho Chi Minh City.\nStay Active and Refreshed at LOTTE HOTEL SAIGON's Sports Facilities\nLOTTE HOTEL SAIGON is a haven for sports enthusiasts, offering a wide range of top-notch sports facilities to keep you active and refreshed during your stay. Dive into the luxurious indoor pool, where you can swim laps or simply relax in the crystal-clear waters. For those who prefer to soak up the sun, the hotel also boasts a stunning outdoor pool surrounded by lush greenery, perfect for a refreshing dip on a hot day.\nIf you're looking to maintain your fitness routine while traveling, LOTTE HOTEL SAIGON has you covered. Their state-of-the-art fitness center is equipped with the latest cardio and strength training equipment, ensuring you can get a full workout no matter your fitness level. Additionally, the hotel offers complimentary access to their free fitness center, so you can stay active without any extra cost.\nFor those who love the great outdoors, LOTTE HOTEL SAIGON provides access to scenic hiking trails. Explore the surrounding nature and immerse yourself in the beauty of Vietnam's landscapes. After an invigorating hike, head over to the poolside bar, where you can enjoy a refreshing beverage while basking in the sun. Whether you're a fitness enthusiast or simply looking for a relaxing way to unwind, LOTTE HOTEL SAIGON's sports facilities are sure to exceed your expectations.\nConvenience at Your Fingertips: LOTTE HOTEL SAIGON's Exceptional Facilities\nLOTTE HOTEL SAIGON in Ho Chi Minh City is renowned for its exceptional convenience facilities, ensuring that guests have everything they need for a comfortable and hassle-free stay. With a wide range of services available 24/7, this hotel goes above and beyond to cater to the needs of its guests.\nOne of the standout features of LOTTE HOTEL SAIGON is its 24-hour room service. Whether you're craving a late-night snack or a full meal, the hotel's dedicated team is always ready to deliver delicious dishes straight to your room. Additionally, the laundry service and dry cleaning options make it effortless to keep your wardrobe fresh and clean throughout your stay.\nFor added peace of mind, LOTTE HOTEL SAIGON offers safety deposit boxes to securely store your valuables. The hotel's concierge is also available to assist with any requests or recommendations, ensuring that you make the most of your time in Ho Chi Minh City. With Wi-Fi available in both public areas and all rooms, staying connected is a breeze.\nOther convenient facilities at LOTTE HOTEL SAIGON include express check-in/check-out for a seamless arrival and departure process, luggage storage for those who want to explore the city without their bags, and a well-stocked convenience store for any last-minute essentials. With daily housekeeping, you can rest assured that your room will always be tidy and comfortable.\nWhether you're visiting for business or leisure, LOTTE HOTEL SAIGON's exceptional convenience facilities will exceed your expectations and enhance your stay in Ho Chi Minh City.\nConvenient Transport Facilities at LOTTE HOTEL SAIGON\nLOTTE HOTEL SAIGON offers a range of transport facilities to ensure a hassle-free stay for its guests. For those arriving by air, the hotel provides airport transfer services, making the journey to and from the airport seamless and convenient. Additionally, guests can take advantage of the shuttle service, which operates at scheduled times, to explore the city's attractions or visit nearby shopping areas.\nFor guests who prefer to drive, LOTTE HOTEL SAIGON offers valet parking and a spacious car park onsite. The car park is free of charge for hotel guests, providing peace of mind for those traveling with their own vehicles. Alternatively, the hotel also offers car hire services, allowing guests to explore the city at their own pace.\nTo further enhance the guest experience, the hotel provides a taxi service for easy transportation around the city. For those looking to book tours or purchase tickets to attractions, LOTTE HOTEL SAIGON offers a ticket service, ensuring that guests can conveniently plan their itinerary. With its comprehensive range of transport facilities, LOTTE HOTEL SAIGON ensures that guests can travel with ease and make the most of their time in Ho Chi Minh City.\nLuxurious Room Facilities at LOTTE HOTEL SAIGON\nIndulge in the ultimate comfort and luxury at LOTTE HOTEL SAIGON, where every detail has been carefully designed to ensure a memorable stay. Each room is equipped with state-of-the-art amenities, including air conditioning to keep you cool and comfortable throughout your stay. Wrap yourself in the softness of the complimentary bathrobes provided, perfect for lounging after a long day of exploring the vibrant city of Ho Chi Minh. Stay up-to-date with the latest news and happenings with the daily newspaper delivered right to your room. Get ready for a night out with ease, thanks to the convenient hair dryer available in every room. Quench your thirst or enjoy a midnight snack from the well-stocked mini bar. And when you're ready to unwind, sit back and relax while watching your favorite shows on the satellite/cable TV. At LOTTE HOTEL SAIGON, your comfort and convenience are our top priorities.\nIndulge in Culinary Delights at LOTTE HOTEL SAIGON\nAt LOTTE HOTEL SAIGON, guests can embark on a gastronomic journey like no other with an array of exceptional dining facilities. From the convenience of 24-hour room service to the vibrant atmosphere of the coffee shop, there is something to satisfy every craving. The hotel's restaurant offers a delightful menu of international and local cuisines, prepared by skilled chefs using only the finest ingredients. Whether you choose to dine in the elegant restaurant or enjoy a meal in the comfort of your room with room service, you can expect impeccable service and delectable flavors. Start your day off right with a sumptuous breakfast buffet, featuring a variety of dishes to suit all tastes. The daily housekeeping ensures that the dining areas are always clean and inviting, providing a pleasant ambiance for your dining experience.\nLuxurious and Spacious Rooms at LOTTE HOTEL SAIGON\nExperience the epitome of luxury and comfort at LOTTE HOTEL SAIGON, located in the heart of Ho Chi Minh City. With a wide range of room types to choose from, guests are guaranteed a memorable stay. From the Deluxe King City View and Deluxe King River View rooms, offering breathtaking views of the city skyline and Saigon River, to the Deluxe Twin City View and Deluxe Twin River View rooms, perfect for families or friends traveling together, LOTTE HOTEL SAIGON has something for everyone.\nBooking your stay at LOTTE HOTEL SAIGON through Agoda ensures that you not only get the best prices but also a hassle-free experience. With Agoda's user-friendly platform, you can easily browse through the room options, compare prices, and make your reservation in just a few clicks. Whether you're traveling for business or leisure, Agoda guarantees a seamless booking process, allowing you to focus on enjoying your stay at LOTTE HOTEL SAIGON.\nDiscover the Vibrant District 1 in Ho Chi Minh City\nWelcome to the heart of Ho Chi Minh City, where the bustling District 1 awaits you. Known as the city's financial and commercial hub, this vibrant district is a melting pot of history, culture, and modernity. With its central location, District 1 is the perfect base for exploring all that Ho Chi Minh City has to offer.\nImmerse yourself in the rich history of the city with a visit to iconic landmarks such as the Notre-Dame Cathedral Basilica of Saigon and the Central Post Office, both stunning architectural masterpieces. Take a stroll along the famous Nguyen Hue Walking Street, a pedestrian-only boulevard lined with shops, cafes, and street performers, offering a lively atmosphere day and night.\nFood lovers will be in paradise in District 1, as it is home to a wide range of culinary delights. From street food stalls serving up delicious banh mi and pho, to upscale restaurants offering exquisite Vietnamese and international cuisine, there is something to satisfy every palate. Don't forget to explore the vibrant local markets, such as Ben Thanh Market, where you can indulge in fresh produce, local handicrafts, and souvenirs.\nAfter a day of exploring, retreat to the comfort of LOTTE HOTEL SAIGON, located in the heart of District 1. With its luxurious accommodations, world-class amenities, and impeccable service, this hotel offers the perfect oasis amidst the bustling city. Whether you're here for business or leisure, LOTTE HOTEL SAIGON is the ideal choice for an unforgettable stay in Ho Chi Minh City.\nConvenient Transportation from Ho Chi Minh City Airports to LOTTE HOTEL SAIGON\nWelcome to LOTTE HOTEL SAIGON, a luxurious and elegant hotel located in the heart of Ho Chi Minh City's District 1. Getting to our hotel from the nearby airports is quick and hassle-free, ensuring a smooth start to your stay in this vibrant city.\nIf you are arriving at Tan Son Nhat International Airport, the most convenient option to reach LOTTE HOTEL SAIGON is by taxi. Taxis are readily available outside the airport terminals, and the journey to the hotel takes approximately 30 minutes, depending on the traffic. Make sure to choose reputable taxi companies such as Vinasun or Mai Linh for a reliable and comfortable ride.\nAlternatively, if you prefer public transportation, you can take a bus from the airport to District 1. Bus number 109 operates between Tan Son Nhat International Airport and the city center, including stops near LOTTE HOTEL SAIGON. The bus runs from early morning until late at night, offering an affordable and convenient option for travelers.\nFor those arriving at Long Thanh International Airport, which is currently under construction, the most convenient way to reach LOTTE HOTEL SAIGON is by booking a private transfer or taxi. The journey from Long Thanh International Airport to the hotel takes approximately 1 hour, depending on the traffic conditions.\nWhichever airport you arrive at, LOTTE HOTEL SAIGON is easily accessible, allowing you to start your visit to Ho Chi Minh City with ease and comfort. Our hotel offers a luxurious and sophisticated ambiance, with spacious rooms, exceptional dining options, and world-class amenities. Whether you are traveling for business or leisure, LOTTE HOTEL SAIGON is the perfect choice for a memorable stay in the heart of this bustling city.\nDiscover the Vibrant Surroundings of LOTTE HOTEL SAIGON\nLocated in the heart of Ho Chi Minh City, LOTTE HOTEL SAIGON offers easy access to some of the city's most iconic landmarks and attractions. Just a short distance away, you will find the Central Post Office, a magnificent colonial building that showcases stunning architecture. Explore its interior and admire the grandeur of its design while sending a postcard to your loved ones.\nFor history enthusiasts, a visit to The Independence Palace is a must. This historical landmark played a significant role in Vietnam's history and offers a glimpse into the country's past. Marvel at the architecture and walk through the rooms where important decisions were made.\nSaigon Notre Dame Cathedral is another nearby attraction that should not be missed. Admire the intricate French Gothic architecture and step inside to witness the serene atmosphere of this religious site.\nFor a panoramic view of the city, head to Bitexco Financial Tower. This towering skyscraper offers an observation deck where you can enjoy breathtaking views of Ho Chi Minh City's skyline.\nIf you're a fan of the arts, make sure to catch a show at the Saigon Opera House (Ho Chi Minh Municipal Theater). This stunning building hosts a variety of performances, including ballets, concerts, and theatrical productions.\nHo Chi Minh Squares, A O Show - Lune Production, Bui Vien Street, Notre Dame Square, and Golden Dragon Water Puppet Theater are also within close proximity, offering a range of entertainment options and cultural experiences.\nWith its prime location, LOTTE HOTEL SAIGON provides the perfect base to explore these captivating landmarks and attractions, ensuring an unforgettable stay in Ho Chi Minh City.\nA Vibrant Culinary Scene Just Steps Away\nLOTTE HOTEL SAIGON is surrounded by an array of diverse and enticing dining options. For craft beer enthusiasts, Pasteur Street Brewing Company is a must-visit, offering a wide selection of locally brewed beers. For those craving authentic Vietnamese cuisine, Propaganda Vietnamese Bistro and Quan Nem Restaurant are perfect choices, serving up traditional dishes bursting with flavors. If you're in the mood for a cozy and charming dining experience, Cuc Gach Quan Restaurant and Den Long - Home Cooked Vietnamese Restaurant are highly recommended. For steak lovers, B3 Steakhouse & Craft Beer is the place to be, combining juicy cuts of meat with a great selection of craft beers. And for a taste of Japanese cuisine, Miyama - Modern Tokyo Restaurant Cafe is the go-to spot. Whether you're in the mood for classic Vietnamese pho or a refreshing poke bowl, Pho Quynh and Poke Saigon offer delicious options. With such a vibrant culinary scene right at your doorstep, you'll never run out of dining choices during your stay at LOTTE HOTEL SAIGON.\nShop 'til you drop in the heart of Ho Chi Minh City\nLocated in the bustling heart of Ho Chi Minh City, LOTTE HOTEL SAIGON is surrounded by a plethora of shopping landmarks that will satisfy even the most avid shopaholics. Just a stone's throw away from the hotel, you'll find Vincom Shopping Center, a modern mall offering a wide range of international and local brands. For those looking to immerse themselves in the city's vibrant art scene, Urban Gallery is just a short walk away, showcasing contemporary Vietnamese artworks. Bookworms will delight in a visit to Phuong Nam Bookshop, where you can browse through an extensive collection of books and literary treasures. Fashion enthusiasts can explore Sapa, a boutique store known for its unique and ethically sourced clothing and accessories. Ipa-nima and Ginkgo Concept Store are also nearby, offering trendy and eclectic fashion pieces. L'usine, a chic concept store and cafe, is perfect for a mid-shopping break, serving up delicious coffee and delectable pastries. Art lovers can visit The Sun Art Gallery, which features a diverse range of contemporary artworks. And for those in search of tailor-made clothing, Cao Vinh Tailors is just around the corner, renowned for their craftsmanship and attention to detail. With such a variety of shopping landmarks surrounding LOTTE HOTEL SAIGON, guests are sure to have an unforgettable retail experience.\nLuxury at an Affordable Price: LOTTE HOTEL SAIGON vs. Average Hotel Prices in Ho Chi Minh City\nIndulge in a truly luxurious experience at LOTTE HOTEL SAIGON without breaking the bank. With an average price of $154 per room, this 5-star hotel offers unparalleled comfort and elegance that will exceed your expectations. Compared to the average price of a hotel room in Ho Chi Minh City, which stands at $62, LOTTE HOTEL SAIGON provides exceptional value for money.\nAt LOTTE HOTEL SAIGON, you can immerse yourself in a world of opulence and sophistication without compromising on affordability. Each room is meticulously designed with modern amenities and stylish furnishings, ensuring a comfortable stay. From spacious suites to cozy deluxe rooms, there is an option to suit every traveler's needs and preferences.\nNot only does LOTTE HOTEL SAIGON offer exceptional accommodation, but it also boasts a wide range of facilities and services that will enhance your stay. Take a dip in the rooftop infinity pool while enjoying panoramic views of the city, or pamper yourself with a rejuvenating spa treatment at the luxurious onsite spa. With multiple dining options offering a variety of cuisines, you can savor exquisite dishes without leaving the hotel.\nExperience the epitome of luxury at LOTTE HOTEL SAIGON, where affordability meets elegance. Book your stay today and discover why this hotel is the perfect choice for discerning travelers seeking an unforgettable experience in Ho Chi Minh City.\nSuperb Hotel with Friendly and Professional Staff\nLOTTE HOTEL SAIGON in Ho Chi Minh City is a superb hotel that offers a fantastic value for guests. With its prime location in downtown, guests can easily explore the city's attractions and landmarks. The hotel's staff are highly praised for their friendliness, kindness, and professionalism. They go above and beyond to ensure that guests have a memorable stay. The rooms at LOTTE HOTEL SAIGON are clean and spacious, providing a comfortable and relaxing environment. Additionally, the hotel features a beautiful structure and a pool that is loved by both adults and kids. Guests also rave about the delicious food served at the hotel. Whether you're traveling for business or leisure, LOTTE HOTEL SAIGON is the perfect choice for a remarkable stay in Ho Chi Minh City.\nExceptional Customer Ratings at LOTTE HOTEL SAIGON\nLOTTE HOTEL SAIGON in Ho Chi Minh City has received exceptional customer ratings, making it a top choice for travelers seeking a luxurious and memorable stay. With an overall rating of 8.9, guests have consistently praised the hotel for its outstanding service and commitment to excellence.\nOne of the key highlights of LOTTE HOTEL SAIGON is its excellent value for money, with a rating of 8.7. Guests have found that the hotel offers a range of amenities and services that exceed their expectations, all at a reasonable price. From the moment you step into the hotel, you will be greeted by a warm and welcoming atmosphere, ensuring that every penny spent is well worth it.\nFurthermore, LOTTE HOTEL SAIGON boasts impressive facilities, earning a rating of 8.8. Whether you're looking to relax by the pool, work out in the fitness center, or indulge in a rejuvenating spa treatment, the hotel has it all. The state-of-the-art facilities are well-maintained and provide guests with the perfect setting to unwind and enjoy their stay.\nThe hotel's commitment to cleanliness is evident in its exceptional rating of 9.2. Guests have consistently praised the impeccable housekeeping services, ensuring that every corner of the hotel is spotless. Whether it's the rooms, common areas, or dining establishments, you can expect a pristine and hygienic environment throughout your stay.\nLOTTE HOTEL SAIGON's prime location also contributes to its high rating of 8.9. Situated in the heart of Ho Chi Minh City, the hotel offers convenient access to popular attractions, shopping centers, and vibrant nightlife. Whether you're a leisure or business traveler, you'll appreciate the hotel's central location, making it easy to explore the city and its cultural treasures.\nComfort is another aspect that guests have raved about, with a rating of 8.7. The spacious and well-appointed rooms provide a tranquil sanctuary, allowing guests to relax and recharge after a day of exploration. The plush bedding, modern amenities, and attention to detail ensure a comfortable and enjoyable stay.\nLastly, the staff at LOTTE HOTEL SAIGON have consistently received high praise, earning a rating of 9.1 for their exceptional performance. Guests have commended the friendly and attentive service provided by the hotel's staff, who go above and beyond to cater to every need. From the moment of arrival to departure, you can expect personalized and professional service that will make your stay truly memorable.\nIn conclusion, LOTTE HOTEL SAIGON has garnered outstanding customer ratings in various categories, ensuring a memorable and enjoyable stay for every guest. With its exceptional value, impressive facilities, impeccable cleanliness, prime location, comfortable rooms, and exceptional staff performance, the hotel truly stands out as a top choice in Ho Chi Minh City."
+  },
+  "check_in": {
+    "from": "14:00",
+    "until": null
+  },
+  "check_out": {
+    "until": "12:00"
+  },
+  "contact": {
+    "phone": "+84-000-8092-4803",
+    "email": "reservations+lotte_hotel_saigon@catalog.hotelgo.demo",
+    "website": "https://www.agoda.com/vi-vn/lotte-legend-hotel-saigon/hotel/ho-chi-minh-city-vn.html"
+  },
+  "highlights": {
+    "location_highlight": "Inside city center",
+    "things_youll_love": [
+      "Airport transfer",
+      "Free Wi-Fi in all rooms!",
+      "Daily housekeeping",
+      "Bar"
+    ],
+    "nearby_highlights": [
+      "Shopping and Markets",
+      "War Remnants Museum",
+      "Restaurants",
+      "Central Post Office"
+    ]
+  },
+  "general_amenities": [
+    "A la carte in restaurant",
+    "Accessible by elevator",
+    "Accessible vanities",
+    "Adapter",
+    "Air conditioning",
+    "Air conditioning in public area",
+    "Airport transfer",
+    "Alarm clock",
+    "Alternative meal arrangement",
+    "Anti-viral cleaning products",
+    "Asian breakfast",
+    "Asian cuisine in restaurant",
+    "Bar",
+    "Bathrobes",
+    "Bathtub",
+    "Body scrub",
+    "Body thermometer",
+    "Bottle of water",
+    "Breakfast [buffet]",
+    "Breakfast in room",
+    "Breakfast service",
+    "Breakfast takeaway service",
+    "Buffet in restaurant",
+    "Business facilities",
+    "CCTV in common areas",
+    "Car park [charges apply]",
+    "Car park [free of charge]",
+    "Car park [nearby]",
+    "Car park [on-site]",
+    "Carpeting",
+    "Cash withdrawal",
+    "Cashless payment service",
+    "Check-in [24-hour]",
+    "Check-in/out [express]",
+    "Check-in/out [private]",
+    "Chinese [Mandarin]",
+    "Chinese cuisine in restaurant",
+    "Closet",
+    "Clothes rack",
+    "Coffee shop",
+    "Coffee/tea in restaurant",
+    "Coffee/tea maker",
+    "Computer station",
+    "Concierge",
+    "Contactless check-in/out",
+    "Convenience store",
+    "Currency exchange",
+    "Daily disinfection in all rooms",
+    "Daily disinfection in common areas",
+    "Daily housekeeping",
+    "Desk",
+    "Desserts in restaurant",
+    "Doctor/nurse on call",
+    "Doorman",
+    "Dressing room",
+    "Dry cleaning",
+    "Electric kettle",
+    "Elevator",
+    "English",
+    "Facilities for disabled guests",
+    "Family room",
+    "Family/child friendly",
+    "Fire extinguisher",
+    "First aid kit",
+    "Fitness center",
+    "Food delivery",
+    "Foot bath",
+    "Free Wi-Fi in all rooms!",
+    "Free bottled water",
+    "Free face masks",
+    "Front desk [24-hour]",
+    "Fruits/snacks",
+    "Garden",
+    "Gift/souvenir shop",
+    "Grooming service",
+    "Guest rooms seal after sanitization",
+    "Gym/fitness",
+    "Hair dryer",
+    "Hand sanitizer",
+    "Happy hour",
+    "Hot water linen and laundry washing",
+    "Hotel chain",
+    "Hotel room service app",
+    "Hygiene certification",
+    "Hypoallergenic",
+    "In-room safe box",
+    "Individually-wrapped food options",
+    "Indoor venue for special events",
+    "International cuisine in restaurant",
+    "Internet",
+    "Internet services",
+    "Ironing facilities",
+    "Ironing service",
+    "Japanese",
+    "Kids meal",
+    "Kids safety features",
+    "Korean",
+    "Laundry service",
+    "Linens",
+    "Locker",
+    "Lockers",
+    "Luggage storage",
+    "Massage",
+    "Meeting stationery",
+    "Meeting/banquet facilities",
+    "Meetings",
+    "Mini bar",
+    "Nightclub",
+    "Non-smoking",
+    "Non-smoking rooms",
+    "On-site entertainment",
+    "Outdoor recreational features",
+    "Outdoor venue for special events",
+    "Pajamas",
+    "Physical distancing of at least 1 meter",
+    "Playground",
+    "Pool facilities",
+    "Pool with view",
+    "Poolside bar",
+    "Postal service",
+    "Private bathroom",
+    "Private entrance",
+    "Professional-grade sanitizing services",
+    "Projector/LED display",
+    "Protective screens in common areas",
+    "Refrigerator",
+    "Rental car",
+    "Restaurant breakfast",
+    "Restaurant dinner",
+    "Restaurant lunch",
+    "Restaurants",
+    "Roll-in shower",
+    "Room sanitization opt-out available",
+    "Room service [24-hour]",
+    "Rooms sanitized between stays",
+    "Safe dining setup",
+    "Safety deposit boxes",
+    "Safety/security feature",
+    "Salad in restaurant",
+    "Salon",
+    "Sanitized kitchen and tableware items",
+    "Satellite/cable channels",
+    "Sauna",
+    "Seating area",
+    "Security [24-hour]",
+    "Separate dining area",
+    "Shared lounge/TV area",
+    "Shared stationery removed",
+    "Shops",
+    "Shower",
+    "Shuttle service",
+    "Sleep comfort items",
+    "Slippers",
+    "Smoke alarms",
+    "Smoke detector",
+    "Smoke-free property",
+    "Smoking area",
+    "Snack bar",
+    "Socket near the bed",
+    "Sofa",
+    "Solarium",
+    "Soundproofing",
+    "Spa",
+    "Spa/sauna",
+    "Staff trained in safety protocol",
+    "Steamroom",
+    "Swimming pool",
+    "Swimming pool [kids]",
+    "Swimming pool [outdoor]",
+    "Taxi service",
+    "Telephone",
+    "Temperature check for guests and staff",
+    "Terrace",
+    "Ticket services",
+    "Toiletries",
+    "Tours",
+    "Towels",
+    "Trash cans",
+    "Valet parking",
+    "Vegetarian restaurant",
+    "Vietnamese",
+    "Wake-up service",
+    "Western cuisine in restaurant",
+    "Wheelchair accessible",
+    "Whirlpool bathtub",
+    "Wi-Fi in public areas",
+    "Window",
+    "Wine glasses",
+    "Xerox/fax in business center"
+  ],
+  "featured_amenities": [
+    "Airport transfer",
+    "Bar",
+    "Daily housekeeping",
+    "Free Wi-Fi in all rooms!"
+  ],
+  "breakfast": {
+    "available_cuisines": [
+      "American",
+      "Asian",
+      "Buffet"
+    ],
+    "charge": {
+      "raw": "630000 VND",
+      "amount": 630000.0,
+      "currency": "VND"
+    }
+  },
+  "restaurants": [
+    {
+      "id": 264962,
+      "name": "Crystal Jade Palace",
+      "servings": [
+        "A-la-carte"
+      ],
+      "cuisines": [
+        "Chinese"
+      ]
+    },
+    {
+      "id": 264963,
+      "name": "Yoshino Restaurant",
+      "servings": [
+        "A-la-carte"
+      ],
+      "cuisines": [
+        "Japanese"
+      ]
+    },
+    {
+      "id": 264961,
+      "name": "The Canvas",
+      "servings": [
+        "Buffet"
+      ],
+      "cuisines": [
+        "International"
+      ]
+    },
+    {
+      "id": 264964,
+      "name": "Ottimo House Trattoria",
+      "servings": [
+        "A-la-carte"
+      ],
+      "cuisines": [
+        "American",
+        "Italian"
+      ]
+    }
+  ],
+  "policies": {
+    "guest_policies": {
+      "extraBedPolicy": "Extra beds are dependent on the room you choose. Please check the individual room capacity for more details.",
+      "minimumAgeOfGuest": "All children are welcome.",
+      "infantPolicy": {
+        "ageDescription": "Infant 0-4 year(s)",
+        "policy": "Stay for free if using existing bedding.",
+        "additionalInfo": "Baby cot/crib may be requested directly from the property. Subject to availability."
+      },
+      "childPolicy": {
+        "ageDescription": "Children 5-11 year(s)",
+        "policy": "Stay for free if using existing bedding.",
+        "additionalInfo": "If you need an extra bed, it will incur an additional charge."
+      },
+      "adultChildPolicy": {
+        "ageDescription": "Guests 12 years and older are considered as adults",
+        "additionalInfo": "Must use an extra bed which will incur an additional charge."
+      }
+    },
+    "child_policies": [
+      {
+        "isInfant": true,
+        "policy": "Infant 0-4 year(s)",
+        "description": "Stay for free if using existing bedding. Note, if you need a cot, it may incur an extra charge and is subject to availability."
+      },
+      {
+        "isInfant": false,
+        "policy": "Children 5-11 year(s)",
+        "description": "Stay for free if using existing bedding."
+      }
+    ],
+    "extra_bed_policies": [
+      {
+        "type": 1,
+        "description": "Extra beds are dependent on the room you choose. Please check the individual room capacity for more details."
+      }
+    ],
+    "other_policies": [
+      "As per the law, a foreigner cannot share a room with a citizen of Vietnam without a certificate of marriage as a proof. The property may reject the booking or request that a second room be booked upon failure to do so.",
+      "Children 5 – 11 years old will be charged additional fee at VND 350,000 when sharing bed with parents (rate are subject to 5% service charge & Vat according to Vietnamese regulation). Children 12 years and over are considered as adults.",
+      "When booking more than 5 rooms, different policies and additional supplements may apply."
+    ]
+  },
+  "important_notes": [],
+  "useful_info": [
+    {
+      "name": "Check-in/Check-out",
+      "items": [
+        {
+          "title": "Check-in from",
+          "description": "14:00",
+          "icon": "ficon-express-check-in-check-out"
+        },
+        {
+          "title": "Check-out until",
+          "description": "12:00",
+          "icon": "ficon-express-check-in-check-out"
+        },
+        {
+          "title": "Reception open until",
+          "description": "00:00",
+          "icon": "ficon-24hour-frontdesk"
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "items": [
+        {
+          "title": "Distance from city center",
+          "description": "0.35 km",
+          "icon": "ficon-distance-from-city-center"
+        },
+        {
+          "title": "Travel time to airport (minutes)",
+          "description": "25",
+          "icon": "ficon-time-to-airport"
+        },
+        {
+          "title": "Airport transfer fee",
+          "description": "1527500 VND",
+          "icon": "ficon-airport-transfer"
+        }
+      ]
+    },
+    {
+      "name": "Extras",
+      "items": [
+        {
+          "title": "Daily Internet/Wi-Fi fee",
+          "description": "0 VND",
+          "icon": "ficon-free-wifi-in-all-rooms"
+        },
+        {
+          "title": "Breakfast charge (unless included in room price)",
+          "description": "630000 VND",
+          "icon": "ficon-free-breakfast"
+        }
+      ]
+    },
+    {
+      "name": "The property",
+      "items": [
+        {
+          "title": "Year property opened",
+          "description": "2001",
+          "icon": "ficon-year-hotel-built"
+        },
+        {
+          "title": "Number of floors",
+          "description": "17",
+          "icon": "ficon-number-of-floors"
+        },
+        {
+          "title": "Room voltage",
+          "description": "220",
+          "icon": "ficon-room-voltage"
+        },
+        {
+          "title": "Number of rooms",
+          "description": "283",
+          "icon": "ficon-number-of-rooms"
+        },
+        {
+          "title": "Most recent renovation",
+          "description": "2014",
+          "icon": "ficon-year-hotel-last-renovated"
+        },
+        {
+          "title": "Non-smoking rooms/floors",
+          "description": "yes",
+          "icon": "ficon-non-smoking-room"
+        },
+        {
+          "title": "Number of restaurants",
+          "description": "3",
+          "icon": "ficon-restaurant"
+        },
+        {
+          "title": "Number of bars/lounges",
+          "description": "2",
+          "icon": "ficon-mini-bar"
+        }
+      ]
+    },
+    {
+      "name": "Parking",
+      "items": [
+        {
+          "title": "Daily parking fee",
+          "description": "0 VND",
+          "icon": "ficon-car-park"
+        }
+      ]
+    }
+  ],
+  "property_facts": {
+    "distance_from_city_center": "0.35 km",
+    "travel_time_to_airport_minutes": "25",
+    "airport_transfer_fee": {
+      "raw": "1527500 VND",
+      "amount": 1527500.0,
+      "currency": "VND"
+    },
+    "daily_internet_fee": {
+      "raw": "0 VND",
+      "amount": 0.0,
+      "currency": "VND"
+    },
+    "year_opened": "2001",
+    "most_recent_renovation": "2014",
+    "number_of_floors": "17",
+    "number_of_rooms": "283",
+    "number_of_restaurants": "3",
+    "number_of_bars_lounges": "2",
+    "room_voltage": "220",
+    "parking_fee": {
+      "raw": "0 VND",
+      "amount": 0.0,
+      "currency": "VND"
+    }
+  },
+  "images": [
+    {
+      "local_path": "images/hotel/hotel_01.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/9e98e4e28acb9561e2d69f0f7dd2c706.jpg?ce=0&s=1024x768",
+      "title": "Bar/lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_01.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_02.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/942b3ec959b83d50b169fe20bacbe7df.jpg?ce=0&s=1024x768",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_02.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_03.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/443443285.jpg?k=97e847733513b72842c9062d72eb0325702caa3cdb2794e2ebed9c66fbe8d066&o=",
+      "title": "Bar/lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_03.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_04.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/530202069.jpg?k=a23b522a7193e5de09ab7a8162d5381e8f625bf89820fb9f6f66250270489276&o=",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_04.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_05.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/84557495905d65ee7fd4e14adc3d978e.png?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_05.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_06.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/6896ddb39ac85976713b4f065c580672.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Other",
+      "group_id": "other",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_06.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_07.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/548343265.jpg?k=9bcec3329c18c34af0941affbbb9917f9d415fddd8505f308981e21fd9979893&o=",
+      "title": "Balcony/terrace",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_07.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_08.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/9f1febb743326f32096447fb081a0de5.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_08.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_09.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/31e3702e5a057368bc0415b817e04107.jpg?ce=0&s=1024x768",
+      "title": "Lobby",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_09.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_10.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/58791ef89db2ef0c03f490e15cf7a262.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_10.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_11.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/d9914f1277d3677e406fe2b117c4c38d.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_11.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_12.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/cf870c7f25c5abea58f0c2b8bea4b502.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_12.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_13.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/2bd75a6f2f296223178e38390b07c246.jpg?ce=0&s=1024x768",
+      "title": "Bar/lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_13.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_14.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/c0f4328621e68ed36077bf129f619232.jpg?ce=0&s=1024x768",
+      "title": "Reception",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_14.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_15.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/530202079.jpg?k=1d2f00b699475549908a42e259505922a085a0df92967e380c3c9d60f1481427&o=",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_15.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_16.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/026617f66eefbb44ab7862d4d2240c26.jpg?ce=0&s=1024x768",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_16.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_17.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/35e983829f9ce7960072eb354b03d6f2.jpg?ce=0&s=1024x768",
+      "title": "Buffet",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_17.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_18.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/81d177a2b8e1b319292602629d90cc13.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_18.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_19.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429441926.jpg?k=88555b091c41a6cf17c049e91a937dfd55f1c70a70bd87ff4ec023b140ccd9f8&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_19.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_20.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/1c3d2091c1a5af4802843d23249f12d5.jpg?ce=0&s=1024x768",
+      "title": "Executive lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_20.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_21.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/5bcf437b3da1ce80a88f8583dbfa4039.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_21.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_22.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/fa099aed42ba8d2169554ea5419922d7.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_22.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_23.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/062fe2042cf7980cbe165a64a0e765e6.jpeg?ce=3&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_23.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_24.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/7b4e7f765b365fb97b6c939b43947ff3.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_24.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_25.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/be6f44cdf4f44ac920b2f4dc4a18f431.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_25.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_26.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429441925.jpg?k=3fc9c21cdc1db6e0ba4f6093ce78e4d9bff13429b98876cf243f4b7b435e8ced&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_26.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_27.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/df0a21f47d668bc7826a1c6f51984933.jpg?ce=0&s=1024x768",
+      "title": "Executive lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_27.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_28.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/387647020.jpg?k=5ed5cb99fa3dde4417b2a836df7c50add34372717f75d400965674cffa74d443&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_28.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_29.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/cda9c565f494ca96bfbc945e10f36c89.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_29.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_30.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/22d41f14c0ad6ca2e4c9ad158e9a6cc8.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_30.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_31.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/f0bb01e5134a269d91b00e48317a8b43.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_31.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_32.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388853490.jpg?k=ee1c335c8837d4199174fc5a79f5a07448f6422cf76186421e5031abec519da2&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_32.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_33.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429436120.jpg?k=e57fe9149c8e88a7d57e8db015b938f273a74aac57094ae8a27f822a46bb5ed3&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_33.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_34.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/b4962aed5a7559a30b23347414b6bde8.jpg?ce=0&s=1024x768",
+      "title": "Buffet",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_34.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_35.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/428473010d5fd9840df70f3803b0a899.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_35.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_36.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/530202076.jpg?k=d7c958636944530af3daf590a12377f449075dc974daa5d850d81af2f6ef3d91&o=",
+      "title": "Swimming pool",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_36.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_37.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/9cd42eed8cb5fd21e21adef82cc8b940.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_37.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_38.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/7a439053e6da6cd3156f354cedd4c6dc.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_38.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_39.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388848516.jpg?k=03ce9959f96fa2d6c04d0d5676e0986b99f4ee397b32097a56b257826a96f37c&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_39.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_40.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/a78c3e61db0e295974afa175f1f2f245.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_40.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_41.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/5e04e4e34befffe1fa64ced274521c94.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_41.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_42.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/a344dca2364c77ff04437273b09267ef.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_42.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_43.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e25c173c606608a4642d9f2a3f96d7bb.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_43.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_44.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388852639.jpg?k=2b539c8087f2bba8a78e124090d9481650f9b74c93095289736dbae6f33467c7&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_44.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_45.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/22f1ed0da1a6ccb863449a2ff2ce5560.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_45.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_46.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/068fad28678c3d1634a6a123ac23107e.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_46.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_47.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e50e59cd170ba6d2ec4d27b4e2924a9c.jpeg?ce=3&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_47.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_48.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388859956.jpg?k=bc1e05bc047ac1bcd3da4a488d72b840b91b3a341132b6d529d489d6f55833eb&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_48.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_49.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/1e580520226d8ac938f04b512f83899a.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_49.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_50.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429441905.jpg?k=48e1f030413f08ba5d95430c521dbdd9a5d2a7fded2cf4d1d07d67c38a3751eb&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_50.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_51.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388859955.jpg?k=b14d338a5fc2e789ef41b2947c7f8f36fb8e560b784753ddea13d62a6caab801&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_51.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_52.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388850375.jpg?k=82ced8790b60e933a98c8f498b5d5f0f6fe562d7132e206df4c2b56480a500c0&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_52.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_53.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/37901b78cc1c1c7f58a7c82213a798b0.jpg?ce=0&s=1024x768",
+      "title": "Ballroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_53.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_54.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/eb869819bc0a192e2df6f7ea2404d6d8.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_54.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_55.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388851366.jpg?k=21d2a4b91723d37953ad28ffeafafdf6ed0a2dfb5c32ff22bcb51617c0f0a3f8&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_55.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_56.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/a3fb10a93cff688ca1ca99a9e24d500b.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Executive lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_56.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_57.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429436966.jpg?k=f9ac40152a90fa8abe575b4f03f1f0cf197781999458d64f52a49797142b1fcd&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_57.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_58.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/87139377b8e28f78c6a7f6a53767df3f.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_58.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_59.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/c45f04822a3647a2a055bc34efa01804.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_59.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_60.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/6cd2290af3a9ed624604e3eb530f5a20.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_60.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_61.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/548343340.jpg?k=5aaf9471fb60f06039f61ee64d967daa5c035a79c726475187d9d2f2ce86bd85&o=",
+      "title": "Meeting room / ballrooms",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_61.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_62.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/8c75982fa0859bf3a2d4a16c0a41430d.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_62.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_63.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429441931.jpg?k=192a12e3281ec5868a5b0107500cd2448b2513cd767db31f72a3ab0349d60a9d&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_63.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_64.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429436940.jpg?k=05e7d0e84c0fc7ccfb9f392b3f2d375303f839651fde4845224507f786aef94c&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_64.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_65.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429441929.jpg?k=e520453ebe52053ee9ce363bca397a97301ad9ef3573450fc1ece330f0c86e4b&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_65.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_66.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/8b1dcfb2831c998cce90bf33065e2249.jpg?ce=0&s=1024x768",
+      "title": "Executive lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_66.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_67.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/530202108.jpg?k=37b38d9fff423015eb03404507bb0b5bb7b432cf4029509f08812638b2877321&o=",
+      "title": "Garden",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_67.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_68.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/71cf87848b5318e803cf1cdddf0adb6e.jpeg?ce=3&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_68.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_69.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388848562.jpg?k=eb5b82f7a59ba95a7ce7a6d13368c06591821031fba6802d38037e467d4a0ea2&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_69.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_70.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/b3cdd479b5ddcb4ab06d982da1b98929.jpg?ce=0&s=1024x768",
+      "title": "Bar/lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_70.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_71.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/fbc37c771c6cd975d735bfca0dd7be4c.jpg?ce=0&s=1024x768",
+      "title": "Ballroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_71.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_72.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/0/21ffae24a34034fb806752f628b65ec2.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Ballroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_72.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_73.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/3e2b5839c2029e1d8b96a9c8536e0eb0.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_73.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_74.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/93935188eb68e29a93c6dfb07aced517.jpg?ca=7&ce=1&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_74.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_75.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/01afe45d7bb75098bcc42cc10d1b41f2.jpg?ce=0&s=1024x768",
+      "title": "Executive lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_75.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_76.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/548343338.jpg?k=a5a8b522d9430c8fb04e8473f4b8f988fa3ec11068055678b71214eb16fd9cd5&o=",
+      "title": "Meeting room / ballrooms",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_76.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_77.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429441930.jpg?k=7826c485213068246bd4f0495aa55c100e9fb4e81366260324d2dbe26f1b1518&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_77.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_78.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/548343268.jpg?k=1e980c4ec816adb6ac0cbad3ff06a084172e8bbd188a02f20a6ca6e767b5c222&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_78.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_79.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388850774.jpg?k=47d65f4e35bfd25ce8d966f54c62ad4ef6157b09bd981078384f7518aa14ee70&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_79.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_80.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/49b62e209492d22ecfbb600100764c67.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_80.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_81.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/d1d8727b57dbb924087cbe510e9d870d.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_81.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_82.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/387655093.jpg?k=0d5c9efffc86a35d1a7516e8fbcf3c8af1f5be8b5d01eafbb89cc0e20ceabaf5&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_82.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_83.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429441924.jpg?k=56d925aac4f33a650727208b217ed27376f251b0cd33ff06cd4dfdba41d17927&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_83.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_84.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/bcb2cce05884ad6368ea68e5e4498c3e.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_84.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_85.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/387647032.jpg?k=668480b9ddd8d7186b3a727a3140141bc6e94cfbfca5b8140f6ba6b3da3c77db&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_85.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_86.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e374cebf35eb927a329ae5e2c18fa6c8.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_86.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_87.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/2a675626cdf5d6a2cb5d566888b58ad2.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_87.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_88.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/4cac27576c8c49eeabd3e1ea8140ad09.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_88.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_89.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/1aae4e4c5f004785c2c7d6b274e1ee41.jpg?ce=0&s=1024x768",
+      "title": "Executive lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_89.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_90.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/4afb834ba9626e60fb2bae4e05459046.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_90.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_91.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/443443288.jpg?k=9f6124d012264ce1021386d63deb7b2868dc012da88edb156f1d7a0451a4c838&o=",
+      "title": "Bar/lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_91.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_92.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/548343339.jpg?k=4e6104b5290d7b396156aee3155322d13ae195705cdfbcb820705f39899825f3&o=",
+      "title": "Meeting room / ballrooms",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_92.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_93.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/97ccce73b57f1c8b45ce125deb9db1e5.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_93.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_94.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/b000756c7f833dc7b4a903c1669772f3.png?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_94.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_95.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e14902ad19c8a09d0aa190696e6fc530.jpeg?ce=3&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_95.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_96.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388848476.jpg?k=d565255c4bd0d29fe55d3236535e76afa8752eea166936368b95213440b9537b&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_96.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_97.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/d87bfd20c0f288e174f295cd9d48c4c2.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_97.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_98.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429435989.jpg?k=c7d5b77a6413f4ef410f091a5245045e71d8624cf5d4ff9c3f52f24c3a1f6dd3&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_98.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_99.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388848542.jpg?k=6b87300b3615d68422e06607d0e215d2a8eb2af0a0f20a3b0864176d88a7bf72&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_99.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_100.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/387655173.jpg?k=14136cabf99291aad68bd31cd01637e45fa7b2ff67bc422cc0a8b084e9c9c39a&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_100.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_101.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/906351f8c7943613a133416e0c432133.jpg?ce=0&s=1024x768",
+      "title": "Ballroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_101.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_102.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388848687.jpg?k=5bda60f17a4db41d8754845057de06dd5f55d331992c5acda020c12d4e310450&o=",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_102.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_103.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/164128628.jpg?k=e2eb50591e6ef289c89a0e43530e44d0fbf8c433cfaebca26a87370b6b0ee52b&o=",
+      "title": "Fitness center",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_103.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_104.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/51309cd25dbdefcf639a5d34f7313a72.jpg?ce=0&s=1024x768",
+      "title": "Buffet",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_104.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_105.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388851373.jpg?k=90eab247bea69dd47143d62bc9c8bd3eb622286a6b881e1d8232b1878dec61a8&o=",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_105.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_106.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/cbdd3741a5c63563650e40e296730ced.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_106.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_107.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/ed8520272a585391a06d57fb2ff68301.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_107.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_108.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/388848696.jpg?k=65151a4eef2325e2007b15f31e47abaa0a606ba799ba7bfb6ebed0e8a8e5a813&o=",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_108.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_109.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/116375336.jpg?k=66d09976fe4512d1340ce8c9037547f0818490792276eeca4b4dbe4c0693d88e&o=",
+      "title": "Meeting room / ballrooms",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_109.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_110.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/548344554.jpg?k=def370d7a313550ceea8c6f82a37e1c06f40a833cac7c3b19f26daab95c6f2c0&o=",
+      "title": "Food and beverages",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_110.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_111.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/3b1344a49bc7d9ed0cca9e61ddde1ade.jpg?ce=0&s=1024x768",
+      "title": "Executive lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_111.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_112.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/585331935.jpg?k=8762ff5ced85d77a83fd4509b99c2d90f9e328b9bb83999fa9cd90478bc8d961&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_112.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_113.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/581078311.jpg?k=324c92239e90e6bc33c3c39efab76149928b46690a62a16347b2e68af7f2e2de&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_113.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_114.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/4b52d139e230fe3f8c8bc6b0188f9c69.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_114.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_115.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/c0bcb2c2005059b2e63815deb4c04a75.jpg?ce=0&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_115.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_116.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e1bb85d2b9eb0d6128f1412d7055291f.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_116.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_117.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/92689532bc8badba8ba11b205a74bf30.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_117.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_118.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/98e0c612a5f27029e29d6c5453db4320.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_118.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_119.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/6be62db7e49fd9235ad64ab79d0f25a5.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Rooms",
+      "group_id": "room",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_119.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_120.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/70f158066ecf1b8b6a21a33cc76561ca.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_120.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_121.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/548343335.jpg?k=f8499e7c2327aa8f009cbff87a5153b7f8b1e65f6600232ef4553331f042a1b8&o=",
+      "title": "Meeting room / ballrooms",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_121.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_122.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/ee9d5da2971e94417b0f6a911fd262d4.jpg?ce=0&s=1024x768",
+      "title": "Bathroom",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_122.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_123.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e70552e6b0dae1ba1edeb3c88d7798c6.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_123.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_124.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/023baf6723b295a1bb82e17ac9852a35.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_124.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_125.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/443443289.jpg?k=721e44f8273ca5962c7595af2b3c73b1427b358e7466edfe85cc5fa00b300e8c&o=",
+      "title": "Bar/lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_125.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_126.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/443443280.jpg?k=152274f39b87ef8901b933a6b74efdb531ba3139339470ae10a7633107b7e408&o=",
+      "title": "Bar/lounge",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_126.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_127.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/164128709.jpg?k=60999e092d0ac59cf9de9f4413edba9b9b4b86f0fa17af33af1b24a657572bfe&o=",
+      "title": "Massage",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_127.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_128.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/585331821.jpg?k=d33b099e5c565f132276b135468e057ce2031143a91e461ee2a242d238877767&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_128.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_129.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/299225b30a593a258ff687bb54748332.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_129.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_130.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e4231c237ace60c1cb7b00965c4ae3f0.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_130.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_131.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/0f7aa7923ff65feaf46ae02173bff893.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_131.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_132.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/3324233ecda711813e6f9aa5b5a837d8.jpg?ce=0&s=1024x768",
+      "title": "Garden",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_132.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_133.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/23a95566f7f10bd3dd8b7105bd4b59d2.jpeg?ce=3&s=1024x768",
+      "title": "Interior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_133.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_134.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/2fecfe09d010d77f5063ff0c16096046.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_134.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_135.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/585331817.jpg?k=317e69c1f019f0d9d13d5e1a46d781d4c4e424fac96dba59da637038ccb92117&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_135.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_136.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e8b89b50850bf7cbc32a8b781f993914.jpeg?ce=3&s=1024x768",
+      "title": "Recreational facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_136.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_137.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/db1126cd1721e81352aa1ed5657e916c.jpg?ce=0&s=1024x768",
+      "title": "Facilities",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_137.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_138.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/585331820.jpg?k=42aa0efc08efa83c8cd862e775ba01af2a4cd643e4cdc83799423db600bfbba2&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_138.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_139.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/34850444.jpg?k=574bbddcf67076e2b7af7393b743fab493e09f306c6310829c48d4409fc618f0&o=",
+      "title": "Sauna",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_139.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_140.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/530202104.jpg?k=d017e6692464f10e84b4013ba067077b4c70f626fe7c27fa4a738566174a74c8&o=",
+      "title": "View",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_140.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_141.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/72a8ad6cee13fee64f48cb4d8f3b1faa.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_141.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_142.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/dc5088522117c80ed67fd8a4994eeebf.jpeg?ce=3&s=1024x768",
+      "title": "",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_142.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_143.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/738a90df9a472961a0b7350e22bbb349.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_143.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_144.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/929b3eea5a1fa62ffcc7937ec8d5bc23.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_144.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_145.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/585331818.jpg?k=64e6438bf699512085b9742e1318a83cdb841a14b151a212f202f98f5ba0d691&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_145.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_146.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/530202088.jpg?k=447b7dab3e279a7b8c22fcf6aa33587de53a9ca1796ed8f1dcb5b2c7636bcc46&o=",
+      "title": "Garden",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_146.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_147.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/34850450.jpg?k=16620289a6f81de66469b811610827594534fcb51cd170dc27881b215b3e64b6&o=",
+      "title": "Spa",
+      "group": "Facilities",
+      "group_id": "facility",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_147.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_148.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e51419b0d431c9cb7a10ee014aa748b9.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_148.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_149.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/902/-1/4dfa43288b4940166280406631939f18.jpg?ce=0&s=1024x768",
+      "title": "Exterior view",
+      "group": "Property views",
+      "group_id": "property",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_149.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_150.jpg",
+      "source_url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/548342618.jpg?k=c0faeaf0f9a6fef56163911fa9d3f0b3abce5b2522080800b2427f9c2e32795d&o=",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_150.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_151.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/e6189079c47df521e532bddb38599b48.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_151.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_152.jpg",
+      "source_url": "https://pix8.agoda.net/hotelImages/25966523/0/7d29bb4d7234b5d2266be572313c03fc.jpeg?ce=3&s=1024x768",
+      "title": "Restaurant",
+      "group": "Dining",
+      "group_id": "dining",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_152.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_153.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/128728/e2d5ebdb68323ccc8694317ee70987a0.jpg?ca=19&ce=1&s=1024x768",
+      "title": "Nguyen Hue Street - 650 m from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_153.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_154.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/51308/2_51308_02.jpg?ca=6&ce=1&s=1024x768",
+      "title": "People's Committee Building - 700 m from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_154.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_155.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/128723/2_128723.jpg?ca=6&ce=1&s=1024x768",
+      "title": "City Hall - 700 m from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_155.jpg"
+    },
+    {
+      "local_path": "images/hotel/hotel_156.jpg",
+      "source_url": "https://pix8.agoda.net/geo/poi/22136/2_22136_02.jpg?ca=6&ce=1&s=1024x768",
+      "title": "Reunification Palace - 1.25 km from property",
+      "group": "Nearby attraction",
+      "group_id": "nearby",
+      "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_156.jpg"
+    }
+  ],
+  "room_grid_probe": {
+    "attempted": true,
+    "url": "https://www.agoda.com/api/v1/property/room-grid",
+    "request_payload": {
+      "hotelId": 902
+    },
+    "status_code": 400,
+    "response_body_preview": "The api key used is invalid. Please contact agoda to get a valid key.",
+    "accessible": false,
+    "blocked_reason": "invalid_api_key"
+  },
+  "short_description": "LOTTE HOTEL SAIGON • Ho Chi Minh City • 5.0 stars • review 9.0",
+  "room_count": 14,
+  "policy_notes": [
+    "Check-in from 14:00.",
+    "Check-out until 12:00.",
+    "Breakfast inclusion may vary by booking date.",
+    "Catalog-only pricing was estimated for demo completeness."
+  ],
+  "synthetic_fields": [
+    "contact.email",
+    "contact.phone",
+    "contact.website",
+    "policy_notes"
+  ],
+  "catalog_quality": {
+    "synthetic_fields": [
+      "contact.email",
+      "contact.phone",
+      "contact.website",
+      "policy_notes"
+    ],
+    "has_uploaded_images": true,
+    "room_count": 14
+  },
+  "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_01.jpg",
+  "gallery_image_urls": [
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_01.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_02.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_03.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_04.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_05.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_06.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_07.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_08.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_09.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_10.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_11.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_12.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_13.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_14.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_15.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_16.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_17.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_18.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_19.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_20.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_21.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_22.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_23.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_24.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_25.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_26.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_27.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_28.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_29.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_30.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_31.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_32.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_33.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_34.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_35.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_36.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_37.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_38.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_39.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_40.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_41.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_42.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_43.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_44.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_45.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_46.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_47.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_48.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_49.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_50.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_51.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_52.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_53.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_54.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_55.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_56.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_57.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_58.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_59.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_60.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_61.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_62.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_63.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_64.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_65.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_66.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_67.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_68.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_69.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_70.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_71.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_72.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_73.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_74.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_75.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_76.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_77.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_78.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_79.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_80.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_81.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_82.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_83.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_84.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_85.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_86.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_87.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_88.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_89.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_90.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_91.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_92.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_93.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_94.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_95.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_96.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_97.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_98.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_99.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_100.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_101.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_102.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_103.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_104.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_105.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_106.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_107.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_108.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_109.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_110.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_111.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_112.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_113.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_114.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_115.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_116.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_117.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_118.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_119.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_120.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_121.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_122.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_123.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_124.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_125.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_126.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_127.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_128.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_129.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_130.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_131.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_132.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_133.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_134.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_135.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_136.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_137.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_138.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_139.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_140.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_141.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_142.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_143.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_144.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_145.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_146.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_147.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_148.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_149.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_150.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_151.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_152.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_153.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_154.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_155.jpg",
+    "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/LotteLegendHotelSaigon/images/hotel/hotel_156.jpg"
+  ]
+}

@@ -38,6 +38,11 @@ object SupabaseRepository {
     )
 
     private data class HttpResult(val code: Int, val body: String)
+    private data class HotelLookup(
+        val displayName: String = "",
+        val area: String = "",
+        val city: String = ""
+    )
 
     private val mainHandler = Handler(Looper.getMainLooper())
     private const val AUTH_PREFS = "supabase_auth"
@@ -230,8 +235,9 @@ object SupabaseRepository {
             return
         }
         runAsync(onSuccess, onError) {
-            select("rooms", mapOf("select" to "*", "code" to "eq.$code", "limit" to "1")).firstObjectOrNull()?.toRoom()
-                ?: select("rooms", mapOf("select" to "*", "id" to "eq.$code", "limit" to "1")).firstObjectOrNull()?.toRoom()
+            val hotelLookup = loadHotelLookup()
+            select("rooms", mapOf("select" to "*", "code" to "eq.$code", "limit" to "1")).firstObjectOrNull()?.toRoom(hotelLookup)
+                ?: select("rooms", mapOf("select" to "*", "id" to "eq.$code", "limit" to "1")).firstObjectOrNull()?.toRoom(hotelLookup)
         }
     }
 
@@ -240,19 +246,21 @@ object SupabaseRepository {
 
     fun searchRooms(queryText: String, onSuccess: (List<Room>) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
-            val rooms = select("rooms", mapOf("select" to "*", "limit" to "50")).toRoomList()
+            val hotelLookup = loadHotelLookup()
+            val rooms = select("rooms", mapOf("select" to "*", "limit" to "200")).toRoomList(hotelLookup)
             if (queryText.isBlank()) rooms else rooms.filter {
-                it.code.contains(queryText, true) || it.type.contains(queryText, true)
+                it.area.contains(queryText, true) || it.city.contains(queryText, true)
             }
         }
     }
 
     fun filterRooms(type: String?, sortAscending: Boolean?, onSuccess: (List<Room>) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
+            val hotelLookup = loadHotelLookup()
             val q = linkedMapOf("select" to "*", "limit" to "50")
             if (!type.isNullOrBlank()) q["type"] = "eq.$type"
             if (sortAscending != null) q["order"] = if (sortAscending) "price.asc" else "price.desc"
-            select("rooms", q).toRoomList()
+            select("rooms", q).toRoomList(hotelLookup)
         }
     }
 
@@ -590,6 +598,22 @@ object SupabaseRepository {
         }
     }
 
+    private fun loadHotelLookup(): Map<String, HotelLookup> {
+        val hotels = select("hotels", mapOf("select" to "id,display_name,area,city", "limit" to "500"))
+        return (0 until hotels.length())
+            .mapNotNull { index ->
+                val item = hotels.optJSONObject(index)
+                item?.optString("id")?.takeIf { it.isNotBlank() }?.let { id ->
+                    id to HotelLookup(
+                        displayName = item.optString("display_name"),
+                        area = item.optString("area"),
+                        city = item.optString("city")
+                    )
+                }
+            }
+            .toMap()
+    }
+
     private fun JSONArray.firstObjectOrNull(): JSONObject? = if (length() == 0) null else optJSONObject(0)
 
     private fun JSONObject.optDoubleCompat(key: String): Double = when (val v = opt(key)) { is Number -> v.toDouble(); is String -> v.toDoubleOrNull() ?: 0.0; else -> 0.0 }
@@ -625,18 +649,33 @@ object SupabaseRepository {
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
-    private fun JSONObject.toRoom(): Room = Room(
-        id = optString("id"),
-        code = optString("code"),
-        type = optString("type"),
-        price = optDoubleCompat("price"),
-        rating = optDoubleCompat("rating"),
-        reviewCount = optIntCompat("review_count"),
-        status = optString("status", "available"),
-        capacity = optIntCompat("capacity").takeIf { it > 0 } ?: 2,
-        images = optStringList("images"),
-        createdAt = parseTimestampMillis(opt("created_at"))
-    )
+    private fun JSONObject.toRoom(hotelLookup: Map<String, HotelLookup> = emptyMap()): Room {
+        val raw = optJSONObject("raw")
+        val hotelId = raw?.optString("hotel_id").orEmpty()
+        val hotelMeta = hotelLookup[hotelId]
+        val displayType = shortenRoomType(
+            rawRoomName = raw?.optString("room_name").orEmpty(),
+            fallbackType = optString("type")
+        )
+        return Room(
+            id = optString("id"),
+            code = optString("code"),
+            type = optString("type"),
+            displayType = displayType,
+            typeKey = toRoomTypeKey(displayType),
+            price = optDoubleCompat("price"),
+            rating = optDoubleCompat("rating"),
+            reviewCount = optIntCompat("review_count"),
+            status = optString("status", "available"),
+            capacity = optIntCompat("capacity").takeIf { it > 0 } ?: 2,
+            images = optStringList("images"),
+            createdAt = parseTimestampMillis(opt("created_at")),
+            hotelId = hotelId,
+            hotelName = raw?.optString("hotel_name").orEmpty().ifBlank { hotelMeta?.displayName.orEmpty() },
+            area = hotelMeta?.area.orEmpty(),
+            city = hotelMeta?.city.orEmpty()
+        )
+    }
 
     private fun JSONObject.toHotelCatalogItem(): HotelCatalogItem = HotelCatalogItem(
         id = optString("id"),
@@ -776,7 +815,8 @@ object SupabaseRepository {
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
-    private fun JSONArray.toRoomList(): List<Room> = (0 until length()).mapNotNull { optJSONObject(it)?.toRoom() }
+    private fun JSONArray.toRoomList(hotelLookup: Map<String, HotelLookup> = emptyMap()): List<Room> =
+        (0 until length()).mapNotNull { optJSONObject(it)?.toRoom(hotelLookup) }
     private fun JSONArray.toHotelCatalogList(): List<HotelCatalogItem> = (0 until length()).mapNotNull { optJSONObject(it)?.toHotelCatalogItem() }
     private fun JSONArray.toHotelCatalogRoomList(): List<HotelCatalogRoom> = (0 until length()).mapNotNull { optJSONObject(it)?.toHotelCatalogRoom() }
     private fun JSONArray.toBookingList(): List<Booking> = (0 until length()).mapNotNull { optJSONObject(it)?.toBooking() }
@@ -869,4 +909,31 @@ object SupabaseRepository {
         .put("status", payment.status)
         .put("card_last4", payment.cardLast4)
         .put("created_at", millisToIso(payment.createdAt))
+
+    private fun shortenRoomType(rawRoomName: String, fallbackType: String): String {
+        val source = rawRoomName.ifBlank { fallbackType }
+            .substringBefore(" - ")
+            .trim()
+        if (source.isBlank()) return ""
+        val lower = source.lowercase()
+        return when {
+            "villa" in lower -> "Villa"
+            "suite" in lower -> "Suite"
+            "deluxe" in lower -> "Deluxe"
+            "standard" in lower -> "Standard"
+            "superior" in lower -> "Superior"
+            "premium" in lower -> "Premium"
+            "executive" in lower -> "Executive"
+            "family" in lower -> "Family"
+            "studio" in lower -> "Studio"
+            "quadruple" in lower -> "Quadruple"
+            "triple" in lower -> "Triple"
+            "double" in lower || "twin" in lower -> "Twin/Double"
+            "king" in lower -> "King"
+            "queen" in lower -> "Queen"
+            else -> source
+        }
+    }
+
+    private fun toRoomTypeKey(displayType: String): String = displayType.trim().lowercase()
 }

@@ -1,7 +1,9 @@
 ﻿package com.example.hotelapp_test2.ui.features
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import coil.load
@@ -35,8 +37,10 @@ class RoomDetailActivity : BaseActivity() {
 
         val image = findViewById<ImageView>(R.id.roomDetailImage)
         val title = findViewById<TextView>(R.id.roomDetailTitle)
+        val hotelName = findViewById<TextView>(R.id.roomDetailHotelName)
         val info = findViewById<TextView>(R.id.roomDetailInfo)
         val price = findViewById<TextView>(R.id.roomDetailPrice)
+        val openHotelButton = findViewById<MaterialButton>(R.id.roomDetailOpenHotelButton)
         val checkInInput = findViewById<TextView>(R.id.roomDetailCheckIn)
         val checkOutInput = findViewById<TextView>(R.id.roomDetailCheckOut)
         val guestsInput = findViewById<TextInputEditText>(R.id.roomDetailGuests)
@@ -45,7 +49,8 @@ class RoomDetailActivity : BaseActivity() {
 
         fun bindRoom(room: Room) {
             val code = room.code.ifBlank { room.id.ifBlank { getString(R.string.common_na) } }
-            title.text = getString(R.string.room_title_format, code, room.type.ifBlank { getString(R.string.room_default_type) })
+            val displayType = room.displayType.ifBlank { room.type.ifBlank { getString(R.string.room_default_type) } }
+            title.text = getString(R.string.room_title_format, code, displayType)
             val ratingText = if (room.rating > 0.0) {
                 getString(R.string.room_rating_format, room.rating)
             } else {
@@ -58,6 +63,25 @@ class RoomDetailActivity : BaseActivity() {
                 placeholder(R.mipmap.ic_launcher)
                 error(R.mipmap.ic_launcher)
                 crossfade(true)
+            }
+            if (room.hotelId.isNotBlank() && room.hotelName.isNotBlank()) {
+                val openHotel = {
+                    startActivity(
+                        Intent(this, HotelDetailActivity::class.java)
+                            .putExtra(HotelDetailActivity.EXTRA_HOTEL_ID, room.hotelId)
+                    )
+                }
+                hotelName.visibility = View.VISIBLE
+                hotelName.text = getString(R.string.room_detail_hotel_label, room.hotelName)
+                hotelName.setOnClickListener { openHotel() }
+                openHotelButton.visibility = View.VISIBLE
+                openHotelButton.setOnClickListener { openHotel() }
+            } else {
+                hotelName.visibility = View.GONE
+                hotelName.text = ""
+                hotelName.setOnClickListener(null)
+                openHotelButton.visibility = View.GONE
+                openHotelButton.setOnClickListener(null)
             }
 
             fun updateTotal() {

@@ -1,4 +1,4 @@
-<resources>
+﻿<resources>
     <string name="app_name">HotelGo</string>
     <string name="language_toggle_en">EN</string>
     <string name="language_toggle_vi">VN</string>
@@ -130,7 +130,7 @@
     <string name="toolbar_filter_sort_subtitle">Advanced options</string>
 
     <string name="room_search_title">Search rooms</string>
-    <string name="room_search_query_hint">Keyword / room code / area</string>
+    <string name="room_search_query_hint">Area</string>
     <string name="room_search_checkin_hint">Check-in date</string>
     <string name="room_search_type_label">Room type</string>
     <string name="room_type_all">All</string>
@@ -315,6 +315,7 @@
     <string name="error_password_mismatch">Passwords do not match.</string>
     <string name="error_google_client_missing">GOOGLE_WEB_CLIENT_ID is not configured in local.properties.</string>
     <string name="error_google_account">Could not get Google account: %1$s</string>
+    <string name="error_google_no_credentials">No Google account was available for Sign in with Google. Check that the device has a Google account and Google Play services is up to date.</string>
     <string name="error_google_credential_invalid">Invalid Google credential.</string>
     <string name="error_google_token">Could not read Google ID token: %1$s</string>
     <string name="error_google_signin">Google sign-in failed: %1$s</string>
@@ -404,4 +405,7 @@
     <string name="error_voucher_required">Enter voucher code and value.</string>
     <string name="success_voucher_created">Voucher %1$s created.</string>
     <string name="error_voucher_create">Could not create voucher: %1$s</string>
+    <string name="room_detail_hotel_label">Hotel: %1$s</string>
+    <string name="room_detail_open_hotel">View hotel information</string>
 </resources>
+

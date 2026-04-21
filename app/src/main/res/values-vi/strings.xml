@@ -1,4 +1,4 @@
-<resources>
+﻿<resources>
     <string name="app_name">HotelGo</string>
     <string name="language_toggle_en">EN</string>
     <string name="language_toggle_vi">VN</string>
@@ -86,7 +86,7 @@
     <string name="toolbar_filter_sort_subtitle">Tùy chọn nâng cao</string>
 
     <string name="room_search_title">Tìm kiếm phòng</string>
-    <string name="room_search_query_hint">Từ khóa / mã phòng / khu vực</string>
+    <string name="room_search_query_hint">Khu vực</string>
     <string name="room_search_checkin_hint">Ngày nhận phòng</string>
     <string name="room_search_type_label">Loại phòng</string>
     <string name="room_type_all">Tất cả</string>
@@ -270,6 +270,7 @@
     <string name="error_password_mismatch">Mật khẩu không khớp.</string>
     <string name="error_google_client_missing">Chưa cấu hình GOOGLE_WEB_CLIENT_ID trong local.properties.</string>
     <string name="error_google_account">Không lấy được tài khoản Google: %1$s</string>
+    <string name="error_google_no_credentials">Không có tài khoản Google khả dụng để đăng nhập. Hãy kiểm tra thiết bị đã thêm tài khoản Google và Google Play services đã được cập nhật.</string>
     <string name="error_google_credential_invalid">Credential Google không hợp lệ.</string>
     <string name="error_google_token">Không đọc được Google ID token: %1$s</string>
     <string name="error_google_signin">Đăng nhập Google thất bại: %1$s</string>
@@ -353,4 +354,58 @@
     <string name="error_voucher_required">Nhập mã voucher và giá trị.</string>
     <string name="success_voucher_created">Đã tạo voucher %1$s.</string>
     <string name="error_voucher_create">Lỗi tạo voucher: %1$s</string>
+    <string name="feature_hotel_catalog_title">Danh mục khách sạn</string>
+    <string name="feature_hotel_catalog_subtitle">Xem danh sách khách sạn và thư viện phòng</string>
+    <string name="hotel_search_title">Tìm khách sạn</string>
+    <string name="hotel_search_subtitle">Khám phá danh mục khách sạn đã đồng bộ</string>
+    <string name="hotel_search_query_hint">Tên khách sạn / thành phố / khu vực</string>
+    <string name="hotel_search_summary">Tìm thấy %1$d khách sạn</string>
+    <string name="hotel_search_summary_placeholder">Tìm thấy 0 khách sạn</string>
+    <string name="hotel_search_empty">Không tìm thấy khách sạn phù hợp</string>
+    <string name="error_hotel_not_found">Không tìm thấy khách sạn.</string>
+    <string name="error_hotel_search">Lỗi tìm khách sạn: %1$s</string>
+    <string name="error_hotel_load">Không tải được khách sạn: %1$s</string>
+    <string name="error_hotel_rooms_load">Không tải được danh sách phòng: %1$s</string>
+    <string name="error_hotel_room_not_found">Không tìm thấy phòng khách sạn.</string>
+    <string name="error_hotel_room_load">Không tải được phòng khách sạn: %1$s</string>
+    <string name="room_detail_hotel_label">Khách sạn: %1$s</string>
+    <string name="room_detail_open_hotel">Xem thông tin khách sạn</string>
+    <string name="hotel_review_meta">%1$.1f điểm đánh giá (%2$d lượt)</string>
+    <string name="hotel_no_review_meta">Chưa có điểm đánh giá công khai</string>
+    <string name="hotel_meta_format">%1$.1f sao - %2$s</string>
+    <string name="hotel_detail_title">Chi tiết khách sạn</string>
+    <string name="hotel_detail_subtitle">Tổng quan, tiện ích, thư viện và các phòng</string>
+    <string name="hotel_detail_meta_format">%1$.1f sao - %2$s - %3$d phòng</string>
+    <string name="hotel_detail_schedule_format">Nhận phòng %1$s | Trả phòng %2$s</string>
+    <string name="hotel_detail_contact_format">Liên hệ: %1$s</string>
+    <string name="hotel_detail_contact_empty">Liên hệ: chưa có thông tin</string>
+    <string name="hotel_detail_description_title">Mô tả</string>
+    <string name="hotel_detail_amenities_title">Tiện ích</string>
+    <string name="hotel_detail_amenities_empty">Chưa có danh sách tiện ích</string>
+    <string name="hotel_detail_policies_title">Chính sách</string>
+    <string name="hotel_detail_policies_empty">Chưa có ghi chú chính sách</string>
+    <string name="hotel_detail_source_title">Nguồn dữ liệu</string>
+    <string name="hotel_detail_room_title">Danh sách phòng</string>
+    <string name="hotel_detail_room_summary">Có %1$d phòng trong khách sạn này</string>
+    <string name="hotel_detail_room_summary_placeholder">Có 0 phòng trong khách sạn này</string>
+    <string name="hotel_detail_room_empty">Chưa có dữ liệu phòng</string>
+    <string name="hotel_room_detail_title">Chi tiết phòng khách sạn</string>
+    <string name="hotel_room_detail_subtitle">Thông tin phòng và tiện ích</string>
+    <string name="hotel_room_detail_summary_title">Tóm tắt</string>
+    <string name="hotel_room_detail_specs_title">Thông số phòng</string>
+    <string name="hotel_room_detail_cancellation_title">Hủy phòng</string>
+    <string name="hotel_room_detail_amenities_title">Tiện ích phòng</string>
+    <string name="hotel_room_detail_bathroom_title">Tiện ích phòng tắm</string>
+    <string name="hotel_room_detail_tags_title">Nhãn</string>
+    <string name="hotel_room_detail_book_button">Mở luồng đặt phòng</string>
+    <string name="hotel_room_detail_size_format">Diện tích: %1$.0f m2</string>
+    <string name="hotel_room_detail_view_format">Hướng nhìn: %1$s</string>
+    <string name="hotel_room_detail_bed_format">Giường: %1$s</string>
+    <string name="hotel_room_detail_breakfast_yes">Bao gồm bữa sáng</string>
+    <string name="hotel_room_detail_breakfast_no">Không bao gồm bữa sáng</string>
+    <string name="hotel_room_detail_cancellation_empty">Chưa có ghi chú hủy phòng</string>
+    <string name="hotel_room_detail_amenities_empty">Chưa có dữ liệu tiện ích</string>
+    <string name="hotel_room_detail_tags_empty">Chưa có nhãn</string>
 </resources>
+
+

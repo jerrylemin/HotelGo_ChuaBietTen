@@ -48,7 +48,8 @@ class RoomSearchAdapter(
         fun bind(room: Room) {
             val context = itemView.context
             val code = room.code.ifBlank { room.id.ifBlank { context.getString(R.string.common_na) } }
-            title.text = context.getString(R.string.room_title_format, code, room.type.ifBlank { context.getString(R.string.room_default_type) })
+            val displayType = room.displayType.ifBlank { room.type.ifBlank { context.getString(R.string.room_default_type) } }
+            title.text = context.getString(R.string.room_title_format, code, displayType)
             price.text = if (room.price > 0.0) {
                 context.getString(R.string.room_price_per_night, room.price.toInt())
             } else {
@@ -59,7 +60,11 @@ class RoomSearchAdapter(
             } else {
                 context.getString(R.string.room_no_rating)
             }
-            info.text = context.getString(R.string.room_info_format, room.capacity, ratingText, statusLabel(room.status))
+            val infoLines = buildList {
+                if (room.hotelName.isNotBlank()) add(context.getString(R.string.room_detail_hotel_label, room.hotelName))
+                add(context.getString(R.string.room_info_format, room.capacity, ratingText, statusLabel(room.status)))
+            }
+            info.text = infoLines.joinToString("\n")
 
             val imageUrl = room.images.firstOrNull().orEmpty()
             if (imageUrl.isBlank()) {

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "catalog:dolce_by_wyndham_hanoi_golden_lake:golden_deluxe_king",
+    "code": "DolceByWyndhamHanoiGoldenLake-golden_deluxe_king",
+    "type": "Golden Deluxe King - Dolce by Wyndham Hanoi Golden Lake",
+    "price": 3050000.0,
+    "rating": 8.7,
+    "reviewCount": 2756,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_deluxe_king/golden_deluxe_king_01.jpg"
+    ],
+    "createdAt": 1775640066496
+  },
+  {
+    "id": "catalog:dolce_by_wyndham_hanoi_golden_lake:premier_lake_view_king",
+    "code": "DolceByWyndhamHanoiGoldenLake-premier_lake_view_king",
+    "type": "Premier Lake View King - Dolce by Wyndham Hanoi Golden Lake",
+    "price": 4450000.0,
+    "rating": 8.7,
+    "reviewCount": 2756,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_king/premier_lake_view_king_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_king/premier_lake_view_king_02.jpg"
+    ],
+    "createdAt": 1775640066496
+  },
+  {
+    "id": "catalog:dolce_by_wyndham_hanoi_golden_lake:premier_lake_view_twin",
+    "code": "DolceByWyndhamHanoiGoldenLake-premier_lake_view_twin",
+    "type": "Premier Lake View Twin - Dolce by Wyndham Hanoi Golden Lake",
+    "price": 4450000.0,
+    "rating": 8.7,
+    "reviewCount": 2756,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/premier_lake_view_twin/premier_lake_view_twin_01.jpg"
+    ],
+    "createdAt": 1775640066496
+  },
+  {
+    "id": "catalog:dolce_by_wyndham_hanoi_golden_lake:golden_classic_king",
+    "code": "DolceByWyndhamHanoiGoldenLake-golden_classic_king",
+    "type": "Golden Classic King - Dolce by Wyndham Hanoi Golden Lake",
+    "price": 2100000.0,
+    "rating": 8.7,
+    "reviewCount": 2756,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_classic_king/golden_classic_king_01.jpg"
+    ],
+    "createdAt": 1775640066496
+  },
+  {
+    "id": "catalog:dolce_by_wyndham_hanoi_golden_lake:imperial_penthouse",
+    "code": "DolceByWyndhamHanoiGoldenLake-imperial_penthouse",
+    "type": "Imperial Penthouse - Dolce by Wyndham Hanoi Golden Lake",
+    "price": 8450000.0,
+    "rating": 8.7,
+    "reviewCount": 2756,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/imperial_penthouse/imperial_penthouse_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/imperial_penthouse/imperial_penthouse_02.jpg"
+    ],
+    "createdAt": 1775640066496
+  },
+  {
+    "id": "catalog:dolce_by_wyndham_hanoi_golden_lake:golden_executive_twin_guestroom",
+    "code": "DolceByWyndhamHanoiGoldenLake-golden_executive_twin_guestroom",
+    "type": "Golden Executive Twin - Guestroom - Dolce by Wyndham Hanoi Golden Lake",
+    "price": 4300000.0,
+    "rating": 8.7,
+    "reviewCount": 2756,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_executive_twin_guestroom/golden_executive_twin_guestroom_01.jpg"
+    ],
+    "createdAt": 1775640066496
+  },
+  {
+    "id": "catalog:dolce_by_wyndham_hanoi_golden_lake:executive_suite",
+    "code": "DolceByWyndhamHanoiGoldenLake-executive_suite",
+    "type": "Executive Suite - Dolce by Wyndham Hanoi Golden Lake",
+    "price": 6100000.0,
+    "rating": 8.7,
+    "reviewCount": 2756,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/executive_suite/executive_suite_01.jpg"
+    ],
+    "createdAt": 1775640066496
+  },
+  {
+    "id": "catalog:dolce_by_wyndham_hanoi_golden_lake:golden_deluxe_twin",
+    "code": "DolceByWyndhamHanoiGoldenLake-golden_deluxe_twin",
+    "type": "Golden Deluxe Twin - Dolce by Wyndham Hanoi Golden Lake",
+    "price": 3050000.0,
+    "rating": 8.7,
+    "reviewCount": 2756,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_deluxe_twin/golden_deluxe_twin_01.jpg"
+    ],
+    "createdAt": 1775640066496
+  },
+  {
+    "id": "catalog:dolce_by_wyndham_hanoi_golden_lake:golden_suite_guestroom",
+    "code": "DolceByWyndhamHanoiGoldenLake-golden_suite_guestroom",
+    "type": "Golden Suite - Guestroom - Dolce by Wyndham Hanoi Golden Lake",
+    "price": 6650000.0,
+    "rating": 8.7,
+    "reviewCount": 2756,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/DolceByWyndhamHanoiGoldenLake/images/golden_suite_guestroom/golden_suite_guestroom_01.jpg"
+    ],
+    "createdAt": 1775640066496
+  }
+]

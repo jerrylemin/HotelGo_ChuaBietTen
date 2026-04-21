@@ -8,6 +8,7 @@ import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.GetCredentialResponse
 import androidx.credentials.exceptions.GetCredentialException
+import androidx.credentials.exceptions.NoCredentialException
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hotelapp_test2.BuildConfig
 import com.example.hotelapp_test2.MainActivity
@@ -16,7 +17,7 @@ import com.example.hotelapp_test2.data.SessionManager
 import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
-import com.google.android.libraries.identity.googleid.GetGoogleIdOption
+import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException
 import com.google.android.material.tabs.TabLayout
@@ -29,6 +30,7 @@ import java.util.concurrent.Executors
 class AuthActivity : BaseActivity() {
     private val credentialManager by lazy { CredentialManager.create(this) }
     private val credentialExecutor: ExecutorService by lazy { Executors.newSingleThreadExecutor() }
+    private var didRetryAfterClearingState = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +47,11 @@ class AuthActivity : BaseActivity() {
     }
 
     fun launchGoogleSignIn() {
+        didRetryAfterClearingState = false
+        launchGoogleSignInInternal()
+    }
+
+    private fun launchGoogleSignInInternal() {
         val webClientId = BuildConfig.GOOGLE_WEB_CLIENT_ID.trim()
         if (webClientId.isBlank()) {
             toast(getString(R.string.error_google_client_missing))
@@ -52,13 +59,11 @@ class AuthActivity : BaseActivity() {
         }
 
         val rawNonce = UUID.randomUUID().toString()
-        val googleIdOption = GetGoogleIdOption.Builder()
-            .setFilterByAuthorizedAccounts(false)
-            .setServerClientId(webClientId)
+        val signInWithGoogleOption = GetSignInWithGoogleOption.Builder(webClientId)
             .setNonce(rawNonce.sha256())
             .build()
         val request = GetCredentialRequest.Builder()
-            .addCredentialOption(googleIdOption)
+            .addCredentialOption(signInWithGoogleOption)
             .build()
 
         credentialManager.getCredentialAsync(
@@ -72,8 +77,26 @@ class AuthActivity : BaseActivity() {
                 }
 
                 override fun onError(e: GetCredentialException) {
+                    if (shouldRetryAfterReauthFailure(e)) {
+                        didRetryAfterClearingState = true
+                        GoogleCredentialStateManager.clear(this@AuthActivity) {
+                            if (!isFinishing && !isDestroyed) {
+                                launchGoogleSignInInternal()
+                            }
+                        }
+                        return
+                    }
+
                     runOnUiThread {
-                        toast(getString(R.string.error_google_account, e.message ?: e.type))
+                        val messageRes = if (e is NoCredentialException) {
+                            R.string.error_google_no_credentials
+                        } else {
+                            null
+                        }
+                        toast(
+                            messageRes?.let(::getString)
+                                ?: getString(R.string.error_google_account, e.message ?: e.type)
+                        )
                     }
                 }
             }
@@ -172,6 +195,12 @@ class AuthActivity : BaseActivity() {
         toast(getString(R.string.success_signin))
         startActivity(Intent(this, MainActivity::class.java))
         finish()
+    }
+
+    private fun shouldRetryAfterReauthFailure(e: GetCredentialException): Boolean {
+        if (didRetryAfterClearingState) return false
+        val message = e.message.orEmpty()
+        return message.contains("Account reauth failed", ignoreCase = true)
     }
 }
 

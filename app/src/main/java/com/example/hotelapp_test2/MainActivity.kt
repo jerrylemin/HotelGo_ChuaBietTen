@@ -19,6 +19,7 @@ import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.FeatureAdapter
 import com.example.hotelapp_test2.ui.GridSpacingItemDecoration
 import com.example.hotelapp_test2.ui.auth.AuthActivity
+import com.example.hotelapp_test2.ui.auth.GoogleCredentialStateManager
 import com.example.hotelapp_test2.ui.features.ProfileActivity
 import com.example.hotelapp_test2.ui.features.RecommendationPosterActivity
 import com.google.android.material.button.MaterialButton
@@ -89,6 +90,7 @@ class MainActivity : BaseActivity() {
         logoutButton.setOnClickListener {
             SupabaseRepository.signOut()
             SessionManager.clear(this)
+            GoogleCredentialStateManager.clear(this)
             startActivity(Intent(this, AuthActivity::class.java))
             finish()
         }

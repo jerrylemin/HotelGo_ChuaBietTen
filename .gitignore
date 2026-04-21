@@ -1,13 +1,37 @@
+# Build and IDE
 .gradle/
 .kotlin/
+.idea/
 build/
 app/build/
-local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output.json
 *.iml
-.idea/workspace.xml
-.idea/caches/
-.idea/shelf/
-.idea/.name
-.idea/vcs.xml
-.idea/deviceManager.xml
-.idea/deploymentTargetSelector.xml
+
+# Local machine and secrets
+local.properties
+firebase-service.json
+supabase.env
+supabase-db-url.txt
+*.jks
+*.keystore
+
+# Logs and caches
+*.log
+*.hprof
+__pycache__/
+*.pyc
+
+# One-off plans, reports, and support data not required for app runtime
+auth_strategy.txt
+crash.txt
+cutover_plan.json
+data_rules.json
+migration_report_*.json
+migration_scope.json
+storage_mapping.json
+AGENTS.md
+docs/

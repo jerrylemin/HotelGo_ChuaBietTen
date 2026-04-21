@@ -1,0 +1,60 @@
+[
+  {
+    "id": "catalog:melia_ba_vi_mountain_retreat:family_master_suite",
+    "code": "MeliaBaViMountainRetreat-family_master_suite",
+    "type": "Family Master Suite - Melia Ba Vi Mountain Retreat",
+    "price": 6300000.0,
+    "rating": 8.9,
+    "reviewCount": 1281,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/family_master_suite/family_master_suite_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/family_master_suite/family_master_suite_02.jpg"
+    ],
+    "createdAt": 1775640552614
+  },
+  {
+    "id": "catalog:melia_ba_vi_mountain_retreat:deluxe_guestroom",
+    "code": "MeliaBaViMountainRetreat-deluxe_guestroom",
+    "type": "Deluxe - Guestroom - Melia Ba Vi Mountain Retreat",
+    "price": 2900000.0,
+    "rating": 8.9,
+    "reviewCount": 1281,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/deluxe_guestroom/deluxe_guestroom_01.jpg",
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/deluxe_guestroom/deluxe_guestroom_02.jpg"
+    ],
+    "createdAt": 1775640552614
+  },
+  {
+    "id": "catalog:melia_ba_vi_mountain_retreat:premium_guestroom",
+    "code": "MeliaBaViMountainRetreat-premium_guestroom",
+    "type": "Premium - Guestroom - Melia Ba Vi Mountain Retreat",
+    "price": 2000000.0,
+    "rating": 8.9,
+    "reviewCount": 1281,
+    "status": "available",
+    "capacity": 2,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/premium_guestroom/premium_guestroom_01.jpg"
+    ],
+    "createdAt": 1775640552614
+  },
+  {
+    "id": "catalog:melia_ba_vi_mountain_retreat:junior_suite_guestroom",
+    "code": "MeliaBaViMountainRetreat-junior_suite_guestroom",
+    "type": "Junior Suite - Guestroom - Melia Ba Vi Mountain Retreat",
+    "price": 6300000.0,
+    "rating": 8.9,
+    "reviewCount": 1281,
+    "status": "available",
+    "capacity": 4,
+    "images": [
+      "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/junior_suite_guestroom/junior_suite_guestroom_01.jpg"
+    ],
+    "createdAt": 1775640552614
+  }
+]

@@ -57,6 +57,16 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/roomDetailHotelName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:textColor="@color/brand_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
                         android:id="@+id/roomDetailInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -73,6 +83,16 @@
                         android:text="@string/room_detail_placeholder_price"
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/roomDetailOpenHotelButton"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/room_detail_open_hotel"
+                        android:visibility="gone" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

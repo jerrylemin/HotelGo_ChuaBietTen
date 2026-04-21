@@ -3,17 +3,19 @@
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.EditText
 import android.widget.TextView
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SupabaseRepository
+import com.example.hotelapp_test2.data.model.Room
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
-import com.google.android.material.textfield.TextInputEditText
 import android.content.Intent
 
 class RoomSearchActivity : BaseActivity() {
@@ -26,16 +28,17 @@ class RoomSearchActivity : BaseActivity() {
         TYPE_AZ
     }
 
-    private var selectedType: String? = null
+    private var selectedTypeKey: String? = null
     private var selectedSort: SortOption = SortOption.PRICE_ASC
     private lateinit var adapter: RoomSearchAdapter
+    private var rebuildingTypeChips = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room_search)
         setupToolbar(R.string.room_search_title, R.string.toolbar_room_search_subtitle)
 
-        val queryInput = findViewById<TextInputEditText>(R.id.roomSearchQuery)
+        val queryInput = findViewById<EditText>(R.id.roomSearchQuery)
         val searchButton = findViewById<MaterialButton>(R.id.roomSearchButton)
         val summaryText = findViewById<TextView>(R.id.roomSearchSummary)
         val emptyText = findViewById<TextView>(R.id.roomSearchEmpty)
@@ -78,14 +81,9 @@ class RoomSearchActivity : BaseActivity() {
         }
 
         typeGroup.setOnCheckedStateChangeListener { _, checkedIds ->
-            selectedType = when {
-                checkedIds.contains(R.id.roomSearchTypeStandard) -> "Standard"
-                checkedIds.contains(R.id.roomSearchTypeDeluxe) -> "Deluxe"
-                checkedIds.contains(R.id.roomSearchTypeSuite) -> "Suite"
-                checkedIds.contains(R.id.roomSearchTypeFamily) -> "Family"
-                checkedIds.contains(R.id.roomSearchTypeVilla) -> "Villa"
-                else -> null
-            }
+            if (rebuildingTypeChips) return@setOnCheckedStateChangeListener
+            val selectedChip = checkedIds.firstOrNull()?.let { checkedId -> typeGroup.findViewById<Chip>(checkedId) }
+            selectedTypeKey = selectedChip?.tag as? String
             performSearch(queryInput.text?.toString().orEmpty().trim(), summaryText, emptyText)
         }
 
@@ -97,13 +95,15 @@ class RoomSearchActivity : BaseActivity() {
     }
 
     private fun performSearch(query: String, summaryText: TextView, emptyText: TextView) {
+        val typeGroup = findViewById<ChipGroup>(R.id.roomSearchTypeGroup)
         SupabaseRepository.searchRooms(
             queryText = query,
             onSuccess = { rooms ->
-                val filtered = if (selectedType.isNullOrBlank()) {
+                rebuildTypeChips(typeGroup, rooms)
+                val filtered = if (selectedTypeKey.isNullOrBlank()) {
                     rooms
                 } else {
-                    rooms.filter { it.type.equals(selectedType, ignoreCase = true) }
+                    rooms.filter { it.typeKey == selectedTypeKey }
                 }
 
                 val sorted = when (selectedSort) {
@@ -123,6 +123,41 @@ class RoomSearchActivity : BaseActivity() {
                 toast(getString(R.string.error_room_search, error.message.orEmpty()))
             }
         )
+    }
+
+    private fun rebuildTypeChips(typeGroup: ChipGroup, rooms: List<Room>) {
+        val types = rooms
+            .map { it.displayType.ifBlank { it.type } to it.typeKey.ifBlank { it.type.trim().lowercase() } }
+            .filter { (label, key) -> label.isNotBlank() && key.isNotBlank() }
+            .distinctBy { it.second }
+            .sortedBy { it.first.lowercase() }
+
+        val validSelectedType = selectedTypeKey?.takeIf { key -> types.any { it.second == key } }
+        rebuildingTypeChips = true
+        typeGroup.removeAllViews()
+
+        val allChip = Chip(this).apply {
+            id = View.generateViewId()
+            text = getString(R.string.room_type_all)
+            isCheckable = true
+            isChecked = validSelectedType == null
+        }
+        typeGroup.addView(allChip)
+
+        types.forEach { (label, key) ->
+            typeGroup.addView(
+                Chip(this).apply {
+                    id = View.generateViewId()
+                    text = label
+                    tag = key
+                    isCheckable = true
+                    isChecked = key == validSelectedType
+                }
+            )
+        }
+
+        selectedTypeKey = validSelectedType
+        rebuildingTypeChips = false
     }
 }
 

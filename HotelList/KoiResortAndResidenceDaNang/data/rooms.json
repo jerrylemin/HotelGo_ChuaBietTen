@@ -1,0 +1,1011 @@
+{
+  "schema_version": "1.0",
+  "hotel_slug": "koi_resort_residence_da_nang_inclusive_spa_access",
+  "room_count": 11,
+  "rooms": [
+    {
+      "room_id": "inferred:deluxe_double_partial_sea_view",
+      "name": "Deluxe Double Partial Sea View",
+      "slug": "deluxe_double_partial_sea_view",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 3050000.0,
+        "original_amount": 3600000.0,
+        "discounted_amount": 3050000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": "Sea view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/deluxe_double_partial_sea_view/deluxe_double_partial_sea_view_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/-1/3921281713905c650ad52f5f7d2b695f.jpg?ce=0&s=1024x768",
+          "title": "Deluxe Double Partial Sea View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_double_partial_sea_view/deluxe_double_partial_sea_view_01.jpg"
+        },
+        {
+          "local_path": "images/deluxe_double_partial_sea_view/deluxe_double_partial_sea_view_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/-1/fcfb917fc1c814a67c74873d08b61d9e.jpg?ce=0&s=1024x768",
+          "title": "Deluxe Double Partial Sea View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_double_partial_sea_view/deluxe_double_partial_sea_view_02.jpg"
+        }
+      ],
+      "short_description": "Deluxe Double Partial Sea View | 32 m² | Sea view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_double_partial_sea_view/deluxe_double_partial_sea_view_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_double_partial_sea_view/deluxe_double_partial_sea_view_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_double_partial_sea_view/deluxe_double_partial_sea_view_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:deluxe_studio_ocean_view",
+      "name": "Deluxe Studio Ocean View",
+      "slug": "deluxe_studio_ocean_view",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 3050000.0,
+        "original_amount": 3600000.0,
+        "discounted_amount": 3050000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": "Ocean view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/deluxe_studio_ocean_view/deluxe_studio_ocean_view_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/1208680357/9959859bf667cba36b98c39f7ac67067.jpg?ce=2&s=1024x768",
+          "title": "Deluxe Studio Ocean View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_ocean_view/deluxe_studio_ocean_view_01.jpg"
+        },
+        {
+          "local_path": "images/deluxe_studio_ocean_view/deluxe_studio_ocean_view_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/1208680357/ebb721f8a7bf1747d6b1efadbc9aa099.jpg?ce=2&s=1024x768",
+          "title": "Deluxe Studio Ocean View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_ocean_view/deluxe_studio_ocean_view_02.jpg"
+        }
+      ],
+      "short_description": "Deluxe Studio Ocean View | 32 m² | Ocean view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_ocean_view/deluxe_studio_ocean_view_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_ocean_view/deluxe_studio_ocean_view_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_ocean_view/deluxe_studio_ocean_view_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:villa_beach_front_4_bedrooms_private_pool",
+      "name": "Villa Beach Front - 4 Bedrooms - Private Pool",
+      "slug": "villa_beach_front_4_bedrooms_private_pool",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 13450000.0,
+        "original_amount": 15850000.0,
+        "discounted_amount": 13450000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 4,
+      "max_capacity": 8,
+      "room_size": {
+        "source_text": "Synthetic estimate: 120 m²/1292 ft²",
+        "square_meters": 120.0,
+        "square_feet": 1291.7
+      },
+      "view": "Pool view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Kitchen",
+        "Mini bar",
+        "Private entrance",
+        "Private pool",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/villa_beach_front_4_bedrooms_private_pool/villa_beach_front_4_bedrooms_private_pool_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/1344420353/930fe14d263acdb49a7ba888a7ae73d1.jpg?ce=3&s=1024x768",
+          "title": "Villa Beach Front - 4 Bedrooms - Private Pool",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_beach_front_4_bedrooms_private_pool/villa_beach_front_4_bedrooms_private_pool_01.jpg"
+        }
+      ],
+      "short_description": "Villa Beach Front - 4 Bedrooms - Private Pool | 120 m² | Pool view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 8,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_beach_front_4_bedrooms_private_pool/villa_beach_front_4_bedrooms_private_pool_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_beach_front_4_bedrooms_private_pool/villa_beach_front_4_bedrooms_private_pool_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:deluxe_twin_balcony",
+      "name": "Deluxe Twin Balcony",
+      "slug": "deluxe_twin_balcony",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 2600000.0,
+        "original_amount": 3050000.0,
+        "discounted_amount": 2600000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/deluxe_twin_balcony/deluxe_twin_balcony_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/-1/4ca1a7185095237e1635f400f7139b42.jpg?ce=0&s=1024x768",
+          "title": "Deluxe Twin Balcony",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_twin_balcony/deluxe_twin_balcony_01.jpg"
+        },
+        {
+          "local_path": "images/deluxe_twin_balcony/deluxe_twin_balcony_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/-1/375d48d9035b2dbe5c986ff3e828c5b4.jpg?ce=0&s=1024x768",
+          "title": "Deluxe Twin Balcony",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_twin_balcony/deluxe_twin_balcony_02.jpg"
+        }
+      ],
+      "short_description": "Deluxe Twin Balcony | 32 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_twin_balcony/deluxe_twin_balcony_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_twin_balcony/deluxe_twin_balcony_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_twin_balcony/deluxe_twin_balcony_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:villa_4_bedroom",
+      "name": "Villa - 4-Bedroom",
+      "slug": "villa_4_bedroom",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 12700000.0,
+        "original_amount": 15000000.0,
+        "discounted_amount": 12700000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 4,
+      "max_capacity": 8,
+      "room_size": {
+        "source_text": "Synthetic estimate: 120 m²/1292 ft²",
+        "square_meters": 120.0,
+        "square_feet": 1291.7
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Kitchen",
+        "Mini bar",
+        "Private entrance",
+        "Private pool",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/villa_4_bedroom/villa_4_bedroom_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/-1/6684c5a79899c66efc5c082d6c48f9e9.jpg?ce=0&s=1024x768",
+          "title": "Villa - 4-Bedroom",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_4_bedroom/villa_4_bedroom_01.jpg"
+        }
+      ],
+      "short_description": "Villa - 4-Bedroom | 120 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 8,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_4_bedroom/villa_4_bedroom_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_4_bedroom/villa_4_bedroom_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:grand_suite_with_private_plunge_pool",
+      "name": "Grand Suite with Private Plunge Pool",
+      "slug": "grand_suite_with_private_plunge_pool",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 6950000.0,
+        "original_amount": 8200000.0,
+        "discounted_amount": 6950000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Synthetic estimate: 52 m²/560 ft²",
+        "square_meters": 52.0,
+        "square_feet": 559.7
+      },
+      "view": "Pool view",
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Dining table",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "Seating area",
+        "Sofa",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/grand_suite_with_private_plunge_pool/grand_suite_with_private_plunge_pool_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/-1/89a3ec78ea6463fed0ac5b0a302724c2.jpg?ce=0&s=1024x768",
+          "title": "Grand Suite with Private Plunge Pool",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/grand_suite_with_private_plunge_pool/grand_suite_with_private_plunge_pool_01.jpg"
+        }
+      ],
+      "short_description": "Grand Suite with Private Plunge Pool | 52 m² | Pool view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/grand_suite_with_private_plunge_pool/grand_suite_with_private_plunge_pool_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/grand_suite_with_private_plunge_pool/grand_suite_with_private_plunge_pool_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:villa_ocean_view",
+      "name": "Villa Ocean View",
+      "slug": "villa_ocean_view",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 12000000.0,
+        "original_amount": 14150000.0,
+        "discounted_amount": 12000000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 3,
+      "max_capacity": 6,
+      "room_size": {
+        "source_text": "Synthetic estimate: 120 m²/1292 ft²",
+        "square_meters": 120.0,
+        "square_feet": 1291.7
+      },
+      "view": "Ocean view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Kitchen",
+        "Mini bar",
+        "Private entrance",
+        "Private pool",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/villa_ocean_view/villa_ocean_view_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/796205553/b48ee4f8d03765a6fff079b1cbb12348.jpg?ce=2&s=1024x768",
+          "title": "Villa Ocean View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_ocean_view/villa_ocean_view_01.jpg"
+        },
+        {
+          "local_path": "images/villa_ocean_view/villa_ocean_view_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/796205553/0cb0678814a8feafa10f8c47c05a4b82.jpg?ce=2&s=1024x768",
+          "title": "Villa Ocean View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_ocean_view/villa_ocean_view_02.jpg"
+        }
+      ],
+      "short_description": "Villa Ocean View | 120 m² | Ocean view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 6,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_ocean_view/villa_ocean_view_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_ocean_view/villa_ocean_view_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_ocean_view/villa_ocean_view_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:deluxe_studio_twin",
+      "name": "Deluxe Studio Twin",
+      "slug": "deluxe_studio_twin",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 2600000.0,
+        "original_amount": 3050000.0,
+        "discounted_amount": 2600000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/deluxe_studio_twin/deluxe_studio_twin_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/1159978108/b7b944d000ef835e9e7f485b0f42c560.jpg?ce=2&s=1024x768",
+          "title": "Deluxe Studio Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_twin/deluxe_studio_twin_01.jpg"
+        },
+        {
+          "local_path": "images/deluxe_studio_twin/deluxe_studio_twin_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/1159978108/5cbb5df4452a181ce43c6f9d2d7d354c.jpg?ce=2&s=1024x768",
+          "title": "Deluxe Studio Twin",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_twin/deluxe_studio_twin_02.jpg"
+        }
+      ],
+      "short_description": "Deluxe Studio Twin | 32 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_twin/deluxe_studio_twin_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_twin/deluxe_studio_twin_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/deluxe_studio_twin/deluxe_studio_twin_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:villa_3_bedroom",
+      "name": "Villa 3 Bedroom",
+      "slug": "villa_3_bedroom",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 11750000.0,
+        "original_amount": 13850000.0,
+        "discounted_amount": 11750000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 3,
+      "max_capacity": 6,
+      "room_size": {
+        "source_text": "Synthetic estimate: 120 m²/1292 ft²",
+        "square_meters": 120.0,
+        "square_feet": 1291.7
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Kitchen",
+        "Mini bar",
+        "Private entrance",
+        "Private pool",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/villa_3_bedroom/villa_3_bedroom_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/-1/2da77311f866def8595c13a461c74179.jpg?ce=0&s=1024x768",
+          "title": "Villa 3 Bedroom",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_3_bedroom/villa_3_bedroom_01.jpg"
+        }
+      ],
+      "short_description": "Villa 3 Bedroom | 120 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 6,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_3_bedroom/villa_3_bedroom_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/villa_3_bedroom/villa_3_bedroom_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:bungalow_pool_view",
+      "name": "Bungalow Pool View",
+      "slug": "bungalow_pool_view",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 1900000.0,
+        "original_amount": 2250000.0,
+        "discounted_amount": 1900000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 28 m²/301 ft²",
+        "square_meters": 28.0,
+        "square_feet": 301.4
+      },
+      "view": "Pool view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/bungalow_pool_view/bungalow_pool_view_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/-1/cb7df08033ece8d5e407715420ada4d6.jpg?ce=0&s=1024x768",
+          "title": "Bungalow Pool View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/bungalow_pool_view/bungalow_pool_view_01.jpg"
+        },
+        {
+          "local_path": "images/bungalow_pool_view/bungalow_pool_view_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/-1/705e0ad877a1fab1de534ce076af2475.jpg?ce=0&s=1024x768",
+          "title": "Bungalow Pool View",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/bungalow_pool_view/bungalow_pool_view_02.jpg"
+        }
+      ],
+      "short_description": "Bungalow Pool View | 28 m² | Pool view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/bungalow_pool_view/bungalow_pool_view_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/bungalow_pool_view/bungalow_pool_view_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/bungalow_pool_view/bungalow_pool_view_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:duplex_with_private_pool",
+      "name": "Duplex with Private Pool",
+      "slug": "duplex_with_private_pool",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 1900000.0,
+        "original_amount": 2250000.0,
+        "discounted_amount": 1900000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 28 m²/301 ft²",
+        "square_meters": 28.0,
+        "square_feet": 301.4
+      },
+      "view": "Pool view",
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Airport transfer",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/duplex_with_private_pool/duplex_with_private_pool_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/49391882/1148006159/dcc27a95fd738c17da67e4fb96ef26c5.jpg?ce=2&s=1024x768",
+          "title": "Duplex with Private Pool",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/duplex_with_private_pool/duplex_with_private_pool_01.jpg"
+        }
+      ],
+      "short_description": "Duplex with Private Pool | 28 m² | Pool view",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description",
+        "view"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/duplex_with_private_pool/duplex_with_private_pool_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/KoiResortAndResidenceDaNang/images/duplex_with_private_pool/duplex_with_private_pool_01.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0",
+  "hotel_slug": "melia_ba_vi_mountain_retreat",
+  "room_count": 4,
+  "rooms": [
+    {
+      "room_id": "inferred:family_master_suite",
+      "name": "Family Master Suite",
+      "slug": "family_master_suite",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 6300000.0,
+        "original_amount": 7450000.0,
+        "discounted_amount": 6300000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Synthetic estimate: 52 m²/560 ft²",
+        "square_meters": 52.0,
+        "square_feet": 559.7
+      },
+      "view": null,
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Dining table",
+        "Extra bedding",
+        "Family seating area",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "Seating area",
+        "Sofa",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/family_master_suite/family_master_suite_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/484/4848611/4848611_18112816460069978395.jpg?ca=7&ce=1&s=1024x768",
+          "title": "Family Master Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/family_master_suite/family_master_suite_01.jpg"
+        },
+        {
+          "local_path": "images/family_master_suite/family_master_suite_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/4848611/33864006/1f029fbb86c5b782fadf63db41a16d3e.jpg?ce=2&s=1024x768",
+          "title": "Family Master Suite",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/family_master_suite/family_master_suite_02.jpg"
+        }
+      ],
+      "short_description": "Family Master Suite | 52 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/family_master_suite/family_master_suite_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/family_master_suite/family_master_suite_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/family_master_suite/family_master_suite_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:deluxe_guestroom",
+      "name": "Deluxe - Guestroom",
+      "slug": "deluxe_guestroom",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 2900000.0,
+        "original_amount": 3400000.0,
+        "discounted_amount": 2900000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 32 m²/344 ft²",
+        "square_meters": 32.0,
+        "square_feet": 344.4
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 2,
+      "images": [
+        {
+          "local_path": "images/deluxe_guestroom/deluxe_guestroom_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/4860602/124992052/066a187f95294830fb8bc2aa3d0a168f.jpg?ca=9&ce=1&s=1024x768",
+          "title": "Deluxe - Guestroom",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/deluxe_guestroom/deluxe_guestroom_01.jpg"
+        },
+        {
+          "local_path": "images/deluxe_guestroom/deluxe_guestroom_02.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/4848611/33863803/271b21c264b7f51f3d12cf76595a279f.jpg?ce=0&s=1024x768",
+          "title": "Deluxe",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/deluxe_guestroom/deluxe_guestroom_02.jpg"
+        }
+      ],
+      "short_description": "Deluxe - Guestroom | 32 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/deluxe_guestroom/deluxe_guestroom_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/deluxe_guestroom/deluxe_guestroom_01.jpg",
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/deluxe_guestroom/deluxe_guestroom_02.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:premium_guestroom",
+      "name": "Premium - Guestroom",
+      "slug": "premium_guestroom",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 2000000.0,
+        "original_amount": 2350000.0,
+        "discounted_amount": 2000000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 1,
+      "max_capacity": 2,
+      "room_size": {
+        "source_text": "Synthetic estimate: 28 m²/301 ft²",
+        "square_meters": 28.0,
+        "square_feet": 301.4
+      },
+      "view": null,
+      "breakfast_included": false,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/premium_guestroom/premium_guestroom_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/4860602/34097507/ab4780a8530470ada6114ebfd0fdb4de.jpg?ca=9&ce=1&s=1024x768",
+          "title": "Premium - Guestroom",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/premium_guestroom/premium_guestroom_01.jpg"
+        }
+      ],
+      "short_description": "Premium - Guestroom | 28 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 2,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/premium_guestroom/premium_guestroom_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/premium_guestroom/premium_guestroom_01.jpg"
+      ]
+    },
+    {
+      "room_id": "inferred:junior_suite_guestroom",
+      "name": "Junior Suite - Guestroom",
+      "slug": "junior_suite_guestroom",
+      "provider": "agoda",
+      "source_room_id": null,
+      "price": {
+        "currency": "VND",
+        "current_amount": 6300000.0,
+        "original_amount": 7450000.0,
+        "discounted_amount": 6300000.0,
+        "status": "synthetic_estimate"
+      },
+      "bed_configuration": {
+        "summary": null,
+        "layouts": []
+      },
+      "number_of_beds": 2,
+      "max_capacity": 4,
+      "room_size": {
+        "source_text": "Synthetic estimate: 52 m²/560 ft²",
+        "square_meters": 52.0,
+        "square_feet": 559.7
+      },
+      "view": null,
+      "breakfast_included": true,
+      "cancellation_policy": "Demo policy: Free cancellation up to 72 hours before check-in. Generated for catalog completeness.",
+      "amenities": [
+        "Air conditioning",
+        "Bar",
+        "Closet",
+        "Daily housekeeping",
+        "Dining table",
+        "Free Wi-Fi in all rooms!",
+        "Free bottled water",
+        "Mini bar",
+        "Seating area",
+        "Sofa",
+        "TV",
+        "Wi-Fi [free]"
+      ],
+      "bathroom_amenities": [
+        "Bathtub",
+        "Hair dryer",
+        "Shower",
+        "Toiletries",
+        "Towels"
+      ],
+      "facility_groups": [],
+      "image_count": 1,
+      "images": [
+        {
+          "local_path": "images/junior_suite_guestroom/junior_suite_guestroom_01.jpg",
+          "source_url": "https://pix8.agoda.net/hotelImages/4848611/-1/babe3bfd8bcd51305f8157a2553e2c5e.jpg?ca=7&ce=1&s=1024x768",
+          "title": "Junior Suite - Guestroom",
+          "public_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/junior_suite_guestroom/junior_suite_guestroom_01.jpg"
+        }
+      ],
+      "short_description": "Junior Suite - Guestroom | 52 m²",
+      "tags": [
+        "inferred_from_room_image_title"
+      ],
+      "raw_features": [],
+      "raw_propaganda_messages": [],
+      "capacity": 4,
+      "status": "available",
+      "synthetic_fields": [
+        "amenities",
+        "bathroom_amenities",
+        "breakfast_included",
+        "cancellation_policy",
+        "max_capacity",
+        "number_of_beds",
+        "price.current_amount",
+        "price.discounted_amount",
+        "price.original_amount",
+        "room_size",
+        "short_description"
+      ],
+      "catalog_quality": {
+        "is_inferred_room": true,
+        "has_uploaded_images": true,
+        "price_status": "synthetic_estimate"
+      },
+      "hero_image_url": "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/junior_suite_guestroom/junior_suite_guestroom_01.jpg",
+      "image_public_urls": [
+        "https://jdwgmulywzzqwtrukebf.supabase.co/storage/v1/object/public/hotel-catalog/MeliaBaViMountainRetreat/images/junior_suite_guestroom/junior_suite_guestroom_01.jpg"
+      ]
+    }
+  ]
+}

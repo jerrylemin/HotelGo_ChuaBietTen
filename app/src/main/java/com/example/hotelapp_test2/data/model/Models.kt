@@ -13,13 +13,19 @@ data class Room(
     val id: String = "",
     val code: String = "",
     val type: String = "",
+    val displayType: String = "",
+    val typeKey: String = "",
     val price: Double = 0.0,
     val rating: Double = 0.0,
     val reviewCount: Int = 0,
     val status: String = "available",
     val capacity: Int = 2,
     val images: List<String> = emptyList(),
-    val createdAt: Long = 0L
+    val createdAt: Long = 0L,
+    val hotelId: String = "",
+    val hotelName: String = "",
+    val area: String = "",
+    val city: String = ""
 )
 
 data class HotelCatalogItem(

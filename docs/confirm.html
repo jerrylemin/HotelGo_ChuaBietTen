@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HotelGo Confirmation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #eef2f6;
+      --card: #ffffff;
+      --text: #1d2733;
+      --muted: #617182;
+      --accent: #0b8f5a;
+      --accent-dark: #087247;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(11, 143, 90, 0.14), transparent 30%),
+        linear-gradient(180deg, #f8fbfd 0%, var(--bg) 100%);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+    }
+
+    .card {
+      width: min(460px, 100%);
+      background: var(--card);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 18px 45px rgba(20, 34, 48, 0.12);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 28px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 13px 18px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+    }
+
+    .status {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Xác nhận email thành công</h1>
+    <p id="message">Trang này sẽ tự mở ứng dụng HotelGo để hoàn tất đăng nhập.</p>
+    <a id="openApp" class="button" href="#">Mở ứng dụng HotelGo</a>
+    <div id="status" class="status">Đang chuẩn bị chuyển tiếp...</div>
+  </main>
+
+  <script>
+    const query = window.location.search || "";
+    const hash = window.location.hash || "";
+    const appUrl = `hotelapp://auth-callback${query}${hash}`;
+    const openAppLink = document.getElementById("openApp");
+    const message = document.getElementById("message");
+    const status = document.getElementById("status");
+
+    openAppLink.href = appUrl;
+
+    if (!query && !hash) {
+      message.textContent = "Không thấy dữ liệu xác nhận từ Supabase. Hãy thử mở lại liên kết trong email.";
+      status.textContent = "Thiếu token xác nhận.";
+    } else {
+      setTimeout(() => {
+        window.location.href = appUrl;
+      }, 900);
+
+      setTimeout(() => {
+        status.textContent = "Nếu ứng dụng chưa mở, hãy bấm nút phía trên.";
+      }, 2400);
+    }
+  </script>
+</body>
+</html>

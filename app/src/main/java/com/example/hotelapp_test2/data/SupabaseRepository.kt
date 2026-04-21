@@ -39,7 +39,7 @@ object SupabaseRepository {
     )
 
     data class SignUpResult(
-        val user: SupabaseUser,
+        val user: SupabaseUser?,
         val requiresEmailConfirmation: Boolean
     )
 
@@ -149,11 +149,7 @@ object SupabaseRepository {
             if (response.code !in 200..299) {
                 throw IllegalStateException(authError(response.body, "Dang ky that bai"))
             }
-            val parsed = parseAndPersistAuth(response.body)
-            SignUpResult(
-                user = parsed.user,
-                requiresEmailConfirmation = parsed.accessToken.isBlank()
-            )
+            parseSignUpResponse(response.body)
         }
     }
 
@@ -489,6 +485,35 @@ object SupabaseRepository {
             persistAuthState(parsed.user, parsed.accessToken, parsed.refreshToken)
         }
         return parsed
+    }
+
+    private fun parseSignUpResponse(body: String): SignUpResult {
+        if (body.isBlank()) {
+            clearAuthState()
+            return SignUpResult(user = null, requiresEmailConfirmation = true)
+        }
+
+        val root = try {
+            JSONObject(body)
+        } catch (_: Exception) {
+            clearAuthState()
+            return SignUpResult(user = null, requiresEmailConfirmation = true)
+        }
+
+        val accessToken = root.optString("access_token")
+        val refreshToken = root.optString("refresh_token")
+        val user = root.optJSONObject("user")?.let { userObj ->
+            runCatching { parseSupabaseUser(userObj) }.getOrNull()
+        }
+
+        if (accessToken.isBlank()) {
+            clearAuthState()
+            return SignUpResult(user = user, requiresEmailConfirmation = true)
+        }
+
+        val resolvedUser = user ?: throw IllegalStateException("Khong nhan duoc user")
+        persistAuthState(resolvedUser, accessToken, refreshToken)
+        return SignUpResult(user = resolvedUser, requiresEmailConfirmation = false)
     }
 
     private fun parseSupabaseUser(userObj: JSONObject): SupabaseUser {

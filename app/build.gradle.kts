@@ -11,7 +11,10 @@ if (localPropertiesFile.exists()) {
 }
 val supabaseUrl = localProperties.getProperty("SUPABASE_URL", "")
 val supabaseAnonKey = localProperties.getProperty("SUPABASE_ANON_KEY", "")
-val supabaseAuthRedirectUrl = localProperties.getProperty("SUPABASE_AUTH_REDIRECT_URL", "hotelapp://auth-callback")
+val supabaseAuthRedirectUrl = localProperties.getProperty(
+    "SUPABASE_AUTH_REDIRECT_URL",
+    "https://jerrylemin.github.io/HotelGo_ChuaBietTen/confirm.html"
+)
 val payosClientId = localProperties.getProperty("PAYOS_CLIENT_ID", "")
 val payosApiKey = localProperties.getProperty("PAYOS_API_KEY", "")
 val payosChecksumKey = localProperties.getProperty("PAYOS_CHECKSUM_KEY", "")

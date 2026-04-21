@@ -47,8 +47,16 @@ class RegisterFragment : Fragment() {
                 email = email,
                 password = password,
                 name = name,
-                onSuccess = {
+                phone = phone,
+                onSuccess = { result ->
                     if (!isAdded) return@signUpWithEmail
+                    if (result.requiresEmailConfirmation) {
+                        context?.toast(getString(R.string.success_signup_check_email))
+                        passwordInput.setText("")
+                        confirmInput.setText("")
+                        return@signUpWithEmail
+                    }
+
                     val ctx = context ?: return@signUpWithEmail
                     SupabaseRepository.ensureUserProfile(
                         context = ctx,

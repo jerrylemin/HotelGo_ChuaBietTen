@@ -44,6 +44,14 @@ class AuthActivity : BaseActivity() {
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = getString(if (position == 0) R.string.auth_tab_login else R.string.auth_tab_register)
         }.attach()
+
+        handleAuthRedirect(intent)
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleAuthRedirect(intent)
     }
 
     fun launchGoogleSignIn() {
@@ -200,6 +208,67 @@ class AuthActivity : BaseActivity() {
         toast(getString(R.string.success_signin))
         startActivity(Intent(this, MainActivity::class.java))
         finish()
+    }
+
+    private fun handleAuthRedirect(intent: Intent?) {
+        val dataString = intent?.dataString?.trim().orEmpty()
+        if (dataString.isBlank()) return
+
+        SupabaseRepository.completeAuthFromRedirect(
+            redirectUrl = dataString,
+            onSuccess = { user ->
+                if (isFinishing || isDestroyed) return@completeAuthFromRedirect
+                finishEmailConfirmation(user)
+            },
+            onError = { error ->
+                if (isFinishing || isDestroyed) return@completeAuthFromRedirect
+                toast(getString(R.string.error_auth_redirect, error.message.orEmpty()))
+            }
+        )
+    }
+
+    private fun finishEmailConfirmation(user: SupabaseRepository.SupabaseUser) {
+        SupabaseRepository.fetchUserProfile(
+            userId = user.uid,
+            onSuccess = { profile ->
+                if (isFinishing || isDestroyed) return@fetchUserProfile
+                if (profile == null) {
+                    SupabaseRepository.ensureUserProfile(
+                        context = this,
+                        name = user.displayName,
+                        email = user.email,
+                        phone = user.phone,
+                        requestedRole = "client",
+                        onSuccess = {
+                            if (isFinishing || isDestroyed) return@ensureUserProfile
+                            toast(getString(R.string.success_email_confirmed))
+                            startActivity(Intent(this, MainActivity::class.java))
+                            finish()
+                        },
+                        onError = { error ->
+                            if (isFinishing || isDestroyed) return@ensureUserProfile
+                            if (error.isProfileWriteForbidden()) {
+                                SessionManager.setUser(this, user.uid, "client")
+                                toast(getString(R.string.success_email_confirmed))
+                                startActivity(Intent(this, MainActivity::class.java))
+                                finish()
+                            } else {
+                                toast(getString(R.string.error_create_profile, error.message.orEmpty()))
+                            }
+                        }
+                    )
+                } else {
+                    SessionManager.setUser(this, user.uid, profile.role)
+                    toast(getString(R.string.success_email_confirmed))
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
+                }
+            },
+            onError = { error ->
+                if (isFinishing || isDestroyed) return@fetchUserProfile
+                toast(getString(R.string.error_load_profile, error.message.orEmpty()))
+            }
+        )
     }
 
     private fun shouldRetryAfterReauthFailure(e: GetCredentialException): Boolean {

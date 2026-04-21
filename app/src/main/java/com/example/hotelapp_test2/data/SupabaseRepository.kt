@@ -34,7 +34,19 @@ object SupabaseRepository {
     data class SupabaseUser(
         val uid: String,
         val email: String = "",
-        val displayName: String = ""
+        val displayName: String = "",
+        val phone: String = ""
+    )
+
+    data class SignUpResult(
+        val user: SupabaseUser,
+        val requiresEmailConfirmation: Boolean
+    )
+
+    private data class ParsedAuthPayload(
+        val user: SupabaseUser,
+        val accessToken: String,
+        val refreshToken: String
     )
 
     private data class HttpResult(val code: Int, val body: String)
@@ -103,7 +115,7 @@ object SupabaseRepository {
             if (response.code !in 200..299) {
                 throw IllegalStateException(authError(response.body, "Dang nhap that bai"))
             }
-            parseAndPersistAuth(response.body)
+            parseAndPersistAuth(response.body).user
         }
     }
 
@@ -111,14 +123,23 @@ object SupabaseRepository {
         email: String,
         password: String,
         name: String,
-        onSuccess: (SupabaseUser) -> Unit,
+        phone: String,
+        onSuccess: (SignUpResult) -> Unit,
         onError: (Exception) -> Unit
     ) {
         runAsync(onSuccess, onError) {
             val payload = JSONObject()
                 .put("email", email)
                 .put("password", password)
-                .put("data", JSONObject().put("full_name", name))
+                .put(
+                    "data",
+                    JSONObject()
+                        .put("full_name", name)
+                        .put("phone", phone)
+                )
+            BuildConfig.SUPABASE_AUTH_REDIRECT_URL.trim()
+                .takeIf { it.isNotBlank() }
+                ?.let { payload.put("redirect_to", it) }
             val response = request(
                 method = "POST",
                 path = "/auth/v1/signup",
@@ -128,7 +149,34 @@ object SupabaseRepository {
             if (response.code !in 200..299) {
                 throw IllegalStateException(authError(response.body, "Dang ky that bai"))
             }
-            parseAndPersistAuth(response.body)
+            val parsed = parseAndPersistAuth(response.body)
+            SignUpResult(
+                user = parsed.user,
+                requiresEmailConfirmation = parsed.accessToken.isBlank()
+            )
+        }
+    }
+
+    fun completeAuthFromRedirect(
+        redirectUrl: String,
+        onSuccess: (SupabaseUser) -> Unit,
+        onError: (Exception) -> Unit
+    ) {
+        runAsync(onSuccess, onError) {
+            val session = SupabaseAuthRedirectParser.parse(redirectUrl)
+                ?: throw IllegalStateException("Lien ket xac nhan khong hop le hoac da het han")
+            val response = request(
+                method = "GET",
+                path = "/auth/v1/user",
+                bearer = session.accessToken,
+                retryOnUnauthorized = false
+            )
+            if (response.code !in 200..299) {
+                throw IllegalStateException(authError(response.body, "Khong the khoi phuc phien dang nhap"))
+            }
+            val user = parseSupabaseUser(JSONObject(response.body))
+            persistAuthState(user, session.accessToken, session.refreshToken)
+            user
         }
     }
 
@@ -151,7 +199,7 @@ object SupabaseRepository {
             if (response.code !in 200..299) {
                 throw IllegalStateException(authError(response.body, "Dang nhap Google that bai"))
             }
-            parseAndPersistAuth(response.body)
+            parseAndPersistAuth(response.body).user
         }
     }
 
@@ -427,16 +475,33 @@ object SupabaseRepository {
         return if (response.body.isBlank()) JSONArray() else JSONArray(response.body)
     }
 
-    private fun parseAndPersistAuth(body: String): SupabaseUser {
+    private fun parseAndPersistAuth(body: String): ParsedAuthPayload {
         val root = JSONObject(body)
         val userObj = root.optJSONObject("user") ?: throw IllegalStateException("Khong nhan duoc user")
+        val parsed = ParsedAuthPayload(
+            user = parseSupabaseUser(userObj),
+            accessToken = root.optString("access_token"),
+            refreshToken = root.optString("refresh_token")
+        )
+        if (parsed.accessToken.isBlank()) {
+            clearAuthState()
+        } else {
+            persistAuthState(parsed.user, parsed.accessToken, parsed.refreshToken)
+        }
+        return parsed
+    }
+
+    private fun parseSupabaseUser(userObj: JSONObject): SupabaseUser {
+        val userMetadata = userObj.optJSONObject("user_metadata")
+            ?: userObj.optJSONObject("raw_user_meta_data")
+            ?: JSONObject()
         val user = SupabaseUser(
             uid = userObj.optString("id"),
             email = userObj.optString("email"),
-            displayName = userObj.optJSONObject("user_metadata")?.optString("full_name").orEmpty()
+            displayName = userMetadata.optString("full_name"),
+            phone = userMetadata.optString("phone")
         )
         if (user.uid.isBlank()) throw IllegalStateException("User id tu Supabase bi trong")
-        persistAuthState(user, root.optString("access_token"), root.optString("refresh_token"))
         return user
     }
 
@@ -559,7 +624,13 @@ object SupabaseRepository {
     private fun authError(raw: String, fallback: String): String {
         return try {
             val o = JSONObject(raw)
-            o.optString("msg").ifBlank { o.optString("error_description").ifBlank { fallback } }
+            o.optString("msg").ifBlank {
+                o.optString("message").ifBlank {
+                    o.optString("error_description").ifBlank {
+                        o.optString("error").ifBlank { fallback }
+                    }
+                }
+            }
         } catch (_: Exception) {
             fallback
         }

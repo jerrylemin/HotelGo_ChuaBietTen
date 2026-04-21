@@ -321,10 +321,13 @@
     <string name="error_google_signin">Google sign-in failed: %1$s</string>
     <string name="error_create_profile">Could not create profile: %1$s</string>
     <string name="error_load_profile">Could not load profile: %1$s</string>
+    <string name="error_auth_redirect">Email confirmation failed: %1$s</string>
     <string name="error_signup">Registration failed: %1$s</string>
     <string name="error_signin">Sign-in failed: %1$s</string>
     <string name="success_signin">Signed in successfully.</string>
     <string name="success_signup">Account created successfully.</string>
+    <string name="success_signup_check_email">Check your email to confirm your account, then tap the confirmation link to finish signing in.</string>
+    <string name="success_email_confirmed">Email confirmed. You are now signed in.</string>
     <string name="success_profile_updated">Profile updated.</string>
     <string name="error_profile_update">Update failed: %1$s</string>
     <string name="error_booking_required">Please enter all booking information.</string>

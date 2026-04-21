@@ -11,6 +11,7 @@ if (localPropertiesFile.exists()) {
 }
 val supabaseUrl = localProperties.getProperty("SUPABASE_URL", "")
 val supabaseAnonKey = localProperties.getProperty("SUPABASE_ANON_KEY", "")
+val supabaseAuthRedirectUrl = localProperties.getProperty("SUPABASE_AUTH_REDIRECT_URL", "hotelapp://auth-callback")
 val payosClientId = localProperties.getProperty("PAYOS_CLIENT_ID", "")
 val payosApiKey = localProperties.getProperty("PAYOS_API_KEY", "")
 val payosChecksumKey = localProperties.getProperty("PAYOS_CHECKSUM_KEY", "")
@@ -38,6 +39,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "SUPABASE_URL", "\"$supabaseUrl\"")
         buildConfigField("String", "SUPABASE_ANON_KEY", "\"$supabaseAnonKey\"")
+        buildConfigField("String", "SUPABASE_AUTH_REDIRECT_URL", "\"$supabaseAuthRedirectUrl\"")
         buildConfigField("String", "PAYOS_CLIENT_ID", "\"$payosClientId\"")
         buildConfigField("String", "PAYOS_API_KEY", "\"$payosApiKey\"")
         buildConfigField("String", "PAYOS_CHECKSUM_KEY", "\"$payosChecksumKey\"")

@@ -276,10 +276,13 @@
     <string name="error_google_signin">Đăng nhập Google thất bại: %1$s</string>
     <string name="error_create_profile">Lỗi tạo hồ sơ: %1$s</string>
     <string name="error_load_profile">Không đọc được hồ sơ: %1$s</string>
+    <string name="error_auth_redirect">Xác nhận email thất bại: %1$s</string>
     <string name="error_signup">Đăng ký thất bại: %1$s</string>
     <string name="error_signin">Đăng nhập thất bại: %1$s</string>
     <string name="success_signin">Đăng nhập thành công.</string>
     <string name="success_signup">Đăng ký thành công.</string>
+    <string name="success_signup_check_email">Hãy kiểm tra email và bấm vào liên kết xác nhận để hoàn tất đăng nhập.</string>
+    <string name="success_email_confirmed">Đã xác nhận email. Bạn đã được đăng nhập.</string>
     <string name="success_profile_updated">Đã cập nhật hồ sơ.</string>
     <string name="error_profile_update">Lỗi cập nhật: %1$s</string>
     <string name="error_booking_required">Vui lòng nhập đầy đủ thông tin đặt phòng.</string>

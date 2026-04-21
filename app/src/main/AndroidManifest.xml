@@ -16,7 +16,18 @@
         android:theme="@style/Theme.Hotelapp_test2">
         <activity
             android:name=".ui.auth.AuthActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="auth-callback"
+                    android:scheme="hotelapp" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.features.HotelSearchActivity"
             android:exported="false" />

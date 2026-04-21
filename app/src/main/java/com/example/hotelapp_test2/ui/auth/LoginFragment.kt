@@ -61,7 +61,14 @@ class LoginFragment : Fragment() {
                                     },
                                     onError = { error ->
                                         if (!isAdded) return@ensureUserProfile
-                                        context?.toast(getString(R.string.error_create_profile, error.message.orEmpty()))
+                                        if (error.isProfileWriteForbidden()) {
+                                            SessionManager.setUser(ctx, uid, "client")
+                                            context?.toast(getString(R.string.success_signin))
+                                            startActivity(Intent(ctx, MainActivity::class.java))
+                                            activity?.finish()
+                                        } else {
+                                            context?.toast(getString(R.string.error_create_profile, error.message.orEmpty()))
+                                        }
                                     }
                                 )
                             } else {
@@ -90,4 +97,9 @@ class LoginFragment : Fragment() {
 
         return view
     }
+}
+
+private fun Throwable.isProfileWriteForbidden(): Boolean {
+    val text = message.orEmpty()
+    return text.contains("Upsert users failed: HTTP 403", ignoreCase = true)
 }

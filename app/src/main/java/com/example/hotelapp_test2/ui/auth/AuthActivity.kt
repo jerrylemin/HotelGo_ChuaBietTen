@@ -176,7 +176,12 @@ class AuthActivity : BaseActivity() {
                         },
                         onError = { error ->
                             if (isFinishing || isDestroyed) return@ensureUserProfile
-                            toast(getString(R.string.error_create_profile, error.message.orEmpty()))
+                            if (error.isProfileWriteForbidden()) {
+                                SessionManager.setUser(this, user.uid, "client")
+                                navigateAfterSignIn()
+                            } else {
+                                toast(getString(R.string.error_create_profile, error.message.orEmpty()))
+                            }
                         }
                     )
                 } else {
@@ -207,4 +212,9 @@ class AuthActivity : BaseActivity() {
 private fun String.sha256(): String {
     val digest = MessageDigest.getInstance("SHA-256").digest(toByteArray())
     return digest.joinToString(separator = "") { byte -> "%02x".format(byte) }
+}
+
+private fun Throwable.isProfileWriteForbidden(): Boolean {
+    val text = message.orEmpty()
+    return text.contains("Upsert users failed: HTTP 403", ignoreCase = true)
 }

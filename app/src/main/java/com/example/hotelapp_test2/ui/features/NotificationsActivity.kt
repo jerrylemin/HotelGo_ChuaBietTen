@@ -1,16 +1,25 @@
-﻿package com.example.hotelapp_test2.ui.features
+package com.example.hotelapp_test2.ui.features
 
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.hotelapp_test2.R
-import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.SessionManager
+import com.example.hotelapp_test2.data.SupabaseRepository
+import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.NotificationSettings
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.switchmaterial.SwitchMaterial
 
 class NotificationsActivity : BaseActivity() {
+    private lateinit var listContainer: LinearLayout
+    private lateinit var emptyText: TextView
+    private lateinit var unreadText: TextView
+    private var role: String = "client"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notifications)
@@ -19,7 +28,9 @@ class NotificationsActivity : BaseActivity() {
         val checkInSwitch = findViewById<SwitchMaterial>(R.id.notifCheckInSwitch)
         val promoSwitch = findViewById<SwitchMaterial>(R.id.notifPromoSwitch)
         val roomSwitch = findViewById<SwitchMaterial>(R.id.notifRoomSwitch)
-        val listText = findViewById<TextView>(R.id.notificationListText)
+        listContainer = findViewById(R.id.notificationListContainer)
+        emptyText = findViewById(R.id.notificationEmptyText)
+        unreadText = findViewById(R.id.notificationUnreadText)
 
         val userId = SupabaseRepository.currentUser()?.uid.orEmpty()
         if (userId.isBlank()) {
@@ -27,6 +38,7 @@ class NotificationsActivity : BaseActivity() {
             return
         }
 
+        role = SessionManager.getRole(this)
         SupabaseRepository.fetchNotificationSettings(
             userId = userId,
             onSuccess = { settings ->
@@ -54,18 +66,64 @@ class NotificationsActivity : BaseActivity() {
         checkInSwitch.setOnCheckedChangeListener { _, _ -> saveSettings() }
         promoSwitch.setOnCheckedChangeListener { _, _ -> saveSettings() }
         roomSwitch.setOnCheckedChangeListener { _, _ -> saveSettings() }
+        loadNotifications()
+    }
 
-        val role = SessionManager.getRole(this)
+    private fun loadNotifications() {
         SupabaseRepository.listenNotifications(
             role = role,
             onSuccess = { notifications ->
-                listText.text = if (notifications.isEmpty()) {
-                    getString(R.string.notifications_empty)
-                } else {
-                    notifications.joinToString("\n") { getString(R.string.notification_list_item, it.title, it.body) }
-                }
+                renderNotifications(notifications)
             },
             onError = { error -> toast(getString(R.string.error_notifications_load, error.message.orEmpty())) }
         )
+    }
+
+    private fun renderNotifications(notifications: List<AppNotification>) {
+        listContainer.removeAllViews()
+        val unreadCount = notifications.count { !it.read }
+        unreadText.text = getString(R.string.notifications_unread_count, unreadCount)
+        emptyText.visibility = if (notifications.isEmpty()) android.view.View.VISIBLE else android.view.View.GONE
+        notifications.forEach { notification ->
+            listContainer.addView(createNotificationRow(notification))
+        }
+    }
+
+    private fun createNotificationRow(notification: AppNotification): MaterialCardView {
+        val card = MaterialCardView(this).apply {
+            radius = resources.getDimension(R.dimen.radius_s)
+            cardElevation = 0f
+            setContentPadding(24, 24, 24, 24)
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            ).apply { topMargin = resources.getDimensionPixelSize(R.dimen.space_s) }
+        }
+        val content = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
+        val detail = TextView(this).apply {
+            val state = if (notification.read) getString(R.string.notifications_read) else getString(R.string.notifications_unread)
+            text = getString(R.string.notification_list_item_status, notification.title, notification.body, state)
+            setTextColor(getColor(if (notification.read) R.color.text_secondary else R.color.text_primary))
+            textSize = 14f
+        }
+        val button = MaterialButton(this).apply {
+            text = getString(if (notification.read) R.string.notifications_mark_unread else R.string.notifications_mark_read)
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            ).apply { topMargin = resources.getDimensionPixelSize(R.dimen.space_s) }
+            setOnClickListener {
+                SupabaseRepository.markNotificationRead(
+                    notificationId = notification.id,
+                    read = !notification.read,
+                    onSuccess = { loadNotifications() },
+                    onError = { error -> toast(getString(R.string.error_notifications_save, error.message.orEmpty())) }
+                )
+            }
+        }
+        content.addView(detail)
+        content.addView(button)
+        card.addView(content)
+        return card
     }
 }

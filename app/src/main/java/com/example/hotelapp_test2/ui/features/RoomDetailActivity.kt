@@ -207,6 +207,15 @@ class RoomDetailActivity : BaseActivity() {
                             onSuccess = {},
                             onError = {}
                         )
+                        SupabaseRepository.createNotification(
+                            AppNotification(
+                                title = getString(R.string.booking_client_notification_title),
+                                body = getString(R.string.booking_client_notification_body, room.code.ifBlank { room.id }),
+                                targetRole = "client"
+                            ),
+                            onSuccess = {},
+                            onError = {}
+                        )
                         finish()
                     },
                     onError = { error ->

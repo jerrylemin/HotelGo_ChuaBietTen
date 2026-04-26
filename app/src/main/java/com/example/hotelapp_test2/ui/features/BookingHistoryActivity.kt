@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.SessionManager
+import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Payment
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
@@ -81,6 +82,15 @@ class BookingHistoryActivity : BaseActivity() {
                     status = "confirmed",
                     onSuccess = {
                         toast(getString(R.string.success_booking_confirmed))
+                        SupabaseRepository.createNotification(
+                            AppNotification(
+                                title = getString(R.string.booking_confirm_notification_title),
+                                body = getString(R.string.booking_confirm_notification_body, booking.id),
+                                targetRole = "client"
+                            ),
+                            onSuccess = {},
+                            onError = {}
+                        )
                         loadBookings(emptyText)
                     },
                     onError = { error ->
@@ -98,6 +108,15 @@ class BookingHistoryActivity : BaseActivity() {
                     status = "cancelled",
                     onSuccess = {
                         toast(getString(R.string.success_booking_cancelled))
+                        SupabaseRepository.createNotification(
+                            AppNotification(
+                                title = getString(R.string.booking_cancel_notification_title),
+                                body = getString(R.string.booking_cancel_notification_body, booking.id),
+                                targetRole = "client"
+                            ),
+                            onSuccess = {},
+                            onError = {}
+                        )
                         loadBookings(emptyText)
                     },
                     onError = { error ->

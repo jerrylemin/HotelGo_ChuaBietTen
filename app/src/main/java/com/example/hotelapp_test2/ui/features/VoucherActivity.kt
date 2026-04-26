@@ -6,6 +6,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SupabaseRepository
+import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.SessionManager
 import com.example.hotelapp_test2.data.model.Voucher
 import com.example.hotelapp_test2.ui.BaseActivity
@@ -137,6 +138,15 @@ class VoucherActivity : BaseActivity() {
                     createUsageLimit.setText("")
                     createActive.isChecked = true
                     createButton.text = getString(R.string.voucher_create)
+                    SupabaseRepository.createNotification(
+                        AppNotification(
+                            title = getString(R.string.voucher_notification_title),
+                            body = getString(R.string.voucher_notification_body, code),
+                            targetRole = "client"
+                        ),
+                        onSuccess = {},
+                        onError = {}
+                    )
                     loadVouchers()
                 },
                 onError = { error ->

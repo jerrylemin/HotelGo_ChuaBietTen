@@ -58,6 +58,8 @@
     <string name="feature_poster_search_subtitle">Đăng nhu cầu tìm phòng</string>
     <string name="feature_profile_title">Hồ sơ người dùng</string>
     <string name="feature_profile_subtitle">Thông tin và bảo mật tài khoản</string>
+    <string name="feature_notifications_title">Thông báo</string>
+    <string name="feature_notifications_subtitle">Xem cập nhật đặt phòng, thanh toán và hỗ trợ</string>
     <string name="feature_booking_history_admin_title">Quản lý đặt phòng của khách</string>
     <string name="feature_booking_history_admin_subtitle">Xác nhận hoặc hủy đặt phòng</string>
     <string name="feature_booking_history_client_title">Phòng đã đặt của tôi</string>
@@ -141,6 +143,12 @@
     <string name="booking_summary_placeholder">Tổng tiền dự kiến: 1.500.000 VND</string>
     <string name="booking_notification_title">Đặt phòng mới</string>
     <string name="booking_notification_body">Khách đã đặt phòng %1$s</string>
+    <string name="booking_client_notification_title">Đặt phòng thành công</string>
+    <string name="booking_client_notification_body">Bạn đã tạo booking cho phòng %1$s thành công.</string>
+    <string name="booking_confirm_notification_title">Booking đã xác nhận</string>
+    <string name="booking_confirm_notification_body">Booking %1$s đã được xác nhận.</string>
+    <string name="booking_cancel_notification_title">Booking đã bị hủy</string>
+    <string name="booking_cancel_notification_body">Booking %1$s đã bị hủy.</string>
     <string name="booking_history_title">Lịch sử đặt phòng</string>
     <string name="booking_history_subtitle">Theo dõi và quản lý đặt phòng</string>
     <string name="booking_history_client_subtitle">Chỉ hủy trước 2 ngày, hoàn 80%%</string>
@@ -224,6 +232,12 @@
     <string name="notifications_room_status">Cập nhật trạng thái phòng</string>
     <string name="notifications_empty">Chưa có thông báo</string>
     <string name="notification_list_item">%1$s: %2$s</string>
+    <string name="notification_list_item_status">%1$s\n%2$s\nTrạng thái: %3$s</string>
+    <string name="notifications_unread_count">Chưa đọc: %1$d</string>
+    <string name="notifications_read">Đã đọc</string>
+    <string name="notifications_unread">Chưa đọc</string>
+    <string name="notifications_mark_read">Đánh dấu đã đọc</string>
+    <string name="notifications_mark_unread">Đánh dấu chưa đọc</string>
 
     <string name="payment_title">Thanh toán demo payOS</string>
     <string name="payment_description">Nhập mã đặt phòng. Ứng dụng dùng đúng tổng tiền booking và tự chuyển sang thanh toán demo nếu payOS chưa cấu hình.</string>
@@ -241,6 +255,8 @@
     <string name="payment_already_paid">Booking này đã thanh toán.</string>
     <string name="payment_notification_title">Đã nhận thanh toán</string>
     <string name="payment_notification_body">Booking %1$s đã thanh toán.</string>
+    <string name="payment_client_notification_title">Thanh toán thành công</string>
+    <string name="payment_client_notification_body">Bạn đã thanh toán thành công booking %1$s.</string>
 
     <string name="poster_recommend_title">Tạo poster khuyến nghị</string>
     <string name="poster_title_hint">Tiêu đề poster</string>
@@ -337,6 +353,8 @@
     <string name="voucher_invalid">Voucher đã hết hạn, bị tắt, hết lượt dùng hoặc chưa đạt chi tiêu tối thiểu.</string>
     <string name="voucher_ready">Voucher %1$s đã sẵn sàng áp dụng.</string>
     <string name="voucher_apply_button">Áp dụng voucher</string>
+    <string name="voucher_notification_title">Voucher mới</string>
+    <string name="voucher_notification_body">Voucher %1$s hiện đã khả dụng.</string>
     <string name="voucher_found">Voucher %1$s: giảm %2$s (%3$s)</string>
     <string name="voucher_check_error">Lỗi kiểm tra: %1$s</string>
 
@@ -396,6 +414,8 @@
     <string name="error_issue_booking_required">Chỉ phòng đã đặt mới được gửi báo cáo. Hãy kiểm tra mã phòng và mã đặt phòng.</string>
     <string name="success_issue_sent">Đã gửi báo cáo.</string>
     <string name="success_issue_updated">Đã cập nhật trạng thái báo cáo.</string>
+    <string name="issue_response_notification_title">Báo cáo vấn đề đã cập nhật</string>
+    <string name="issue_response_notification_body">Admin đã cập nhật báo cáo vấn đề của bạn.</string>
     <string name="error_issue_load">Lỗi tải báo cáo: %1$s</string>
     <string name="error_issue_send">Lỗi gửi báo cáo: %1$s</string>
     <string name="error_issue_update">Lỗi cập nhật: %1$s</string>

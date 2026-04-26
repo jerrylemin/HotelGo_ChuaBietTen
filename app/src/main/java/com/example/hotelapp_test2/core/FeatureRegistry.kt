@@ -5,6 +5,7 @@ import com.example.hotelapp_test2.ui.features.BookingHistoryActivity
 import com.example.hotelapp_test2.ui.features.CheckInOutActivity
 import com.example.hotelapp_test2.ui.features.HotelSearchActivity
 import com.example.hotelapp_test2.ui.features.IssueReportActivity
+import com.example.hotelapp_test2.ui.features.NotificationsActivity
 import com.example.hotelapp_test2.ui.features.PaymentActivity
 import com.example.hotelapp_test2.ui.features.ProfileActivity
 import com.example.hotelapp_test2.ui.features.RecommendationPosterActivity
@@ -93,6 +94,13 @@ object FeatureRegistry {
             subtitleRes = R.string.feature_profile_subtitle,
             roles = setOf(FeatureRole.ADMIN, FeatureRole.CLIENT),
             activityClass = ProfileActivity::class.java
+        ),
+        FeatureItem(
+            id = "notifications",
+            titleRes = R.string.feature_notifications_title,
+            subtitleRes = R.string.feature_notifications_subtitle,
+            roles = setOf(FeatureRole.ADMIN, FeatureRole.CLIENT),
+            activityClass = NotificationsActivity::class.java
         ),
         FeatureItem(
             id = "booking_history_admin",

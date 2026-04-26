@@ -171,6 +171,15 @@ class PaymentActivity : BaseActivity() {
                             onSuccess = {},
                             onError = {}
                         )
+                        SupabaseRepository.createNotification(
+                            AppNotification(
+                                title = getString(R.string.payment_client_notification_title),
+                                body = getString(R.string.payment_client_notification_body, booking.id),
+                                targetRole = "client"
+                            ),
+                            onSuccess = {},
+                            onError = {}
+                        )
                         submitButton.isEnabled = true
                         statusText.text = getString(R.string.success_payment_demo_paid)
                         onDone()

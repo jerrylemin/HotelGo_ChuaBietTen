@@ -517,6 +517,16 @@ object SupabaseRepository {
     fun createNotification(notification: AppNotification, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("notifications", notificationToJson(notification.copy(id = notification.id.ifBlank { UUID.randomUUID().toString() }))) }
 
+    fun markNotificationRead(notificationId: String, read: Boolean, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (notificationId.isBlank()) {
+            onError(IllegalArgumentException("Missing notification id"))
+            return
+        }
+        runAsyncUnit(onSuccess, onError) {
+            patch("notifications", mapOf("id" to "eq.$notificationId"), JSONObject().put("is_read", read))
+        }
+    }
+
     fun createPayment(payment: Payment, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("payments", paymentToJson(payment.copy(id = payment.id.ifBlank { UUID.randomUUID().toString() }))) }
 
@@ -1053,6 +1063,7 @@ object SupabaseRepository {
         title = optString("title"),
         body = optString("body"),
         targetRole = optString("target_role", "all"),
+        read = optBooleanCompat("is_read", false),
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
@@ -1165,6 +1176,7 @@ object SupabaseRepository {
         .put("title", notification.title)
         .put("body", notification.body)
         .put("target_role", normalizeTargetRole(notification.targetRole))
+        .put("is_read", notification.read)
         .put("created_at", millisToIso(notification.createdAt))
 
     private fun paymentToJson(payment: Payment): JSONObject = JSONObject()

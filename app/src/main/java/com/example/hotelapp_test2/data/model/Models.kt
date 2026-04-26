@@ -163,6 +163,7 @@ data class AppNotification(
     val title: String = "",
     val body: String = "",
     val targetRole: String = "all",
+    val read: Boolean = false,
     val createdAt: Long = 0L
 )
 

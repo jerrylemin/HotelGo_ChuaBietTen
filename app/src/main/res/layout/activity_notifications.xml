@@ -66,12 +66,27 @@
                     android:text="@string/notifications_room_status" />
 
                     <TextView
-                        android:id="@+id/notificationListText"
+                        android:id="@+id/notificationUnreadText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_m"
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/notificationEmptyText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/notifications_empty"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/notificationListContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>

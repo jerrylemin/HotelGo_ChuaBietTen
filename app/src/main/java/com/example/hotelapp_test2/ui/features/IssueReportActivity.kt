@@ -222,6 +222,15 @@ class IssueReportActivity : BaseActivity() {
             status = status,
             onSuccess = {
                 toast(getString(R.string.success_issue_updated))
+                SupabaseRepository.createNotification(
+                    AppNotification(
+                        title = getString(R.string.issue_response_notification_title),
+                        body = getString(R.string.issue_response_notification_body),
+                        targetRole = "client"
+                    ),
+                    onSuccess = {},
+                    onError = {}
+                )
                 loadIssues()
             },
             onError = { error ->

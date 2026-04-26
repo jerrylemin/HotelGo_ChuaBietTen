@@ -123,6 +123,15 @@ class BookingActivity : BaseActivity() {
                                 onSuccess = {},
                                 onError = {}
                             )
+                            SupabaseRepository.createNotification(
+                                AppNotification(
+                                    title = getString(R.string.booking_client_notification_title),
+                                    body = getString(R.string.booking_client_notification_body, roomCode),
+                                    targetRole = "client"
+                                ),
+                                onSuccess = {},
+                                onError = {}
+                            )
                         },
                         onError = { error ->
                             toast(getString(R.string.error_booking_create, error.message.orEmpty()))

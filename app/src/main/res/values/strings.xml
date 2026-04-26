@@ -276,6 +276,10 @@
     <string name="review_recent_placeholder">Excellent, clean room and friendly staff.</string>
     <string name="review_empty">No reviews yet</string>
     <string name="review_list_item">%1$s: %2$s</string>
+    <string name="review_room_detail_title">Guest reviews</string>
+    <string name="review_average_empty">Average rating: no reviews yet</string>
+    <string name="review_average_format">Average rating: %1$.1f/5 from %2$d reviews</string>
+    <string name="review_room_detail_item">%1$d stars - %2$s</string>
 
     <string name="room_crud_title">Room information</string>
     <string name="room_code_hint">Room code</string>
@@ -389,6 +393,8 @@
     <string name="success_poster_search_published">Room search poster published.</string>
     <string name="error_review_load">Could not load reviews: %1$s</string>
     <string name="error_review_required">Please enter the full review.</string>
+    <string name="error_review_booking_required">Only guests with a confirmed or completed booking can review this room.</string>
+    <string name="error_review_check">Could not verify your booking: %1$s</string>
     <string name="success_review_sent">Review submitted.</string>
     <string name="error_review_send">Submit review failed: %1$s</string>
     <string name="error_room_code_type_required">Please enter room code and room type.</string>

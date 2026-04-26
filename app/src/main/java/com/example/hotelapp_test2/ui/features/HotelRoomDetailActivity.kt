@@ -64,6 +64,8 @@ class HotelRoomDetailActivity : BaseActivity() {
         val amenities = findViewById<TextView>(R.id.hotelRoomDetailAmenities)
         val bathroom = findViewById<TextView>(R.id.hotelRoomDetailBathroomAmenities)
         val tags = findViewById<TextView>(R.id.hotelRoomDetailTags)
+        val reviewSummary = findViewById<TextView>(R.id.hotelRoomDetailReviewSummary)
+        val reviewList = findViewById<TextView>(R.id.hotelRoomDetailReviewList)
         val bookingButton = findViewById<MaterialButton>(R.id.hotelRoomDetailBookButton)
 
         title.text = room.name
@@ -93,6 +95,7 @@ class HotelRoomDetailActivity : BaseActivity() {
         amenities.text = if (room.amenities.isEmpty()) getString(R.string.hotel_room_detail_amenities_empty) else room.amenities.joinToString("\n") { "- $it" }
         bathroom.text = if (room.bathroomAmenities.isEmpty()) getString(R.string.hotel_room_detail_amenities_empty) else room.bathroomAmenities.joinToString("\n") { "- $it" }
         tags.text = if (room.tags.isEmpty()) getString(R.string.hotel_room_detail_tags_empty) else room.tags.joinToString(" | ")
+        loadReviews(room.id, reviewSummary, reviewList)
 
         heroImage.load(room.heroImage.ifBlank { room.images.firstOrNull() }) {
             placeholder(R.mipmap.ic_launcher)
@@ -113,6 +116,33 @@ class HotelRoomDetailActivity : BaseActivity() {
         } else {
             bookingButton.visibility = View.GONE
         }
+    }
+
+    private fun loadReviews(roomId: String, summaryView: TextView, listView: TextView) {
+        if (roomId.isBlank()) {
+            summaryView.text = getString(R.string.review_average_empty)
+            listView.text = getString(R.string.review_empty)
+            return
+        }
+        SupabaseRepository.listReviewsForRoom(
+            roomId = roomId,
+            onSuccess = { reviews ->
+                if (reviews.isEmpty()) {
+                    summaryView.text = getString(R.string.review_average_empty)
+                    listView.text = getString(R.string.review_empty)
+                } else {
+                    val average = reviews.map { it.rating.coerceIn(1, 5) }.average()
+                    summaryView.text = getString(R.string.review_average_format, average, reviews.size)
+                    listView.text = reviews.joinToString("\n\n") { review ->
+                        getString(R.string.review_room_detail_item, review.rating.coerceIn(1, 5), review.comment)
+                    }
+                }
+            },
+            onError = { error ->
+                summaryView.text = getString(R.string.review_average_empty)
+                listView.text = getString(R.string.error_review_load, error.message.orEmpty())
+            }
+        )
     }
 
     private fun statusLabel(status: String): String {

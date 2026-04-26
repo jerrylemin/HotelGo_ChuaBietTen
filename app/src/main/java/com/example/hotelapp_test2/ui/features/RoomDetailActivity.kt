@@ -40,6 +40,8 @@ class RoomDetailActivity : BaseActivity() {
         val hotelName = findViewById<TextView>(R.id.roomDetailHotelName)
         val info = findViewById<TextView>(R.id.roomDetailInfo)
         val price = findViewById<TextView>(R.id.roomDetailPrice)
+        val reviewSummary = findViewById<TextView>(R.id.roomDetailReviewSummary)
+        val reviewList = findViewById<TextView>(R.id.roomDetailReviewList)
         val openHotelButton = findViewById<MaterialButton>(R.id.roomDetailOpenHotelButton)
         val checkInInput = findViewById<TextView>(R.id.roomDetailCheckIn)
         val checkOutInput = findViewById<TextView>(R.id.roomDetailCheckOut)
@@ -58,6 +60,7 @@ class RoomDetailActivity : BaseActivity() {
             }
             info.text = getString(R.string.room_info_format, room.capacity, ratingText, statusLabel(room.status))
             price.text = if (room.price > 0.0) getString(R.string.room_price_per_night, room.price.toInt()) else getString(R.string.room_price_empty)
+            loadReviews(room.id.ifBlank { room.code }, reviewSummary, reviewList)
             val imageUrl = room.images.firstOrNull().orEmpty()
             image.load(imageUrl.ifBlank { null }) {
                 placeholder(R.mipmap.ic_launcher)
@@ -181,6 +184,33 @@ class RoomDetailActivity : BaseActivity() {
             toast(getString(R.string.error_room_not_found_simple))
             finish()
         }
+    }
+
+    private fun loadReviews(roomId: String, summaryView: TextView, listView: TextView) {
+        if (roomId.isBlank()) {
+            summaryView.text = getString(R.string.review_average_empty)
+            listView.text = getString(R.string.review_empty)
+            return
+        }
+        SupabaseRepository.listReviewsForRoom(
+            roomId = roomId,
+            onSuccess = { reviews ->
+                if (reviews.isEmpty()) {
+                    summaryView.text = getString(R.string.review_average_empty)
+                    listView.text = getString(R.string.review_empty)
+                } else {
+                    val average = reviews.map { it.rating.coerceIn(1, 5) }.average()
+                    summaryView.text = getString(R.string.review_average_format, average, reviews.size)
+                    listView.text = reviews.joinToString("\n\n") { review ->
+                        getString(R.string.review_room_detail_item, review.rating.coerceIn(1, 5), review.comment)
+                    }
+                }
+            },
+            onError = { error ->
+                summaryView.text = getString(R.string.review_average_empty)
+                listView.text = getString(R.string.error_review_load, error.message.orEmpty())
+            }
+        )
     }
 
     private fun loadByCode(code: String, onLoaded: (Room) -> Unit) {

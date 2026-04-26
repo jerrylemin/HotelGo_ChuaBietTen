@@ -232,6 +232,10 @@
     <string name="review_recent_placeholder">Tuyệt vời, phòng sạch sẽ và nhân viên thân thiện.</string>
     <string name="review_empty">Chưa có đánh giá nào</string>
     <string name="review_list_item">%1$s: %2$s</string>
+    <string name="review_room_detail_title">Đánh giá của khách</string>
+    <string name="review_average_empty">Điểm trung bình: chưa có đánh giá</string>
+    <string name="review_average_format">Điểm trung bình: %1$.1f/5 từ %2$d đánh giá</string>
+    <string name="review_room_detail_item">%1$d sao - %2$s</string>
     <string name="room_crud_title">Thông tin phòng</string>
     <string name="room_code_hint">Mã phòng</string>
     <string name="room_type_hint">Loại phòng</string>
@@ -338,6 +342,8 @@
     <string name="success_poster_search_published">Đã đăng poster tìm phòng.</string>
     <string name="error_review_load">Lỗi tải đánh giá: %1$s</string>
     <string name="error_review_required">Vui lòng nhập đầy đủ đánh giá.</string>
+    <string name="error_review_booking_required">Chỉ khách đã đặt phòng được xác nhận hoặc đã hoàn tất mới được đánh giá phòng này.</string>
+    <string name="error_review_check">Không kiểm tra được đặt phòng của bạn: %1$s</string>
     <string name="success_review_sent">Đã gửi đánh giá.</string>
     <string name="error_review_send">Lỗi gửi đánh giá: %1$s</string>
     <string name="error_room_code_type_required">Vui lòng nhập mã phòng và loại phòng.</string>

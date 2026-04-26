@@ -55,21 +55,49 @@ class ReviewActivity : BaseActivity() {
                 toast(getString(R.string.error_review_required))
                 return@setOnClickListener
             }
-            val review = Review(
-                roomId = roomCode,
-                userId = userId,
-                rating = rating,
-                comment = comment
-            )
-            SupabaseRepository.createReview(
-                review = review,
-                onSuccess = {
-                    toast(getString(R.string.success_review_sent))
-                    commentInput.setText("")
-                    loadRecent()
+            SupabaseRepository.getRoomByCode(
+                code = roomCode,
+                onSuccess = { room ->
+                    if (room == null) {
+                        toast(getString(R.string.error_room_not_found, roomCode))
+                        return@getRoomByCode
+                    }
+                    val resolvedRoomId = room.id.ifBlank { room.code }
+                    SupabaseRepository.canUserReviewRoom(
+                        userId = userId,
+                        roomId = resolvedRoomId,
+                        onSuccess = { canReview ->
+                            if (!canReview) {
+                                toast(getString(R.string.error_review_booking_required))
+                                return@canUserReviewRoom
+                            }
+                            val review = Review(
+                                roomId = resolvedRoomId,
+                                userId = userId,
+                                rating = rating.coerceIn(1, 5),
+                                comment = comment,
+                                createdAt = System.currentTimeMillis()
+                            )
+                            SupabaseRepository.createReviewAndRefreshRoom(
+                                review = review,
+                                onSuccess = {
+                                    toast(getString(R.string.success_review_sent))
+                                    commentInput.setText("")
+                                    ratingBar.rating = 0f
+                                    loadRecent()
+                                },
+                                onError = { error ->
+                                    toast(getString(R.string.error_review_send, error.message.orEmpty()))
+                                }
+                            )
+                        },
+                        onError = { error ->
+                            toast(getString(R.string.error_review_check, error.message.orEmpty()))
+                        }
+                    )
                 },
                 onError = { error ->
-                    toast(getString(R.string.error_review_send, error.message.orEmpty()))
+                    toast(getString(R.string.error_room_load, error.message.orEmpty()))
                 }
             )
         }

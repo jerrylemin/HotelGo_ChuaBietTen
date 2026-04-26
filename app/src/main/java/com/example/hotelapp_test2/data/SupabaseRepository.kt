@@ -378,6 +378,63 @@ object SupabaseRepository {
     fun listRecentReviews(limit: Long, onSuccess: (List<Review>) -> Unit, onError: (Exception) -> Unit) =
         runAsync(onSuccess, onError) { select("reviews", mapOf("select" to "*", "order" to "created_at.desc", "limit" to limit.toString())).toReviewList() }
 
+    fun listReviewsForRoom(roomId: String, onSuccess: (List<Review>) -> Unit, onError: (Exception) -> Unit) {
+        if (roomId.isBlank()) {
+            onSuccess(emptyList())
+            return
+        }
+        runAsync(onSuccess, onError) {
+            select(
+                "reviews",
+                mapOf("select" to "*", "room_id" to "eq.$roomId", "order" to "created_at.desc", "limit" to "100")
+            ).toReviewList()
+        }
+    }
+
+    fun canUserReviewRoom(userId: String, roomId: String, onSuccess: (Boolean) -> Unit, onError: (Exception) -> Unit) {
+        if (userId.isBlank() || roomId.isBlank()) {
+            onSuccess(false)
+            return
+        }
+        runAsync(onSuccess, onError) {
+            val bookings = select(
+                "bookings",
+                mapOf(
+                    "select" to "id,status",
+                    "user_id" to "eq.$userId",
+                    "room_id" to "eq.$roomId",
+                    "status" to "in.(confirmed,paid,checked_in,checked_out)",
+                    "limit" to "1"
+                )
+            )
+            bookings.length() > 0
+        }
+    }
+
+    fun createReviewAndRefreshRoom(review: Review, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (review.roomId.isBlank()) {
+            onError(IllegalArgumentException("Missing room id"))
+            return
+        }
+        runAsyncUnit(onSuccess, onError) {
+            upsert("reviews", reviewToJson(review.copy(id = review.id.ifBlank { UUID.randomUUID().toString() })))
+            val reviews = select(
+                "reviews",
+                mapOf("select" to "rating", "room_id" to "eq.${review.roomId}", "limit" to "1000")
+            ).toReviewList()
+            if (reviews.isNotEmpty()) {
+                val average = reviews.map { it.rating.coerceIn(1, 5) }.average()
+                patch(
+                    "rooms",
+                    mapOf("id" to "eq.${review.roomId}"),
+                    JSONObject()
+                        .put("rating", average)
+                        .put("review_count", reviews.size)
+                )
+            }
+        }
+    }
+
     fun createIssue(issue: IssueReport, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("issues", issueToJson(issue.copy(id = issue.id.ifBlank { UUID.randomUUID().toString() }))) }
 

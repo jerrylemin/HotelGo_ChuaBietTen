@@ -178,6 +178,29 @@
                         android:layout_marginTop="@dimen/space_s"
                         android:text="@string/common_na" />
 
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/review_room_detail_title" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailReviewSummary"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/review_average_empty" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailReviewList"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/review_empty" />
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/hotelRoomDetailBookButton"
                         style="@style/Widget.Hotel.Button.Primary"

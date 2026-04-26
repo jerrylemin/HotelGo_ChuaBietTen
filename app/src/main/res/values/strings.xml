@@ -234,6 +234,10 @@
     <string name="checkin_room_code_hint">Room number</string>
     <string name="checkin_button">Check in</string>
     <string name="checkout_button">Check out</string>
+    <string name="checkin_active_title">Active stays</string>
+    <string name="checkin_empty">No confirmed or paid bookings are waiting for check-in/out.</string>
+    <string name="checkin_overdue_warning">OVERDUE CHECK-OUT</string>
+    <string name="checkin_booking_item">Booking: %1$s\nRoom: %2$s\nCheck-in: %3$s\nCheck-out: %4$s\nStatus: %5$s\n%6$s</string>
 
     <string name="filter_room_type_title">Filter by room type</string>
     <string name="filter_price_title">Sort by price</string>

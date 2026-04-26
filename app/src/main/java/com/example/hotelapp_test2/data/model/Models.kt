@@ -96,6 +96,8 @@ data class Booking(
     val status: String = "pending",
     val total: Double = 0.0,
     val addOns: List<String> = emptyList(),
+    val actualCheckInAt: Long = 0L,
+    val actualCheckOutAt: Long = 0L,
     val createdAt: Long = 0L
 )
 

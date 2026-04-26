@@ -190,6 +190,10 @@
     <string name="checkin_room_code_hint">Số phòng</string>
     <string name="checkin_button">Check-in</string>
     <string name="checkout_button">Check-out</string>
+    <string name="checkin_active_title">Lượt lưu trú đang xử lý</string>
+    <string name="checkin_empty">Chưa có booking đã xác nhận hoặc đã thanh toán cần check-in/check-out.</string>
+    <string name="checkin_overdue_warning">CẢNH BÁO QUÁ HẠN TRẢ PHÒNG</string>
+    <string name="checkin_booking_item">Booking: %1$s\nPhòng: %2$s\nNhận phòng: %3$s\nTrả phòng: %4$s\nTrạng thái: %5$s\n%6$s</string>
 
     <string name="filter_room_type_title">Lọc theo loại phòng</string>
     <string name="filter_price_title">Sắp xếp theo giá</string>

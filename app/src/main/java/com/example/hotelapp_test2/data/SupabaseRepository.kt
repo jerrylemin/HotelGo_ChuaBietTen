@@ -372,6 +372,19 @@ object SupabaseRepository {
     fun updateBookingStatus(bookingId: String, status: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { patch("bookings", mapOf("id" to "eq.$bookingId"), JSONObject().put("status", status)) }
 
+    fun updateBookingStayStatus(bookingId: String, status: String, atMillis: Long, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (bookingId.isBlank()) {
+            onError(IllegalArgumentException("Missing booking id"))
+            return
+        }
+        runAsyncUnit(onSuccess, onError) {
+            val payload = JSONObject().put("status", status)
+            if (status == "checked_in") payload.put("actual_check_in_at", millisToIso(atMillis))
+            if (status == "checked_out") payload.put("actual_check_out_at", millisToIso(atMillis))
+            patch("bookings", mapOf("id" to "eq.$bookingId"), payload)
+        }
+    }
+
     fun createReview(review: Review, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("reviews", reviewToJson(review.copy(id = review.id.ifBlank { UUID.randomUUID().toString() }))) }
 
@@ -973,6 +986,8 @@ object SupabaseRepository {
         status = optString("status", "pending"),
         total = optDoubleCompat("total"),
         addOns = optStringList("add_ons"),
+        actualCheckInAt = parseTimestampMillis(opt("actual_check_in_at")),
+        actualCheckOutAt = parseTimestampMillis(opt("actual_check_out_at")),
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
@@ -1077,16 +1092,21 @@ object SupabaseRepository {
         .put("images", JSONArray(room.images))
         .put("created_at", millisToIso(room.createdAt))
 
-    private fun bookingToJson(booking: Booking): JSONObject = JSONObject()
-        .put("id", booking.id)
-        .put("user_id", booking.userId)
-        .put("room_id", booking.roomId)
-        .put("check_in", normalizeDate(booking.checkIn))
-        .put("check_out", normalizeDate(booking.checkOut))
-        .put("status", booking.status)
-        .put("total", booking.total)
-        .put("add_ons", JSONArray(booking.addOns))
-        .put("created_at", millisToIso(booking.createdAt))
+    private fun bookingToJson(booking: Booking): JSONObject {
+        val json = JSONObject()
+            .put("id", booking.id)
+            .put("user_id", booking.userId)
+            .put("room_id", booking.roomId)
+            .put("check_in", normalizeDate(booking.checkIn))
+            .put("check_out", normalizeDate(booking.checkOut))
+            .put("status", booking.status)
+            .put("total", booking.total)
+            .put("add_ons", JSONArray(booking.addOns))
+            .put("created_at", millisToIso(booking.createdAt))
+        if (booking.actualCheckInAt > 0L) json.put("actual_check_in_at", millisToIso(booking.actualCheckInAt))
+        if (booking.actualCheckOutAt > 0L) json.put("actual_check_out_at", millisToIso(booking.actualCheckOutAt))
+        return json
+    }
 
     private fun reviewToJson(review: Review): JSONObject = JSONObject()
         .put("id", review.id)

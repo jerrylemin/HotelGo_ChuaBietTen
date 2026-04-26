@@ -59,6 +59,7 @@ class BookingHistoryAdapter(
         private val dateText: TextView = itemView.findViewById(R.id.bookingItemDates)
         private val statusText: TextView = itemView.findViewById(R.id.bookingItemStatus)
         private val totalText: TextView = itemView.findViewById(R.id.bookingItemTotal)
+        private val addOnsText: TextView = itemView.findViewById(R.id.bookingItemAddOns)
         private val userText: TextView = itemView.findViewById(R.id.bookingItemUser)
         private val cancelButton: MaterialButton = itemView.findViewById(R.id.bookingItemCancel)
         private val adminActions: View = itemView.findViewById(R.id.bookingAdminActions)
@@ -100,6 +101,11 @@ class BookingHistoryAdapter(
             dateText.text = itemView.context.getString(R.string.booking_dates_format, booking.checkIn, booking.checkOut)
             statusText.text = itemView.context.getString(R.string.booking_status_format, statusLabel(booking.status))
             totalText.text = itemView.context.getString(R.string.booking_total_paid, booking.total.toInt())
+            addOnsText.text = if (booking.addOns.isEmpty()) {
+                itemView.context.getString(R.string.booking_addons_empty)
+            } else {
+                itemView.context.getString(R.string.booking_addons_format, booking.addOns.joinToString(", "))
+            }
 
             if (isAdmin) {
                 userText.visibility = View.VISIBLE

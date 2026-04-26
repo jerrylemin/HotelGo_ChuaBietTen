@@ -82,6 +82,15 @@
             android:textSize="13sp" />
 
         <TextView
+            android:id="@+id/bookingItemAddOns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="@string/booking_addons_empty"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <TextView
             android:id="@+id/bookingItemUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

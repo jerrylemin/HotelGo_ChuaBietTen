@@ -126,6 +126,8 @@
     <string name="room_detail_guests_hint">Số khách</string>
     <string name="booking_total_empty">Tổng tiền dự kiến: --</string>
     <string name="booking_total_format">Tổng tiền dự kiến: %1$d VND</string>
+    <string name="booking_total_with_addons">Tiền phòng: %1$d VND\nMặt hàng phụ: %2$d VND\nTổng tiền dự kiến: %3$d VND</string>
+    <string name="booking_addon_total_format">Mặt hàng phụ đã chọn: %1$d VND</string>
     <string name="room_detail_book_button">Đặt phòng</string>
 
     <string name="booking_title">Thông tin đặt phòng</string>
@@ -147,6 +149,8 @@
     <string name="booking_dates_format">Nhận: %1$s | Trả: %2$s</string>
     <string name="booking_status_format">Trạng thái: %1$s</string>
     <string name="booking_total_paid">Tổng tiền: %1$d VND</string>
+    <string name="booking_addons_empty">Mặt hàng phụ: không có</string>
+    <string name="booking_addons_format">Mặt hàng phụ: %1$s</string>
     <string name="booking_guest_format">Khách: %1$s</string>
     <string name="booking_cancel_refund">Hủy phòng &amp; hoàn tiền</string>
     <string name="booking_admin_confirm">Xác nhận phòng</string>
@@ -161,13 +165,24 @@
     <string name="addon_title">Tạo món hàng phụ</string>
     <string name="addon_name_hint">Tên món</string>
     <string name="addon_price_hint">Giá bán</string>
+    <string name="addon_description_hint">Mô tả</string>
+    <string name="addon_image_hint">URL ảnh</string>
     <string name="addon_category_snack">Snack</string>
     <string name="addon_category_drink">Đồ uống</string>
+    <string name="addon_active">Còn bán</string>
     <string name="addon_save">Lưu món</string>
+    <string name="addon_update">Cập nhật món</string>
+    <string name="addon_edit">Sửa</string>
+    <string name="addon_delete">Xóa</string>
     <string name="addon_list_title">Danh sách món</string>
     <string name="addon_list_placeholder">Nước suối - 20.000 VND</string>
     <string name="addon_empty">Chưa có món hàng phụ</string>
     <string name="addon_list_item">%1$s - %2$d VND</string>
+    <string name="addon_list_item_detail">%1$s - %2$d VND\nMô tả: %3$s\nTrạng thái: %4$s</string>
+    <string name="addon_status_active">Còn bán</string>
+    <string name="addon_status_inactive">Ngừng bán</string>
+    <string name="addon_client_title">Mặt hàng phụ</string>
+    <string name="addon_client_item">%1$s - %2$d VND</string>
 
     <string name="checkin_title">Xác nhận check-in</string>
     <string name="checkin_booking_id_hint">Mã đặt phòng</string>
@@ -317,8 +332,10 @@
 
     <string name="error_addon_required">Vui lòng nhập tên món và giá.</string>
     <string name="success_addon_saved">Đã lưu món hàng phụ.</string>
+    <string name="success_addon_deleted">Đã xóa món hàng phụ.</string>
     <string name="error_addon_load">Lỗi tải món: %1$s</string>
     <string name="error_addon_save">Lỗi lưu món: %1$s</string>
+    <string name="error_addon_delete">Lỗi xóa món: %1$s</string>
     <string name="error_checkin_required">Nhập mã đặt phòng và số phòng.</string>
     <string name="success_checkin">Đã check-in.</string>
     <string name="success_checkout">Đã check-out.</string>

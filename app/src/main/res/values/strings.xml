@@ -170,6 +170,8 @@
     <string name="room_detail_guests_hint">Guests</string>
     <string name="booking_total_empty">Estimated total: --</string>
     <string name="booking_total_format">Estimated total: %1$d VND</string>
+    <string name="booking_total_with_addons">Room: %1$d VND\nAdd-ons: %2$d VND\nEstimated total: %3$d VND</string>
+    <string name="booking_addon_total_format">Selected add-ons: %1$d VND</string>
     <string name="room_detail_book_button">Book room</string>
 
     <string name="booking_title">Booking information</string>
@@ -192,6 +194,8 @@
     <string name="booking_dates_format">Check-in: %1$s | Check-out: %2$s</string>
     <string name="booking_status_format">Status: %1$s</string>
     <string name="booking_total_paid">Total: %1$d VND</string>
+    <string name="booking_addons_empty">Add-ons: none</string>
+    <string name="booking_addons_format">Add-ons: %1$s</string>
     <string name="booking_guest_format">Guest: %1$s</string>
     <string name="booking_cancel_refund">Cancel room &amp; refund</string>
     <string name="booking_admin_confirm">Confirm room</string>
@@ -206,13 +210,24 @@
     <string name="addon_title">Create add-on item</string>
     <string name="addon_name_hint">Item name</string>
     <string name="addon_price_hint">Sale price</string>
+    <string name="addon_description_hint">Description</string>
+    <string name="addon_image_hint">Image URL</string>
     <string name="addon_category_snack">Snack</string>
     <string name="addon_category_drink">Drink</string>
+    <string name="addon_active">Available for sale</string>
     <string name="addon_save">Save item</string>
+    <string name="addon_update">Update item</string>
+    <string name="addon_edit">Edit</string>
+    <string name="addon_delete">Delete</string>
     <string name="addon_list_title">Item list</string>
     <string name="addon_list_placeholder">Water - 20,000 VND</string>
     <string name="addon_empty">No add-on items yet</string>
     <string name="addon_list_item">%1$s - %2$d VND</string>
+    <string name="addon_list_item_detail">%1$s - %2$d VND\nDescription: %3$s\nStatus: %4$s</string>
+    <string name="addon_status_active">Available</string>
+    <string name="addon_status_inactive">Stopped</string>
+    <string name="addon_client_title">Add-on items</string>
+    <string name="addon_client_item">%1$s - %2$d VND</string>
     <string name="checkin_title">Confirm check-in</string>
     <string name="checkin_booking_id_hint">Booking ID</string>
     <string name="checkin_room_code_hint">Room number</string>
@@ -368,8 +383,10 @@
 
     <string name="error_addon_required">Please enter item name and price.</string>
     <string name="success_addon_saved">Add-on item saved.</string>
+    <string name="success_addon_deleted">Add-on item deleted.</string>
     <string name="error_addon_load">Could not load items: %1$s</string>
     <string name="error_addon_save">Could not save item: %1$s</string>
+    <string name="error_addon_delete">Could not delete item: %1$s</string>
     <string name="error_checkin_required">Enter the booking ID and room number.</string>
     <string name="success_checkin">Checked in.</string>
     <string name="success_checkout">Checked out.</string>

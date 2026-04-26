@@ -208,6 +208,20 @@
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
 
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/addon_client_title" />
+
+                    <LinearLayout
+                        android:id="@+id/roomDetailAddOnContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:orientation="vertical" />
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/roomDetailBookButton"
                         android:layout_width="match_parent"

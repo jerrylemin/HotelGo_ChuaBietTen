@@ -5,22 +5,28 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import coil.load
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SupabaseRepository
+import com.example.hotelapp_test2.data.model.AddOnItem
 import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Booking
 import com.example.hotelapp_test2.data.model.Room
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.checkbox.MaterialCheckBox
 import com.google.android.material.textfield.TextInputEditText
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 import java.util.Calendar
 
 class RoomDetailActivity : BaseActivity() {
+    private var addOnItems: List<AddOnItem> = emptyList()
+    private val selectedAddOnIds = linkedSetOf<String>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room_detail)
@@ -47,6 +53,7 @@ class RoomDetailActivity : BaseActivity() {
         val checkOutInput = findViewById<TextView>(R.id.roomDetailCheckOut)
         val guestsInput = findViewById<TextInputEditText>(R.id.roomDetailGuests)
         val totalText = findViewById<TextView>(R.id.roomDetailTotal)
+        val addOnContainer = findViewById<LinearLayout>(R.id.roomDetailAddOnContainer)
         val bookButton = findViewById<MaterialButton>(R.id.roomDetailBookButton)
 
         fun bindRoom(room: Room) {
@@ -101,7 +108,8 @@ class RoomDetailActivity : BaseActivity() {
                     if (diff <= 0) 1 else diff
                 }.getOrDefault(1)
                 val total = room.price * nights
-                totalText.text = getString(R.string.booking_total_format, total.toInt())
+                val addOnTotal = selectedAddOns().sumOf { it.price }
+                totalText.text = getString(R.string.booking_total_with_addons, total.toInt(), addOnTotal.toInt(), (total + addOnTotal).toInt())
             }
 
             fun showDatePicker(target: TextView) {
@@ -123,6 +131,7 @@ class RoomDetailActivity : BaseActivity() {
 
             checkInInput.setOnClickListener { showDatePicker(checkInInput) }
             checkOutInput.setOnClickListener { showDatePicker(checkOutInput) }
+            loadAddOns(addOnContainer) { updateTotal() }
 
             bookButton.setOnClickListener {
                 val userId = SupabaseRepository.currentUser()?.uid.orEmpty()
@@ -143,7 +152,8 @@ class RoomDetailActivity : BaseActivity() {
                     val diff = ChronoUnit.DAYS.between(inDate, outDate)
                     if (diff <= 0) 1 else diff
                 }.getOrDefault(1)
-                val total = room.price * nights
+                val addOnTotal = selectedAddOns().sumOf { it.price }
+                val total = room.price * nights + addOnTotal
 
                 val booking = Booking(
                     userId = userId,
@@ -152,7 +162,7 @@ class RoomDetailActivity : BaseActivity() {
                     checkOut = checkOut,
                     status = "pending",
                     total = total,
-                    addOns = emptyList()
+                    addOns = selectedAddOnIds.toList()
                 )
                 SupabaseRepository.createBooking(
                     booking = booking,
@@ -185,6 +195,39 @@ class RoomDetailActivity : BaseActivity() {
             finish()
         }
     }
+
+    private fun loadAddOns(container: LinearLayout, onChanged: () -> Unit) {
+        SupabaseRepository.listAddOns(
+            onSuccess = { items ->
+                addOnItems = items.filter { it.active }
+                container.removeAllViews()
+                if (addOnItems.isEmpty()) {
+                    val empty = TextView(this).apply {
+                        text = getString(R.string.addon_empty)
+                        setTextColor(getColor(R.color.text_secondary))
+                        textSize = 13f
+                    }
+                    container.addView(empty)
+                } else {
+                    addOnItems.forEach { item ->
+                        val checkBox = MaterialCheckBox(this).apply {
+                            text = getString(R.string.addon_client_item, item.name, item.price.toInt())
+                            isChecked = selectedAddOnIds.contains(item.id)
+                            setOnCheckedChangeListener { _, checked ->
+                                if (checked) selectedAddOnIds.add(item.id) else selectedAddOnIds.remove(item.id)
+                                onChanged()
+                            }
+                        }
+                        container.addView(checkBox)
+                    }
+                }
+                onChanged()
+            },
+            onError = { error -> toast(getString(R.string.error_addon_load, error.message.orEmpty())) }
+        )
+    }
+
+    private fun selectedAddOns(): List<AddOnItem> = addOnItems.filter { selectedAddOnIds.contains(it.id) }
 
     private fun loadReviews(roomId: String, summaryView: TextView, listView: TextView) {
         if (roomId.isBlank()) {

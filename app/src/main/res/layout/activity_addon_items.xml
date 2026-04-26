@@ -72,6 +72,37 @@
                             android:inputType="numberDecimal" />
                     </com.google.android.material.textfield.TextInputLayout>
 
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/addOnDescriptionLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:hint="@string/addon_description_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addOnDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:minLines="2" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/addOnImageUrlLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:hint="@string/addon_image_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addOnImageUrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textUri" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/addOnCategoryGroup"
                         android:layout_width="wrap_content"
@@ -92,6 +123,13 @@
                             android:layout_height="wrap_content"
                             android:text="@string/addon_category_drink" />
                     </com.google.android.material.chip.ChipGroup>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/addOnActiveSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/addon_active" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/addOnSaveButton"
@@ -121,13 +159,19 @@
                         android:text="@string/addon_list_title" />
 
                     <TextView
-                        android:id="@+id/addOnListText"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/addOnEmptyText"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_xs"
-                        android:text="@string/addon_list_placeholder"
+                        android:text="@string/addon_empty"
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/addOnListContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>

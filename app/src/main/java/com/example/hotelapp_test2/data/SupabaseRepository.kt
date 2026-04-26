@@ -477,6 +477,14 @@ object SupabaseRepository {
     fun listAddOns(onSuccess: (List<AddOnItem>) -> Unit, onError: (Exception) -> Unit) =
         runAsync(onSuccess, onError) { select("add_ons", mapOf("select" to "*", "order" to "name.asc")).toAddOnList() }
 
+    fun deleteAddOn(addOnId: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (addOnId.isBlank()) {
+            onError(IllegalArgumentException("Missing add-on id"))
+            return
+        }
+        runAsyncUnit(onSuccess, onError) { delete("add_ons", mapOf("id" to "eq.$addOnId")) }
+    }
+
     fun createNotification(notification: AppNotification, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("notifications", notificationToJson(notification.copy(id = notification.id.ifBlank { UUID.randomUUID().toString() }))) }
 
@@ -990,6 +998,8 @@ object SupabaseRepository {
         id = optString("id"),
         name = optString("name"),
         price = optDoubleCompat("price"),
+        description = optString("description"),
+        imageUrl = optString("image_url"),
         category = optString("category", "snack"),
         active = optBooleanCompat("active", true)
     )
@@ -1079,6 +1089,8 @@ object SupabaseRepository {
         .put("id", item.id)
         .put("name", item.name)
         .put("price", item.price)
+        .put("description", item.description)
+        .put("image_url", item.imageUrl)
         .put("category", item.category)
         .put("active", item.active)
 

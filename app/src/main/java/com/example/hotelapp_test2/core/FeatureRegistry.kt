@@ -56,7 +56,7 @@ object FeatureRegistry {
             id = "payment",
             titleRes = R.string.feature_payment_title,
             subtitleRes = R.string.feature_payment_subtitle,
-            roles = setOf(FeatureRole.CLIENT),
+            roles = setOf(FeatureRole.ADMIN, FeatureRole.CLIENT),
             activityClass = PaymentActivity::class.java
         ),
         FeatureItem(

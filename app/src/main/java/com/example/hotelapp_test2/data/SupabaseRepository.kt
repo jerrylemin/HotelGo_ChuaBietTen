@@ -499,6 +499,14 @@ object SupabaseRepository {
     fun createPayment(payment: Payment, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("payments", paymentToJson(payment.copy(id = payment.id.ifBlank { UUID.randomUUID().toString() }))) }
 
+    fun listPayments(userId: String?, onSuccess: (List<Payment>) -> Unit, onError: (Exception) -> Unit) {
+        runAsync(onSuccess, onError) {
+            val q = linkedMapOf("select" to "*", "limit" to "100", "order" to "created_at.desc")
+            if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
+            select("payments", q).toPaymentList()
+        }
+    }
+
     fun fetchNotificationSettings(userId: String, onSuccess: (NotificationSettings) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
             val row = select("users", mapOf("select" to "raw", "id" to "eq.$userId", "limit" to "1")).firstObjectOrNull()
@@ -1020,6 +1028,17 @@ object SupabaseRepository {
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
+    private fun JSONObject.toPayment(): Payment = Payment(
+        id = optString("id"),
+        bookingId = optString("booking_id"),
+        userId = optString("user_id"),
+        amount = optDoubleCompat("amount"),
+        method = optString("method"),
+        status = optString("status", "paid"),
+        cardLast4 = optString("card_last4"),
+        createdAt = parseTimestampMillis(opt("created_at"))
+    )
+
     private fun JSONArray.toRoomList(hotelLookup: Map<String, HotelLookup> = emptyMap()): List<Room> =
         (0 until length()).mapNotNull { optJSONObject(it)?.toRoom(hotelLookup) }
     private fun JSONArray.toHotelCatalogList(): List<HotelCatalogItem> = (0 until length()).mapNotNull { optJSONObject(it)?.toHotelCatalogItem() }
@@ -1031,6 +1050,7 @@ object SupabaseRepository {
     private fun JSONArray.toPosterList(): List<Poster> = (0 until length()).mapNotNull { optJSONObject(it)?.toPoster() }
     private fun JSONArray.toAddOnList(): List<AddOnItem> = (0 until length()).mapNotNull { optJSONObject(it)?.toAddOn() }
     private fun JSONArray.toNotificationList(): List<AppNotification> = (0 until length()).mapNotNull { optJSONObject(it)?.toNotification() }
+    private fun JSONArray.toPaymentList(): List<Payment> = (0 until length()).mapNotNull { optJSONObject(it)?.toPayment() }
 
     private fun roomToJson(room: Room): JSONObject = JSONObject()
         .put("id", room.id)

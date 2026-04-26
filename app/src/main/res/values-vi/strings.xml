@@ -222,11 +222,21 @@
     <string name="notification_list_item">%1$s: %2$s</string>
 
     <string name="payment_title">Thanh toán demo payOS</string>
-    <string name="payment_description">Ứng dụng sẽ mở trang thanh toán mặc định của payOS. Giao diện thanh toán không được tùy biến trong app.</string>
+    <string name="payment_description">Nhập mã đặt phòng. Ứng dụng dùng đúng tổng tiền booking và tự chuyển sang thanh toán demo nếu payOS chưa cấu hình.</string>
     <string name="payment_booking_hint">Mã đặt phòng</string>
     <string name="payment_amount_hint">Số tiền cần thanh toán (VND)</string>
-    <string name="payment_open_payos">Mở giao diện payOS</string>
+    <string name="payment_open_payos">Xác nhận thanh toán</string>
     <string name="payment_item_booking">Đặt phòng HotelGo</string>
+    <string name="payment_history_title">Lịch sử giao dịch</string>
+    <string name="payment_history_empty">Chưa có giao dịch thanh toán</string>
+    <string name="payment_history_item">Đặt phòng: %1$s\nSố tiền: %2$d VND\nTrạng thái: %3$s\nPhương thức: %4$s</string>
+    <string name="payment_status_pending">Đang chờ</string>
+    <string name="payment_status_paid">Đã thanh toán</string>
+    <string name="payment_status_refunded">Đã hoàn tiền</string>
+    <string name="payment_pending_payos">Đã mở payOS. Booking sẽ chuyển sang đã thanh toán sau khi quay lại app.</string>
+    <string name="payment_already_paid">Booking này đã thanh toán.</string>
+    <string name="payment_notification_title">Đã nhận thanh toán</string>
+    <string name="payment_notification_body">Booking %1$s đã thanh toán.</string>
 
     <string name="poster_recommend_title">Tạo poster khuyến nghị</string>
     <string name="poster_title_hint">Tiêu đề poster</string>
@@ -366,9 +376,14 @@
     <string name="error_notifications_save">Lỗi lưu cài đặt: %1$s</string>
     <string name="error_notifications_load">Lỗi tải thông báo: %1$s</string>
     <string name="error_payment_required">Nhập mã đặt phòng và số tiền.</string>
+    <string name="error_payment_booking_not_found">Không tìm thấy booking thuộc tài khoản của bạn.</string>
+    <string name="error_payment_history">Lỗi tải lịch sử thanh toán: %1$s</string>
+    <string name="error_payment_save">Lỗi lưu thanh toán: %1$s</string>
+    <string name="error_payment_update_booking">Đã lưu thanh toán nhưng cập nhật booking lỗi: %1$s</string>
     <string name="error_payment_link">Tạo link payOS thất bại: %1$s</string>
     <string name="error_payment_url_missing">Không nhận được checkoutUrl từ payOS.</string>
     <string name="success_payment_opened">Đã chuyển sang giao diện thanh toán mặc định của payOS.</string>
+    <string name="success_payment_demo_paid">Đã thanh toán demo. Booking đã chuyển sang đã thanh toán.</string>
     <string name="error_payos_result_missing">Không nhận được kết quả thanh toán payOS.</string>
     <string name="error_payos_booking_missing">Thiếu mã đặt phòng từ returnUrl.</string>
     <string name="payos_cancelled">Bạn đã hủy thanh toán payOS.</string>

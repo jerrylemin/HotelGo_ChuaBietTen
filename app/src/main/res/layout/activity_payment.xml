@@ -26,6 +26,7 @@
             android:padding="@dimen/space_m">
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/paymentFormCard"
                 style="@style/Widget.Hotel.Card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -84,6 +85,43 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_m"
                     android:text="@string/payment_open_payos" />
+
+                    <TextView
+                        android:id="@+id/paymentStatusText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Hotel.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_m">
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment_history_title" />
+
+                    <TextView
+                        android:id="@+id/paymentHistoryText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/payment_history_empty"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>

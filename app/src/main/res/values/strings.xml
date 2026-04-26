@@ -266,11 +266,21 @@
     <string name="notification_list_item">%1$s: %2$s</string>
 
     <string name="payment_title">payOS demo payment</string>
-    <string name="payment_description">The app opens the default payOS payment page. The payment UI is not customized inside the app.</string>
+    <string name="payment_description">Enter a booking ID. The app uses the booking total and falls back to a stable demo payment if payOS is not configured.</string>
     <string name="payment_booking_hint">Booking ID</string>
     <string name="payment_amount_hint">Amount to pay (VND)</string>
-    <string name="payment_open_payos">Open payOS checkout</string>
+    <string name="payment_open_payos">Confirm payment</string>
     <string name="payment_item_booking">HotelGo room booking</string>
+    <string name="payment_history_title">Payment history</string>
+    <string name="payment_history_empty">No payment history yet</string>
+    <string name="payment_history_item">Booking: %1$s\nAmount: %2$d VND\nStatus: %3$s\nMethod: %4$s</string>
+    <string name="payment_status_pending">Pending</string>
+    <string name="payment_status_paid">Paid</string>
+    <string name="payment_status_refunded">Refunded</string>
+    <string name="payment_pending_payos">payOS checkout opened. The booking will be marked paid after return.</string>
+    <string name="payment_already_paid">This booking has already been paid.</string>
+    <string name="payment_notification_title">Payment received</string>
+    <string name="payment_notification_body">Booking %1$s has been paid.</string>
 
     <string name="poster_recommend_title">Create recommendation poster</string>
     <string name="poster_title_hint">Poster title</string>
@@ -417,9 +427,14 @@
     <string name="error_notifications_save">Could not save settings: %1$s</string>
     <string name="error_notifications_load">Could not load notifications: %1$s</string>
     <string name="error_payment_required">Enter booking ID and amount.</string>
+    <string name="error_payment_booking_not_found">Booking not found for your account.</string>
+    <string name="error_payment_history">Could not load payment history: %1$s</string>
+    <string name="error_payment_save">Could not save payment: %1$s</string>
+    <string name="error_payment_update_booking">Payment saved, but booking update failed: %1$s</string>
     <string name="error_payment_link">Could not create payOS link: %1$s</string>
     <string name="error_payment_url_missing">payOS did not return checkoutUrl.</string>
     <string name="success_payment_opened">Opened the default payOS checkout.</string>
+    <string name="success_payment_demo_paid">Demo payment completed. Booking is paid.</string>
     <string name="error_payos_result_missing">No payOS payment result received.</string>
     <string name="error_payos_booking_missing">Missing booking ID from returnUrl.</string>
     <string name="payos_cancelled">You cancelled the payOS payment.</string>

@@ -112,9 +112,10 @@ data class IssueReport(
     val id: String = "",
     val userId: String = "",
     val roomId: String = "",
+    val bookingId: String = "",
     val title: String = "",
     val description: String = "",
-    val status: String = "open",
+    val status: String = "new",
     val createdAt: Long = 0L
 )
 

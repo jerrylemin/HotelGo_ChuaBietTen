@@ -228,10 +228,19 @@
     <string name="filter_result_item">%1$s - %2$s - %3$d VND</string>
 
     <string name="issue_title">Report an issue</string>
-    <string name="issue_room_hint">Room code (optional)</string>
+    <string name="issue_room_hint">Room code</string>
+    <string name="issue_booking_hint">Booking ID</string>
     <string name="issue_type_hint">Issue type</string>
     <string name="issue_description_hint">Detailed description</string>
     <string name="issue_submit">Submit report</string>
+    <string name="issue_list_title">Issue reports</string>
+    <string name="issue_empty">No issue reports yet</string>
+    <string name="issue_status_new">New</string>
+    <string name="issue_status_processing">Processing</string>
+    <string name="issue_status_resolved">Resolved</string>
+    <string name="issue_list_item">Room: %1$s\nBooking: %2$s\nType: %3$s\nDescription: %4$s\nStatus: %5$s</string>
+    <string name="issue_notification_title">New issue report</string>
+    <string name="issue_notification_body">A guest reported an issue for room %1$s</string>
 
     <string name="notifications_title">Notification settings</string>
     <string name="notifications_checkin">Check-in reminders</string>
@@ -369,8 +378,12 @@
     <string name="error_checkout">Check-out failed: %1$s</string>
     <string name="error_filter">Filter failed: %1$s</string>
     <string name="error_issue_required">Please enter all issue details.</string>
+    <string name="error_issue_booking_required">Only booked rooms can be reported. Check the room code and booking ID.</string>
     <string name="success_issue_sent">Report submitted.</string>
+    <string name="success_issue_updated">Issue status updated.</string>
+    <string name="error_issue_load">Could not load issue reports: %1$s</string>
     <string name="error_issue_send">Submit failed: %1$s</string>
+    <string name="error_issue_update">Update failed: %1$s</string>
     <string name="error_notifications_settings">Could not load settings: %1$s</string>
     <string name="error_notifications_save">Could not save settings: %1$s</string>
     <string name="error_notifications_load">Could not load notifications: %1$s</string>

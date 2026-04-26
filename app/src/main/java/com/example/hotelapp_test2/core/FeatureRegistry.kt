@@ -49,7 +49,7 @@ object FeatureRegistry {
             id = "issue",
             titleRes = R.string.feature_issue_title,
             subtitleRes = R.string.feature_issue_subtitle,
-            roles = setOf(FeatureRole.CLIENT),
+            roles = setOf(FeatureRole.ADMIN, FeatureRole.CLIENT),
             activityClass = IssueReportActivity::class.java
         ),
         FeatureItem(

@@ -184,10 +184,19 @@
     <string name="filter_result_item">%1$s - %2$s - %3$d VND</string>
 
     <string name="issue_title">Báo cáo vấn đề</string>
-    <string name="issue_room_hint">Mã phòng (nếu có)</string>
+    <string name="issue_room_hint">Mã phòng</string>
+    <string name="issue_booking_hint">Mã đặt phòng</string>
     <string name="issue_type_hint">Loại vấn đề</string>
     <string name="issue_description_hint">Mô tả chi tiết</string>
     <string name="issue_submit">Gửi báo cáo</string>
+    <string name="issue_list_title">Danh sách báo cáo</string>
+    <string name="issue_empty">Chưa có báo cáo vấn đề</string>
+    <string name="issue_status_new">Mới</string>
+    <string name="issue_status_processing">Đang xử lý</string>
+    <string name="issue_status_resolved">Đã xử lý</string>
+    <string name="issue_list_item">Phòng: %1$s\nĐặt phòng: %2$s\nLoại vấn đề: %3$s\nMô tả: %4$s\nTrạng thái: %5$s</string>
+    <string name="issue_notification_title">Báo cáo vấn đề mới</string>
+    <string name="issue_notification_body">Khách đã báo cáo vấn đề cho phòng %1$s</string>
 
     <string name="notifications_title">Cài đặt thông báo</string>
     <string name="notifications_checkin">Nhắc lịch check-in</string>
@@ -318,8 +327,12 @@
     <string name="error_checkout">Lỗi check-out: %1$s</string>
     <string name="error_filter">Lỗi lọc phòng: %1$s</string>
     <string name="error_issue_required">Vui lòng nhập đầy đủ thông tin.</string>
+    <string name="error_issue_booking_required">Chỉ phòng đã đặt mới được gửi báo cáo. Hãy kiểm tra mã phòng và mã đặt phòng.</string>
     <string name="success_issue_sent">Đã gửi báo cáo.</string>
+    <string name="success_issue_updated">Đã cập nhật trạng thái báo cáo.</string>
+    <string name="error_issue_load">Lỗi tải báo cáo: %1$s</string>
     <string name="error_issue_send">Lỗi gửi báo cáo: %1$s</string>
+    <string name="error_issue_update">Lỗi cập nhật: %1$s</string>
     <string name="error_notifications_settings">Lỗi tải cài đặt: %1$s</string>
     <string name="error_notifications_save">Lỗi lưu cài đặt: %1$s</string>
     <string name="error_notifications_load">Lỗi tải thông báo: %1$s</string>

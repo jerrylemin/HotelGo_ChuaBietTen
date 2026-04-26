@@ -438,6 +438,24 @@ object SupabaseRepository {
     fun createIssue(issue: IssueReport, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("issues", issueToJson(issue.copy(id = issue.id.ifBlank { UUID.randomUUID().toString() }))) }
 
+    fun listIssues(userId: String?, onSuccess: (List<IssueReport>) -> Unit, onError: (Exception) -> Unit) {
+        runAsync(onSuccess, onError) {
+            val q = linkedMapOf("select" to "*", "limit" to "100", "order" to "created_at.desc")
+            if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
+            select("issues", q).toIssueList()
+        }
+    }
+
+    fun updateIssueStatus(issueId: String, status: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (issueId.isBlank()) {
+            onError(IllegalArgumentException("Missing issue id"))
+            return
+        }
+        runAsyncUnit(onSuccess, onError) {
+            patch("issues", mapOf("id" to "eq.$issueId"), JSONObject().put("status", normalizeIssueStatus(status)))
+        }
+    }
+
     fun createVoucher(voucher: Voucher, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("vouchers", voucherToJson(voucher.copy(id = voucher.id.ifBlank { voucher.code.ifBlank { UUID.randomUUID().toString() } }))) }
 
@@ -724,6 +742,11 @@ object SupabaseRepository {
         "client" -> "client"
         else -> "all"
     }
+    private fun normalizeIssueStatus(status: String): String = when (status.trim().lowercase()) {
+        "processing", "in_progress", "dang_xu_ly", "đang xử lý" -> "processing"
+        "resolved", "done", "closed", "da_xu_ly", "đã xử lý" -> "resolved"
+        else -> "new"
+    }
 
     private fun <T> runAsync(onSuccess: (T) -> Unit, onError: (Exception) -> Unit, work: () -> T) {
         Thread {
@@ -930,6 +953,17 @@ object SupabaseRepository {
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
+    private fun JSONObject.toIssue(): IssueReport = IssueReport(
+        id = optString("id"),
+        userId = optString("user_id"),
+        roomId = optString("room_id"),
+        bookingId = optString("booking_id"),
+        title = optString("title"),
+        description = optString("description"),
+        status = normalizeIssueStatus(optString("status", "new")),
+        createdAt = parseTimestampMillis(opt("created_at"))
+    )
+
     private fun JSONObject.toVoucher(): Voucher = Voucher(
         id = optString("id"),
         code = optString("code"),
@@ -974,6 +1008,7 @@ object SupabaseRepository {
     private fun JSONArray.toHotelCatalogRoomList(): List<HotelCatalogRoom> = (0 until length()).mapNotNull { optJSONObject(it)?.toHotelCatalogRoom() }
     private fun JSONArray.toBookingList(): List<Booking> = (0 until length()).mapNotNull { optJSONObject(it)?.toBooking() }
     private fun JSONArray.toReviewList(): List<Review> = (0 until length()).mapNotNull { optJSONObject(it)?.toReview() }
+    private fun JSONArray.toIssueList(): List<IssueReport> = (0 until length()).mapNotNull { optJSONObject(it)?.toIssue() }
     private fun JSONArray.toVoucherList(): List<Voucher> = (0 until length()).mapNotNull { optJSONObject(it)?.toVoucher() }
     private fun JSONArray.toPosterList(): List<Poster> = (0 until length()).mapNotNull { optJSONObject(it)?.toPoster() }
     private fun JSONArray.toAddOnList(): List<AddOnItem> = (0 until length()).mapNotNull { optJSONObject(it)?.toAddOn() }
@@ -1014,9 +1049,10 @@ object SupabaseRepository {
         .put("id", issue.id)
         .put("user_id", issue.userId)
         .put("room_id", issue.roomId)
+        .put("booking_id", issue.bookingId)
         .put("title", issue.title)
         .put("description", issue.description)
-        .put("status", issue.status)
+        .put("status", normalizeIssueStatus(issue.status))
         .put("created_at", millisToIso(issue.createdAt))
 
     private fun voucherToJson(voucher: Voucher): JSONObject = JSONObject()

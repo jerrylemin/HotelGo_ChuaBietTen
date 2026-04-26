@@ -465,6 +465,14 @@ object SupabaseRepository {
     fun getVoucherByCode(code: String, onSuccess: (Voucher?) -> Unit, onError: (Exception) -> Unit) =
         runAsync(onSuccess, onError) { select("vouchers", mapOf("select" to "*", "code" to "eq.$code", "limit" to "1")).firstObjectOrNull()?.toVoucher() }
 
+    fun deleteVoucher(voucherId: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (voucherId.isBlank()) {
+            onError(IllegalArgumentException("Missing voucher id"))
+            return
+        }
+        runAsyncUnit(onSuccess, onError) { delete("vouchers", mapOf("id" to "eq.$voucherId")) }
+    }
+
     fun createPoster(poster: Poster, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("posters", posterToJson(poster.copy(id = poster.id.ifBlank { UUID.randomUUID().toString() }))) }
 

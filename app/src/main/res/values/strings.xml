@@ -171,6 +171,7 @@
     <string name="booking_total_empty">Estimated total: --</string>
     <string name="booking_total_format">Estimated total: %1$d VND</string>
     <string name="booking_total_with_addons">Room: %1$d VND\nAdd-ons: %2$d VND\nEstimated total: %3$d VND</string>
+    <string name="booking_total_with_discount">Room: %1$d VND\nAdd-ons: %2$d VND\nVoucher discount: %3$d VND\nEstimated total: %4$d VND</string>
     <string name="booking_addon_total_format">Selected add-ons: %1$d VND</string>
     <string name="room_detail_book_button">Book room</string>
 
@@ -329,10 +330,21 @@
     <string name="voucher_value_hint">Value</string>
     <string name="voucher_min_spend_hint">Minimum spend</string>
     <string name="voucher_end_hint">Expiry date (YYYY-MM-DD)</string>
+    <string name="voucher_usage_limit_hint">Usage limit</string>
+    <string name="voucher_active">Active</string>
     <string name="voucher_create">Create voucher</string>
+    <string name="voucher_update">Update voucher</string>
+    <string name="voucher_edit">Edit</string>
+    <string name="voucher_delete">Delete</string>
     <string name="voucher_empty">No vouchers yet</string>
     <string name="voucher_list_item">%1$s - %2$s %3$s</string>
+    <string name="voucher_list_item_detail">%1$s - %2$s %3$s\nExpires: %4$s\nUsage limit: %5$d\nStatus: %6$s</string>
+    <string name="voucher_status_active">Active</string>
+    <string name="voucher_status_inactive">Inactive</string>
     <string name="voucher_not_found">Voucher not found</string>
+    <string name="voucher_invalid">Voucher is expired, inactive, out of uses, or does not meet the minimum spend.</string>
+    <string name="voucher_ready">Voucher %1$s is ready to apply.</string>
+    <string name="voucher_apply_button">Apply voucher</string>
     <string name="voucher_found">Voucher %1$s: discount %2$s (%3$s)</string>
     <string name="voucher_check_error">Check failed: %1$s</string>
 
@@ -443,7 +455,9 @@
     <string name="error_voucher_admin_only">Only admins can create vouchers.</string>
     <string name="error_voucher_required">Enter voucher code and value.</string>
     <string name="success_voucher_created">Voucher %1$s created.</string>
+    <string name="success_voucher_deleted">Voucher deleted.</string>
     <string name="error_voucher_create">Could not create voucher: %1$s</string>
+    <string name="error_voucher_delete">Could not delete voucher: %1$s</string>
     <string name="room_detail_hotel_label">Hotel: %1$s</string>
     <string name="room_detail_open_hotel">View hotel information</string>
 </resources>

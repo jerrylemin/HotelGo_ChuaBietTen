@@ -127,6 +127,7 @@
     <string name="booking_total_empty">Tổng tiền dự kiến: --</string>
     <string name="booking_total_format">Tổng tiền dự kiến: %1$d VND</string>
     <string name="booking_total_with_addons">Tiền phòng: %1$d VND\nMặt hàng phụ: %2$d VND\nTổng tiền dự kiến: %3$d VND</string>
+    <string name="booking_total_with_discount">Tiền phòng: %1$d VND\nMặt hàng phụ: %2$d VND\nGiảm voucher: %3$d VND\nTổng tiền dự kiến: %4$d VND</string>
     <string name="booking_addon_total_format">Mặt hàng phụ đã chọn: %1$d VND</string>
     <string name="room_detail_book_button">Đặt phòng</string>
 
@@ -284,10 +285,21 @@
     <string name="voucher_value_hint">Giá trị</string>
     <string name="voucher_min_spend_hint">Chi tiêu tối thiểu</string>
     <string name="voucher_end_hint">Hạn sử dụng (YYYY-MM-DD)</string>
+    <string name="voucher_usage_limit_hint">Số lượt dùng</string>
+    <string name="voucher_active">Đang hoạt động</string>
     <string name="voucher_create">Tạo voucher</string>
+    <string name="voucher_update">Cập nhật voucher</string>
+    <string name="voucher_edit">Sửa</string>
+    <string name="voucher_delete">Xóa</string>
     <string name="voucher_empty">Chưa có voucher</string>
     <string name="voucher_list_item">%1$s - %2$s %3$s</string>
+    <string name="voucher_list_item_detail">%1$s - %2$s %3$s\nHết hạn: %4$s\nSố lượt dùng: %5$d\nTrạng thái: %6$s</string>
+    <string name="voucher_status_active">Đang hoạt động</string>
+    <string name="voucher_status_inactive">Tạm tắt</string>
     <string name="voucher_not_found">Không tìm thấy voucher</string>
+    <string name="voucher_invalid">Voucher đã hết hạn, bị tắt, hết lượt dùng hoặc chưa đạt chi tiêu tối thiểu.</string>
+    <string name="voucher_ready">Voucher %1$s đã sẵn sàng áp dụng.</string>
+    <string name="voucher_apply_button">Áp dụng voucher</string>
     <string name="voucher_found">Voucher %1$s: giảm %2$s (%3$s)</string>
     <string name="voucher_check_error">Lỗi kiểm tra: %1$s</string>
 
@@ -392,7 +404,9 @@
     <string name="error_voucher_admin_only">Chỉ admin mới tạo được voucher.</string>
     <string name="error_voucher_required">Nhập mã voucher và giá trị.</string>
     <string name="success_voucher_created">Đã tạo voucher %1$s.</string>
+    <string name="success_voucher_deleted">Đã xóa voucher.</string>
     <string name="error_voucher_create">Lỗi tạo voucher: %1$s</string>
+    <string name="error_voucher_delete">Lỗi xóa voucher: %1$s</string>
     <string name="feature_hotel_catalog_title">Danh mục khách sạn</string>
     <string name="feature_hotel_catalog_subtitle">Xem danh sách khách sạn và thư viện phòng</string>
     <string name="hotel_search_title">Tìm khách sạn</string>

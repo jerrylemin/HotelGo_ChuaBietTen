@@ -77,7 +77,7 @@ object FeatureRegistry {
             id = "poster_recommend",
             titleRes = R.string.feature_poster_recommend_title,
             subtitleRes = R.string.feature_poster_recommend_subtitle,
-            roles = setOf(FeatureRole.ADMIN),
+            roles = setOf(FeatureRole.ADMIN, FeatureRole.CLIENT),
             activityClass = RecommendationPosterActivity::class.java
         ),
         FeatureItem(

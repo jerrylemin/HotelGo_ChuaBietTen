@@ -142,7 +142,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun updateRoleUi() {
-        highlightCard.visibility = if (currentRole == FeatureRole.ADMIN) View.VISIBLE else View.GONE
+        highlightCard.visibility = View.VISIBLE
         applyFilters()
     }
 }

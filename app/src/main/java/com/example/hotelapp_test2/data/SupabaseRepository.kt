@@ -479,6 +479,14 @@ object SupabaseRepository {
     fun listPosters(type: String, limit: Long, onSuccess: (List<Poster>) -> Unit, onError: (Exception) -> Unit) =
         runAsync(onSuccess, onError) { select("posters", mapOf("select" to "*", "type" to "eq.$type", "order" to "created_at.desc", "limit" to limit.toString())).toPosterList() }
 
+    fun deletePoster(posterId: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (posterId.isBlank()) {
+            onError(IllegalArgumentException("Missing poster id"))
+            return
+        }
+        runAsyncUnit(onSuccess, onError) { delete("posters", mapOf("id" to "eq.$posterId")) }
+    }
+
     fun createAddOn(item: AddOnItem, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("add_ons", addOnToJson(item.copy(id = item.id.ifBlank { UUID.randomUUID().toString() }))) }
 
@@ -1006,6 +1014,8 @@ object SupabaseRepository {
         title = optString("title"),
         content = optString("content"),
         imageUrl = optString("image_url"),
+        roomId = optString("room_id"),
+        active = optBooleanCompat("active", true),
         role = normalizeRole(optString("role", "client")),
         createdAt = parseTimestampMillis(opt("created_at"))
     )
@@ -1110,6 +1120,8 @@ object SupabaseRepository {
         .put("title", poster.title)
         .put("content", poster.content)
         .put("image_url", poster.imageUrl)
+        .put("room_id", poster.roomId)
+        .put("active", poster.active)
         .put("role", normalizeRole(poster.role))
         .put("created_at", millisToIso(poster.createdAt))
 

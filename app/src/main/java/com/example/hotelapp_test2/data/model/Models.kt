@@ -137,6 +137,8 @@ data class Poster(
     val title: String = "",
     val content: String = "",
     val imageUrl: String = "",
+    val roomId: String = "",
+    val active: Boolean = true,
     val role: String = "client",
     val createdAt: Long = 0L
 )

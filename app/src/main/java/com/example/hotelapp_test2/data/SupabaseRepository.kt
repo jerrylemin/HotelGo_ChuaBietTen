@@ -1016,6 +1016,9 @@ object SupabaseRepository {
         imageUrl = optString("image_url"),
         roomId = optString("room_id"),
         active = optBooleanCompat("active", true),
+        userId = optString("user_id"),
+        status = optString("status", "new"),
+        response = optString("response"),
         role = normalizeRole(optString("role", "client")),
         createdAt = parseTimestampMillis(opt("created_at"))
     )
@@ -1122,6 +1125,9 @@ object SupabaseRepository {
         .put("image_url", poster.imageUrl)
         .put("room_id", poster.roomId)
         .put("active", poster.active)
+        .put("user_id", poster.userId)
+        .put("status", poster.status)
+        .put("response", poster.response)
         .put("role", normalizeRole(poster.role))
         .put("created_at", millisToIso(poster.createdAt))
 

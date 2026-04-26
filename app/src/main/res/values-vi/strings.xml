@@ -256,11 +256,24 @@
     <string name="poster_status_hidden">Đã ẩn</string>
     <string name="poster_search_title">Đăng poster tìm phòng</string>
     <string name="poster_search_location_hint">Thành phố / khu vực</string>
+    <string name="poster_search_room_type_hint">Loại phòng</string>
     <string name="poster_search_budget_hint">Ngân sách dự kiến</string>
+    <string name="poster_search_guests_hint">Số người</string>
+    <string name="poster_search_date_hint">Ngày mong muốn</string>
+    <string name="poster_search_note_hint">Ghi chú</string>
     <string name="poster_search_submit">Đăng tìm phòng</string>
+    <string name="poster_search_list_title">Yêu cầu tìm phòng</string>
     <string name="poster_search_empty">Chưa có poster tìm phòng</string>
     <string name="poster_search_generated_title">Cần phòng tại %1$s</string>
     <string name="poster_search_generated_content">Ngân sách: %1$s</string>
+    <string name="poster_search_content_detail">Loại phòng: %1$s\nNgân sách: %2$s\nSố người: %3$s\nNgày: %4$s\nGhi chú: %5$s</string>
+    <string name="poster_search_item_detail">%1$s\n%2$s\nTrạng thái: %3$s\nPhản hồi admin: %4$s</string>
+    <string name="poster_response_hint">Phản hồi của admin</string>
+    <string name="poster_response_empty">Chưa có phản hồi</string>
+    <string name="poster_search_notification_title">Yêu cầu tìm phòng mới</string>
+    <string name="poster_search_notification_body">Khách cần tìm phòng tại %1$s.</string>
+    <string name="poster_response_notification_title">Phản hồi tìm phòng</string>
+    <string name="poster_response_notification_body">Admin đã phản hồi yêu cầu tìm phòng.</string>
     <string name="poster_budget_flexible">linh hoạt</string>
 
     <string name="profile_title">Thông tin cá nhân</string>
@@ -409,6 +422,7 @@
     <string name="error_poster_delete">Lỗi xóa poster: %1$s</string>
     <string name="error_poster_location_required">Vui lòng nhập khu vực tìm phòng.</string>
     <string name="success_poster_search_published">Đã đăng poster tìm phòng.</string>
+    <string name="success_poster_response_saved">Đã lưu phản hồi.</string>
     <string name="error_review_load">Lỗi tải đánh giá: %1$s</string>
     <string name="error_review_required">Vui lòng nhập đầy đủ đánh giá.</string>
     <string name="error_review_booking_required">Chỉ khách đã đặt phòng được xác nhận hoặc đã hoàn tất mới được đánh giá phòng này.</string>

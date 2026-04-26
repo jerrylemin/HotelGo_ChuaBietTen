@@ -27,6 +27,7 @@
             android:padding="@dimen/space_m">
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/posterSearchFormCard"
                 style="@style/Widget.Hotel.Card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -58,6 +59,20 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/posterSearchRoomTypeLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:hint="@string/poster_search_room_type_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/posterSearchRoomType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/posterSearchBudgetLayout"
                         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
@@ -72,6 +87,51 @@
                             android:inputType="numberDecimal" />
                     </com.google.android.material.textfield.TextInputLayout>
 
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/posterSearchGuestsLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:hint="@string/poster_search_guests_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/posterSearchGuests"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/posterSearchDateLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:hint="@string/poster_search_date_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/posterSearchDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/posterSearchNoteLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:hint="@string/poster_search_note_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/posterSearchNote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:minLines="2" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/posterSearchButton"
                         android:layout_width="match_parent"
@@ -79,13 +139,41 @@
                         android:layout_marginTop="@dimen/space_m"
                         android:text="@string/poster_search_submit" />
 
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Hotel.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_m">
+
                     <TextView
-                        android:id="@+id/posterSearchListText"
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/poster_search_list_title" />
+
+                    <TextView
+                        android:id="@+id/posterSearchEmptyText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/poster_search_empty"
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/posterSearchListContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>

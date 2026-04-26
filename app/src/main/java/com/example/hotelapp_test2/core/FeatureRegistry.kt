@@ -84,7 +84,7 @@ object FeatureRegistry {
             id = "poster_search",
             titleRes = R.string.feature_poster_search_title,
             subtitleRes = R.string.feature_poster_search_subtitle,
-            roles = setOf(FeatureRole.CLIENT),
+            roles = setOf(FeatureRole.ADMIN, FeatureRole.CLIENT),
             activityClass = SearchPosterActivity::class.java
         ),
         FeatureItem(

@@ -300,11 +300,24 @@
     <string name="poster_status_hidden">Hidden</string>
     <string name="poster_search_title">Post a room search request</string>
     <string name="poster_search_location_hint">City / area</string>
+    <string name="poster_search_room_type_hint">Room type</string>
     <string name="poster_search_budget_hint">Expected budget</string>
+    <string name="poster_search_guests_hint">Guests</string>
+    <string name="poster_search_date_hint">Preferred date</string>
+    <string name="poster_search_note_hint">Notes</string>
     <string name="poster_search_submit">Post request</string>
+    <string name="poster_search_list_title">Room search requests</string>
     <string name="poster_search_empty">No room search posters yet</string>
     <string name="poster_search_generated_title">Need a room in %1$s</string>
     <string name="poster_search_generated_content">Budget: %1$s</string>
+    <string name="poster_search_content_detail">Room type: %1$s\nBudget: %2$s\nGuests: %3$s\nDate: %4$s\nNotes: %5$s</string>
+    <string name="poster_search_item_detail">%1$s\n%2$s\nStatus: %3$s\nAdmin response: %4$s</string>
+    <string name="poster_response_hint">Admin response</string>
+    <string name="poster_response_empty">No response yet</string>
+    <string name="poster_search_notification_title">New room search request</string>
+    <string name="poster_search_notification_body">A client needs a room in %1$s.</string>
+    <string name="poster_response_notification_title">Room search response</string>
+    <string name="poster_response_notification_body">Admin responded to a room search request.</string>
     <string name="poster_budget_flexible">flexible</string>
 
     <string name="profile_title">Personal information</string>
@@ -460,6 +473,7 @@
     <string name="error_poster_delete">Could not delete poster: %1$s</string>
     <string name="error_poster_location_required">Please enter the area you are searching in.</string>
     <string name="success_poster_search_published">Room search poster published.</string>
+    <string name="success_poster_response_saved">Response saved.</string>
     <string name="error_review_load">Could not load reviews: %1$s</string>
     <string name="error_review_required">Please enter the full review.</string>
     <string name="error_review_booking_required">Only guests with a confirmed or completed booking can review this room.</string>

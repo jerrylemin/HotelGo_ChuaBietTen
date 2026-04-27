@@ -391,7 +391,7 @@ object SupabaseRepository {
     }
 
     fun createBooking(booking: Booking, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
-        runAsyncUnit(onSuccess, onError) { upsert("bookings", bookingToJson(booking.copy(id = booking.id.ifBlank { UUID.randomUUID().toString() }))) }
+        runAsyncUnit(onSuccess, onError) { upsertBookingWithSchemaFallback(booking.copy(id = booking.id.ifBlank { UUID.randomUUID().toString() })) }
 
     fun createBookingWithAddOns(
         booking: Booking,
@@ -407,26 +407,28 @@ object SupabaseRepository {
                     .filter { it.quantity > 0 }
                     .map { "${it.item.id}:${it.quantity}" }
             )
-            upsert("bookings", bookingToJson(normalizedBooking))
+            upsertBookingWithSchemaFallback(normalizedBooking)
             addOnSelections
                 .filter { it.quantity > 0 && it.item.id.isNotBlank() }
                 .forEach { selection ->
-                    upsert(
-                        "booking_addons",
-                        bookingAddOnToJson(
-                            BookingAddOn(
-                                id = UUID.randomUUID().toString(),
-                                bookingId = bookingId,
-                                addOnItemId = selection.item.id,
-                                name = selection.item.name,
-                                description = selection.item.description,
-                                quantity = selection.quantity,
-                                unitPrice = selection.item.price,
-                                totalPrice = selection.totalPrice,
-                                createdAt = System.currentTimeMillis()
+                    runCatching {
+                        upsert(
+                            "booking_addons",
+                            bookingAddOnToJson(
+                                BookingAddOn(
+                                    id = UUID.randomUUID().toString(),
+                                    bookingId = bookingId,
+                                    addOnItemId = selection.item.id,
+                                    name = selection.item.name,
+                                    description = selection.item.description,
+                                    quantity = selection.quantity,
+                                    unitPrice = selection.item.price,
+                                    totalPrice = selection.totalPrice,
+                                    createdAt = System.currentTimeMillis()
+                                )
                             )
                         )
-                    )
+                    }
                 }
             bookingId
         }
@@ -444,14 +446,18 @@ object SupabaseRepository {
         if (bookings.isEmpty()) return bookings
         val bookingIds = bookings.map { it.id }.filter { it.isNotBlank() }.toSet()
         if (bookingIds.isEmpty()) return bookings
-        val addOnLookup = selectAll("add_ons", mapOf("select" to "*", "order" to "name.asc"))
-            .toAddOnList()
-            .associateBy { it.id }
-        val rows = selectAll(
-            "booking_addons",
-            mapOf("select" to "*", "order" to "created_at.asc")
-        ).toBookingAddOnList(addOnLookup)
-            .filter { it.bookingId in bookingIds }
+        val addOnLookup = runCatching {
+            selectAll("add_ons", mapOf("select" to "*", "order" to "name.asc"))
+                .toAddOnList()
+                .associateBy { it.id }
+        }.getOrDefault(emptyMap())
+        val rows = runCatching {
+            selectAll(
+                "booking_addons",
+                mapOf("select" to "*", "order" to "created_at.asc")
+            ).toBookingAddOnList(addOnLookup)
+                .filter { it.bookingId in bookingIds }
+        }.getOrDefault(emptyList())
         val rowsByBooking = rows.groupBy { it.bookingId }
         return bookings.map { booking ->
             booking.copy(addOnDetails = rowsByBooking[booking.id].orEmpty())
@@ -508,7 +514,13 @@ object SupabaseRepository {
         runAsyncUnit(onSuccess, onError) { upsert("reviews", reviewToJson(review.copy(id = review.id.ifBlank { UUID.randomUUID().toString() }))) }
 
     fun listRecentReviews(limit: Long, onSuccess: (List<Review>) -> Unit, onError: (Exception) -> Unit) =
-        runAsync(onSuccess, onError) { select("reviews", mapOf("select" to "*", "order" to "created_at.desc", "limit" to limit.toString())).toReviewList() }
+        runAsync(onSuccess, onError) {
+            runCatching {
+                select("reviews", mapOf("select" to "*", "order" to "created_at.desc", "limit" to limit.toString())).toReviewList()
+            }.getOrElse {
+                select("reviews", mapOf("select" to "id,room_id,user_id,rating,comment", "limit" to limit.toString())).toReviewList()
+            }
+        }
 
     fun listReviewsForRoom(roomId: String, onSuccess: (List<Review>) -> Unit, onError: (Exception) -> Unit) {
         if (roomId.isBlank()) {
@@ -550,20 +562,16 @@ object SupabaseRepository {
                     if (room.code.isNotBlank()) put(room.code, room)
                 }
             }
-            val reviews = selectAll(
-                "reviews",
-                linkedMapOf(
-                    "select" to "*",
-                    "user_id" to "eq.$userId",
-                    "order" to "created_at.desc"
-                )
-            ).toReviewList()
+            val reviews = selectUserReviewsForReviewableBookings(userId)
             val reviewsByBooking = reviews.filter { it.bookingId.isNotBlank() }.associateBy { it.bookingId }
+            val legacyReviewedRoomIds = reviews
+                .filter { it.bookingId.isBlank() && it.roomId.isNotBlank() }
+                .associateBy { it.roomId }
             bookings.map { booking ->
                 ReviewableBooking(
                     booking = booking,
                     room = roomLookup[booking.roomId],
-                    existingReview = reviewsByBooking[booking.id]
+                    existingReview = reviewsByBooking[booking.id] ?: legacyReviewedRoomIds[booking.roomId]
                 )
             }
         }
@@ -606,48 +614,98 @@ object SupabaseRepository {
                     "limit" to "1"
                 )
             ).firstObjectOrNull() ?: throw IllegalStateException("Booking is not eligible for review")
-            val existing = runCatching {
-                select(
-                    "reviews",
-                    mapOf("select" to "id", "user_id" to "eq.${review.userId}", "booking_id" to "eq.${booking.optString("id")}", "limit" to "1")
-                )
-            }.getOrElse { error ->
-                if (isMissingReviewContextColumn(error)) {
-                    select(
-                        "reviews",
-                        mapOf("select" to "id", "user_id" to "eq.${review.userId}", "room_id" to "eq.${review.roomId}", "limit" to "1")
-                    )
-                } else {
-                    throw error
-                }
-            }
+            val existing = selectExistingReviewForBooking(review.userId, booking.optString("id"), review.roomId)
             if (existing.length() > 0) throw IllegalStateException("Booking was already reviewed")
-            val normalizedReview = review.copy(id = review.id.ifBlank { UUID.randomUUID().toString() })
-            runCatching {
-                upsert("reviews", reviewToJson(normalizedReview))
-            }.getOrElse { error ->
-                if (isMissingReviewContextColumn(error)) {
-                    upsert("reviews", legacyReviewToJson(normalizedReview))
-                } else {
-                    throw error
-                }
-            }
+            upsertReviewWithSchemaFallback(review.copy(id = review.id.ifBlank { UUID.randomUUID().toString() }))
             val reviews = select(
                 "reviews",
                 mapOf("select" to "rating", "room_id" to "eq.${review.roomId}", "limit" to "1000")
             ).toReviewList()
             if (reviews.isNotEmpty()) {
                 val average = reviews.map { it.rating.coerceIn(1, 5) }.average()
-                val ratingPayload = JSONObject()
-                    .put("rating", average)
-                    .put("review_count", reviews.size)
-                runCatching {
-                    patch("rooms", mapOf("id" to "eq.${review.roomId}"), ratingPayload)
-                }
-                runCatching {
-                    patch("hotel_rooms", mapOf("id" to "eq.${review.roomId}"), ratingPayload)
-                }
+                patchRoomRating(review.roomId, average, reviews.size)
             }
+        }
+    }
+
+    private fun selectUserReviewsForReviewableBookings(userId: String): List<Review> =
+        runCatching {
+            selectAll(
+                "reviews",
+                linkedMapOf(
+                    "select" to "*",
+                    "user_id" to "eq.$userId",
+                    "order" to "created_at.desc"
+                )
+            ).toReviewList()
+        }.getOrElse {
+            selectAll(
+                "reviews",
+                linkedMapOf(
+                    "select" to "id,room_id,user_id,rating,comment",
+                    "user_id" to "eq.$userId"
+                )
+            ).toReviewList()
+        }
+
+    private fun selectExistingReviewForBooking(userId: String, bookingId: String, roomId: String): JSONArray =
+        runCatching {
+            select(
+                "reviews",
+                mapOf("select" to "id", "user_id" to "eq.$userId", "booking_id" to "eq.$bookingId", "limit" to "1")
+            )
+        }.getOrElse {
+            select(
+                "reviews",
+                mapOf("select" to "id", "user_id" to "eq.$userId", "room_id" to "eq.$roomId", "limit" to "1")
+            )
+        }
+
+    private fun upsertReviewWithSchemaFallback(review: Review) {
+        runCatching {
+            upsert("reviews", reviewToJson(review))
+        }.getOrElse {
+            upsert(
+                "reviews",
+                JSONObject()
+                    .put("id", review.id)
+                    .put("room_id", review.roomId)
+                    .put("user_id", review.userId)
+                    .put("rating", review.rating)
+                    .put("comment", review.comment)
+                    .put("created_at", millisToIso(review.createdAt))
+            )
+        }
+    }
+
+    private fun patchRoomRating(roomId: String, average: Double, reviewCount: Int) {
+        val payload = JSONObject()
+            .put("rating", average)
+            .put("review_count", reviewCount)
+        runCatching {
+            patch("rooms", mapOf("id" to "eq.$roomId"), payload)
+        }.recoverCatching {
+            patch("hotel_rooms", mapOf("id" to "eq.$roomId"), payload)
+        }
+    }
+
+    private fun upsertBookingWithSchemaFallback(booking: Booking) {
+        runCatching {
+            upsert("bookings", bookingToJson(booking))
+        }.getOrElse {
+            upsert(
+                "bookings",
+                JSONObject()
+                    .put("id", booking.id)
+                    .put("user_id", booking.userId)
+                    .put("room_id", booking.roomId)
+                    .put("check_in", normalizeDate(booking.checkIn))
+                    .put("check_out", normalizeDate(booking.checkOut))
+                    .put("status", booking.status)
+                    .put("total", booking.total)
+                    .put("add_ons", JSONArray(booking.addOns))
+                    .put("created_at", millisToIso(booking.createdAt))
+            )
         }
     }
 
@@ -849,22 +907,22 @@ object SupabaseRepository {
             jsonBody = payload.toString(),
             headers = mapOf("Prefer" to "resolution=merge-duplicates,return=representation")
         )
-        if (response.code !in 200..299) throw IllegalStateException("Upsert $table failed: HTTP ${response.code}${response.body.errorSuffix()}")
+        if (response.code !in 200..299) throw IllegalStateException("Upsert $table failed: HTTP ${response.code}${response.body.toErrorSuffix()}")
     }
 
     private fun patch(table: String, filters: Map<String, String>, payload: JSONObject) {
         val response = request("PATCH", "/rest/v1/$table", query = filters, jsonBody = payload.toString())
-        if (response.code !in 200..299) throw IllegalStateException("Patch $table failed: HTTP ${response.code}${response.body.errorSuffix()}")
+        if (response.code !in 200..299) throw IllegalStateException("Patch $table failed: HTTP ${response.code}${response.body.toErrorSuffix()}")
     }
 
     private fun delete(table: String, filters: Map<String, String>) {
         val response = request("DELETE", "/rest/v1/$table", query = filters)
-        if (response.code !in 200..299) throw IllegalStateException("Delete $table failed: HTTP ${response.code}${response.body.errorSuffix()}")
+        if (response.code !in 200..299) throw IllegalStateException("Delete $table failed: HTTP ${response.code}${response.body.toErrorSuffix()}")
     }
 
     private fun select(table: String, query: Map<String, String>): JSONArray {
         val response = request("GET", "/rest/v1/$table", query = query)
-        if (response.code !in 200..299) throw IllegalStateException("Select $table failed: HTTP ${response.code}${response.body.errorSuffix()}")
+        if (response.code !in 200..299) throw IllegalStateException("Select $table failed: HTTP ${response.code}${response.body.toErrorSuffix()}")
         return if (response.body.isBlank()) JSONArray() else JSONArray(response.body)
     }
 
@@ -1104,6 +1162,7 @@ object SupabaseRepository {
 
     private fun millisToIso(millis: Long): String = Instant.ofEpochMilli(if (millis <= 0L) System.currentTimeMillis() else millis).atOffset(ZoneOffset.UTC).toString()
     private fun normalizeDate(text: String): String = try { LocalDate.parse(text.trim()).toString() } catch (_: Exception) { LocalDate.now().toString() }
+    private fun String.toErrorSuffix(): String = trim().takeIf { it.isNotBlank() }?.let { ": ${it.take(240)}" }.orEmpty()
 
     private fun parseTimestampMillis(value: Any?): Long {
         return when (value) {

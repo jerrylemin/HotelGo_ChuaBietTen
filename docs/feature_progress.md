@@ -102,6 +102,30 @@
 - Fix local Android SDK config before compile verification:
   - Current blocker: invalid/missing `sdk.dir` in `local.properties`; `ANDROID_HOME` is not providing a valid SDK.
 
+## Review Hotfix - Supabase 400
+- Status: implemented, build pending local SDK verification.
+- Files changed:
+  - `data/SupabaseRepository.kt`
+  - `supabase/migrations/202604270004_create_room_reviews.sql`
+- Done:
+  - Added a full `reviews` migration that creates the table when missing, adds `hotel_id` and `booking_id` when absent, enables read/own-write RLS policies, and seeds a few reviews from eligible bookings when possible.
+  - Added app fallback for older `reviews` schemas without `booking_id`/`hotel_id`; review submit falls back to storing by `room_id`, and room detail still shows reviews from other users for the same room.
+  - Improved Supabase REST error messages to include the returned error body after HTTP 400.
+
+## Booking Hotfix - Supabase 400
+- Status: implemented, build pending.
+- Files changed:
+  - `data/SupabaseRepository.kt`
+  - `supabase/migrations/202604270005_booking_schema_hotfix.sql`
+- Observed database state:
+  - `bookings` exists with base fields.
+  - `bookings` currently returns HTTP 400 when selecting voucher/payment summary columns.
+  - `booking_addons` currently returns HTTP 404 because the table is missing from the Supabase schema cache.
+- Done:
+  - Booking creation falls back to base `bookings` fields when optional voucher/add-on summary columns are missing.
+  - Missing `booking_addons` no longer causes the whole booking request to fail after the booking row is created.
+  - Added a migration that adds missing booking voucher/stay columns and creates `booking_addons` with RLS policies.
+
 ## Final Completion Record
 - Completed requirements:
   - Requirement 1: user can review only rooms from own eligible bookings; duplicate booking review blocked.

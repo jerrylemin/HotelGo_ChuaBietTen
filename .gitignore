@@ -12,10 +12,8 @@ output.json
 *.iml
 
 # Local machine and secrets
-local.properties
 firebase-service.json
 supabase.env
-supabase-db-url.txt
 *.jks
 *.keystore
 

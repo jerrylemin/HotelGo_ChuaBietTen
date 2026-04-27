@@ -19,7 +19,10 @@
 - Client role is required before booking screens continue.
 - `RoomDetailActivity` can create a booking for a selected room. `BookingActivity` is a manual booking form using room code.
 - Booking creation calls `SupabaseRepository.createBooking`, which writes a row to `bookings`.
+- Booking with add-ons uses `SupabaseRepository.createBookingWithAddOns`, which writes `bookings` plus `booking_addons` line items.
+- Add-ons are selected before confirmation/payment in `RoomDetailActivity` and `BookingActivity`; users can increase/decrease quantity and totals are included in the booking total.
 - Booking history is shown in `BookingHistoryActivity` with `BookingHistoryAdapter`.
+- Booking history loads `booking_addons` details and shows quantity, unit price, line total, and add-ons total.
 - Admin can confirm/cancel bookings from booking history. Client can cancel when the check-in date is at least 2 days away.
 
 ## Current Payment Flow
@@ -46,6 +49,8 @@
 - `reviews`: room reviews.
 - `issues`: issue reports.
 - `add_on_items`: admin-managed add-on items.
+- `add_ons`: actual table used by current admin add-on repository code.
+- `booking_addons`: booking add-on line items with quantity, unit price, and total price.
 - `vouchers`: voucher definitions.
 - `posters`: recommendation/search posters.
 - `notifications`: in-app notifications.
@@ -64,6 +69,7 @@
 - Services/repository/API: `data/SupabaseRepository.kt`, `data/PayOSGateway.kt`.
 - Models/interfaces: `data/model/Models.kt`.
 - Supabase schema/migrations: `supabase/migrations/*.sql`.
+- Add-on migration: `supabase/migrations/202604270002_booking_addons.sql`.
 
 ## How To Run
 - Open the project in Android Studio or run Gradle from repo root.

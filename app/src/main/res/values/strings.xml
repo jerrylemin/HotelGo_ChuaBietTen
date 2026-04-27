@@ -205,6 +205,8 @@
     <string name="booking_total_paid">Total: %1$d VND</string>
     <string name="booking_addons_empty">Add-ons: none</string>
     <string name="booking_addons_format">Add-ons: %1$s</string>
+    <string name="booking_addons_detail_format">Add-ons:\n%1$s\nAdd-ons total: %2$d VND</string>
+    <string name="booking_addon_detail_line">%1$s x%2$d - %3$d VND each = %4$d VND</string>
     <string name="booking_guest_format">Guest: %1$s</string>
     <string name="booking_cancel_refund">Cancel room &amp; refund</string>
     <string name="booking_admin_confirm">Confirm room</string>
@@ -238,6 +240,9 @@
     <string name="addon_status_inactive">Stopped</string>
     <string name="addon_client_title">Add-on items</string>
     <string name="addon_client_item">%1$s - %2$d VND</string>
+    <string name="addon_client_item_detail">%1$s\n%2$s\n%3$d VND each</string>
+    <string name="quantity_decrease">-</string>
+    <string name="quantity_increase">+</string>
     <string name="checkin_title">Confirm check-in</string>
     <string name="checkin_booking_id_hint">Booking ID</string>
     <string name="checkin_room_code_hint">Room number</string>

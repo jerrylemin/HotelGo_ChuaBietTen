@@ -101,7 +101,19 @@ class BookingHistoryAdapter(
             dateText.text = itemView.context.getString(R.string.booking_dates_format, booking.checkIn, booking.checkOut)
             statusText.text = itemView.context.getString(R.string.booking_status_format, statusLabel(booking.status))
             totalText.text = itemView.context.getString(R.string.booking_total_paid, booking.total.toInt())
-            addOnsText.text = if (booking.addOns.isEmpty()) {
+            addOnsText.text = if (booking.addOnDetails.isNotEmpty()) {
+                val details = booking.addOnDetails.joinToString("\n") { addOn ->
+                    itemView.context.getString(
+                        R.string.booking_addon_detail_line,
+                        addOn.name.ifBlank { addOn.addOnItemId },
+                        addOn.quantity,
+                        addOn.unitPrice.toInt(),
+                        addOn.totalPrice.toInt()
+                    )
+                }
+                val total = booking.addOnDetails.sumOf { it.totalPrice }
+                itemView.context.getString(R.string.booking_addons_detail_format, details, total.toInt())
+            } else if (booking.addOns.isEmpty()) {
                 itemView.context.getString(R.string.booking_addons_empty)
             } else {
                 itemView.context.getString(R.string.booking_addons_format, booking.addOns.joinToString(", "))

@@ -8,6 +8,8 @@ import com.example.hotelapp_test2.BuildConfig
 import com.example.hotelapp_test2.data.model.AddOnItem
 import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Booking
+import com.example.hotelapp_test2.data.model.BookingAddOn
+import com.example.hotelapp_test2.data.model.BookingAddOnSelection
 import com.example.hotelapp_test2.data.model.HotelCatalogItem
 import com.example.hotelapp_test2.data.model.HotelCatalogRoom
 import com.example.hotelapp_test2.data.model.IssueReport
@@ -391,11 +393,68 @@ object SupabaseRepository {
     fun createBooking(booking: Booking, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { upsert("bookings", bookingToJson(booking.copy(id = booking.id.ifBlank { UUID.randomUUID().toString() }))) }
 
+    fun createBookingWithAddOns(
+        booking: Booking,
+        addOnSelections: List<BookingAddOnSelection>,
+        onSuccess: (String) -> Unit,
+        onError: (Exception) -> Unit
+    ) {
+        runAsync(onSuccess, onError) {
+            val bookingId = booking.id.ifBlank { UUID.randomUUID().toString() }
+            val normalizedBooking = booking.copy(
+                id = bookingId,
+                addOns = addOnSelections
+                    .filter { it.quantity > 0 }
+                    .map { "${it.item.id}:${it.quantity}" }
+            )
+            upsert("bookings", bookingToJson(normalizedBooking))
+            addOnSelections
+                .filter { it.quantity > 0 && it.item.id.isNotBlank() }
+                .forEach { selection ->
+                    upsert(
+                        "booking_addons",
+                        bookingAddOnToJson(
+                            BookingAddOn(
+                                id = UUID.randomUUID().toString(),
+                                bookingId = bookingId,
+                                addOnItemId = selection.item.id,
+                                name = selection.item.name,
+                                description = selection.item.description,
+                                quantity = selection.quantity,
+                                unitPrice = selection.item.price,
+                                totalPrice = selection.totalPrice,
+                                createdAt = System.currentTimeMillis()
+                            )
+                        )
+                    )
+                }
+            bookingId
+        }
+    }
+
     fun listBookings(userId: String?, onSuccess: (List<Booking>) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
             val q = linkedMapOf("select" to "*", "limit" to "50", "order" to "created_at.desc")
             if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
-            select("bookings", q).toBookingList()
+            attachBookingAddOns(select("bookings", q).toBookingList())
+        }
+    }
+
+    private fun attachBookingAddOns(bookings: List<Booking>): List<Booking> {
+        if (bookings.isEmpty()) return bookings
+        val bookingIds = bookings.map { it.id }.filter { it.isNotBlank() }.toSet()
+        if (bookingIds.isEmpty()) return bookings
+        val addOnLookup = selectAll("add_ons", mapOf("select" to "*", "order" to "name.asc"))
+            .toAddOnList()
+            .associateBy { it.id }
+        val rows = selectAll(
+            "booking_addons",
+            mapOf("select" to "*", "order" to "created_at.asc")
+        ).toBookingAddOnList(addOnLookup)
+            .filter { it.bookingId in bookingIds }
+        val rowsByBooking = rows.groupBy { it.bookingId }
+        return bookings.map { booking ->
+            booking.copy(addOnDetails = rowsByBooking[booking.id].orEmpty())
         }
     }
 
@@ -1311,6 +1370,22 @@ object SupabaseRepository {
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
+    private fun JSONObject.toBookingAddOn(addOnLookup: Map<String, AddOnItem> = emptyMap()): BookingAddOn {
+        val itemId = optString("addon_item_id")
+        val item = addOnLookup[itemId]
+        return BookingAddOn(
+            id = optString("id"),
+            bookingId = optString("booking_id"),
+            addOnItemId = itemId,
+            name = item?.name.orEmpty().ifBlank { optString("name") },
+            description = item?.description.orEmpty().ifBlank { optString("description") },
+            quantity = optIntCompat("quantity"),
+            unitPrice = optDoubleCompat("unit_price"),
+            totalPrice = optDoubleCompat("total_price"),
+            createdAt = parseTimestampMillis(opt("created_at"))
+        )
+    }
+
     private fun JSONObject.toReview(): Review = Review(
         id = optString("id"),
         roomId = optString("room_id"),
@@ -1397,6 +1472,8 @@ object SupabaseRepository {
     private fun JSONArray.toSearchRoomList(hotelLookup: Map<String, HotelLookup> = emptyMap()): List<Room> =
         (0 until length()).mapNotNull { optJSONObject(it)?.toSearchRoom(hotelLookup) }
     private fun JSONArray.toBookingList(): List<Booking> = (0 until length()).mapNotNull { optJSONObject(it)?.toBooking() }
+    private fun JSONArray.toBookingAddOnList(addOnLookup: Map<String, AddOnItem> = emptyMap()): List<BookingAddOn> =
+        (0 until length()).mapNotNull { optJSONObject(it)?.toBookingAddOn(addOnLookup) }
     private fun JSONArray.toReviewList(): List<Review> = (0 until length()).mapNotNull { optJSONObject(it)?.toReview() }
     private fun JSONArray.toIssueList(): List<IssueReport> = (0 until length()).mapNotNull { optJSONObject(it)?.toIssue() }
     private fun JSONArray.toVoucherList(): List<Voucher> = (0 until length()).mapNotNull { optJSONObject(it)?.toVoucher() }
@@ -1432,6 +1509,15 @@ object SupabaseRepository {
         if (booking.actualCheckOutAt > 0L) json.put("actual_check_out_at", millisToIso(booking.actualCheckOutAt))
         return json
     }
+
+    private fun bookingAddOnToJson(addOn: BookingAddOn): JSONObject = JSONObject()
+        .put("id", addOn.id)
+        .put("booking_id", addOn.bookingId)
+        .put("addon_item_id", addOn.addOnItemId)
+        .put("quantity", addOn.quantity)
+        .put("unit_price", addOn.unitPrice)
+        .put("total_price", addOn.totalPrice)
+        .put("created_at", millisToIso(addOn.createdAt))
 
     private fun reviewToJson(review: Review): JSONObject = JSONObject()
         .put("id", review.id)

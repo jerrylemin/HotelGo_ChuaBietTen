@@ -13,12 +13,12 @@ import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.model.AddOnItem
 import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Booking
+import com.example.hotelapp_test2.data.model.BookingAddOnSelection
 import com.example.hotelapp_test2.data.model.Room
 import com.example.hotelapp_test2.data.model.Voucher
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.checkbox.MaterialCheckBox
 import com.google.android.material.textfield.TextInputEditText
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
@@ -26,7 +26,7 @@ import java.util.Calendar
 
 class RoomDetailActivity : BaseActivity() {
     private var addOnItems: List<AddOnItem> = emptyList()
-    private val selectedAddOnIds = linkedSetOf<String>()
+    private val selectedAddOnQuantities = linkedMapOf<String, Int>()
     private var selectedVoucher: Voucher? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -112,7 +112,7 @@ class RoomDetailActivity : BaseActivity() {
                     if (diff <= 0) 1 else diff
                 }.getOrDefault(1)
                 val total = room.price * nights
-                val addOnTotal = selectedAddOns().sumOf { it.price }
+                val addOnTotal = selectedAddOns().sumOf { it.totalPrice }
                 val subtotal = total + addOnTotal
                 val discount = discountFor(subtotal)
                 totalText.text = getString(R.string.booking_total_with_discount, total.toInt(), addOnTotal.toInt(), discount.toInt(), (subtotal - discount).coerceAtLeast(0.0).toInt())
@@ -176,7 +176,8 @@ class RoomDetailActivity : BaseActivity() {
                     if (diff <= 0) 1 else diff
                 }.getOrDefault(1)
                 val roomTotal = room.price * nights
-                val addOnTotal = selectedAddOns().sumOf { it.price }
+                val addOnSelections = selectedAddOns()
+                val addOnTotal = addOnSelections.sumOf { it.totalPrice }
                 val subtotal = roomTotal + addOnTotal
                 val discount = discountFor(subtotal)
                 if (selectedVoucher != null && discount <= 0.0) {
@@ -192,10 +193,10 @@ class RoomDetailActivity : BaseActivity() {
                     checkOut = checkOut,
                     status = "pending",
                     total = total,
-                    addOns = selectedAddOnIds.toList() + listOfNotNull(selectedVoucher?.code?.takeIf { it.isNotBlank() }?.let { "voucher:$it" })
                 )
-                SupabaseRepository.createBooking(
+                SupabaseRepository.createBookingWithAddOns(
                     booking = booking,
+                    addOnSelections = addOnSelections,
                     onSuccess = {
                         toast(getString(R.string.success_booking_created))
                         SupabaseRepository.createNotification(
@@ -248,17 +249,7 @@ class RoomDetailActivity : BaseActivity() {
                     }
                     container.addView(empty)
                 } else {
-                    addOnItems.forEach { item ->
-                        val checkBox = MaterialCheckBox(this).apply {
-                            text = getString(R.string.addon_client_item, item.name, item.price.toInt())
-                            isChecked = selectedAddOnIds.contains(item.id)
-                            setOnCheckedChangeListener { _, checked ->
-                                if (checked) selectedAddOnIds.add(item.id) else selectedAddOnIds.remove(item.id)
-                                onChanged()
-                            }
-                        }
-                        container.addView(checkBox)
-                    }
+                    addOnItems.forEach { item -> container.addView(createAddOnRow(item, onChanged)) }
                 }
                 onChanged()
             },
@@ -266,7 +257,58 @@ class RoomDetailActivity : BaseActivity() {
         )
     }
 
-    private fun selectedAddOns(): List<AddOnItem> = addOnItems.filter { selectedAddOnIds.contains(it.id) }
+    private fun createAddOnRow(item: AddOnItem, onChanged: () -> Unit): LinearLayout {
+        val row = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(0, resources.getDimensionPixelSize(R.dimen.space_xs), 0, resources.getDimensionPixelSize(R.dimen.space_xs))
+        }
+        val title = TextView(this).apply {
+            text = getString(R.string.addon_client_item_detail, item.name, item.description.ifBlank { getString(R.string.common_na) }, item.price.toInt())
+            setTextColor(getColor(R.color.text_primary))
+            textSize = 13f
+        }
+        val controls = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+        }
+        val minus = MaterialButton(this).apply {
+            text = getString(R.string.quantity_decrease)
+            minWidth = 0
+        }
+        val quantityText = TextView(this).apply {
+            text = "0"
+            setTextColor(getColor(R.color.text_primary))
+            textSize = 14f
+            setPadding(resources.getDimensionPixelSize(R.dimen.space_m), resources.getDimensionPixelSize(R.dimen.space_s), resources.getDimensionPixelSize(R.dimen.space_m), 0)
+        }
+        val plus = MaterialButton(this).apply {
+            text = getString(R.string.quantity_increase)
+            minWidth = 0
+        }
+        fun refresh() {
+            quantityText.text = (selectedAddOnQuantities[item.id] ?: 0).toString()
+            onChanged()
+        }
+        minus.setOnClickListener {
+            val next = ((selectedAddOnQuantities[item.id] ?: 0) - 1).coerceAtLeast(0)
+            if (next == 0) selectedAddOnQuantities.remove(item.id) else selectedAddOnQuantities[item.id] = next
+            refresh()
+        }
+        plus.setOnClickListener {
+            selectedAddOnQuantities[item.id] = ((selectedAddOnQuantities[item.id] ?: 0) + 1).coerceAtMost(20)
+            refresh()
+        }
+        controls.addView(minus)
+        controls.addView(quantityText)
+        controls.addView(plus)
+        row.addView(title)
+        row.addView(controls)
+        return row
+    }
+
+    private fun selectedAddOns(): List<BookingAddOnSelection> = addOnItems.mapNotNull { item ->
+        val quantity = selectedAddOnQuantities[item.id] ?: 0
+        if (quantity > 0) BookingAddOnSelection(item, quantity) else null
+    }
 
     private fun discountFor(subtotal: Double): Double {
         val voucher = selectedVoucher ?: return 0.0

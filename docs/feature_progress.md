@@ -33,8 +33,27 @@
   - Result: failed before compile because Android SDK path in `local.properties` does not exist. No code compile result was produced.
 
 ## Requirement 2 - Booking Add-ons
-- Status: not completed.
-- Existing code has basic `add_on_items` listing and stores selected IDs in `bookings.add_ons`; this still needs proper booking add-on line items, quantity, totals, persistence, and detail display.
+- Status: implemented, build blocked by local Android SDK path.
+- Files changed:
+  - `data/model/Models.kt`
+  - `data/SupabaseRepository.kt`
+  - `ui/features/RoomDetailActivity.kt`
+  - `ui/features/BookingActivity.kt`
+  - `ui/features/BookingHistoryAdapter.kt`
+  - `res/values/strings.xml`
+  - `res/values-vi/strings.xml`
+  - `supabase/migrations/202604270002_booking_addons.sql`
+- Done:
+  - Added `BookingAddOn` and `BookingAddOnSelection` models.
+  - Added `booking_addons` migration with FK to `bookings` and existing `add_ons`.
+  - Seeded sample hotel add-ons: water, breakfast, airport transfer, room decoration, laundry.
+  - Booking UI supports multiple add-ons with quantity increase/decrease.
+  - Add-on totals are added into booking total.
+  - Booking creation persists line items with `booking_id`, `addon_item_id`, `quantity`, `unit_price`, and `total_price`.
+  - Booking history displays selected add-ons, quantity, unit price, line total, and add-ons total.
+- Verification:
+  - Ran `.\gradlew.bat assembleDebug`.
+  - Result: failed before compile because Android SDK path in `local.properties` does not exist. No code compile result was produced.
 
 ## Requirement 3 - Booking Vouchers
 - Status: not completed.

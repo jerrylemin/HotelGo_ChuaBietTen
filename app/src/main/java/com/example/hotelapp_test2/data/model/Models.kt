@@ -96,10 +96,30 @@ data class Booking(
     val status: String = "pending",
     val total: Double = 0.0,
     val addOns: List<String> = emptyList(),
+    val addOnDetails: List<BookingAddOn> = emptyList(),
     val actualCheckInAt: Long = 0L,
     val actualCheckOutAt: Long = 0L,
     val createdAt: Long = 0L
 )
+
+data class BookingAddOn(
+    val id: String = "",
+    val bookingId: String = "",
+    val addOnItemId: String = "",
+    val name: String = "",
+    val description: String = "",
+    val quantity: Int = 0,
+    val unitPrice: Double = 0.0,
+    val totalPrice: Double = 0.0,
+    val createdAt: Long = 0L
+)
+
+data class BookingAddOnSelection(
+    val item: AddOnItem,
+    val quantity: Int
+) {
+    val totalPrice: Double get() = item.price * quantity.coerceAtLeast(0)
+}
 
 data class ReviewableBooking(
     val booking: Booking = Booking(),

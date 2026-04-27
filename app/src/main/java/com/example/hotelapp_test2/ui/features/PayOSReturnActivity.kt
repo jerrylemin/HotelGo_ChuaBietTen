@@ -7,6 +7,7 @@ import com.example.hotelapp_test2.MainActivity
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.model.Booking
+import com.example.hotelapp_test2.data.model.NotificationSettings
 import com.example.hotelapp_test2.data.model.Payment
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
@@ -87,7 +88,12 @@ class PayOSReturnActivity : BaseActivity() {
                         SupabaseRepository.recordVoucherUsage(payment, onSuccess = {}, onError = {})
                         SupabaseRepository.incrementVoucherUsage(payment.voucherId, onSuccess = {}, onError = {})
                         toast(getString(R.string.payos_success))
-                        goMain()
+                        showCompletionPopup(
+                            category = NotificationSettings.CATEGORY_PAYMENT,
+                            title = getString(R.string.completion_title),
+                            message = getString(R.string.completion_payment_paid),
+                            onDismiss = { goMain() }
+                        )
                     },
                     onError = {
                         toast(getString(R.string.payos_update_error))

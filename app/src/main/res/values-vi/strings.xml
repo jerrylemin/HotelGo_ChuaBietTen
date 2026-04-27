@@ -4,6 +4,9 @@
     <string name="language_toggle_vi">VN</string>
     <string name="language_toggle_content_description">Đổi ngôn ngữ</string>
     <string name="common_na">N/A</string>
+    <string name="common_ok">OK</string>
+    <string name="notification_settings_action">Cài đặt</string>
+    <string name="completion_title">Đã hoàn thành</string>
 
     <string name="main_toolbar_subtitle">Quản lý khách sạn dễ dàng</string>
     <string name="main_header_default">Xin chào!</string>
@@ -415,6 +418,7 @@
     <string name="error_room_search">Lỗi tìm kiếm: %1$s</string>
     <string name="error_booking_create">Lỗi đặt phòng: %1$s</string>
     <string name="success_booking_created">Đã tạo đặt phòng.</string>
+    <string name="completion_booking_created">Bạn đã đăng kí/đặt phòng thành công.</string>
     <string name="error_date_required">Vui lòng chọn ngày nhận và trả phòng.</string>
     <string name="error_booking_id_missing">Không tìm thấy mã đặt phòng.</string>
     <string name="error_cancel_too_late">Chỉ được hủy trước ngày check-in ít nhất 2 ngày.</string>
@@ -441,6 +445,7 @@
     <string name="error_issue_required">Vui lòng nhập đầy đủ thông tin.</string>
     <string name="error_issue_booking_required">Chỉ phòng đã đặt mới được gửi báo cáo.</string>
     <string name="success_issue_sent">Đã gửi báo cáo.</string>
+    <string name="completion_issue_sent">Bạn đã gửi báo cáo vấn đề thành công.</string>
     <string name="success_issue_updated">Đã cập nhật trạng thái báo cáo.</string>
     <string name="issue_response_notification_title">Báo cáo vấn đề đã cập nhật</string>
     <string name="issue_response_notification_body">Admin đã cập nhật báo cáo vấn đề của bạn.</string>
@@ -459,6 +464,7 @@
     <string name="error_payment_url_missing">Không nhận được checkoutUrl từ payOS.</string>
     <string name="success_payment_opened">Đã chuyển sang giao diện thanh toán mặc định của payOS.</string>
     <string name="success_payment_demo_paid">Đã thanh toán demo. Booking đã chuyển sang đã thanh toán.</string>
+    <string name="completion_payment_paid">Bạn đã thanh toán thành công.</string>
     <string name="error_payos_result_missing">Không nhận được kết quả thanh toán payOS.</string>
     <string name="error_payos_booking_missing">Thiếu mã đặt phòng từ returnUrl.</string>
     <string name="payos_cancelled">Bạn đã hủy thanh toán payOS.</string>
@@ -480,6 +486,7 @@
     <string name="error_review_booking_required">Chỉ khách đã đặt phòng được xác nhận hoặc đã hoàn tất mới được đánh giá phòng này.</string>
     <string name="error_review_check">Không kiểm tra được đặt phòng của bạn: %1$s</string>
     <string name="success_review_sent">Đã gửi đánh giá.</string>
+    <string name="completion_review_sent">Bạn đã gửi bình luận/đánh giá thành công.</string>
     <string name="error_review_send">Lỗi gửi đánh giá: %1$s</string>
     <string name="error_room_code_type_required">Vui lòng nhập mã phòng và loại phòng.</string>
     <string name="error_room_code_required">Vui lòng nhập mã phòng.</string>

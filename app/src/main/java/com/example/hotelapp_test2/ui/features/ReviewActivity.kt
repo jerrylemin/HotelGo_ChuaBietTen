@@ -9,6 +9,7 @@ import android.widget.TextView
 import coil.load
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SupabaseRepository
+import com.example.hotelapp_test2.data.model.NotificationSettings
 import com.example.hotelapp_test2.data.model.Review
 import com.example.hotelapp_test2.data.model.ReviewableBooking
 import com.example.hotelapp_test2.ui.BaseActivity
@@ -112,6 +113,11 @@ class ReviewActivity : BaseActivity() {
                 review = review,
                 onSuccess = {
                     toast(getString(R.string.success_review_sent))
+                    showCompletionPopup(
+                        NotificationSettings.CATEGORY_REVIEW,
+                        R.string.completion_title,
+                        R.string.completion_review_sent
+                    )
                     commentInput.setText("")
                     ratingBar.rating = 0f
                     loadReviewableBookings()

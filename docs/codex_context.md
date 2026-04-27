@@ -31,9 +31,11 @@
 
 ## Current Review Flow
 - Review UI is `ReviewActivity` with layout `activity_review.xml`.
-- Current in-progress logic loads reviewable bookings for the logged-in user through `SupabaseRepository.listReviewableBookings`.
+- Reviewable bookings for the logged-in user load through `SupabaseRepository.listReviewableBookings`.
 - Eligible booking statuses are `completed`, `checked_out`, `paid`, and `confirmed`.
 - Review creation uses `SupabaseRepository.createReviewAndRefreshRoom`, validates booking ownership/status/room, blocks duplicate user+booking reviews, inserts into `reviews`, and refreshes room rating count.
+- Booking cards display hotel, room, image, check-in/check-out, booking id, booking status, and reviewed/unreviewed state.
+- `listReviewableBookings` maps rooms from both `rooms` and `hotel_rooms` so imported hotel catalog bookings can be reviewed.
 
 ## Database Tables Seen In Code
 - `users`: profile, role, phone, email.

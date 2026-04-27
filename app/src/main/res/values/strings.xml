@@ -214,6 +214,7 @@
     <string name="booking_status_paid">Paid</string>
     <string name="booking_status_checked_in">Checked in</string>
     <string name="booking_status_checked_out">Checked out</string>
+    <string name="booking_status_completed">Completed</string>
     <string name="booking_status_cancelled">Cancelled</string>
 
     <string name="addon_title">Create add-on item</string>
@@ -347,6 +348,14 @@
     <string name="profile_save">Save changes</string>
 
     <string name="review_title">Rate your experience</string>
+    <string name="review_booking_title">Rooms you can review</string>
+    <string name="review_booking_hint">Choose a completed, checked-out, paid, or confirmed booking before writing a review.</string>
+    <string name="review_booking_empty">No eligible bookings are available for review.</string>
+    <string name="review_booking_item">Hotel: %1$s\nRoom: %2$s\nCheck-in: %3$s\nCheck-out: %4$s\nBooking: %5$s\nStatus: %6$s\n%7$s</string>
+    <string name="review_select_booking_first">Select one of your booked rooms first.</string>
+    <string name="review_selected_booking">Selected: %1$s - %2$s (%3$s)</string>
+    <string name="review_already_done">Reviewed</string>
+    <string name="review_can_review">Tap to review</string>
     <string name="review_room_hint">Room code</string>
     <string name="review_comment_hint">Comment</string>
     <string name="review_submit">Submit review</string>

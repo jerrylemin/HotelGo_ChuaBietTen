@@ -15,6 +15,7 @@ import com.example.hotelapp_test2.data.model.NotificationSettings
 import com.example.hotelapp_test2.data.model.Payment
 import com.example.hotelapp_test2.data.model.Poster
 import com.example.hotelapp_test2.data.model.Review
+import com.example.hotelapp_test2.data.model.ReviewableBooking
 import com.example.hotelapp_test2.data.model.Room
 import com.example.hotelapp_test2.data.model.UserProfile
 import com.example.hotelapp_test2.data.model.Voucher
@@ -57,6 +58,7 @@ object SupabaseRepository {
     )
 
     private val mainHandler = Handler(Looper.getMainLooper())
+    private const val PAGE_SIZE = 1000
     private const val AUTH_PREFS = "supabase_auth"
     private const val KEY_UID = "uid"
     private const val KEY_EMAIL = "email"
@@ -432,6 +434,52 @@ object SupabaseRepository {
         }
     }
 
+    fun listReviewableBookings(userId: String, onSuccess: (List<ReviewableBooking>) -> Unit, onError: (Exception) -> Unit) {
+        if (userId.isBlank()) {
+            onSuccess(emptyList())
+            return
+        }
+        runAsync(onSuccess, onError) {
+            val eligibleStatuses = setOf("completed", "checked_out", "paid", "confirmed")
+            val bookings = selectAll(
+                "bookings",
+                linkedMapOf(
+                    "select" to "*",
+                    "user_id" to "eq.$userId",
+                    "status" to "in.(${eligibleStatuses.joinToString(",")})",
+                    "order" to "created_at.desc"
+                )
+            ).toBookingList()
+            if (bookings.isEmpty()) return@runAsync emptyList()
+
+            val hotelLookup = loadHotelLookup()
+            val rooms = selectAll("rooms", linkedMapOf("select" to "*", "order" to "code.asc")).toRoomList(hotelLookup)
+            val hotelRooms = selectAll("hotel_rooms", linkedMapOf("select" to "*", "order" to "room_code.asc")).toSearchRoomList(hotelLookup)
+            val roomLookup = buildMap {
+                (rooms + hotelRooms).forEach { room ->
+                    if (room.id.isNotBlank()) put(room.id, room)
+                    if (room.code.isNotBlank()) put(room.code, room)
+                }
+            }
+            val reviews = selectAll(
+                "reviews",
+                linkedMapOf(
+                    "select" to "*",
+                    "user_id" to "eq.$userId",
+                    "order" to "created_at.desc"
+                )
+            ).toReviewList()
+            val reviewsByBooking = reviews.filter { it.bookingId.isNotBlank() }.associateBy { it.bookingId }
+            bookings.map { booking ->
+                ReviewableBooking(
+                    booking = booking,
+                    room = roomLookup[booking.roomId],
+                    existingReview = reviewsByBooking[booking.id]
+                )
+            }
+        }
+    }
+
     fun canUserReviewRoom(userId: String, roomId: String, onSuccess: (Boolean) -> Unit, onError: (Exception) -> Unit) {
         if (userId.isBlank() || roomId.isBlank()) {
             onSuccess(false)
@@ -453,11 +501,27 @@ object SupabaseRepository {
     }
 
     fun createReviewAndRefreshRoom(review: Review, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
-        if (review.roomId.isBlank()) {
-            onError(IllegalArgumentException("Missing room id"))
+        if (review.roomId.isBlank() || review.userId.isBlank() || review.bookingId.isBlank()) {
+            onError(IllegalArgumentException("Missing review booking context"))
             return
         }
         runAsyncUnit(onSuccess, onError) {
+            val booking = select(
+                "bookings",
+                mapOf(
+                    "select" to "id,user_id,room_id,status",
+                    "id" to "eq.${review.bookingId}",
+                    "user_id" to "eq.${review.userId}",
+                    "room_id" to "eq.${review.roomId}",
+                    "status" to "in.(completed,checked_out,paid,confirmed)",
+                    "limit" to "1"
+                )
+            ).firstObjectOrNull() ?: throw IllegalStateException("Booking is not eligible for review")
+            val existing = select(
+                "reviews",
+                mapOf("select" to "id", "user_id" to "eq.${review.userId}", "booking_id" to "eq.${booking.optString("id")}", "limit" to "1")
+            )
+            if (existing.length() > 0) throw IllegalStateException("Booking was already reviewed")
             upsert("reviews", reviewToJson(review.copy(id = review.id.ifBlank { UUID.randomUUID().toString() })))
             val reviews = select(
                 "reviews",
@@ -875,7 +939,7 @@ object SupabaseRepository {
     }
 
     private fun loadHotelLookup(): Map<String, HotelLookup> {
-        val hotels = selectAll("hotels", mapOf("select" to "id,display_name,area,city"))
+        val hotels = selectAll("hotels", mapOf("select" to "id,display_name,area,city", "order" to "display_name.asc"))
         if (hotels.length() == 0) {
             return fallbackHotels().associate { hotel ->
                 hotel.id to HotelLookup(
@@ -1250,6 +1314,8 @@ object SupabaseRepository {
     private fun JSONObject.toReview(): Review = Review(
         id = optString("id"),
         roomId = optString("room_id"),
+        hotelId = optString("hotel_id"),
+        bookingId = optString("booking_id"),
         userId = optString("user_id"),
         rating = optIntCompat("rating"),
         comment = optString("comment"),
@@ -1370,6 +1436,8 @@ object SupabaseRepository {
     private fun reviewToJson(review: Review): JSONObject = JSONObject()
         .put("id", review.id)
         .put("room_id", review.roomId)
+        .put("hotel_id", review.hotelId)
+        .put("booking_id", review.bookingId)
         .put("user_id", review.userId)
         .put("rating", review.rating)
         .put("comment", review.comment)

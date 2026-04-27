@@ -101,9 +101,17 @@ data class Booking(
     val createdAt: Long = 0L
 )
 
+data class ReviewableBooking(
+    val booking: Booking = Booking(),
+    val room: Room? = null,
+    val existingReview: Review? = null
+)
+
 data class Review(
     val id: String = "",
     val roomId: String = "",
+    val hotelId: String = "",
+    val bookingId: String = "",
     val userId: String = "",
     val rating: Int = 0,
     val comment: String = "",

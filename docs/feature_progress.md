@@ -11,7 +11,7 @@
 - Markdown read: `docs/codex_repo_setup.md`; these context files are maintained for current work.
 
 ## Requirement 1 - Restrict Reviews To Booked Rooms
-- Status: in progress from existing working tree changes, pending verification and commit.
+- Status: implemented, build blocked by local Android SDK path.
 - Planned/observed files:
   - `data/model/Models.kt`
   - `data/SupabaseRepository.kt`
@@ -20,11 +20,17 @@
   - `res/values/strings.xml`
   - `res/values-vi/strings.xml`
   - `supabase/migrations/202604270001_room_reviews_booking_context.sql`
-- Work to verify:
+- Done:
   - Only logged-in user's eligible bookings appear.
   - No hardcoded user id.
-  - `reviews.booking_id` and duplicate protection exist.
-  - Build succeeds.
+  - Eligible statuses are `completed`, `checked_out`, `paid`, and `confirmed`.
+  - Review cards show hotel, room, image, dates, booking id, booking status, and reviewed state.
+  - Review submission saves `user_id`, `room_id`, `hotel_id`, `booking_id`, rating, comment, and created time.
+  - Duplicate review per `user_id + booking_id` is blocked in code and migration.
+  - Booking list reloads after review submit.
+- Verification:
+  - Ran `.\gradlew.bat assembleDebug`.
+  - Result: failed before compile because Android SDK path in `local.properties` does not exist. No code compile result was produced.
 
 ## Requirement 2 - Booking Add-ons
 - Status: not completed.

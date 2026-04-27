@@ -38,24 +38,36 @@
                     android:padding="@dimen/space_m">
 
                     <TextView
+                        android:id="@+id/reviewBookingTitle"
+                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        style="@style/TextAppearance.Hotel.SectionTitle"
-                        android:text="@string/review_title" />
+                        android:text="@string/review_booking_title" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/reviewRoomCodeLayout"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    <TextView
+                        android:id="@+id/reviewBookingHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/review_booking_hint"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/reviewBookingContainer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/review_room_hint">
+                        android:orientation="vertical" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/reviewRoomCode"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:id="@+id/reviewSelectedBooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/review_select_booking_first"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
 
                     <RatingBar
                         android:id="@+id/reviewRating"

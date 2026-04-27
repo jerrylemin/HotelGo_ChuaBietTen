@@ -169,6 +169,7 @@
     <string name="booking_status_paid">Đã thanh toán</string>
     <string name="booking_status_checked_in">Đã check-in</string>
     <string name="booking_status_checked_out">Đã check-out</string>
+    <string name="booking_status_completed">Hoàn tất</string>
     <string name="booking_status_cancelled">Đã hủy</string>
 
     <string name="addon_title">Tạo món hàng phụ</string>
@@ -303,6 +304,14 @@
     <string name="profile_save">Lưu thay đổi</string>
 
     <string name="review_title">Đánh giá trải nghiệm</string>
+    <string name="review_booking_title">Phòng bạn có thể đánh giá</string>
+    <string name="review_booking_hint">Chọn một booking đã hoàn tất, đã trả phòng, đã thanh toán hoặc đã xác nhận trước khi viết đánh giá.</string>
+    <string name="review_booking_empty">Chưa có booking hợp lệ để đánh giá.</string>
+    <string name="review_booking_item">Khách sạn: %1$s\nPhòng: %2$s\nNhận phòng: %3$s\nTrả phòng: %4$s\nMã booking: %5$s\nTrạng thái: %6$s\n%7$s</string>
+    <string name="review_select_booking_first">Hãy chọn một phòng bạn đã đặt trước.</string>
+    <string name="review_selected_booking">Đã chọn: %1$s - %2$s (%3$s)</string>
+    <string name="review_already_done">Đã đánh giá</string>
+    <string name="review_can_review">Bấm để đánh giá</string>
     <string name="review_room_hint">Mã phòng</string>
     <string name="review_comment_hint">Bình luận</string>
     <string name="review_submit">Gửi đánh giá</string>

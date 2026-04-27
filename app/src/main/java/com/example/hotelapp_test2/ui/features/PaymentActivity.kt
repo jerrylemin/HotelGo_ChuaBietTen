@@ -389,7 +389,7 @@ class PaymentActivity : BaseActivity() {
             },
             onError = { error ->
                 submitButton.isEnabled = true
-                toast(getString(R.string.error_payment_save, error.message.orEmpty()))
+                toast("Không lưu được thanh toán. Vui lòng kiểm tra cấu trúc bảng payments trên Supabase.\nLỗi: ${error.message}")
             }
         )
     }

@@ -1,4 +1,4 @@
-﻿package com.example.hotelapp_test2.data
+package com.example.hotelapp_test2.data
 
 import android.content.Context
 import android.net.Uri
@@ -919,7 +919,18 @@ object SupabaseRepository {
     }
 
     fun createPayment(payment: Payment, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
-        runAsyncUnit(onSuccess, onError) { upsert("payments", paymentToJson(payment.copy(id = payment.id.ifBlank { UUID.randomUUID().toString() }))) }
+        runAsyncUnit(onSuccess, onError) {
+            val paymentWithId = payment.copy(id = payment.id.ifBlank { UUID.randomUUID().toString() })
+            try {
+                upsert("payments", paymentToJson(paymentWithId, minimal = false))
+            } catch (e: Exception) {
+                if (e.message?.contains("PGRST204") == true || e.message?.contains("column") == true) {
+                    upsert("payments", paymentToJson(paymentWithId, minimal = true))
+                } else {
+                    throw e
+                }
+            }
+        }
 
     fun listPayments(userId: String?, onSuccess: (List<Payment>) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
@@ -1871,21 +1882,27 @@ object SupabaseRepository {
         .put("is_read", notification.read)
         .put("created_at", millisToIso(notification.createdAt))
 
-    private fun paymentToJson(payment: Payment): JSONObject = JSONObject()
-        .put("id", payment.id)
-        .put("booking_id", payment.bookingId)
-        .put("user_id", payment.userId)
-        .put("amount", payment.amount)
-        .put("method", payment.method)
-        .put("status", payment.status)
-        .put("card_last4", payment.cardLast4)
-        .put("voucher_id", payment.voucherId)
-        .put("voucher_code", payment.voucherCode)
-        .put("discount_amount", payment.discountAmount)
-        .put("original_total", payment.originalTotal)
-        .put("addons_total", payment.addonsTotal)
-        .put("final_total", payment.finalTotal)
-        .put("created_at", millisToIso(payment.createdAt))
+    private fun paymentToJson(payment: Payment, minimal: Boolean = false): JSONObject {
+        val json = JSONObject()
+            .put("id", payment.id)
+            .put("booking_id", payment.bookingId)
+            .put("user_id", payment.userId)
+            .put("amount", payment.amount)
+            .put("method", payment.method)
+            .put("status", payment.status)
+            .put("card_last4", payment.cardLast4)
+            .put("created_at", millisToIso(payment.createdAt))
+            
+        if (!minimal) {
+            json.put("voucher_id", payment.voucherId)
+                .put("voucher_code", payment.voucherCode)
+                .put("discount_amount", payment.discountAmount)
+                .put("original_total", payment.originalTotal)
+                .put("addons_total", payment.addonsTotal)
+                .put("final_total", payment.finalTotal)
+        }
+        return json
+    }
 
     private fun shortenRoomType(rawRoomName: String, fallbackType: String): String {
         val source = rawRoomName.ifBlank { fallbackType }

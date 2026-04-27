@@ -247,15 +247,52 @@
     <string name="addon_client_item_detail">%1$s\n%2$s\n%3$d VND each</string>
     <string name="quantity_decrease">-</string>
     <string name="quantity_increase">+</string>
-    <string name="checkin_title">Confirm check-in</string>
-    <string name="checkin_booking_id_hint">Booking ID</string>
-    <string name="checkin_room_code_hint">Room number</string>
-    <string name="checkin_button">Check in</string>
-    <string name="checkout_button">Check out</string>
-    <string name="checkin_active_title">Active stays</string>
-    <string name="checkin_empty">No confirmed or paid bookings are waiting for check-in/out.</string>
-    <string name="checkin_overdue_warning">OVERDUE CHECK-OUT</string>
-    <string name="checkin_booking_item">Booking: %1$s\nRoom: %2$s\nCheck-in: %3$s\nCheck-out: %4$s\nStatus: %5$s\n%6$s</string>
+    <!-- ════════════════════════════════════════════════════════════════════
+         Admin Check-in / Check-out screen
+         ════════════════════════════════════════════════════════════════════ -->
+    <string name="checkin_title">Xác nhận check-in</string>
+    <string name="checkin_button">Check-in</string>
+    <string name="checkout_button">Check-out</string>
+    <string name="checkin_empty">Không có lượt lưu trú nào để hiển thị.</string>
+    <string name="checkin_overdue_warning">⚠ QUÁ HẠN TRẢ PHÒNG</string>
+
+    <!-- Filter chips -->
+    <string name="checkin_filter_all">Tất cả</string>
+    <string name="checkin_filter_pending">Chờ nhận phòng</string>
+    <string name="checkin_filter_checked_in">Đã check-in</string>
+    <string name="checkin_filter_checked_out">Đã check-out</string>
+    <string name="checkin_filter_overdue">Quá hạn</string>
+    <string name="checkin_filter_cancelled">Đã hủy</string>
+
+    <!-- Card / action panel -->
+    <string name="checkin_selected_booking">Đặt phòng đang chọn</string>
+    <string name="checkin_selected_booking_code">Đặt phòng: %1$s</string>
+    <string name="checkin_guest_label">Khách: %1$s</string>
+    <string name="checkin_guest_unknown">Khách #%1$s</string>
+    <string name="checkin_dates_format">Nhận: %1$s → Trả: %2$s</string>
+    <string name="checkin_action_panel_details">Phòng: %1$s\nKhách: %2$s\nNhận phòng: %3$s\nTrả phòng: %4$s\nTrạng thái: %5$s</string>
+
+    <!-- Stay status labels (used in admin AND client screens) -->
+    <string name="stay_status_pending_checkin">Chờ nhận phòng</string>
+    <string name="stay_status_checked_in">Đã check-in</string>
+    <string name="stay_status_checked_out">Đã check-out</string>
+    <string name="stay_status_overdue">Quá hạn trả phòng</string>
+    <string name="stay_status_cancelled">Đã hủy</string>
+
+    <!-- Success / error messages -->
+    <string name="success_checkin">✅ Đã check-in thành công.</string>
+    <string name="success_checkout">✅ Đã check-out thành công.</string>
+    <string name="error_checkin">Check-in thất bại: %1$s</string>
+    <string name="error_checkout">Check-out thất bại: %1$s</string>
+    <string name="error_checkin_required">Vui lòng chọn một đặt phòng trước.</string>
+    <string name="error_checkin_not_allowed">Đặt phòng này không ở trạng thái chờ nhận phòng.</string>
+    <string name="error_checkout_not_allowed">Đặt phòng này chưa check-in hoặc đã check-out rồi.</string>
+    <string name="error_room_update">Cập nhật phòng thất bại: %1$s</string>
+
+    <!-- Legacy (kept for backward compat) -->
+    <string name="checkin_booking_id_hint">Mã đặt phòng</string>
+    <string name="checkin_room_code_hint">Số phòng</string>
+    <string name="checkin_active_title">Lượt lưu trú đang xử lý</string>
 
     <string name="filter_room_type_title">Filter by room type</string>
     <string name="filter_price_title">Sort by price</string>
@@ -517,12 +554,7 @@
     <string name="error_addon_load">Could not load items: %1$s</string>
     <string name="error_addon_save">Could not save item: %1$s</string>
     <string name="error_addon_delete">Could not delete item: %1$s</string>
-    <string name="error_checkin_required">Enter the booking ID and room number.</string>
-    <string name="success_checkin">Checked in.</string>
-    <string name="success_checkout">Checked out.</string>
-    <string name="error_room_update">Room update failed: %1$s</string>
-    <string name="error_checkin">Check-in failed: %1$s</string>
-    <string name="error_checkout">Check-out failed: %1$s</string>
+    <!-- error_checkin_required, success_checkin, success_checkout, error_room_update, error_checkin, error_checkout moved to checkin section above -->
     <string name="error_filter">Filter failed: %1$s</string>
     <string name="error_issue_required">Please enter all issue details.</string>
     <string name="error_issue_booking_required">Only booked rooms can be reported.</string>

@@ -310,7 +310,7 @@
     <string name="payment_booking_list_empty">You have no unpaid bookings.</string>
     <string name="payment_booking_item_title">Booking: %1$s</string>
     <string name="payment_booking_item_details">Room: %1$s\nDates: %2$s to %3$s\nStatus: %4$s</string>
-    <string name="payment_booking_item_summary">Room cost: %1$d VND\nAdd-ons: %2$d VND\nDiscount: %3$d VND\nTotal: %4$d VND</string>
+    <string name="payment_booking_item_summary">Room cost: %1$s VND\nAdd-ons: %2$s VND\nDiscount: %3$s VND\nTotal: %4$s VND</string>
     <string name="payment_booking_select_btn">Select</string>
     <string name="payment_booking_selected">Selected</string>
     <string name="payment_confirm_button">Confirm payment</string>

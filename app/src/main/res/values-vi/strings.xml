@@ -266,7 +266,7 @@
     <string name="payment_booking_list_empty">Bạn không có đơn đặt phòng nào chưa thanh toán.</string>
     <string name="payment_booking_item_title">Mã: %1$s</string>
     <string name="payment_booking_item_details">Phòng: %1$s\nTừ %2$s đến %3$s\nTrạng thái: %4$s</string>
-    <string name="payment_booking_item_summary">Tiền phòng: %1$d VND\nMặt hàng phụ: %2$d VND\nGiảm giá: %3$d VND\nTổng cộng: %4$d VND</string>
+    <string name="payment_booking_item_summary">Tiền phòng: %1$s VND\nMặt hàng phụ: %2$s VND\nGiảm giá: %3$s VND\nTổng cộng: %4$s VND</string>
     <string name="payment_booking_select_btn">Chọn</string>
     <string name="payment_booking_selected">Đã chọn</string>
     <string name="payment_confirm_button">Xác nhận thanh toán</string>

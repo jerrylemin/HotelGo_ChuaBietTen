@@ -185,7 +185,7 @@ class PaymentActivity : BaseActivity() {
         }
     }
 
-    private fun selectBooking(booking: Booking, selectedRow: View, container: LinearLayout) {
+    private fun selectBooking(booking: Booking, selectedRow: LinearLayout, container: LinearLayout) {
         selectedBooking = booking
         formCard.visibility = View.VISIBLE
         statusText.text = ""
@@ -198,7 +198,7 @@ class PaymentActivity : BaseActivity() {
             btn.isEnabled = true
         }
 
-        val btn = selectedRow.findViewById<MaterialButton>(selectedRow.getChildAt(1).id) ?: (selectedRow as LinearLayout).getChildAt(1) as MaterialButton
+        val btn = selectedRow.getChildAt(1) as MaterialButton
         btn.text = getString(R.string.payment_booking_selected)
         btn.isEnabled = false
 
@@ -371,8 +371,8 @@ class PaymentActivity : BaseActivity() {
                         }
                         showCompletionPopup(
                             NotificationSettings.CATEGORY_PAYMENT,
-                            R.string.completion_title,
-                            R.string.completion_payment_paid
+                            getString(R.string.completion_title),
+                            getString(R.string.completion_payment_paid)
                         ) {
                             formCard.visibility = View.GONE
                             selectedBooking = null
@@ -462,10 +462,10 @@ class PaymentActivity : BaseActivity() {
 
     private fun paymentSummaryText(summary: PaymentSummary): String = getString(
         R.string.payment_booking_item_summary,
-        summary.originalTotal.toInt(),
-        summary.addonsTotal.toInt(),
-        summary.discountAmount.toInt(),
-        summary.finalTotal.toInt()
+        summary.originalTotal.toInt().toString(),
+        summary.addonsTotal.toInt().toString(),
+        summary.discountAmount.toInt().toString(),
+        summary.finalTotal.toInt().toString()
     )
 
     private fun discountFor(voucher: Voucher?, subtotal: Double): Double {

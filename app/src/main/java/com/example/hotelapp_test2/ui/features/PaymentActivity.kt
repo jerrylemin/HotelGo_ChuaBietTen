@@ -31,6 +31,7 @@ class PaymentActivity : BaseActivity() {
     private var selectedVoucher: Voucher? = null
     private var selectedBooking: Booking? = null
     private var unpaidBookings: List<Booking> = emptyList()
+    private var availableVouchers: List<Voucher> = emptyList()
 
     // Views
     private lateinit var bookingListCard: MaterialCardView
@@ -41,6 +42,8 @@ class PaymentActivity : BaseActivity() {
     private lateinit var submitButton: MaterialButton
     private lateinit var summaryText: TextView
     private lateinit var statusText: TextView
+    private lateinit var voucherStatusText: TextView
+    private lateinit var voucherListContainer: LinearLayout
     private lateinit var methodGroup: RadioGroup
     private lateinit var qrCard: MaterialCardView
     private lateinit var qrImage: ImageView
@@ -74,6 +77,8 @@ class PaymentActivity : BaseActivity() {
         submitButton = findViewById(R.id.paymentSubmitButton)
         summaryText = findViewById(R.id.paymentSummaryText)
         statusText = findViewById(R.id.paymentStatusText)
+        voucherStatusText = findViewById(R.id.paymentVoucherStatus)
+        voucherListContainer = findViewById(R.id.paymentVoucherListContainer)
         methodGroup = findViewById(R.id.paymentMethodGroup)
         qrCard = findViewById(R.id.paymentQrCard)
         qrImage = findViewById(R.id.paymentQrImage)
@@ -218,12 +223,104 @@ class PaymentActivity : BaseActivity() {
             selectedVoucher = null
             displaySummary()
         }
+        loadVouchersForBooking()
     }
 
     private fun displaySummary() {
         val booking = selectedBooking ?: return
         val summary = summarizePayment(booking, selectedVoucher)
         summaryText.text = paymentSummaryText(summary)
+    }
+
+    private fun loadVouchersForBooking() {
+        val booking = selectedBooking ?: return
+        voucherStatusText.text = getString(R.string.payment_voucher_loading)
+        voucherListContainer.removeAllViews()
+        SupabaseRepository.listVouchers(
+            onSuccess = { vouchers ->
+                availableVouchers = vouchers
+                renderVoucherChoices(booking)
+            },
+            onError = { error -> voucherStatusText.text = getString(R.string.error_voucher_load, error.message.orEmpty()) }
+        )
+    }
+
+    private fun renderVoucherChoices(booking: Booking) {
+        val addOns = booking.addonsTotal.takeIf { it > 0.0 } ?: booking.addOnDetails.sumOf { it.totalPrice }
+        val subtotal = booking.originalTotal.takeIf { it > 0.0 } ?: (booking.total - addOns).coerceAtLeast(0.0)
+        val checkTotal = subtotal + addOns
+        val valid = availableVouchers.filter { voucherUsabilityReason(it, checkTotal) == null }
+        voucherListContainer.removeAllViews()
+        voucherStatusText.text = when {
+            selectedVoucher != null -> getString(R.string.payment_voucher_applied, selectedVoucher!!.code, discountFor(selectedVoucher, checkTotal).toInt())
+            availableVouchers.isEmpty() -> getString(R.string.payment_voucher_none)
+            valid.isEmpty() -> getString(R.string.payment_voucher_none)
+            else -> ""
+        }
+        valid.forEach { voucher ->
+            voucherListContainer.addView(createVoucherChoiceRow(voucher, checkTotal))
+        }
+        if (selectedVoucher != null) {
+            val removeButton = MaterialButton(this, null, com.google.android.material.R.attr.materialButtonOutlinedStyle).apply {
+                text = getString(R.string.payment_voucher_remove)
+                setOnClickListener {
+                    selectedVoucher = null
+                    displaySummary()
+                    renderVoucherChoices(booking)
+                }
+            }
+            voucherListContainer.addView(removeButton)
+        }
+    }
+
+    private fun createVoucherChoiceRow(voucher: Voucher, subtotal: Double): MaterialCardView {
+        val card = MaterialCardView(this).apply {
+            radius = resources.getDimension(R.dimen.radius_s)
+            cardElevation = 0f
+            setContentPadding(20, 20, 20, 20)
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            ).apply { topMargin = resources.getDimensionPixelSize(R.dimen.space_s) }
+        }
+        val row = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
+        val detail = TextView(this).apply {
+            text = getString(
+                R.string.payment_voucher_item,
+                voucher.code,
+                voucher.description.ifBlank { voucher.title },
+                voucherConditionText(voucher, subtotal)
+            )
+            setTextColor(getColor(R.color.text_primary))
+            textSize = 13f
+        }
+        val select = MaterialButton(this, null, com.google.android.material.R.attr.materialButtonOutlinedStyle).apply {
+            text = if (selectedVoucher?.id == voucher.id) getString(R.string.payment_booking_selected) else getString(R.string.payment_voucher_select)
+            setOnClickListener {
+                selectedVoucher = voucher
+                displaySummary()
+                selectedBooking?.let { renderVoucherChoices(it) }
+            }
+        }
+        row.addView(detail)
+        row.addView(select)
+        card.addView(row)
+        return card
+    }
+
+    private fun voucherConditionText(voucher: Voucher, subtotal: Double): String {
+        val discount = discountFor(voucher, subtotal).toInt()
+        return getString(R.string.payment_voucher_condition, voucher.minSpend.toInt(), voucher.endAt.ifBlank { getString(R.string.common_na) }, discount)
+    }
+
+    private fun voucherUsabilityReason(voucher: Voucher, subtotal: Double): String? {
+        if (!voucher.active) return getString(R.string.voucher_status_inactive)
+        if (voucher.usageLimit > 0 && voucher.usedCount >= voucher.usageLimit) return getString(R.string.voucher_invalid)
+        if (subtotal < voucher.minSpend) return getString(R.string.voucher_invalid)
+        val today = LocalDate.now()
+        val startOk = runCatching { !today.isBefore(LocalDate.parse(voucher.startAt)) }.getOrDefault(true)
+        val endOk = runCatching { !today.isAfter(LocalDate.parse(voucher.endAt)) }.getOrDefault(true)
+        return if (startOk && endOk) null else getString(R.string.voucher_invalid)
     }
 
     private fun loadHistory() {
@@ -353,8 +450,11 @@ class PaymentActivity : BaseActivity() {
                         )
                         SupabaseRepository.createNotification(
                             AppNotification(
+                                userId = userId,
                                 title = getString(R.string.payment_client_notification_title),
                                 body = getString(R.string.payment_client_notification_body, booking.id.takeLast(8).uppercase()),
+                                type = "payment",
+                                relatedId = booking.id,
                                 targetRole = "client"
                             ),
                             onSuccess = {}, onError = {}

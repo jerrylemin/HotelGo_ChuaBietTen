@@ -103,6 +103,29 @@
                         android:textColor="@color/text_secondary"
                         android:textSize="14sp" />
 
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/payment_voucher_section_title" />
+
+                    <TextView
+                        android:id="@+id/paymentVoucherStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/payment_voucher_loading"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/paymentVoucherListContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:orientation="vertical" />
+
                     <!-- Payment method selection -->
                     <TextView
                         style="@style/TextAppearance.Hotel.SectionTitle"

@@ -9,7 +9,6 @@ import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Booking
 import com.example.hotelapp_test2.data.model.BookingAddOnSelection
 import com.example.hotelapp_test2.data.model.NotificationSettings
-import com.example.hotelapp_test2.data.model.Voucher
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
 import com.google.android.material.button.MaterialButton
@@ -21,7 +20,6 @@ import android.widget.TextView
 class BookingActivity : BaseActivity() {
     private var addOnItems: List<AddOnItem> = emptyList()
     private val selectedAddOnQuantities = linkedMapOf<String, Int>()
-    private var selectedVoucher: Voucher? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,31 +34,8 @@ class BookingActivity : BaseActivity() {
         val submitButton = findViewById<MaterialButton>(R.id.bookingSubmitButton)
         val summaryText = findViewById<TextView>(R.id.bookingSummaryText)
         val addOnContainer = findViewById<LinearLayout>(R.id.bookingAddOnContainer)
-        val voucherInput = findViewById<TextInputEditText>(R.id.bookingVoucherCode)
-        val voucherButton = findViewById<MaterialButton>(R.id.bookingVoucherApplyButton)
 
         loadAddOns(addOnContainer, summaryText)
-
-        voucherButton.setOnClickListener {
-            val code = voucherInput.text?.toString().orEmpty().trim()
-            if (code.isBlank()) {
-                selectedVoucher = null
-                summaryText.text = getString(R.string.voucher_not_found)
-                return@setOnClickListener
-            }
-            SupabaseRepository.getVoucherByCode(
-                code = code,
-                onSuccess = { voucher ->
-                    selectedVoucher = voucher
-                    summaryText.text = if (voucher == null) {
-                        getString(R.string.voucher_not_found)
-                    } else {
-                        getString(R.string.voucher_ready, voucher.code)
-                    }
-                },
-                onError = { error -> summaryText.text = getString(R.string.voucher_check_error, error.message.orEmpty()) }
-            )
-        }
 
         submitButton.setOnClickListener {
             val roomCode = roomCodeInput.text?.toString().orEmpty().trim()
@@ -94,14 +69,8 @@ class BookingActivity : BaseActivity() {
                     val roomTotal = room.price * nights
                     val addOnSelections = selectedAddOns()
                     val addOnTotal = addOnSelections.sumOf { it.totalPrice }
-                    val subtotal = roomTotal + addOnTotal
-                    val discount = discountFor(subtotal)
-                    if (selectedVoucher != null && discount <= 0.0) {
-                        toast(getString(R.string.voucher_invalid))
-                        return@getRoomByCode
-                    }
-                    val total = (subtotal - discount).coerceAtLeast(0.0)
-                    summaryText.text = getString(R.string.booking_total_with_discount, roomTotal.toInt(), addOnTotal.toInt(), discount.toInt(), total.toInt())
+                    val total = roomTotal + addOnTotal
+                    summaryText.text = getString(R.string.booking_total_with_addons, roomTotal.toInt(), addOnTotal.toInt(), total.toInt())
 
                     val booking = Booking(
                         userId = userId,
@@ -110,9 +79,6 @@ class BookingActivity : BaseActivity() {
                         checkOut = checkOut,
                         status = "pending",
                         total = total,
-                        voucherId = selectedVoucher?.id.orEmpty(),
-                        voucherCode = selectedVoucher?.code.orEmpty(),
-                        discountAmount = discount,
                         originalTotal = roomTotal,
                         addonsTotal = addOnTotal,
                         finalTotal = total,
@@ -138,8 +104,10 @@ class BookingActivity : BaseActivity() {
                             )
                             SupabaseRepository.createNotification(
                                 AppNotification(
+                                    userId = userId,
                                     title = getString(R.string.booking_client_notification_title),
                                     body = getString(R.string.booking_client_notification_body, roomCode),
+                                    type = "booking",
                                     targetRole = "client"
                                 ),
                                 onSuccess = {},
@@ -233,20 +201,4 @@ class BookingActivity : BaseActivity() {
         if (quantity > 0) BookingAddOnSelection(item, quantity) else null
     }
 
-    private fun discountFor(subtotal: Double): Double {
-        val voucher = selectedVoucher ?: return 0.0
-        if (!voucher.active || subtotal < voucher.minSpend) return 0.0
-        if (voucher.usageLimit > 0 && voucher.usedCount >= voucher.usageLimit) return 0.0
-        val today = LocalDate.now()
-        val startOk = runCatching { !today.isBefore(LocalDate.parse(voucher.startAt)) }.getOrDefault(true)
-        val endOk = runCatching { !today.isAfter(LocalDate.parse(voucher.endAt)) }.getOrDefault(true)
-        if (!startOk || !endOk) return 0.0
-        val rawDiscount = if (voucher.type.equals("percent", true) || voucher.type.equals("percentage", true)) {
-            subtotal * voucher.value.coerceIn(0.0, 100.0) / 100.0
-        } else {
-            voucher.value.coerceAtMost(subtotal)
-        }
-        val cappedDiscount = if (voucher.maxDiscountAmount > 0) rawDiscount.coerceAtMost(voucher.maxDiscountAmount) else rawDiscount
-        return cappedDiscount.coerceIn(0.0, subtotal)
-    }
 }

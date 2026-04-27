@@ -114,28 +114,6 @@
                         android:layout_marginTop="@dimen/space_xs"
                         android:orientation="vertical" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/bookingVoucherCodeLayout"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_m"
-                        android:hint="@string/voucher_code_hint">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/bookingVoucherCode"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/bookingVoucherApplyButton"
-                        style="@style/Widget.Hotel.Button.Outlined"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_s"
-                        android:text="@string/voucher_apply_button" />
-
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/bookingSubmitButton"
                         android:layout_width="match_parent"
@@ -177,5 +155,4 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
-
 

@@ -96,6 +96,7 @@ data class Booking(
     val status: String = "pending",
     val stayStatus: String = "",        // pending_checkin | checked_in | checked_out | cancelled | overdue
     val guestName: String = "",         // resolved from users table for admin view
+    val guestPhone: String = "",
     val total: Double = 0.0,
     val addOns: List<String> = emptyList(),
     val addOnDetails: List<BookingAddOn> = emptyList(),
@@ -156,6 +157,8 @@ data class IssueReport(
     val title: String = "",
     val description: String = "",
     val status: String = "new",
+    val userName: String = "",
+    val userPhone: String = "",
     val createdAt: Long = 0L
 )
 
@@ -197,6 +200,8 @@ data class RoomRequest(
     val id: String = "",
     val userId: String = "",
     val userEmail: String = "",
+    val userName: String = "",
+    val userPhone: String = "",
     val requestText: String = "",
     val budget: Double = 0.0,
     val adminReply: String = "",

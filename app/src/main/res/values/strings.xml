@@ -36,6 +36,7 @@
     <string name="register_admin_note">Admin accounts are created manually.</string>
     <string name="register_name_hint">Full name</string>
     <string name="register_phone_hint">Phone number</string>
+    <string name="client_contact_format">%1$s - Phone: %2$s</string>
     <string name="register_email_hint">Email</string>
     <string name="register_password_hint">Password</string>
     <string name="register_confirm_hint">Confirm password</string>
@@ -319,7 +320,7 @@
     <string name="issue_status_new">New</string>
     <string name="issue_status_processing">Processing</string>
     <string name="issue_status_resolved">Resolved</string>
-    <string name="issue_list_item">Room: %1$s\nBooking: %2$s\nType: %3$s\nDescription: %4$s\nStatus: %5$s</string>
+    <string name="issue_list_item">Client: %1$s\nRoom: %2$s\nBooking: %3$s\nType: %4$s\nDescription: %5$s\nStatus: %6$s</string>
     <string name="issue_notification_title">New issue report</string>
     <string name="issue_notification_body">A guest reported an issue for room %1$s</string>
 
@@ -423,7 +424,7 @@
     <string name="poster_search_generated_title">Need a room in %1$s</string>
     <string name="poster_search_generated_content">Budget: %1$s</string>
     <string name="poster_search_content_detail">Room type: %1$s\nBudget: %2$s\nGuests: %3$s\nDate: %4$s\nNotes: %5$s</string>
-    <string name="poster_search_item_detail">%1$s\n%2$s\nStatus: %3$s\nAdmin response: %4$s</string>
+    <string name="poster_search_item_detail">Client: %1$s\n%2$s\n%3$s\nStatus: %4$s\nAdmin response: %5$s</string>
     <string name="poster_response_hint">Admin response</string>
     <string name="poster_response_save">Save response</string>
     <string name="poster_response_empty">No response yet</string>

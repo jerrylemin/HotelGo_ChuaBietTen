@@ -168,6 +168,8 @@ class CheckInOutActivity : BaseActivity() {
 
         val guest = booking.guestName.ifBlank {
             getString(R.string.checkin_guest_unknown, booking.userId.take(6).uppercase())
+        }.let { name ->
+            getString(R.string.client_contact_format, name, booking.guestPhone.ifBlank { getString(R.string.common_na) })
         }
         val stayLabel = stayStatusDisplayLabel(stayStatus)
         actionPanelDetails.text = getString(

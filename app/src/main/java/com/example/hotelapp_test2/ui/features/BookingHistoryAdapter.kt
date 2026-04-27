@@ -156,7 +156,7 @@ class BookingHistoryAdapter(
 
             if (isAdmin) {
                 userText.visibility = View.VISIBLE
-                userText.text = itemView.context.getString(R.string.booking_guest_format, guestLabel(booking.userId))
+                userText.text = itemView.context.getString(R.string.booking_guest_format, guestLabel(booking))
             } else {
                 userText.visibility = View.GONE
             }
@@ -230,9 +230,13 @@ class BookingHistoryAdapter(
                 LocalDate.parse(value).format(DateTimeFormatter.ofPattern("dd/MM"))
             }.getOrDefault(value)
 
-        private fun guestLabel(userId: String): String =
-            userId.ifBlank { itemView.context.getString(R.string.common_na) }
-                .let { "Khach #${shortId(it)}" }
+        private fun guestLabel(booking: Booking): String {
+            val name = booking.guestName.ifBlank {
+                booking.userId.takeLast(6).ifBlank { itemView.context.getString(R.string.common_na) }
+            }
+            val phone = booking.guestPhone.ifBlank { itemView.context.getString(R.string.common_na) }
+            return itemView.context.getString(R.string.client_contact_format, name, phone)
+        }
 
         private fun money(value: Double): String =
             String.format(Locale.US, "%,d", value.toInt()).replace(',', '.')

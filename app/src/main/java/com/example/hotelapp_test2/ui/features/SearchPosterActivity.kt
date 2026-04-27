@@ -50,7 +50,8 @@ class SearchPosterActivity : BaseActivity() {
                 toast(getString(R.string.error_login_required))
                 return@setOnClickListener
             }
-            val email = SupabaseRepository.currentUser()?.email.orEmpty()
+            val currentUser = SupabaseRepository.currentUser()
+            val email = currentUser?.email.orEmpty()
             val location = locationInput.text?.toString().orEmpty().trim()
             val roomType = roomTypeInput.text?.toString().orEmpty().trim()
             val budgetText = budgetInput.text?.toString().orEmpty().trim()
@@ -73,6 +74,8 @@ class SearchPosterActivity : BaseActivity() {
             val request = RoomRequest(
                 userId = userId,
                 userEmail = email,
+                userName = currentUser?.displayName.orEmpty(),
+                userPhone = currentUser?.phone.orEmpty(),
                 requestText = getString(R.string.poster_search_generated_title, location) + "\n" + content,
                 budget = budget,
                 status = "new",
@@ -138,8 +141,10 @@ class SearchPosterActivity : BaseActivity() {
         }
         val content = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
         val detail = TextView(this).apply {
+            val clientLabel = clientLabel(poster.userName, poster.userEmail, poster.userPhone, poster.userId)
             text = getString(
                 R.string.poster_search_item_detail,
+                clientLabel,
                 poster.requestText,
                 getString(R.string.poster_budget_format, poster.budget.toInt()),
                 statusLabel(poster.status),
@@ -209,5 +214,11 @@ class SearchPosterActivity : BaseActivity() {
         "processing" -> getString(R.string.issue_status_processing)
         "resolved" -> getString(R.string.issue_status_resolved)
         else -> getString(R.string.issue_status_new)
+    }
+
+    private fun clientLabel(name: String, email: String, phone: String, userId: String): String {
+        val displayName = name.ifBlank { email }.ifBlank { userId.takeLast(6).ifBlank { getString(R.string.common_na) } }
+        val displayPhone = phone.ifBlank { getString(R.string.common_na) }
+        return getString(R.string.client_contact_format, displayName, displayPhone)
     }
 }

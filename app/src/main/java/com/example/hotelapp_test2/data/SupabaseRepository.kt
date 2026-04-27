@@ -59,6 +59,11 @@ object SupabaseRepository {
         val area: String = "",
         val city: String = ""
     )
+    private data class UserContact(
+        val name: String = "",
+        val email: String = "",
+        val phone: String = ""
+    )
 
     private val mainHandler = Handler(Looper.getMainLooper())
     private const val PAGE_SIZE = 1000
@@ -433,7 +438,7 @@ object SupabaseRepository {
         runAsync(onSuccess, onError) {
             val q = linkedMapOf("select" to "*", "limit" to "50", "order" to "created_at.desc")
             if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
-            attachBookingAddOns(select("bookings", q).toBookingList())
+            attachBookingAddOns(enrichBookingsWithUsers(select("bookings", q).toBookingList()))
         }
     }
 
@@ -539,23 +544,7 @@ object SupabaseRepository {
                 // Admin default: show relevant statuses (exclude purely pending/unconfirmed)
                 q["status"] = "in.(confirmed,paid,checked_in,checked_out,cancelled)"
             }
-            val bookings = select("bookings", q).toBookingList()
-            // Try to resolve guest names from users table
-            val enriched = runCatching {
-                val userIds = bookings.map { it.userId }.filter { it.isNotBlank() }.toSet()
-                if (userIds.isEmpty()) return@runCatching bookings
-                val userRows = selectAll("users", mapOf("select" to "id,name", "id" to "in.(${userIds.joinToString(",")})"))
-                val nameMap = buildMap<String, String> {
-                    for (i in 0 until userRows.length()) {
-                        val obj = userRows.optJSONObject(i) ?: continue
-                        val uid = obj.optString("id")
-                        val name = obj.optString("name")
-                        if (uid.isNotBlank()) put(uid, name)
-                    }
-                }
-                bookings.map { b -> b.copy(guestName = nameMap[b.userId].orEmpty()) }
-            }.getOrDefault(bookings)
-            attachBookingAddOns(enriched)
+            attachBookingAddOns(enrichBookingsWithUsers(select("bookings", q).toBookingList()))
         }
     }
 
@@ -876,7 +865,7 @@ object SupabaseRepository {
         runAsync(onSuccess, onError) {
             val q = linkedMapOf("select" to "*", "limit" to "100", "order" to "created_at.desc")
             if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
-            select("issues", q).toIssueList()
+            enrichIssuesWithUsers(select("issues", q).toIssueList())
         }
     }
 
@@ -1023,10 +1012,10 @@ object SupabaseRepository {
             val q = linkedMapOf("select" to "*", "limit" to "100", "order" to "created_at.desc")
             if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
             try {
-                select("room_requests", q).toRoomRequestList()
+                enrichRoomRequestsWithUsers(select("room_requests", q).toRoomRequestList())
             } catch (e: Exception) {
                 if (!isSchemaMismatch(e)) throw e
-                listLegacyRoomRequestPosters(userId)
+                enrichRoomRequestsWithUsers(listLegacyRoomRequestPosters(userId))
             }
         }
     }
@@ -1579,6 +1568,73 @@ object SupabaseRepository {
         }
     }
 
+    private fun loadUserContacts(userIds: Collection<String>): Map<String, UserContact> {
+        val ids = userIds.map { it.trim() }.filter { it.isNotBlank() }.toSet()
+        if (ids.isEmpty()) return emptyMap()
+        val filter = "in.(${ids.joinToString(",") { it.toPostgrestInValue() }})"
+        return runCatching {
+            selectAll("users", mapOf("select" to "id,name,email,phone", "id" to filter))
+        }.getOrElse {
+            selectAll("users", mapOf("select" to "*", "id" to filter))
+        }.let { rows ->
+            buildMap {
+                for (i in 0 until rows.length()) {
+                    val obj = rows.optJSONObject(i) ?: continue
+                    val id = obj.optCleanString("id")
+                    if (id.isBlank()) continue
+                    put(
+                        id,
+                        UserContact(
+                            name = obj.optCleanString("name").ifBlank { obj.optCleanString("full_name") },
+                            email = obj.optCleanString("email"),
+                            phone = obj.optCleanString("phone")
+                        )
+                    )
+                }
+            }
+        }
+    }
+
+    private fun enrichBookingsWithUsers(bookings: List<Booking>): List<Booking> {
+        if (bookings.isEmpty()) return bookings
+        val contacts = loadUserContacts(bookings.map { it.userId })
+        if (contacts.isEmpty()) return bookings
+        return bookings.map { booking ->
+            val contact = contacts[booking.userId]
+            booking.copy(
+                guestName = booking.guestName.ifBlank { contact?.name.orEmpty() },
+                guestPhone = booking.guestPhone.ifBlank { contact?.phone.orEmpty() }
+            )
+        }
+    }
+
+    private fun enrichIssuesWithUsers(issues: List<IssueReport>): List<IssueReport> {
+        if (issues.isEmpty()) return issues
+        val contacts = loadUserContacts(issues.map { it.userId })
+        if (contacts.isEmpty()) return issues
+        return issues.map { issue ->
+            val contact = contacts[issue.userId]
+            issue.copy(
+                userName = issue.userName.ifBlank { contact?.name.orEmpty() },
+                userPhone = issue.userPhone.ifBlank { contact?.phone.orEmpty() }
+            )
+        }
+    }
+
+    private fun enrichRoomRequestsWithUsers(requests: List<RoomRequest>): List<RoomRequest> {
+        if (requests.isEmpty()) return requests
+        val contacts = loadUserContacts(requests.map { it.userId })
+        if (contacts.isEmpty()) return requests
+        return requests.map { request ->
+            val contact = contacts[request.userId]
+            request.copy(
+                userEmail = request.userEmail.ifBlank { contact?.email.orEmpty() },
+                userName = request.userName.ifBlank { contact?.name.orEmpty() },
+                userPhone = request.userPhone.ifBlank { contact?.phone.orEmpty() }
+            )
+        }
+    }
+
     private fun enrichPostersWithRooms(posters: List<Poster>): List<Poster> {
         if (posters.isEmpty()) return posters
         val rooms = runCatching { loadAvailableRooms() }.getOrDefault(emptyList())
@@ -2027,6 +2083,8 @@ object SupabaseRepository {
         checkOut = optString("check_out"),
         status = optString("status", "pending"),
         stayStatus = optString("stay_status"),
+        guestName = optCleanString("guest_name"),
+        guestPhone = optCleanString("guest_phone"),
         total = optDoubleCompat("total"),
         addOns = optStringList("add_ons"),
         voucherId = optString("voucher_id"),
@@ -2077,6 +2135,8 @@ object SupabaseRepository {
         title = optString("title"),
         description = optString("description"),
         status = normalizeIssueStatus(optString("status", "new")),
+        userName = optCleanString("user_name"),
+        userPhone = optCleanString("user_phone"),
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
@@ -2118,6 +2178,8 @@ object SupabaseRepository {
         id = optCleanString("id"),
         userId = optCleanString("user_id").ifBlank { optCleanString("created_by") },
         userEmail = optCleanString("user_email"),
+        userName = optCleanString("user_name"),
+        userPhone = optCleanString("user_phone"),
         requestText = optCleanString("request_text")
             .ifBlank { optCleanString("description") }
             .ifBlank { optCleanString("content") }
@@ -2210,6 +2272,8 @@ object SupabaseRepository {
             .put("check_out", normalizeDate(booking.checkOut))
             .put("status", booking.status)
             .put("total", booking.total)
+            .put("guest_name", booking.guestName)
+            .put("guest_phone", booking.guestPhone)
             .put("add_ons", JSONArray(booking.addOns))
             .put("voucher_id", booking.voucherId)
             .put("voucher_code", booking.voucherCode)
@@ -2258,6 +2322,8 @@ object SupabaseRepository {
         .put("title", issue.title)
         .put("description", issue.description)
         .put("status", normalizeIssueStatus(issue.status))
+        .put("user_name", issue.userName)
+        .put("user_phone", issue.userPhone)
         .put("created_at", millisToIso(issue.createdAt))
 
     private fun voucherToJson(voucher: Voucher): JSONObject = JSONObject()
@@ -2351,6 +2417,8 @@ object SupabaseRepository {
         .put("id", request.id)
         .put("user_id", request.userId)
         .put("user_email", request.userEmail)
+        .put("user_name", request.userName)
+        .put("user_phone", request.userPhone)
         .put("request_text", request.requestText)
         .put("budget", request.budget)
         .put("admin_reply", request.adminReply)
@@ -2374,6 +2442,8 @@ object SupabaseRepository {
                 .put("user_id", request.userId)
                 .put("created_by", request.userId)
                 .put("user_email", request.userEmail)
+                .put("user_name", request.userName)
+                .put("user_phone", request.userPhone)
                 .put("admin_reply", request.adminReply)
                 .put("response", request.adminReply)
                 .put("status", status)

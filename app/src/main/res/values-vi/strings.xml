@@ -36,6 +36,7 @@
     <string name="register_admin_note">Tài khoản quản trị được tạo thủ công.</string>
     <string name="register_name_hint">Họ và tên</string>
     <string name="register_phone_hint">Số điện thoại</string>
+    <string name="client_contact_format">%1$s - SĐT: %2$s</string>
     <string name="register_email_hint">Email</string>
     <string name="register_password_hint">Mật khẩu</string>
     <string name="register_confirm_hint">Xác nhận mật khẩu</string>
@@ -238,7 +239,7 @@
     <string name="issue_status_new">Mới</string>
     <string name="issue_status_processing">Đang xử lý</string>
     <string name="issue_status_resolved">Đã xử lý</string>
-    <string name="issue_list_item">Phòng: %1$s\nĐặt phòng: %2$s\nLoại vấn đề: %3$s\nMô tả: %4$s\nTrạng thái: %5$s</string>
+    <string name="issue_list_item">Khách: %1$s\nPhòng: %2$s\nĐặt phòng: %3$s\nLoại vấn đề: %4$s\nMô tả: %5$s\nTrạng thái: %6$s</string>
     <string name="issue_notification_title">Báo cáo vấn đề mới</string>
     <string name="issue_notification_body">Khách đã báo cáo vấn đề cho phòng %1$s</string>
 
@@ -342,7 +343,7 @@
     <string name="poster_search_generated_title">Cần phòng tại %1$s</string>
     <string name="poster_search_generated_content">Ngân sách: %1$s</string>
     <string name="poster_search_content_detail">Loại phòng: %1$s\nNgân sách: %2$s\nSố người: %3$s\nNgày: %4$s\nGhi chú: %5$s</string>
-    <string name="poster_search_item_detail">%1$s\n%2$s\nTrạng thái: %3$s\nPhản hồi admin: %4$s</string>
+    <string name="poster_search_item_detail">Khách: %1$s\n%2$s\n%3$s\nTrạng thái: %4$s\nPhản hồi admin: %5$s</string>
     <string name="poster_response_hint">Phản hồi của admin</string>
     <string name="poster_response_save">Lưu phản hồi</string>
     <string name="poster_response_empty">Chưa có phản hồi</string>

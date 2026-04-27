@@ -261,8 +261,10 @@ class IssueReportActivity : BaseActivity() {
                 orientation = LinearLayout.VERTICAL
             }
             val detail = TextView(this).apply {
+                val clientLabel = clientLabel(issue.userName, issue.userPhone, issue.userId)
                 text = getString(
                     R.string.issue_list_item,
+                    clientLabel,
                     issue.roomId.ifBlank { getString(R.string.common_na) },
                     issue.bookingId.ifBlank { getString(R.string.common_na) },
                     issue.title,
@@ -328,6 +330,12 @@ class IssueReportActivity : BaseActivity() {
         "processing" -> getString(R.string.issue_status_processing)
         "resolved" -> getString(R.string.issue_status_resolved)
         else -> getString(R.string.issue_status_new)
+    }
+
+    private fun clientLabel(name: String, phone: String, userId: String): String {
+        val displayName = name.ifBlank { userId.takeLast(6).ifBlank { getString(R.string.common_na) } }
+        val displayPhone = phone.ifBlank { getString(R.string.common_na) }
+        return getString(R.string.client_contact_format, displayName, displayPhone)
     }
 
     private fun bookingStatusLabel(status: String): String = when (status) {

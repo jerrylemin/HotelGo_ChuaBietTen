@@ -89,6 +89,8 @@ class AdminBookingAdapter(
             // Guest name
             val guest = booking.guestName.ifBlank {
                 ctx.getString(R.string.checkin_guest_unknown, shortId(booking.userId))
+            }.let { name ->
+                ctx.getString(R.string.client_contact_format, name, booking.guestPhone.ifBlank { ctx.getString(R.string.common_na) })
             }
             guestText.text = ctx.getString(R.string.checkin_guest_label, guest)
 

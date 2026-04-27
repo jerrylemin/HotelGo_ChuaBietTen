@@ -270,6 +270,8 @@
     <string name="payment_booking_select_btn">Chọn</string>
     <string name="payment_booking_selected">Đã chọn</string>
     <string name="payment_confirm_button">Xác nhận thanh toán</string>
+    <string name="payment_item_booking">Đặt phòng HotelGo</string>
+    <string name="payment_history_title">Lịch sử giao dịch</string>
     <string name="payment_history_empty">Chưa có giao dịch thanh toán</string>
     <string name="payment_history_item">Đặt phòng: %1$s\nSố tiền: %2$d VND\nTrạng thái: %3$s\nPhương thức: %4$s</string>
     <string name="payment_history_item_discount">Đặt phòng: %1$s\nGiá gốc: %2$d VND\nMặt hàng phụ: %3$d VND\nVoucher: %4$s\nGiảm giá: %5$d VND\nSau giảm: %6$d VND\nTrạng thái: %7$s\nPhương thức: %8$s</string>

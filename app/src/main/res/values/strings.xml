@@ -314,6 +314,8 @@
     <string name="payment_booking_select_btn">Select</string>
     <string name="payment_booking_selected">Selected</string>
     <string name="payment_confirm_button">Confirm payment</string>
+    <string name="payment_item_booking">HotelGo room booking</string>
+    <string name="payment_history_title">Payment history</string>
     <string name="payment_history_empty">No payment history yet</string>
     <string name="payment_history_item">Booking: %1$s\nAmount: %2$d VND\nStatus: %3$s\nMethod: %4$s</string>
     <string name="payment_history_item_discount">Booking: %1$s\nOriginal: %2$d VND\nAdd-ons: %3$d VND\nVoucher: %4$s\nDiscount: %5$d VND\nFinal: %6$d VND\nStatus: %7$s\nMethod: %8$s</string>

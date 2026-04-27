@@ -8,6 +8,7 @@ import com.example.hotelapp_test2.data.model.AddOnItem
 import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Booking
 import com.example.hotelapp_test2.data.model.BookingAddOnSelection
+import com.example.hotelapp_test2.data.model.NotificationSettings
 import com.example.hotelapp_test2.data.model.Voucher
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
@@ -121,6 +122,11 @@ class BookingActivity : BaseActivity() {
                         addOnSelections = addOnSelections,
                         onSuccess = {
                             toast(getString(R.string.success_booking_created))
+                            showCompletionPopup(
+                                NotificationSettings.CATEGORY_BOOKING,
+                                R.string.completion_title,
+                                R.string.completion_booking_created
+                            )
                             SupabaseRepository.createNotification(
                                 AppNotification(
                                     title = getString(R.string.booking_notification_title),

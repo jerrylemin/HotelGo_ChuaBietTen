@@ -12,6 +12,7 @@ import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Booking
 import com.example.hotelapp_test2.data.model.IssueReport
+import com.example.hotelapp_test2.data.model.NotificationSettings
 import com.example.hotelapp_test2.data.model.Room
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
@@ -204,6 +205,11 @@ class IssueReportActivity : BaseActivity() {
             issue = issue,
             onSuccess = {
                 toast(getString(R.string.success_issue_sent))
+                showCompletionPopup(
+                    NotificationSettings.CATEGORY_ISSUE,
+                    R.string.completion_title,
+                    R.string.completion_issue_sent
+                )
                 SupabaseRepository.createNotification(
                     AppNotification(
                         title = getString(R.string.issue_notification_title),

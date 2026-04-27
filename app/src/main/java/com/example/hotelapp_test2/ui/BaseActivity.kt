@@ -1,6 +1,7 @@
 package com.example.hotelapp_test2.ui
 
 import android.content.Context
+import android.content.Intent
 import android.view.Gravity
 import android.view.ViewGroup
 import androidx.annotation.StringRes
@@ -8,7 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SessionManager
+import com.example.hotelapp_test2.data.SupabaseRepository
+import com.example.hotelapp_test2.ui.features.NotificationsActivity
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.button.MaterialButton
 
 open class BaseActivity : AppCompatActivity() {
@@ -67,6 +71,52 @@ open class BaseActivity : AppCompatActivity() {
             return false
         }
         return true
+    }
+
+    protected fun showCompletionPopup(
+        category: String,
+        title: String,
+        message: String,
+        fallbackToast: Boolean = true,
+        onDismiss: (() -> Unit)? = null
+    ) {
+        val userId = SupabaseRepository.currentUser()?.uid.orEmpty()
+        if (userId.isBlank()) {
+            if (fallbackToast) toast(message)
+            onDismiss?.invoke()
+            return
+        }
+        SupabaseRepository.fetchNotificationSettings(
+            userId = userId,
+            onSuccess = { settings ->
+                if (!settings.enabledFor(category) || isFinishing || isDestroyed) {
+                    onDismiss?.invoke()
+                    return@fetchNotificationSettings
+                }
+                MaterialAlertDialogBuilder(this)
+                    .setTitle(title)
+                    .setMessage(message)
+                    .setPositiveButton(R.string.common_ok) { _, _ -> onDismiss?.invoke() }
+                    .setNegativeButton(R.string.notification_settings_action) { _, _ ->
+                        startActivity(Intent(this, NotificationsActivity::class.java))
+                        onDismiss?.invoke()
+                    }
+                    .setOnCancelListener { onDismiss?.invoke() }
+                    .show()
+            },
+            onError = {
+                if (fallbackToast) toast(message)
+                onDismiss?.invoke()
+            }
+        )
+    }
+
+    protected fun showCompletionPopup(
+        category: String,
+        @StringRes titleRes: Int,
+        @StringRes messageRes: Int
+    ) {
+        showCompletionPopup(category, getString(titleRes), getString(messageRes))
     }
 
     private fun setupLanguageToggle(toolbar: MaterialToolbar) {

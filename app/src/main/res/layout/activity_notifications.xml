@@ -44,11 +44,51 @@
                     android:text="@string/notifications_title" />
 
                     <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/notifBookingSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/notifications_booking"
+                        android:checked="true" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/notifReviewSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/notifications_review"
+                        android:checked="true" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/notifIssueSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/notifications_issue"
+                        android:checked="true" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/notifPaymentSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/notifications_payment"
+                        android:checked="true" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
                         android:id="@+id/notifCheckInSwitch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                    android:text="@string/notifications_checkin"
+                        android:text="@string/notifications_checkin"
+                        android:checked="true" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/notifRoomSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/notifications_room_status"
                         android:checked="true" />
 
                     <com.google.android.material.switchmaterial.SwitchMaterial
@@ -56,14 +96,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                    android:text="@string/notifications_promo" />
-
-                    <com.google.android.material.switchmaterial.SwitchMaterial
-                        android:id="@+id/notifRoomSwitch"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_s"
-                    android:text="@string/notifications_room_status" />
+                        android:text="@string/notifications_promo"
+                        android:checked="true" />
 
                     <TextView
                         android:id="@+id/notificationUnreadText"

@@ -225,5 +225,30 @@ data class Payment(
 data class NotificationSettings(
     val checkIn: Boolean = true,
     val promo: Boolean = true,
-    val roomStatus: Boolean = true
-)
+    val roomStatus: Boolean = true,
+    val booking: Boolean = true,
+    val review: Boolean = true,
+    val issue: Boolean = true,
+    val payment: Boolean = true
+) {
+    fun enabledFor(category: String): Boolean = when (category) {
+        CATEGORY_CHECK_IN -> checkIn
+        CATEGORY_PROMO -> promo
+        CATEGORY_ROOM_STATUS -> roomStatus
+        CATEGORY_BOOKING -> booking
+        CATEGORY_REVIEW -> review
+        CATEGORY_ISSUE -> issue
+        CATEGORY_PAYMENT -> payment
+        else -> true
+    }
+
+    companion object {
+        const val CATEGORY_CHECK_IN = "check_in"
+        const val CATEGORY_PROMO = "promo"
+        const val CATEGORY_ROOM_STATUS = "room_status"
+        const val CATEGORY_BOOKING = "booking"
+        const val CATEGORY_REVIEW = "review"
+        const val CATEGORY_ISSUE = "issue"
+        const val CATEGORY_PAYMENT = "payment"
+    }
+}

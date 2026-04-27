@@ -11,6 +11,7 @@ import com.example.hotelapp_test2.data.SessionManager
 import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Booking
+import com.example.hotelapp_test2.data.model.NotificationSettings
 import com.example.hotelapp_test2.data.model.Payment
 import com.example.hotelapp_test2.data.model.Voucher
 import com.example.hotelapp_test2.ui.BaseActivity
@@ -260,6 +261,11 @@ class PaymentActivity : BaseActivity() {
                         SupabaseRepository.incrementVoucherUsage(booking.voucherId, onSuccess = {}, onError = {})
                         submitButton.isEnabled = true
                         statusText.text = getString(R.string.success_payment_demo_paid)
+                        showCompletionPopup(
+                            NotificationSettings.CATEGORY_PAYMENT,
+                            R.string.completion_title,
+                            R.string.completion_payment_paid
+                        )
                         onDone()
                     },
                     onError = { error ->

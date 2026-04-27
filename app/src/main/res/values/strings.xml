@@ -4,6 +4,9 @@
     <string name="language_toggle_vi">VN</string>
     <string name="language_toggle_content_description">Switch language</string>
     <string name="common_na">N/A</string>
+    <string name="common_ok">OK</string>
+    <string name="notification_settings_action">Settings</string>
+    <string name="completion_title">Completed</string>
 
     <string name="main_toolbar_subtitle">Hotel management made simple</string>
     <string name="main_header_default">Welcome!</string>
@@ -284,6 +287,10 @@
     <string name="issue_notification_body">A guest reported an issue for room %1$s</string>
 
     <string name="notifications_title">Notification settings</string>
+    <string name="notifications_booking">Booking completed</string>
+    <string name="notifications_review">Review submitted</string>
+    <string name="notifications_issue">Issue report submitted or updated</string>
+    <string name="notifications_payment">Payment completed</string>
     <string name="notifications_checkin">Check-in reminders</string>
     <string name="notifications_promo">New promotions</string>
     <string name="notifications_room_status">Room status updates</string>
@@ -462,6 +469,7 @@
     <string name="error_room_search">Search failed: %1$s</string>
     <string name="error_booking_create">Booking failed: %1$s</string>
     <string name="success_booking_created">Booking created.</string>
+    <string name="completion_booking_created">Your booking has been created successfully.</string>
     <string name="error_date_required">Please select check-in and check-out dates.</string>
     <string name="error_booking_id_missing">Booking ID not found.</string>
     <string name="error_cancel_too_late">Bookings can only be cancelled at least 2 days before check-in.</string>
@@ -488,6 +496,7 @@
     <string name="error_issue_required">Please enter all issue details.</string>
     <string name="error_issue_booking_required">Only booked rooms can be reported.</string>
     <string name="success_issue_sent">Report submitted.</string>
+    <string name="completion_issue_sent">Your issue report has been submitted successfully.</string>
     <string name="success_issue_updated">Issue status updated.</string>
     <string name="issue_response_notification_title">Issue report updated</string>
     <string name="issue_response_notification_body">Admin updated your issue report.</string>
@@ -506,6 +515,7 @@
     <string name="error_payment_url_missing">payOS did not return checkoutUrl.</string>
     <string name="success_payment_opened">Opened the default payOS checkout.</string>
     <string name="success_payment_demo_paid">Demo payment completed. Booking is paid.</string>
+    <string name="completion_payment_paid">Payment completed successfully.</string>
     <string name="error_payos_result_missing">No payOS payment result received.</string>
     <string name="error_payos_booking_missing">Missing booking ID from returnUrl.</string>
     <string name="payos_cancelled">You cancelled the payOS payment.</string>
@@ -527,6 +537,7 @@
     <string name="error_review_booking_required">Only guests with a confirmed or completed booking can review this room.</string>
     <string name="error_review_check">Could not verify your booking: %1$s</string>
     <string name="success_review_sent">Review submitted.</string>
+    <string name="completion_review_sent">Your review has been submitted successfully.</string>
     <string name="error_review_send">Submit review failed: %1$s</string>
     <string name="error_room_code_type_required">Please enter room code and room type.</string>
     <string name="error_room_code_required">Please enter the room code.</string>

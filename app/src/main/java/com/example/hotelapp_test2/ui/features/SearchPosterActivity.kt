@@ -1,14 +1,17 @@
 package com.example.hotelapp_test2.ui.features
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.LinearLayout
+import android.widget.Spinner
 import android.widget.TextView
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SessionManager
 import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.model.AppNotification
-import com.example.hotelapp_test2.data.model.Poster
+import com.example.hotelapp_test2.data.model.RoomRequest
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
 import com.google.android.material.button.MaterialButton
@@ -47,9 +50,11 @@ class SearchPosterActivity : BaseActivity() {
                 toast(getString(R.string.error_login_required))
                 return@setOnClickListener
             }
+            val email = SupabaseRepository.currentUser()?.email.orEmpty()
             val location = locationInput.text?.toString().orEmpty().trim()
             val roomType = roomTypeInput.text?.toString().orEmpty().trim()
-            val budget = budgetInput.text?.toString().orEmpty().trim()
+            val budgetText = budgetInput.text?.toString().orEmpty().trim()
+            val budget = budgetText.toDoubleOrNull() ?: 0.0
             val guests = guestsInput.text?.toString().orEmpty().trim()
             val date = dateInput.text?.toString().orEmpty().trim()
             val note = noteInput.text?.toString().orEmpty().trim()
@@ -60,23 +65,21 @@ class SearchPosterActivity : BaseActivity() {
             val content = getString(
                 R.string.poster_search_content_detail,
                 roomType.ifBlank { getString(R.string.common_na) },
-                budget.ifBlank { getString(R.string.poster_budget_flexible) },
+                budgetText.ifBlank { getString(R.string.poster_budget_flexible) },
                 guests.ifBlank { getString(R.string.common_na) },
                 date.ifBlank { getString(R.string.common_na) },
                 note.ifBlank { getString(R.string.common_na) }
             )
-            val poster = Poster(
-                type = "search",
-                title = getString(R.string.poster_search_generated_title, location),
-                content = content,
+            val request = RoomRequest(
                 userId = userId,
+                userEmail = email,
+                requestText = getString(R.string.poster_search_generated_title, location) + "\n" + content,
+                budget = budget,
                 status = "new",
-                response = "",
-                role = "client",
                 createdAt = System.currentTimeMillis()
             )
-            SupabaseRepository.createPoster(
-                poster = poster,
+            SupabaseRepository.createRoomRequest(
+                request = request,
                 onSuccess = {
                     toast(getString(R.string.success_poster_search_published))
                     SupabaseRepository.createNotification(
@@ -105,18 +108,16 @@ class SearchPosterActivity : BaseActivity() {
 
     private fun loadPosters() {
         val currentUserId = SupabaseRepository.currentUser()?.uid.orEmpty()
-        SupabaseRepository.listPosters(
-            type = "search",
-            limit = 100,
+        SupabaseRepository.listRoomRequests(
+            userId = if (isAdmin) null else currentUserId,
             onSuccess = { posters ->
-                val visible = if (isAdmin) posters else posters.filter { it.userId == currentUserId }
-                renderPosters(visible)
+                renderPosters(posters)
             },
             onError = { error -> toast(getString(R.string.error_poster_load, error.message.orEmpty())) }
         )
     }
 
-    private fun renderPosters(posters: List<Poster>) {
+    private fun renderPosters(posters: List<RoomRequest>) {
         listContainer.removeAllViews()
         emptyText.visibility = if (posters.isEmpty()) View.VISIBLE else View.GONE
         posters.forEach { poster ->
@@ -124,7 +125,7 @@ class SearchPosterActivity : BaseActivity() {
         }
     }
 
-    private fun createPosterRow(poster: Poster): MaterialCardView {
+    private fun createPosterRow(poster: RoomRequest): MaterialCardView {
         val card = MaterialCardView(this).apply {
             radius = resources.getDimension(R.dimen.radius_s)
             cardElevation = 0f
@@ -133,62 +134,66 @@ class SearchPosterActivity : BaseActivity() {
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
             ).apply { topMargin = resources.getDimensionPixelSize(R.dimen.space_s) }
+            if (isAdmin) setOnClickListener { showAdminResponseDialog(poster) }
         }
         val content = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
         val detail = TextView(this).apply {
             text = getString(
                 R.string.poster_search_item_detail,
-                poster.title,
-                poster.content,
+                poster.requestText,
+                getString(R.string.poster_budget_format, poster.budget.toInt()),
                 statusLabel(poster.status),
-                poster.response.ifBlank { getString(R.string.poster_response_empty) }
+                poster.adminReply.ifBlank { getString(R.string.poster_response_empty) }
             )
             setTextColor(getColor(R.color.text_primary))
             textSize = 14f
         }
         content.addView(detail)
-        if (isAdmin) {
-            val responseInput = TextInputEditText(this).apply {
-                hint = getString(R.string.poster_response_hint)
-                setText(poster.response)
-            }
-            val actions = LinearLayout(this).apply {
-                orientation = LinearLayout.HORIZONTAL
-                layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-                ).apply { topMargin = resources.getDimensionPixelSize(R.dimen.space_s) }
-            }
-            listOf(
-                "new" to R.string.issue_status_new,
-                "processing" to R.string.issue_status_processing,
-                "resolved" to R.string.issue_status_resolved
-            ).forEach { (status, labelRes) ->
-                val button = MaterialButton(this).apply {
-                    text = getString(labelRes)
-                    layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
-                    setOnClickListener {
-                        updatePoster(poster, status, responseInput.text?.toString().orEmpty().trim())
-                    }
-                }
-                actions.addView(button)
-            }
-            content.addView(responseInput)
-            content.addView(actions)
-        }
         card.addView(content)
         return card
     }
 
-    private fun updatePoster(poster: Poster, status: String, response: String) {
-        SupabaseRepository.createPoster(
-            poster = poster.copy(status = status, response = response),
+    private fun showAdminResponseDialog(poster: RoomRequest) {
+        val container = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(32, 12, 32, 0)
+        }
+        val responseInput = TextInputEditText(this).apply {
+            hint = getString(R.string.poster_response_hint)
+            setText(poster.adminReply)
+            minLines = 3
+        }
+        val spinner = Spinner(this)
+        val statuses = listOf("new", "processing", "resolved")
+        val labels = statuses.map { statusLabel(it) }
+        spinner.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, labels)
+        spinner.setSelection(statuses.indexOf(poster.status).coerceAtLeast(0))
+        container.addView(responseInput)
+        container.addView(spinner)
+        AlertDialog.Builder(this)
+            .setTitle(R.string.poster_response_hint)
+            .setView(container)
+            .setNegativeButton(R.string.common_cancel, null)
+            .setPositiveButton(R.string.poster_response_save) { _, _ ->
+                updatePoster(poster, statuses[spinner.selectedItemPosition], responseInput.text?.toString().orEmpty().trim())
+            }
+            .show()
+    }
+
+    private fun updatePoster(poster: RoomRequest, status: String, response: String) {
+        SupabaseRepository.updateRoomRequest(
+            requestId = poster.id,
+            status = status,
+            adminReply = response,
             onSuccess = {
                 toast(getString(R.string.success_poster_response_saved))
                 SupabaseRepository.createNotification(
                     AppNotification(
+                        userId = poster.userId,
+                        userEmail = poster.userEmail,
                         title = getString(R.string.poster_response_notification_title),
                         body = getString(R.string.poster_response_notification_body),
+                        type = "room_request",
                         targetRole = "client"
                     ),
                     onSuccess = {},

@@ -115,16 +115,19 @@ class PaymentActivity : BaseActivity() {
         SupabaseRepository.listBookings(
             userId = userId,
             onSuccess = { allBookings ->
-                val unpaidStatuses = setOf("pending", "confirmed", "unpaid")
-                unpaidBookings = allBookings.filter { it.status.lowercase() in unpaidStatuses }
-                
-                bookingListLoading.visibility = View.GONE
-                if (unpaidBookings.isEmpty()) {
-                    bookingListEmpty.visibility = View.VISIBLE
-                } else {
-                    bookingListContainer.visibility = View.VISIBLE
-                    renderBookingList()
-                }
+                SupabaseRepository.listPayments(
+                    userId = userId,
+                    onSuccess = { payments ->
+                        val activePaymentBookingIds = payments
+                            .filter { it.status.lowercase() in setOf("pending", "paid") }
+                            .map { it.bookingId }
+                            .toSet()
+                        renderPayableBookings(allBookings, activePaymentBookingIds)
+                    },
+                    onError = {
+                        renderPayableBookings(allBookings, emptySet())
+                    }
+                )
             },
             onError = { error ->
                 bookingListLoading.visibility = View.GONE
@@ -132,6 +135,23 @@ class PaymentActivity : BaseActivity() {
                 bookingListEmpty.text = error.message
             }
         )
+    }
+
+    private fun renderPayableBookings(allBookings: List<Booking>, activePaymentBookingIds: Set<String>) {
+        val payableStatuses = setOf("pending", "confirmed", "unpaid")
+        unpaidBookings = allBookings.filter { booking ->
+            booking.status.lowercase() in payableStatuses && booking.id !in activePaymentBookingIds
+        }
+
+        bookingListLoading.visibility = View.GONE
+        if (unpaidBookings.isEmpty()) {
+            bookingListEmpty.visibility = View.VISIBLE
+            bookingListContainer.visibility = View.GONE
+        } else {
+            bookingListEmpty.visibility = View.GONE
+            bookingListContainer.visibility = View.VISIBLE
+            renderBookingList()
+        }
     }
 
     private fun renderBookingList() {

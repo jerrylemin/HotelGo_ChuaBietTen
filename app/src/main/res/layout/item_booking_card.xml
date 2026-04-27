@@ -35,9 +35,11 @@
 
                 <TextView
                     android:id="@+id/bookingItemRoom"
+                    style="@style/TextAppearance.Hotel.SectionTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/TextAppearance.Hotel.SectionTitle"
+                    android:ellipsize="end"
+                    android:maxLines="2"
                     android:text="@string/booking_room_label"
                     android:textColor="@color/text_primary"
                     android:textSize="16sp"

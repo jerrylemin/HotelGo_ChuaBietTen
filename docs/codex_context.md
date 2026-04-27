@@ -25,6 +25,7 @@
 - Add-ons are selected before confirmation/payment in `RoomDetailActivity` and `BookingActivity`; users can increase/decrease quantity and totals are included in the booking total.
 - Booking history is shown in `BookingHistoryActivity` with `BookingHistoryAdapter`.
 - Booking history loads `booking_addons` details and shows quantity, unit price, line total, and add-ons total.
+- Booking history display now shortens long hotel/room identifiers, guest ids, add-on ids, dates, and money values so cards remain readable on mobile.
 - Admin can confirm/cancel bookings from booking history. Client can cancel when the check-in date is at least 2 days away.
 
 ## Current Payment Flow
@@ -42,6 +43,8 @@
 - Review creation uses `SupabaseRepository.createReviewAndRefreshRoom`, validates booking ownership/status/room, blocks duplicate user+booking reviews, inserts into `reviews`, and refreshes room rating count.
 - Review creation now falls back to legacy `reviews` schemas that do not yet have `booking_id` or `hotel_id`, so users can still submit and other users can read room reviews by `room_id`.
 - Booking cards display hotel, room, image, check-in/check-out, booking id, booking status, and reviewed/unreviewed state.
+- Review booking cards shorten hotel/room names, dates, and booking ids to avoid long wrapped identifiers.
+- Room detail review loading resolves equivalent room identifiers such as `hotel:room`, `catalog:hotel:room`, and `room_code`, so reviews written through one flow appear when another user opens the same room through another flow.
 - `listReviewableBookings` maps rooms from both `rooms` and `hotel_rooms` so imported hotel catalog bookings can be reviewed.
 
 ## Database Tables Seen In Code
@@ -105,7 +108,8 @@
   - `supabase/migrations/202604270002_booking_addons.sql`
   - `supabase/migrations/202604270003_booking_vouchers.sql`
   - `supabase/migrations/202604270004_create_room_reviews.sql`
-  - `supabase/migrations/202604270005_booking_schema_hotfix.sql`
+- `supabase/migrations/202604270005_booking_schema_hotfix.sql`
+- `supabase/migrations/202604270006_issue_booking_context.sql`
 - Final verification commands:
   - `.\gradlew.bat clean`: success.
   - `.\gradlew.bat build`: failed before compile because Android SDK path is missing/invalid.

@@ -126,6 +126,45 @@
   - Missing `booking_addons` no longer causes the whole booking request to fail after the booking row is created.
   - Added a migration that adds missing booking voucher/stay columns and creates `booking_addons` with RLS policies.
 
+## Booking/Review Display Cleanup
+- Status: implemented.
+- Files changed:
+  - `ui/features/BookingHistoryAdapter.kt`
+  - `ui/features/ReviewActivity.kt`
+  - `res/layout/item_booking_card.xml`
+  - `res/values/strings.xml`
+  - `res/values-vi/strings.xml`
+- Done:
+  - Shortened long room/catalog ids into readable hotel/type labels.
+  - Shortened booking ids and guest ids to compact `#xxxxxx` labels.
+  - Shortened legacy add-on ids into simple service names or compact service ids.
+  - Display dates as `dd/MM` on booking/review cards.
+  - Added thousands separators to booking money values.
+  - Limited booking card room title to two lines with ellipsis.
+
+## Room Review Visibility Hotfix
+- Status: implemented.
+- Files changed:
+  - `data/SupabaseRepository.kt`
+- Observed database state:
+  - Existing review rows store imported hotel rooms as `catalog:hotel_slug:room_slug`.
+  - Hotel room detail can open the same room as `hotel_slug:room_slug`, so exact `room_id` filtering missed those reviews.
+- Done:
+  - `listReviewsForRoom` now resolves and queries equivalent room ids, including `catalog:` prefixed ids, non-prefixed ids, `room_code`, and hotel room table identities.
+  - Added a fallback that reads reviews and filters locally if Supabase rejects the multi-id filter.
+
+## Issue Report Hotfix - Supabase 400
+- Status: implemented.
+- Files changed:
+  - `data/SupabaseRepository.kt`
+  - `supabase/migrations/202604270006_issue_booking_context.sql`
+- Observed database state:
+  - `issues` exists with base fields.
+  - Selecting or writing `booking_id` currently returns HTTP 400 / PGRST204 because the column is missing.
+- Done:
+  - Issue creation falls back to base `issues` fields when `booking_id` is missing.
+  - Added a migration to add `booking_id`, index it, and install basic owner/admin RLS policies.
+
 ## Final Completion Record
 - Completed requirements:
   - Requirement 1: user can review only rooms from own eligible bookings; duplicate booking review blocked.

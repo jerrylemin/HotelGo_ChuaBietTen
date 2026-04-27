@@ -528,10 +528,18 @@ object SupabaseRepository {
             return
         }
         runAsync(onSuccess, onError) {
-            select(
-                "reviews",
-                mapOf("select" to "*", "room_id" to "eq.$roomId", "order" to "created_at.desc", "limit" to "100")
-            ).toReviewList()
+            val roomAliases = resolveReviewRoomAliases(roomId)
+            val filter = "in.(${roomAliases.joinToString(",") { it.toPostgrestInValue() }})"
+            runCatching {
+                select(
+                    "reviews",
+                    mapOf("select" to "*", "room_id" to filter, "order" to "created_at.desc", "limit" to "100")
+                ).toReviewList()
+            }.getOrElse {
+                selectAll("reviews", mapOf("select" to "*", "order" to "created_at.desc"))
+                    .toReviewList()
+                    .filter { it.roomId in roomAliases }
+            }.distinctBy { it.id.ifBlank { "${it.roomId}:${it.userId}:${it.createdAt}" } }
         }
     }
 
@@ -689,6 +697,46 @@ object SupabaseRepository {
         }
     }
 
+    private fun resolveReviewRoomAliases(roomId: String): Set<String> {
+        val aliases = linkedSetOf<String>()
+        addRoomAliasVariants(roomId, aliases)
+        val lookupKeys = aliases.toList()
+        lookupKeys.forEach { key ->
+            runCatching {
+                select("hotel_rooms", mapOf("select" to "*", "id" to "eq.$key", "limit" to "1")).firstObjectOrNull()
+                    ?: select("hotel_rooms", mapOf("select" to "*", "room_code" to "eq.$key", "limit" to "1")).firstObjectOrNull()
+            }.getOrNull()?.let { row ->
+                addRoomAliasVariants(row.optString("id"), aliases)
+                addRoomAliasVariants(row.optString("room_code"), aliases)
+                val slug = row.optString("slug")
+                val hotelSlug = row.optString("hotel_slug").ifBlank { row.optString("hotel_id") }
+                if (hotelSlug.isNotBlank() && slug.isNotBlank()) {
+                    addRoomAliasVariants("$hotelSlug:$slug", aliases)
+                    addRoomAliasVariants("catalog:$hotelSlug:$slug", aliases)
+                }
+            }
+            runCatching {
+                select("rooms", mapOf("select" to "id,code", "id" to "eq.$key", "limit" to "1")).firstObjectOrNull()
+                    ?: select("rooms", mapOf("select" to "id,code", "code" to "eq.$key", "limit" to "1")).firstObjectOrNull()
+            }.getOrNull()?.let { row ->
+                addRoomAliasVariants(row.optString("id"), aliases)
+                addRoomAliasVariants(row.optString("code"), aliases)
+            }
+        }
+        return aliases.filterTo(linkedSetOf()) { it.isNotBlank() }
+    }
+
+    private fun addRoomAliasVariants(value: String, aliases: MutableSet<String>) {
+        val clean = value.trim()
+        if (clean.isBlank()) return
+        aliases.add(clean)
+        if (clean.startsWith("catalog:")) {
+            aliases.add(clean.removePrefix("catalog:"))
+        } else if (clean.count { it == ':' } == 1) {
+            aliases.add("catalog:$clean")
+        }
+    }
+
     private fun upsertBookingWithSchemaFallback(booking: Booking) {
         runCatching {
             upsert("bookings", bookingToJson(booking))
@@ -709,8 +757,26 @@ object SupabaseRepository {
         }
     }
 
+    private fun upsertIssueWithSchemaFallback(issue: IssueReport) {
+        runCatching {
+            upsert("issues", issueToJson(issue))
+        }.getOrElse {
+            upsert(
+                "issues",
+                JSONObject()
+                    .put("id", issue.id)
+                    .put("user_id", issue.userId)
+                    .put("room_id", issue.roomId)
+                    .put("title", issue.title)
+                    .put("description", issue.description)
+                    .put("status", normalizeIssueStatus(issue.status))
+                    .put("created_at", millisToIso(issue.createdAt))
+            )
+        }
+    }
+
     fun createIssue(issue: IssueReport, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
-        runAsyncUnit(onSuccess, onError) { upsert("issues", issueToJson(issue.copy(id = issue.id.ifBlank { UUID.randomUUID().toString() }))) }
+        runAsyncUnit(onSuccess, onError) { upsertIssueWithSchemaFallback(issue.copy(id = issue.id.ifBlank { UUID.randomUUID().toString() })) }
 
     fun listIssues(userId: String?, onSuccess: (List<IssueReport>) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
@@ -1163,6 +1229,7 @@ object SupabaseRepository {
     private fun millisToIso(millis: Long): String = Instant.ofEpochMilli(if (millis <= 0L) System.currentTimeMillis() else millis).atOffset(ZoneOffset.UTC).toString()
     private fun normalizeDate(text: String): String = try { LocalDate.parse(text.trim()).toString() } catch (_: Exception) { LocalDate.now().toString() }
     private fun String.toErrorSuffix(): String = trim().takeIf { it.isNotBlank() }?.let { ": ${it.take(240)}" }.orEmpty()
+    private fun String.toPostgrestInValue(): String = "\"${replace("\\", "\\\\").replace("\"", "\\\"")}\""
 
     private fun parseTimestampMillis(value: Any?): Long {
         return when (value) {

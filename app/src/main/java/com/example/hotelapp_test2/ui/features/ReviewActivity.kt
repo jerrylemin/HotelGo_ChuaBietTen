@@ -16,6 +16,9 @@ import com.example.hotelapp_test2.ui.toast
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textfield.TextInputEditText
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 
 class ReviewActivity : BaseActivity() {
     private var selectedBooking: ReviewableBooking? = null
@@ -140,9 +143,9 @@ class ReviewActivity : BaseActivity() {
                 selectedBooking = item
                 selectedText.text = getString(
                     R.string.review_selected_booking,
-                    room?.hotelName?.ifBlank { getString(R.string.common_na) } ?: getString(R.string.common_na),
-                    room?.displayType?.ifBlank { room.type } ?: booking.roomId,
-                    booking.id
+                    compactHotelName(room?.hotelName.orEmpty()),
+                    compactRoomName(room?.displayType?.ifBlank { room.type }.orEmpty().ifBlank { booking.roomId }),
+                    shortId(booking.id)
                 )
                 item.existingReview?.let { review ->
                     ratingBar.rating = review.rating.coerceIn(1, 5).toFloat()
@@ -182,11 +185,11 @@ class ReviewActivity : BaseActivity() {
             val reviewed = if (item.existingReview == null) getString(R.string.review_can_review) else getString(R.string.review_already_done)
             text = getString(
                 R.string.review_booking_item,
-                room?.hotelName?.ifBlank { getString(R.string.common_na) } ?: getString(R.string.common_na),
-                room?.displayType?.ifBlank { room.type } ?: booking.roomId,
-                booking.checkIn,
-                booking.checkOut,
-                booking.id,
+                compactHotelName(room?.hotelName.orEmpty()),
+                compactRoomName(room?.displayType?.ifBlank { room.type }.orEmpty().ifBlank { booking.roomId }),
+                shortDate(booking.checkIn),
+                shortDate(booking.checkOut),
+                "#${shortId(booking.id)}",
                 statusLabel(booking.status),
                 reviewed
             )
@@ -210,4 +213,31 @@ class ReviewActivity : BaseActivity() {
         "checked_out" -> getString(R.string.booking_status_checked_out)
         else -> status
     }
+
+    private fun compactHotelName(value: String): String =
+        value.ifBlank { getString(R.string.common_na) }.toDisplayWords(maxWords = 4)
+
+    private fun compactRoomName(value: String): String =
+        value.ifBlank { getString(R.string.common_na) }.toDisplayWords(maxWords = 3)
+
+    private fun shortDate(value: String): String =
+        runCatching {
+            LocalDate.parse(value).format(DateTimeFormatter.ofPattern("dd/MM"))
+        }.getOrDefault(value)
+
+    private fun shortId(value: String): String {
+        val clean = value.trim()
+        if (clean.length <= 8) return clean
+        return clean.takeLast(6)
+    }
+
+    private fun String.toDisplayWords(maxWords: Int): String =
+        replace('_', ' ')
+            .replace('-', ' ')
+            .split(Regex("\\s+"))
+            .filter { it.isNotBlank() }
+            .take(maxWords)
+            .joinToString(" ") { word ->
+                word.lowercase(Locale.ROOT).replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
+            }
 }

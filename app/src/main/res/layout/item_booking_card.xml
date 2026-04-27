@@ -56,11 +56,21 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Booking short code -->
+        <TextView
+            android:id="@+id/bookingItemCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:text="BK-XXXXXX" />
+
         <TextView
             android:id="@+id/bookingItemDates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_s"
+            android:layout_marginTop="2dp"
             android:text="@string/booking_dates_format"
             android:textColor="@color/text_secondary"
             android:textSize="13sp" />
@@ -73,6 +83,22 @@
             android:text="@string/booking_status_format"
             android:textColor="@color/text_secondary"
             android:textSize="13sp" />
+
+        <!-- Stay status badge (shown for both admin and client) -->
+        <TextView
+            android:id="@+id/bookingItemStayStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/badge_status_bg"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/bookingItemTotal"

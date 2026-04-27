@@ -1,15 +1,18 @@
-﻿package com.example.hotelapp_test2.ui.features
+package com.example.hotelapp_test2.ui.features
 
+import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.hotelapp_test2.R
+import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.model.Booking
 import com.example.hotelapp_test2.data.model.Room
 import com.google.android.material.button.MaterialButton
@@ -58,8 +61,10 @@ class BookingHistoryAdapter(
         private val roomImage: ImageView = itemView.findViewById(R.id.bookingItemImage)
         private val roomText: TextView = itemView.findViewById(R.id.bookingItemRoom)
         private val priceText: TextView = itemView.findViewById(R.id.bookingItemPrice)
+        private val codeText: TextView = itemView.findViewById(R.id.bookingItemCode)
         private val dateText: TextView = itemView.findViewById(R.id.bookingItemDates)
         private val statusText: TextView = itemView.findViewById(R.id.bookingItemStatus)
+        private val stayStatusBadge: TextView = itemView.findViewById(R.id.bookingItemStayStatus)
         private val totalText: TextView = itemView.findViewById(R.id.bookingItemTotal)
         private val addOnsText: TextView = itemView.findViewById(R.id.bookingItemAddOns)
         private val userText: TextView = itemView.findViewById(R.id.bookingItemUser)
@@ -99,8 +104,26 @@ class BookingHistoryAdapter(
                     crossfade(true)
                 }
             }
+            // Booking short code (e.g. BK-D48208)
+            codeText.text = SupabaseRepository.shortBookingCode(booking.id)
             dateText.text = itemView.context.getString(R.string.booking_dates_format, shortDate(booking.checkIn), shortDate(booking.checkOut))
             statusText.text = itemView.context.getString(R.string.booking_status_format, statusLabel(booking.status))
+            // Stay status badge – visible when there is a meaningful stay status
+            val resolvedStay = SupabaseRepository.resolveStayStatus(booking)
+            val stayLabel = stayStatusLabel(booking)
+            if (stayLabel.isNotBlank() && resolvedStay !in setOf("pending_checkin", "cancelled")) {
+                stayStatusBadge.text = stayLabel
+                val badgeColor = when (resolvedStay) {
+                    "checked_in"  -> ContextCompat.getColor(itemView.context, R.color.brand_primary)
+                    "checked_out" -> ContextCompat.getColor(itemView.context, R.color.text_secondary)
+                    "overdue"     -> ContextCompat.getColor(itemView.context, R.color.danger)
+                    else          -> ContextCompat.getColor(itemView.context, R.color.brand_secondary)
+                }
+                stayStatusBadge.backgroundTintList = ColorStateList.valueOf(badgeColor)
+                stayStatusBadge.visibility = View.VISIBLE
+            } else {
+                stayStatusBadge.visibility = View.GONE
+            }
             totalText.text = if (booking.discountAmount > 0.0 || booking.voucherCode.isNotBlank()) {
                 itemView.context.getString(
                     R.string.booking_total_discount_detail,
@@ -168,6 +191,23 @@ class BookingHistoryAdapter(
                 "checked_out" -> context.getString(R.string.booking_status_checked_out)
                 "cancelled" -> context.getString(R.string.booking_status_cancelled)
                 else -> status
+            }
+        }
+
+        /**
+         * Returns the human-readable stay status label for client-facing booking cards.
+         * Overdue is computed at render time — if checked_in but checkout date is in the past.
+         */
+        fun stayStatusLabel(booking: Booking): String {
+            val context = itemView.context
+            val resolved = SupabaseRepository.resolveStayStatus(booking)
+            return when (resolved) {
+                "pending_checkin" -> context.getString(R.string.stay_status_pending_checkin)
+                "checked_in" -> context.getString(R.string.stay_status_checked_in)
+                "checked_out" -> context.getString(R.string.stay_status_checked_out)
+                "overdue" -> context.getString(R.string.stay_status_overdue)
+                "cancelled" -> context.getString(R.string.stay_status_cancelled)
+                else -> ""
             }
         }
 

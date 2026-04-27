@@ -74,34 +74,18 @@
                             android:minLines="3" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/posterRecommendImageLayout"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/poster_image_hint">
+                        android:text="@string/poster_room_select_title" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/posterRecommendImage"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textUri" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/posterRecommendRoomLayout"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    <Spinner
+                        android:id="@+id/posterRecommendRoomSpinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/poster_room_hint">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/posterRecommendRoom"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_marginTop="@dimen/space_xs" />
 
                     <com.google.android.material.switchmaterial.SwitchMaterial
                         android:id="@+id/posterRecommendActive"
@@ -157,5 +141,4 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
-
 

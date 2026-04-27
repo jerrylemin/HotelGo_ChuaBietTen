@@ -3,14 +3,17 @@ package com.example.hotelapp_test2.ui.features
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Spinner
 import android.widget.TextView
 import coil.load
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SessionManager
 import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.model.Poster
+import com.example.hotelapp_test2.data.model.Room
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
 import com.google.android.material.button.MaterialButton
@@ -21,6 +24,7 @@ import com.google.android.material.textfield.TextInputEditText
 class RecommendationPosterActivity : BaseActivity() {
     private var editingPoster: Poster? = null
     private var isAdmin: Boolean = false
+    private var rooms: List<Room> = emptyList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +35,7 @@ class RecommendationPosterActivity : BaseActivity() {
         val formCard = findViewById<MaterialCardView>(R.id.posterRecommendFormCard)
         val titleInput = findViewById<TextInputEditText>(R.id.posterRecommendTitle)
         val contentInput = findViewById<TextInputEditText>(R.id.posterRecommendContent)
-        val imageInput = findViewById<TextInputEditText>(R.id.posterRecommendImage)
-        val roomInput = findViewById<TextInputEditText>(R.id.posterRecommendRoom)
+        val roomSpinner = findViewById<Spinner>(R.id.posterRecommendRoomSpinner)
         val activeSwitch = findViewById<SwitchMaterial>(R.id.posterRecommendActive)
         val submitButton = findViewById<MaterialButton>(R.id.posterRecommendButton)
         val emptyText = findViewById<TextView>(R.id.posterRecommendEmptyText)
@@ -40,6 +43,25 @@ class RecommendationPosterActivity : BaseActivity() {
 
         formCard.visibility = if (isAdmin) View.VISIBLE else View.GONE
         activeSwitch.isChecked = true
+
+        fun bindRooms(selectedRoomId: String = "") {
+            SupabaseRepository.listAvailableRooms(
+                onSuccess = { loaded ->
+                    rooms = loaded
+                    val labels = loaded.map { room ->
+                        val roomName = room.displayType.ifBlank { room.type.ifBlank { room.code.ifBlank { room.id } } }
+                        val hotel = room.hotelName.ifBlank { getString(R.string.common_na) }
+                        "$roomName - $hotel - ${room.price.toInt()} VND"
+                    }.ifEmpty { listOf(getString(R.string.poster_room_empty)) }
+                    roomSpinner.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, labels)
+                    val index = loaded.indexOfFirst { it.id == selectedRoomId || it.code == selectedRoomId }.coerceAtLeast(0)
+                    if (loaded.isNotEmpty()) roomSpinner.setSelection(index)
+                },
+                onError = { error -> toast(getString(R.string.error_room_search, error.message.orEmpty())) }
+            )
+        }
+
+        if (isAdmin) bindRooms()
 
         fun loadPosters() {
             SupabaseRepository.listPosters(
@@ -54,8 +76,7 @@ class RecommendationPosterActivity : BaseActivity() {
                             editingPoster = poster
                             titleInput.setText(poster.title)
                             contentInput.setText(poster.content)
-                            imageInput.setText(poster.imageUrl)
-                            roomInput.setText(poster.roomId)
+                            bindRooms(poster.roomId)
                             activeSwitch.isChecked = poster.active
                             submitButton.text = getString(R.string.poster_update)
                         }, onDelete = {
@@ -79,10 +100,13 @@ class RecommendationPosterActivity : BaseActivity() {
         submitButton.setOnClickListener {
             val title = titleInput.text?.toString().orEmpty().trim()
             val content = contentInput.text?.toString().orEmpty().trim()
-            val imageUrl = imageInput.text?.toString().orEmpty().trim()
-            val roomCode = roomInput.text?.toString().orEmpty().trim()
+            val selectedRoom = rooms.getOrNull(roomSpinner.selectedItemPosition)
             if (title.isBlank() || content.isBlank()) {
                 toast(getString(R.string.error_poster_required))
+                return@setOnClickListener
+            }
+            if (selectedRoom == null) {
+                toast(getString(R.string.poster_room_empty))
                 return@setOnClickListener
             }
             val poster = Poster(
@@ -90,10 +114,11 @@ class RecommendationPosterActivity : BaseActivity() {
                 type = "recommend",
                 title = title,
                 content = content,
-                imageUrl = imageUrl,
-                roomId = roomCode,
+                imageUrl = selectedRoom.images.firstOrNull().orEmpty(),
+                roomId = selectedRoom.id.ifBlank { selectedRoom.code },
                 active = activeSwitch.isChecked,
-                role = "client",
+                userId = SupabaseRepository.currentUser()?.uid.orEmpty(),
+                role = "admin",
                 createdAt = editingPoster?.createdAt?.takeIf { it > 0L } ?: System.currentTimeMillis()
             )
             SupabaseRepository.createPoster(
@@ -103,8 +128,6 @@ class RecommendationPosterActivity : BaseActivity() {
                     editingPoster = null
                     titleInput.setText("")
                     contentInput.setText("")
-                    imageInput.setText("")
-                    roomInput.setText("")
                     activeSwitch.isChecked = true
                     submitButton.text = getString(R.string.poster_recommend_submit)
                     loadPosters()

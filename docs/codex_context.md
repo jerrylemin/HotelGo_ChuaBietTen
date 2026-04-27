@@ -81,6 +81,7 @@
 - Full build: `.\gradlew.bat build`.
 - Unit tests: `.\gradlew.bat test`.
 - Supabase and PayOS values are read from `local.properties` into BuildConfig.
+- Current local blocker: `local.properties` contains an Android `sdk.dir` path that does not exist on this machine. Set a valid Android SDK path or `ANDROID_HOME` before build/test.
 
 ## Fast Manual Tests
 - Auth: register/login, verify role resolution on home screen.
@@ -90,3 +91,18 @@
 - Add-ons: create add-on items as admin, book as client, verify selected add-ons affect total and appear in booking history/detail after implementation.
 - Voucher: create voucher as admin/client screen, apply during booking/payment after implementation, verify discount math and persisted booking/payment fields.
 - User home cleanup: login as client and verify `Search rooms, vouchers, guests...` and `Featured poster/Create poster` are absent; login as admin and verify admin dashboard still works.
+
+## Completion Summary
+- Initial docs commit: `d0328a4 docs sync project context`.
+- Reviews commit: `7120ff4 feat: restrict reviews to booked rooms`.
+- Add-ons commit: `87531e7 feat: add booking add ons`.
+- Vouchers commit: `ea85f4f feat: apply booking vouchers`.
+- User widget cleanup commit: `8aafa54 fix: remove unused user widgets`.
+- Migrations created:
+  - `supabase/migrations/202604270001_room_reviews_booking_context.sql`
+  - `supabase/migrations/202604270002_booking_addons.sql`
+  - `supabase/migrations/202604270003_booking_vouchers.sql`
+- Final verification commands:
+  - `.\gradlew.bat clean`: success.
+  - `.\gradlew.bat build`: failed before compile because Android SDK path is missing/invalid.
+  - `.\gradlew.bat test`: failed before test compile because Android SDK path is missing/invalid.

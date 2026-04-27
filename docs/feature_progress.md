@@ -99,5 +99,41 @@
 ## Known Follow-up Checks
 - Apply Supabase migrations to the target project.
 - Verify RLS policies allow logged-in users to select their bookings, add-ons, vouchers, and insert own review/booking rows.
-- Run `.\gradlew.bat assembleDebug` after each feature milestone.
-- Run `.\gradlew.bat test` or `.\gradlew.bat build` for final verification.
+- Fix local Android SDK config before compile verification:
+  - Current blocker: invalid/missing `sdk.dir` in `local.properties`; `ANDROID_HOME` is not providing a valid SDK.
+
+## Final Completion Record
+- Completed requirements:
+  - Requirement 1: user can review only rooms from own eligible bookings; duplicate booking review blocked.
+  - Requirement 2: booking add-ons support quantity, totals, persistence in `booking_addons`, and booking history display.
+  - Requirement 3: payment vouchers support validation, discount calculation, persisted booking/payment summary, and usage tracking.
+  - Requirement 4: client user UI hides the search field and featured poster card; admin UI keeps them.
+- Commit hashes:
+  - `d0328a4` - `docs sync project context`
+  - `7120ff4` - `feat: restrict reviews to booked rooms`
+  - `87531e7` - `feat: add booking add ons`
+  - `ea85f4f` - `feat: apply booking vouchers`
+  - `8aafa54` - `fix: remove unused user widgets`
+- Migrations:
+  - `202604270001_room_reviews_booking_context.sql`
+  - `202604270002_booking_addons.sql`
+  - `202604270003_booking_vouchers.sql`
+- Important files changed:
+  - `app/src/main/java/com/example/hotelapp_test2/data/model/Models.kt`
+  - `app/src/main/java/com/example/hotelapp_test2/data/SupabaseRepository.kt`
+  - `app/src/main/java/com/example/hotelapp_test2/ui/features/ReviewActivity.kt`
+  - `app/src/main/java/com/example/hotelapp_test2/ui/features/RoomDetailActivity.kt`
+  - `app/src/main/java/com/example/hotelapp_test2/ui/features/BookingActivity.kt`
+  - `app/src/main/java/com/example/hotelapp_test2/ui/features/BookingHistoryAdapter.kt`
+  - `app/src/main/java/com/example/hotelapp_test2/ui/features/PaymentActivity.kt`
+  - `app/src/main/java/com/example/hotelapp_test2/ui/features/PayOSReturnActivity.kt`
+  - `app/src/main/java/com/example/hotelapp_test2/MainActivity.kt`
+- Manual retest checklist:
+  - Login as client, create booking, confirm/mark paid or checked-out, open review screen, verify only own eligible booking appears, submit once, verify duplicate is disabled.
+  - Login as admin, create add-ons, login as client, book room with quantities, verify total includes add-ons and history shows line items.
+  - Create/seed voucher, login as client, enter voucher at payment, verify subtotal/discount/final total and payment history.
+  - Login as client and verify home search/featured poster widgets are hidden; login as admin and verify dashboard remains usable.
+- Final command results:
+  - `.\gradlew.bat clean`: success.
+  - `.\gradlew.bat build`: failed before compile because Android SDK path is invalid/missing.
+  - `.\gradlew.bat test`: failed before compile because Android SDK path is invalid/missing.

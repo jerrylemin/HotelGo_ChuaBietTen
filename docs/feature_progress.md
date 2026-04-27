@@ -83,9 +83,18 @@
   - Result: failed before compile because Android SDK path in `local.properties` does not exist. No code compile result was produced.
 
 ## Requirement 4 - Remove User Widgets
-- Status: not completed.
-- Text search found user home search box in `activity_main.xml` using `main_search_hint`.
-- Text search found featured poster card in `activity_main.xml` using `main_highlight_title/body/button`.
+- Status: implemented, build blocked by local Android SDK path.
+- Files changed:
+  - `MainActivity.kt`
+- Done:
+  - Text search found the search box through `main_search_hint` in `activity_main.xml` and strings.
+  - Text search found featured poster card through `main_highlight_title`, `main_highlight_body`, and `main_highlight_button`.
+  - Client role hides the search input and featured poster card entirely.
+  - Admin role keeps these widgets so admin workflows are not removed.
+  - Hidden client search state is cleared before applying feature filters.
+- Verification:
+  - Ran `.\gradlew.bat assembleDebug`.
+  - Result: failed before compile because Android SDK path in `local.properties` does not exist. No code compile result was produced.
 
 ## Known Follow-up Checks
 - Apply Supabase migrations to the target project.

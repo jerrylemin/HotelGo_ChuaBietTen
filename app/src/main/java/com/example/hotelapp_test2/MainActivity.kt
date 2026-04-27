@@ -25,12 +25,14 @@ import com.example.hotelapp_test2.ui.features.RecommendationPosterActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : BaseActivity() {
     private lateinit var featureAdapter: FeatureAdapter
     private var currentRole: FeatureRole = FeatureRole.CLIENT
     private var queryText: String = ""
     private lateinit var headerTitle: TextView
+    private lateinit var searchInput: TextInputLayout
     private lateinit var highlightCard: MaterialCardView
 
     override fun onStart() {
@@ -59,6 +61,7 @@ class MainActivity : BaseActivity() {
         setupToolbar(R.string.app_name, R.string.main_toolbar_subtitle, showBack = false)
 
         headerTitle = findViewById(R.id.headerTitle)
+        searchInput = findViewById(R.id.searchInput)
         highlightCard = findViewById(R.id.highlightCard)
 
         featureAdapter = FeatureAdapter { feature ->
@@ -142,7 +145,13 @@ class MainActivity : BaseActivity() {
     }
 
     private fun updateRoleUi() {
-        highlightCard.visibility = View.VISIBLE
+        val isAdmin = currentRole == FeatureRole.ADMIN
+        searchInput.visibility = if (isAdmin) View.VISIBLE else View.GONE
+        highlightCard.visibility = if (isAdmin) View.VISIBLE else View.GONE
+        if (!isAdmin && queryText.isNotBlank()) {
+            queryText = ""
+            findViewById<TextInputEditText>(R.id.searchEdit).setText("")
+        }
         applyFilters()
     }
 }

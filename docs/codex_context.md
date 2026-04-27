@@ -4,6 +4,7 @@
 - Android app: `app/`.
 - Kotlin source: `app/src/main/java/com/example/hotelapp_test2/`.
 - UI Activities: `MainActivity.kt`, `ui/auth/*`, `ui/features/*`.
+- Home UI: `MainActivity.kt`; client users do not see the feature search input or featured poster card, while admin users still can.
 - Shared UI base/helpers: `ui/BaseActivity.kt`, `ui/FeatureAdapter.kt`, `ui/GridSpacingItemDecoration.kt`, `ui/toast.kt`.
 - Routing/feature entry points: `core/FeatureRegistry.kt` and `AndroidManifest.xml`.
 - State/session: `data/SessionManager.kt`, `data/SupabaseRepository.kt` auth cache.
@@ -88,3 +89,4 @@
 - Review: create/confirm/complete a booking, open reviews, verify only owned eligible bookings appear, submit one review, verify duplicate is blocked.
 - Add-ons: create add-on items as admin, book as client, verify selected add-ons affect total and appear in booking history/detail after implementation.
 - Voucher: create voucher as admin/client screen, apply during booking/payment after implementation, verify discount math and persisted booking/payment fields.
+- User home cleanup: login as client and verify `Search rooms, vouchers, guests...` and `Featured poster/Create poster` are absent; login as admin and verify admin dashboard still works.

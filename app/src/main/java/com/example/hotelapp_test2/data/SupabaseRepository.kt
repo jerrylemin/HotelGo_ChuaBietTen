@@ -1009,14 +1009,25 @@ object SupabaseRepository {
 
     fun createRoomRequest(request: RoomRequest, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) {
-            upsert("room_requests", roomRequestToJson(request.copy(id = request.id.ifBlank { UUID.randomUUID().toString() })))
+            val normalized = request.copy(id = request.id.ifBlank { UUID.randomUUID().toString() })
+            try {
+                upsert("room_requests", roomRequestToJson(normalized))
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                upsertWithSchemaFallback("posters", roomRequestPosterPayloads(normalized))
+            }
         }
 
     fun listRoomRequests(userId: String?, onSuccess: (List<RoomRequest>) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
             val q = linkedMapOf("select" to "*", "limit" to "100", "order" to "created_at.desc")
             if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
-            select("room_requests", q).toRoomRequestList()
+            try {
+                select("room_requests", q).toRoomRequestList()
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                listLegacyRoomRequestPosters(userId)
+            }
         }
     }
 
@@ -1026,14 +1037,19 @@ object SupabaseRepository {
             return
         }
         runAsyncUnit(onSuccess, onError) {
-            patch(
-                "room_requests",
-                mapOf("id" to "eq.$requestId"),
-                JSONObject()
-                    .put("status", normalizeRoomRequestStatus(status))
-                    .put("admin_reply", adminReply)
-                    .put("updated_at", millisToIso(System.currentTimeMillis()))
-            )
+            try {
+                patch(
+                    "room_requests",
+                    mapOf("id" to "eq.$requestId"),
+                    JSONObject()
+                        .put("status", normalizeRoomRequestStatus(status))
+                        .put("admin_reply", adminReply)
+                        .put("updated_at", millisToIso(System.currentTimeMillis()))
+                )
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                patchLegacyRoomRequestPoster(requestId, status, adminReply)
+            }
         }
     }
 
@@ -1582,6 +1598,40 @@ object SupabaseRepository {
         )
     }
 
+    private fun listLegacyRoomRequestPosters(userId: String?): List<RoomRequest> {
+        val q = linkedMapOf("select" to "*", "type" to "eq.search", "limit" to "100", "order" to "created_at.desc")
+        if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
+        return try {
+            select("posters", q).toRoomRequestList()
+        } catch (e: Exception) {
+            if (!isSchemaMismatch(e) || userId.isNullOrBlank()) throw e
+            select(
+                "posters",
+                mapOf("select" to "*", "type" to "eq.search", "limit" to "100", "order" to "created_at.desc")
+            ).toRoomRequestList().filter { it.userId == userId }
+        }
+    }
+
+    private fun patchLegacyRoomRequestPoster(requestId: String, status: String, adminReply: String) {
+        val payload = JSONObject()
+            .put("status", normalizeRoomRequestStatus(status))
+            .put("admin_reply", adminReply)
+            .put("response", adminReply)
+            .put("updated_at", millisToIso(System.currentTimeMillis()))
+        try {
+            patch("posters", mapOf("id" to "eq.$requestId"), payload)
+        } catch (e: Exception) {
+            if (!isSchemaMismatch(e)) throw e
+            patch(
+                "posters",
+                mapOf("id" to "eq.$requestId"),
+                JSONObject()
+                    .put("status", normalizeRoomRequestStatus(status))
+                    .put("response", adminReply)
+            )
+        }
+    }
+
     private fun JSONArray.firstObjectOrNull(): JSONObject? = if (length() == 0) null else optJSONObject(0)
 
     private fun JSONObject.optDoubleCompat(key: String): Double = when (val v = opt(key)) { is Number -> v.toDouble(); is String -> v.toDoubleOrNull() ?: 0.0; else -> 0.0 }
@@ -2019,13 +2069,16 @@ object SupabaseRepository {
     )
 
     private fun JSONObject.toRoomRequest(): RoomRequest = RoomRequest(
-        id = optString("id"),
-        userId = optString("user_id"),
-        userEmail = optString("user_email"),
-        requestText = optString("request_text"),
+        id = optCleanString("id"),
+        userId = optCleanString("user_id").ifBlank { optCleanString("created_by") },
+        userEmail = optCleanString("user_email"),
+        requestText = optCleanString("request_text")
+            .ifBlank { optCleanString("description") }
+            .ifBlank { optCleanString("content") }
+            .ifBlank { optCleanString("title") },
         budget = optDoubleCompat("budget"),
-        adminReply = optString("admin_reply"),
-        status = normalizeRoomRequestStatus(optString("status", "new")),
+        adminReply = optCleanString("admin_reply").ifBlank { optCleanString("response") },
+        status = normalizeRoomRequestStatus(optCleanString("status", "new")),
         createdAt = parseTimestampMillis(opt("created_at")),
         updatedAt = parseTimestampMillis(opt("updated_at"))
     )
@@ -2259,6 +2312,52 @@ object SupabaseRepository {
         .put("created_at", millisToIso(request.createdAt))
         .put("updated_at", millisToIso(request.updatedAt.takeIf { it > 0L } ?: request.createdAt))
 
+    private fun roomRequestPosterPayloads(request: RoomRequest): List<JSONObject> {
+        val createdAt = millisToIso(request.createdAt)
+        val updatedAt = millisToIso(request.updatedAt.takeIf { it > 0L } ?: request.createdAt)
+        val title = request.requestText.lineSequence().firstOrNull()?.takeIf { it.isNotBlank() } ?: "Yeu cau tim phong"
+        val status = normalizeRoomRequestStatus(request.status)
+        return listOf(
+            JSONObject()
+                .put("id", request.id)
+                .put("type", "search")
+                .put("title", title)
+                .put("description", request.requestText)
+                .put("content", request.requestText)
+                .put("budget", request.budget)
+                .put("user_id", request.userId)
+                .put("created_by", request.userId)
+                .put("user_email", request.userEmail)
+                .put("admin_reply", request.adminReply)
+                .put("response", request.adminReply)
+                .put("status", status)
+                .put("role", "client")
+                .put("active", true)
+                .put("is_active", true)
+                .put("created_at", createdAt)
+                .put("updated_at", updatedAt),
+            JSONObject()
+                .put("id", request.id)
+                .put("type", "search")
+                .put("title", title)
+                .put("content", request.requestText)
+                .put("budget", request.budget)
+                .put("user_id", request.userId)
+                .put("response", request.adminReply)
+                .put("status", status)
+                .put("created_at", createdAt),
+            JSONObject()
+                .put("id", request.id)
+                .put("type", "search")
+                .put("title", title)
+                .put("content", request.requestText),
+            JSONObject()
+                .put("id", request.id)
+                .put("type", "search")
+                .put("title", title)
+        )
+    }
+
     private fun addOnToJson(item: AddOnItem): JSONObject = JSONObject()
         .put("id", item.id)
         .put("name", item.name)
@@ -2370,9 +2469,11 @@ object SupabaseRepository {
     private fun isSchemaMismatch(error: Throwable): Boolean {
         val message = error.message.orEmpty()
         return "PGRST204" in message ||
+            "PGRST205" in message ||
             "PGRST303" in message ||
             "42703" in message ||
             "column" in message ||
+            "could not find the table" in message.lowercase() ||
             "schema cache" in message
     }
 

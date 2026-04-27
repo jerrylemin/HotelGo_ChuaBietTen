@@ -900,9 +900,15 @@ object SupabaseRepository {
         runAsyncUnit(onSuccess, onError) {
             val normalized = voucher.copy(id = voucher.id.ifBlank { voucher.code.ifBlank { UUID.randomUUID().toString() } })
             try {
-                upsert("vouchers", voucherToJson(normalized, legacy = false))
+                upsert("vouchers", voucherToJson(normalized))
             } catch (e: Exception) {
-                if (isSchemaMismatch(e)) upsert("vouchers", voucherToJson(normalized, legacy = true)) else throw e
+                if (!isSchemaMismatch(e)) throw e
+                try {
+                    upsert("vouchers", legacyVoucherToJson(normalized, includeUsageLimit = true))
+                } catch (legacyError: Exception) {
+                    if (!isSchemaMismatch(legacyError)) throw legacyError
+                    upsert("vouchers", legacyVoucherToJson(normalized, includeUsageLimit = false))
+                }
             }
         }
 
@@ -2051,29 +2057,32 @@ object SupabaseRepository {
         .put("status", normalizeIssueStatus(issue.status))
         .put("created_at", millisToIso(issue.createdAt))
 
-    private fun voucherToJson(voucher: Voucher, legacy: Boolean = false): JSONObject {
+    private fun voucherToJson(voucher: Voucher): JSONObject = JSONObject()
+        .put("id", voucher.id)
+        .put("code", voucher.code)
+        .put("title", voucher.title.ifBlank { voucher.code })
+        .put("description", voucher.description)
+        .put("discount_type", normalizeDiscountType(voucher.type))
+        .put("discount_value", voucher.value)
+        .put("min_order_amount", voucher.minSpend)
+        .put("max_discount_amount", voucher.maxDiscountAmount)
+        .put("start_date", normalizeDate(voucher.startAt))
+        .put("end_date", normalizeDate(voucher.endAt))
+        .put("is_active", voucher.active)
+        .put("usage_limit", voucher.usageLimit)
+        .put("used_count", voucher.usedCount)
+
+    private fun legacyVoucherToJson(voucher: Voucher, includeUsageLimit: Boolean): JSONObject {
         val json = JSONObject()
             .put("id", voucher.id)
             .put("code", voucher.code)
-            .put("title", voucher.title.ifBlank { voucher.code })
-            .put("description", voucher.description)
-            .put("discount_type", normalizeDiscountType(voucher.type))
-            .put("discount_value", voucher.value)
-            .put("min_order_amount", voucher.minSpend)
-            .put("max_discount_amount", voucher.maxDiscountAmount)
-            .put("start_date", normalizeDate(voucher.startAt))
-            .put("end_date", normalizeDate(voucher.endAt))
-            .put("is_active", voucher.active)
-            .put("usage_limit", voucher.usageLimit)
-            .put("used_count", voucher.usedCount)
-        if (legacy) {
-            json.put("type", voucher.type)
-                .put("value", voucher.value)
-                .put("min_spend", voucher.minSpend)
-                .put("start_at", normalizeDate(voucher.startAt))
-                .put("end_at", normalizeDate(voucher.endAt))
-                .put("active", voucher.active)
-        }
+            .put("type", voucher.type)
+            .put("value", voucher.value)
+            .put("min_spend", voucher.minSpend)
+            .put("start_at", normalizeDate(voucher.startAt))
+            .put("end_at", normalizeDate(voucher.endAt))
+            .put("active", voucher.active)
+        if (includeUsageLimit) json.put("usage_limit", voucher.usageLimit)
         return json
     }
 

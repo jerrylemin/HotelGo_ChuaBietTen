@@ -326,7 +326,7 @@
     <string name="poster_list_title">Poster đã đăng</string>
     <string name="poster_empty">Chưa có poster</string>
     <string name="poster_list_item">%1$s: %2$s</string>
-    <string name="poster_recommend_item_detail">%1$s\n%2$s\nPhòng: %3$s\nTrạng thái: %4$s</string>
+    <string name="poster_recommend_item_detail">%1$s\n%2$s\nPhòng: %3$s\nKhách sạn: %4$s\nGiá: %5$s\nTrạng thái: %6$s</string>
     <string name="poster_status_visible">Đang hiển thị</string>
     <string name="poster_status_hidden">Đã ẩn</string>
     <string name="poster_search_title">Đăng poster tìm phòng</string>

@@ -298,13 +298,7 @@ object SupabaseRepository {
 
     fun searchRooms(queryText: String, onSuccess: (List<Room>) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
-            val hotelLookup = loadHotelLookup()
-            val legacyRooms = selectAll("rooms", mapOf("select" to "*", "order" to "created_at.desc")).toRoomList(hotelLookup)
-            val rooms = legacyRooms.ifEmpty {
-                selectAll("hotel_rooms", mapOf("select" to "*", "order" to "price.asc")).toSearchRoomList(hotelLookup)
-            }.ifEmpty {
-                fallbackSearchRooms()
-            }
+            val rooms = loadAvailableRooms()
             if (queryText.isBlank()) rooms else rooms.filter {
                 it.area.contains(queryText, true) ||
                     it.city.contains(queryText, true) ||
@@ -997,7 +991,10 @@ object SupabaseRepository {
         }
 
     fun listPosters(type: String, limit: Long, onSuccess: (List<Poster>) -> Unit, onError: (Exception) -> Unit) =
-        runAsync(onSuccess, onError) { select("posters", mapOf("select" to "*", "type" to "eq.$type", "order" to "created_at.desc", "limit" to limit.toString())).toPosterList() }
+        runAsync(onSuccess, onError) {
+            val posters = select("posters", mapOf("select" to "*", "type" to "eq.$type", "order" to "created_at.desc", "limit" to limit.toString())).toPosterList()
+            enrichPostersWithRooms(posters)
+        }
 
     fun deletePoster(posterId: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
         if (posterId.isBlank()) {
@@ -1546,8 +1543,43 @@ object SupabaseRepository {
                         city = item.optString("city")
                     )
                 }
+              }
+              .toMap()
+    }
+
+    private fun loadAvailableRooms(): List<Room> {
+        val hotelLookup = loadHotelLookup()
+        val legacyRooms = selectAll("rooms", mapOf("select" to "*", "order" to "created_at.desc")).toRoomList(hotelLookup)
+        return legacyRooms.ifEmpty {
+            selectAll("hotel_rooms", mapOf("select" to "*", "order" to "price.asc")).toSearchRoomList(hotelLookup)
+        }.ifEmpty {
+            fallbackSearchRooms()
+        }
+    }
+
+    private fun enrichPostersWithRooms(posters: List<Poster>): List<Poster> {
+        if (posters.isEmpty()) return posters
+        val rooms = runCatching { loadAvailableRooms() }.getOrDefault(emptyList())
+        if (rooms.isEmpty()) return posters
+        return posters.map { poster ->
+            val room = rooms.firstOrNull { room ->
+                val keys = listOf(room.id, room.code).filter { it.isNotBlank() }
+                poster.roomId in keys
             }
-            .toMap()
+            poster.withRoomFallback(room)
+        }
+    }
+
+    private fun Poster.withRoomFallback(room: Room?): Poster {
+        if (room == null) return this
+        val displayName = room.displayType.ifBlank { room.type.ifBlank { room.code.ifBlank { room.id } } }
+        return copy(
+            imageUrl = imageUrl.ifBlank { room.images.firstOrNull().orEmpty() },
+            roomId = roomId.ifBlank { room.id.ifBlank { room.code } },
+            roomName = roomName.ifBlank { displayName },
+            hotelName = hotelName.ifBlank { room.hotelName },
+            price = price.takeIf { it > 0.0 } ?: room.price
+        )
     }
 
     private fun JSONArray.firstObjectOrNull(): JSONObject? = if (length() == 0) null else optJSONObject(0)
@@ -1559,7 +1591,13 @@ object SupabaseRepository {
         is Boolean -> v
         is Number -> v.toInt() != 0
         is String -> v.equals("true", true) || v == "1"
-        else -> default
+          else -> default
+      }
+    private fun JSONObject.optCleanString(key: String, default: String = ""): String {
+        val value = opt(key)
+        if (value == null || value == JSONObject.NULL) return default
+        val text = value.toString().trim()
+        return if (text.equals("null", true)) default else text
     }
 
     private fun JSONObject.optStringList(key: String): List<String> {
@@ -1567,11 +1605,12 @@ object SupabaseRepository {
         return when (value) {
             is JSONArray -> buildList {
                 for (i in 0 until value.length()) {
-                    val x = value.optString(i).trim()
+                    val raw = value.opt(i)
+                    val x = if (raw == null || raw == JSONObject.NULL) "" else raw.toString().trim()
                     if (x.isNotBlank()) add(x)
                 }
             }
-            is String -> value.split(",").map { it.trim() }.filter { it.isNotBlank() }
+            is String -> value.split(",").map { it.trim() }.filter { it.isNotBlank() && !it.equals("null", true) }
             else -> emptyList()
         }
     }
@@ -1962,17 +2001,20 @@ object SupabaseRepository {
     )
 
     private fun JSONObject.toPoster(): Poster = Poster(
-        id = optString("id"),
-        type = optString("type", "recommend"),
-        title = optString("title"),
-        content = optString("description").ifBlank { optString("content") },
-        imageUrl = optString("image_url"),
-        roomId = optString("room_id"),
+        id = optCleanString("id"),
+        type = optCleanString("type", "recommend"),
+        title = optCleanString("title"),
+        content = optCleanString("description").ifBlank { optCleanString("content") },
+        imageUrl = optCleanString("image_url"),
+        roomId = optCleanString("room_id"),
+        roomName = optCleanString("room_name"),
+        hotelName = optCleanString("hotel_name"),
+        price = optDoubleCompat("price"),
         active = if (has("is_active")) optBooleanCompat("is_active", true) else optBooleanCompat("active", true),
-        userId = optString("created_by").ifBlank { optString("user_id") },
-        status = optString("status", "new"),
-        response = optString("admin_reply").ifBlank { optString("response") },
-        role = normalizeRole(optString("role", "client")),
+        userId = optCleanString("created_by").ifBlank { optCleanString("user_id") },
+        status = optCleanString("status", "new"),
+        response = optCleanString("admin_reply").ifBlank { optCleanString("response") },
+        role = normalizeRole(optCleanString("role", "client")),
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
@@ -2155,6 +2197,9 @@ object SupabaseRepository {
             .put("title", poster.title)
             .put("image_url", poster.imageUrl)
             .put("room_id", poster.roomId)
+            .put("room_name", poster.roomName)
+            .put("hotel_name", poster.hotelName)
+            .put("price", poster.price)
             .put("status", normalizeRoomRequestStatus(poster.status))
             .put("created_at", millisToIso(poster.createdAt))
         if (canonical) {
@@ -2186,6 +2231,8 @@ object SupabaseRepository {
             .put("id", poster.id)
             .put("type", poster.type)
             .put("title", poster.title)
+            .put("room_id", poster.roomId)
+            .put("image_url", poster.imageUrl)
             .put("status", normalizeRoomRequestStatus(poster.status))
             .put("created_at", millisToIso(poster.createdAt))
         if (useDescription) {

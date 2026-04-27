@@ -407,7 +407,7 @@
     <string name="poster_list_title">Published posters</string>
     <string name="poster_empty">No posters yet</string>
     <string name="poster_list_item">%1$s: %2$s</string>
-    <string name="poster_recommend_item_detail">%1$s\n%2$s\nRoom: %3$s\nStatus: %4$s</string>
+    <string name="poster_recommend_item_detail">%1$s\n%2$s\nRoom: %3$s\nHotel: %4$s\nPrice: %5$s\nStatus: %6$s</string>
     <string name="poster_status_visible">Visible</string>
     <string name="poster_status_hidden">Hidden</string>
     <string name="poster_search_title">Post a room search request</string>

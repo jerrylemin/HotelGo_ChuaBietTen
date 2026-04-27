@@ -116,6 +116,9 @@ class RecommendationPosterActivity : BaseActivity() {
                 content = content,
                 imageUrl = selectedRoom.images.firstOrNull().orEmpty(),
                 roomId = selectedRoom.id.ifBlank { selectedRoom.code },
+                roomName = selectedRoom.displayType.ifBlank { selectedRoom.type.ifBlank { selectedRoom.code.ifBlank { selectedRoom.id } } },
+                hotelName = selectedRoom.hotelName,
+                price = selectedRoom.price,
                 active = activeSwitch.isChecked,
                 userId = SupabaseRepository.currentUser()?.uid.orEmpty(),
                 role = "admin",
@@ -151,28 +154,31 @@ class RecommendationPosterActivity : BaseActivity() {
             setOnClickListener { openLinkedRoom(poster) }
         }
         val content = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
-        if (poster.imageUrl.isNotBlank()) {
-            val image = ImageView(this).apply {
-                layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    resources.getDimensionPixelSize(R.dimen.list_thumb_m) * 2
-                )
-                scaleType = ImageView.ScaleType.CENTER_CROP
-                load(poster.imageUrl) {
-                    placeholder(R.mipmap.ic_launcher)
-                    error(R.mipmap.ic_launcher)
-                    crossfade(true)
-                }
+        val image = ImageView(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                resources.getDimensionPixelSize(R.dimen.list_thumb_m) * 2
+            )
+            scaleType = ImageView.ScaleType.CENTER_CROP
+            load(poster.imageUrl.ifBlank { null }) {
+                placeholder(R.mipmap.ic_launcher)
+                error(R.mipmap.ic_launcher)
+                crossfade(true)
             }
-            content.addView(image)
         }
+        content.addView(image)
         val detail = TextView(this).apply {
             val status = if (poster.active) getString(R.string.poster_status_visible) else getString(R.string.poster_status_hidden)
+            val roomLabel = poster.roomName.ifBlank { poster.roomId.ifBlank { getString(R.string.common_na) } }
+            val hotelLabel = poster.hotelName.ifBlank { getString(R.string.common_na) }
+            val priceLabel = if (poster.price > 0.0) "${poster.price.toInt()} VND" else getString(R.string.common_na)
             text = getString(
                 R.string.poster_recommend_item_detail,
                 poster.title,
                 poster.content,
-                poster.roomId.ifBlank { getString(R.string.common_na) },
+                roomLabel,
+                hotelLabel,
+                priceLabel,
                 status
             )
             setTextColor(getColor(R.color.text_primary))
@@ -209,6 +215,7 @@ class RecommendationPosterActivity : BaseActivity() {
         if (poster.roomId.isBlank()) return
         startActivity(
             Intent(this, RoomDetailActivity::class.java)
+                .putExtra(RoomDetailActivity.EXTRA_ROOM_ID, poster.roomId)
                 .putExtra(RoomDetailActivity.EXTRA_ROOM_CODE, poster.roomId)
         )
     }

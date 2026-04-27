@@ -19,8 +19,22 @@ set
     discount_type = coalesce(discount_type, case when type = 'percent' then 'percentage' else type end, 'percentage'),
     discount_value = coalesce(discount_value, value, 0),
     min_order_amount = coalesce(min_order_amount, min_spend, 0),
-    start_date = coalesce(start_date, nullif(start_at, '')::date),
-    end_date = coalesce(end_date, nullif(end_at, '')::date),
+    start_date = coalesce(
+        start_date,
+        case
+            when btrim(coalesce(start_at::text, '')) ~ '^\d{4}-\d{2}-\d{2}$'
+                then btrim(start_at::text)::date
+            else null
+        end
+    ),
+    end_date = coalesce(
+        end_date,
+        case
+            when btrim(coalesce(end_at::text, '')) ~ '^\d{4}-\d{2}-\d{2}$'
+                then btrim(end_at::text)::date
+            else null
+        end
+    ),
     is_active = coalesce(is_active, active, true),
     used_count = coalesce(used_count, 0),
     updated_at = coalesce(updated_at, now())

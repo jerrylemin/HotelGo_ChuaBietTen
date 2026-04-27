@@ -18,7 +18,9 @@ class NotificationsActivity : BaseActivity() {
     private lateinit var listContainer: LinearLayout
     private lateinit var emptyText: TextView
     private lateinit var unreadText: TextView
+    private lateinit var markAllReadButton: MaterialButton
     private var role: String = "client"
+    private var userId: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +37,9 @@ class NotificationsActivity : BaseActivity() {
         listContainer = findViewById(R.id.notificationListContainer)
         emptyText = findViewById(R.id.notificationEmptyText)
         unreadText = findViewById(R.id.notificationUnreadText)
+        markAllReadButton = findViewById(R.id.notificationMarkAllReadButton)
 
-        val userId = SupabaseRepository.currentUser()?.uid.orEmpty()
+        userId = SupabaseRepository.currentUser()?.uid.orEmpty()
         if (userId.isBlank()) {
             toast(getString(R.string.error_login_required))
             return
@@ -86,12 +89,21 @@ class NotificationsActivity : BaseActivity() {
         ).forEach { switch ->
             switch.setOnCheckedChangeListener { _, _ -> saveSettings() }
         }
+        markAllReadButton.setOnClickListener {
+            SupabaseRepository.markAllNotificationsRead(
+                userId = userId,
+                role = role,
+                onSuccess = { loadNotifications() },
+                onError = { error -> toast(getString(R.string.error_notifications_save, error.message.orEmpty())) }
+            )
+        }
         loadNotifications()
     }
 
     private fun loadNotifications() {
         SupabaseRepository.listenNotifications(
             role = role,
+            userId = userId,
             onSuccess = { notifications ->
                 renderNotifications(notifications)
             },

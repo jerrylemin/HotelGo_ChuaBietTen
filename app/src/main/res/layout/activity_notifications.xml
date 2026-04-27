@@ -107,6 +107,14 @@
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
 
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/notificationMarkAllReadButton"
+                        style="@style/Widget.Hotel.Button.Outlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/notifications_mark_all_read" />
+
                     <TextView
                         android:id="@+id/notificationEmptyText"
                         android:layout_width="match_parent"

@@ -84,8 +84,11 @@ class BookingHistoryActivity : BaseActivity() {
                         toast(getString(R.string.success_booking_confirmed))
                         SupabaseRepository.createNotification(
                             AppNotification(
+                                userId = booking.userId,
                                 title = getString(R.string.booking_confirm_notification_title),
                                 body = getString(R.string.booking_confirm_notification_body, booking.id),
+                                type = "booking",
+                                relatedId = booking.id,
                                 targetRole = "client"
                             ),
                             onSuccess = {},
@@ -110,8 +113,11 @@ class BookingHistoryActivity : BaseActivity() {
                         toast(getString(R.string.success_booking_cancelled))
                         SupabaseRepository.createNotification(
                             AppNotification(
+                                userId = booking.userId,
                                 title = getString(R.string.booking_cancel_notification_title),
                                 body = getString(R.string.booking_cancel_notification_body, booking.id),
+                                type = "booking",
+                                relatedId = booking.id,
                                 targetRole = "client"
                             ),
                             onSuccess = {},

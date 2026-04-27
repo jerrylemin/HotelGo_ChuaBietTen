@@ -146,3 +146,13 @@
   - `supabase/migrations/202604270006_issue_booking_context.sql`
   - `supabase/migrations/20260427_add_payment_summary_fields.sql`
   - `supabase/migrations/20260428_add_stay_status.sql` ← **NEW**
+
+## Voucher / Poster / Notification Alignment (2026-04-28)
+- Voucher flow: booking screens no longer accept voucher codes. Vouchers are loaded and selected only in `PaymentActivity`, where the UI shows voucher details, conditions, discount, and final total.
+- Admin voucher creation: `SupabaseRepository.createVoucher` writes canonical voucher columns first and falls back only for legacy schema mismatch. User voucher list reads active/valid vouchers.
+- Recommendation posters: user screen is read-only and lists active admin recommendation posters. Admin chooses a room from the existing room list; room id and image are derived from selected room data.
+- Room search requests: user requests are stored in `room_requests` with `user_id`, `user_email`, `request_text`, `budget`, `admin_reply`, `status`, `created_at`, `updated_at`. Admin edits reply/status in a dialog with a single save action.
+- Notifications: notifications can be user-scoped, track `is_read` and `read_at`, and include type/related metadata. Android creates in-app notifications only; email sending is an intentional backend/Edge Function integration point.
+- Supabase tables involved: `vouchers`, `voucher_usage`, `posters`, `room_requests`, `notifications`, `notification_settings`, `bookings`, `rooms`, `hotel_rooms`, `payments`.
+- Migration added: `supabase/migrations/202604280002_voucher_poster_notification_alignment.sql`.
+- Files changed: `Models.kt`, `SupabaseRepository.kt`, `BookingActivity.kt`, `RoomDetailActivity.kt`, `PaymentActivity.kt`, `RecommendationPosterActivity.kt`, `SearchPosterActivity.kt`, `NotificationsActivity.kt`, `BookingHistoryActivity.kt`, related layouts and string resources.

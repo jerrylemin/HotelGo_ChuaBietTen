@@ -229,3 +229,17 @@
   - Verify RLS policies allow admin UPDATE on bookings.
 - Test cases verified:
   - Filter chips, check-in/out button states, overdue detection, client badge display, BK-XXXXXX codes.
+
+## Voucher, Poster, Room Request, Notification Fixes (2026-04-28)
+- Status: implemented and locally verified.
+- Pull/sync: `git fetch origin` and `git pull --rebase origin main` completed with `Already up to date`; no local stash was needed.
+- Data/Supabase: added `RoomRequest`, expanded `AppNotification`, added schema-safe fallbacks for voucher/poster/notification writes, and created migration `202604280002_voucher_poster_notification_alignment.sql`.
+- Voucher: removed voucher input/apply from booking and room detail; payment now shows selectable valid vouchers and recalculates final total.
+- Recommendation poster: user side is read-only; admin selects an existing room instead of entering raw image URL or room id.
+- Room request poster: user creates a `room_requests` row; admin edits reply/status in a dialog with one save button; status labels are localized.
+- Notification: read/unread updates include `read_at`; mark-all-read added; booking/payment/room-request notifications are user-scoped where user id is available.
+- UI cleanup: "Phòng đã đặt của tôi" subtitle now uses "Xem các phòng đã đặt".
+- Verification:
+  - `./gradlew.bat assembleDebug`: success.
+  - `./gradlew.bat testDebugUnitTest`: success.
+- Remaining manual checks: apply migration to Supabase, then test admin/client flows against the live project.

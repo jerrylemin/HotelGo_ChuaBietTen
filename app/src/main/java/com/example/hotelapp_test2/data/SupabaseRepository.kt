@@ -1086,13 +1086,18 @@ object SupabaseRepository {
             return
         }
         runAsyncUnit(onSuccess, onError) {
-            patch(
-                "notifications",
-                mapOf("id" to "eq.$notificationId"),
-                JSONObject()
-                    .put("is_read", read)
-                    .put("read_at", if (read) millisToIso(System.currentTimeMillis()) else JSONObject.NULL)
-            )
+            try {
+                patch(
+                    "notifications",
+                    mapOf("id" to "eq.$notificationId"),
+                    JSONObject()
+                        .put("is_read", read)
+                        .put("read_at", if (read) millisToIso(System.currentTimeMillis()) else JSONObject.NULL)
+                )
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                patch("notifications", mapOf("id" to "eq.$notificationId"), JSONObject().put("is_read", read))
+            }
         }
     }
 
@@ -1104,13 +1109,22 @@ object SupabaseRepository {
             } else {
                 mapOf("target_role" to "in.(all,$normalized)")
             }
-            patch(
-                "notifications",
-                filters,
-                JSONObject()
-                    .put("is_read", true)
-                    .put("read_at", millisToIso(System.currentTimeMillis()))
-            )
+            try {
+                patch(
+                    "notifications",
+                    filters,
+                    JSONObject()
+                        .put("is_read", true)
+                        .put("read_at", millisToIso(System.currentTimeMillis()))
+                )
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                patch(
+                    "notifications",
+                    mapOf("target_role" to "in.(all,$normalized)"),
+                    JSONObject().put("is_read", true)
+                )
+            }
         }
     }
 
@@ -1182,7 +1196,15 @@ object SupabaseRepository {
         runAsync(onSuccess, onError) {
             val q = linkedMapOf("select" to "*", "target_role" to "in.(all,$normalized)", "order" to "created_at.desc", "limit" to "50")
             if (userId.isNotBlank()) q["or"] = "(user_id.eq.$userId,user_id.is.null)"
-            select("notifications", q).toNotificationList()
+            try {
+                select("notifications", q).toNotificationList()
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                select(
+                    "notifications",
+                    mapOf("select" to "*", "target_role" to "in.(all,$normalized)", "order" to "created_at.desc", "limit" to "50")
+                ).toNotificationList()
+            }
         }
     }
 
@@ -2232,7 +2254,11 @@ object SupabaseRepository {
 
     private fun isSchemaMismatch(error: Throwable): Boolean {
         val message = error.message.orEmpty()
-        return "PGRST204" in message || "PGRST303" in message || "column" in message || "schema cache" in message
+        return "PGRST204" in message ||
+            "PGRST303" in message ||
+            "42703" in message ||
+            "column" in message ||
+            "schema cache" in message
     }
 
     private fun String.errorSuffix(): String {

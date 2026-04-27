@@ -15,12 +15,6 @@ val supabaseAuthRedirectUrl = localProperties.getProperty(
     "SUPABASE_AUTH_REDIRECT_URL",
     "https://jerrylemin.github.io/HotelGo_ChuaBietTen/confirm.html"
 )
-val payosClientId = localProperties.getProperty("PAYOS_CLIENT_ID", "")
-val payosApiKey = localProperties.getProperty("PAYOS_API_KEY", "")
-val payosChecksumKey = localProperties.getProperty("PAYOS_CHECKSUM_KEY", "")
-val payosBaseUrl = localProperties.getProperty("PAYOS_BASE_URL", "https://api-merchant.payos.vn")
-val payosReturnUrl = localProperties.getProperty("PAYOS_RETURN_URL", "hotelapp://payos-return")
-val payosCancelUrl = localProperties.getProperty("PAYOS_CANCEL_URL", "hotelapp://payos-cancel")
 val googleWebClientId = localProperties.getProperty("GOOGLE_WEB_CLIENT_ID", "")
 
 android {
@@ -43,12 +37,7 @@ android {
         buildConfigField("String", "SUPABASE_URL", "\"$supabaseUrl\"")
         buildConfigField("String", "SUPABASE_ANON_KEY", "\"$supabaseAnonKey\"")
         buildConfigField("String", "SUPABASE_AUTH_REDIRECT_URL", "\"$supabaseAuthRedirectUrl\"")
-        buildConfigField("String", "PAYOS_CLIENT_ID", "\"$payosClientId\"")
-        buildConfigField("String", "PAYOS_API_KEY", "\"$payosApiKey\"")
-        buildConfigField("String", "PAYOS_CHECKSUM_KEY", "\"$payosChecksumKey\"")
-        buildConfigField("String", "PAYOS_BASE_URL", "\"$payosBaseUrl\"")
-        buildConfigField("String", "PAYOS_RETURN_URL", "\"$payosReturnUrl\"")
-        buildConfigField("String", "PAYOS_CANCEL_URL", "\"$payosCancelUrl\"")
+
         buildConfigField("String", "GOOGLE_WEB_CLIENT_ID", "\"$googleWebClientId\"")
     }
 

@@ -284,6 +284,7 @@ object SupabaseRepository {
                 ?: select("rooms", mapOf("select" to "*", "id" to "eq.$code", "limit" to "1")).firstObjectOrNull()?.toRoom(hotelLookup)
                 ?: select("hotel_rooms", mapOf("select" to "*", "room_code" to "eq.$code", "limit" to "1")).firstObjectOrNull()?.toSearchRoom(hotelLookup)
                 ?: select("hotel_rooms", mapOf("select" to "*", "id" to "eq.$code", "limit" to "1")).firstObjectOrNull()?.toSearchRoom(hotelLookup)
+                ?: fallbackSearchRooms().firstOrNull { it.code == code || it.id == code }
         }
     }
 
@@ -296,6 +297,8 @@ object SupabaseRepository {
             val legacyRooms = selectAll("rooms", mapOf("select" to "*", "order" to "created_at.desc")).toRoomList(hotelLookup)
             val rooms = legacyRooms.ifEmpty {
                 selectAll("hotel_rooms", mapOf("select" to "*", "order" to "price.asc")).toSearchRoomList(hotelLookup)
+            }.ifEmpty {
+                fallbackSearchRooms()
             }
             if (queryText.isBlank()) rooms else rooms.filter {
                 it.area.contains(queryText, true) ||
@@ -314,13 +317,24 @@ object SupabaseRepository {
             val q = linkedMapOf("select" to "*")
             if (!type.isNullOrBlank()) q["type"] = "eq.$type"
             if (sortAscending != null) q["order"] = if (sortAscending) "price.asc" else "price.desc"
-            selectAll("rooms", q).toRoomList(hotelLookup)
+            selectAll("rooms", q).toRoomList(hotelLookup).ifEmpty {
+                fallbackSearchRooms()
+                    .filter { room -> type.isNullOrBlank() || room.type == type }
+                    .let { rooms ->
+                        when (sortAscending) {
+                            true -> rooms.sortedBy { it.price }
+                            false -> rooms.sortedByDescending { it.price }
+                            null -> rooms
+                        }
+                    }
+            }
         }
     }
 
     fun searchHotels(queryText: String, onSuccess: (List<HotelCatalogItem>) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
             val hotels = selectAll("hotels", mapOf("select" to "*", "order" to "display_name.asc")).toHotelCatalogList()
+                .ifEmpty { fallbackHotels() }
             if (queryText.isBlank()) {
                 hotels
             } else {
@@ -342,6 +356,7 @@ object SupabaseRepository {
         }
         runAsync(onSuccess, onError) {
             select("hotels", mapOf("select" to "*", "id" to "eq.$hotelId", "limit" to "1")).firstObjectOrNull()?.toHotelCatalogItem()
+                ?: fallbackHotels().firstOrNull { it.id == hotelId || it.slug == hotelId }
         }
     }
 
@@ -354,7 +369,9 @@ object SupabaseRepository {
             selectAll(
                 "hotel_rooms",
                 mapOf("select" to "*", "hotel_id" to "eq.$hotelId", "order" to "price.asc")
-            ).toHotelCatalogRoomList()
+            ).toHotelCatalogRoomList().ifEmpty {
+                fallbackHotelRooms(hotelId)
+            }
         }
     }
 
@@ -365,6 +382,7 @@ object SupabaseRepository {
         }
         runAsync(onSuccess, onError) {
             select("hotel_rooms", mapOf("select" to "*", "id" to "eq.$roomId", "limit" to "1")).firstObjectOrNull()?.toHotelCatalogRoom()
+                ?: fallbackHotelRooms().firstOrNull { it.id == roomId || it.roomCode == roomId }
         }
     }
 
@@ -858,6 +876,15 @@ object SupabaseRepository {
 
     private fun loadHotelLookup(): Map<String, HotelLookup> {
         val hotels = selectAll("hotels", mapOf("select" to "id,display_name,area,city"))
+        if (hotels.length() == 0) {
+            return fallbackHotels().associate { hotel ->
+                hotel.id to HotelLookup(
+                    displayName = hotel.displayName.ifBlank { hotel.name },
+                    area = hotel.area,
+                    city = hotel.city
+                )
+            }
+        }
         return (0 until hotels.length())
             .mapNotNull { index ->
                 val item = hotels.optJSONObject(index)
@@ -1035,6 +1062,175 @@ object SupabaseRepository {
             area = hotelMeta?.area.orEmpty(),
             city = hotelMeta?.city.orEmpty()
         )
+    }
+
+    private fun fallbackHotels(): List<HotelCatalogItem> {
+        val context = appContext ?: return emptyList()
+        val assets = context.assets
+        return runCatching {
+            assets.list("").orEmpty()
+                .mapNotNull { folder ->
+                    readAssetObject("$folder/data/hotel.json")?.toFallbackHotel(folder)
+                }
+                .sortedBy { it.displayName.lowercase() }
+        }.getOrDefault(emptyList())
+    }
+
+    private fun fallbackHotelRooms(hotelId: String? = null): List<HotelCatalogRoom> {
+        val context = appContext ?: return emptyList()
+        val assets = context.assets
+        return runCatching {
+            assets.list("").orEmpty().flatMap { folder ->
+                val hotel = readAssetObject("$folder/data/hotel.json")?.toFallbackHotel(folder)
+                val roomsRoot = readAssetObject("$folder/data/rooms.json")
+                if (hotel == null || roomsRoot == null || (!hotelId.isNullOrBlank() && hotel.id != hotelId && hotel.slug != hotelId)) {
+                    emptyList()
+                } else {
+                    val rooms = roomsRoot.optJSONArray("rooms") ?: JSONArray()
+                    (0 until rooms.length()).mapNotNull { index ->
+                        rooms.optJSONObject(index)?.toFallbackHotelRoom(hotel, folder)
+                    }
+                }
+            }.sortedBy { it.price }
+        }.getOrDefault(emptyList())
+    }
+
+    private fun fallbackSearchRooms(): List<Room> {
+        val lookup = fallbackHotels().associate { hotel ->
+            hotel.id to HotelLookup(
+                displayName = hotel.displayName.ifBlank { hotel.name },
+                area = hotel.area,
+                city = hotel.city
+            )
+        }
+        return fallbackHotelRooms().map { room ->
+            val hotelMeta = lookup[room.hotelId]
+            val displayType = room.name.ifBlank { room.slug }
+            Room(
+                id = room.id,
+                code = room.roomCode,
+                type = displayType,
+                displayType = displayType,
+                typeKey = toRoomTypeKey(displayType),
+                price = room.price,
+                rating = room.rating,
+                reviewCount = room.reviewCount,
+                status = room.status,
+                capacity = room.capacity,
+                images = listOfNotNull(room.heroImage.takeIf { it.isNotBlank() }) + room.images,
+                hotelId = room.hotelId,
+                hotelName = hotelMeta?.displayName.orEmpty().ifBlank { room.hotelSlug },
+                area = hotelMeta?.area.orEmpty(),
+                city = hotelMeta?.city.orEmpty()
+            )
+        }
+    }
+
+    private fun readAssetObject(path: String): JSONObject? {
+        val context = appContext ?: return null
+        return runCatching {
+            context.assets.open(path).use { stream ->
+                JSONObject(BufferedReader(InputStreamReader(stream)).readText())
+            }
+        }.getOrNull()
+    }
+
+    private fun JSONObject.toFallbackHotel(folder: String): HotelCatalogItem {
+        val address = optJSONObject("address")
+        val review = optJSONObject("review")
+        val description = optJSONObject("description")
+        val checkIn = optJSONObject("check_in")
+        val checkOut = optJSONObject("check_out")
+        val contact = optJSONObject("contact")
+        val coordinates = optJSONObject("coordinates")
+        val gallery = optImageUrlList("images", folder)
+        return HotelCatalogItem(
+            id = optString("slug").ifBlank { folder },
+            folderName = optString("folder_name").ifBlank { folder },
+            slug = optString("slug").ifBlank { folder },
+            name = optString("name"),
+            displayName = optString("display_name").ifBlank { optString("name") },
+            city = address?.optString("city").orEmpty(),
+            area = address?.optString("area").orEmpty(),
+            country = address?.optString("country").orEmpty(),
+            addressFull = address?.optString("full").orEmpty(),
+            shortDescription = optString("short_description"),
+            description = description?.optString("overview_text").orEmpty(),
+            starRating = optDoubleCompat("star_rating"),
+            reviewScore = review?.optDoubleCompat("score") ?: 0.0,
+            reviewCount = review?.optIntCompat("review_count") ?: 0,
+            roomCount = optIntCompat("room_count"),
+            checkInFrom = checkIn?.optString("from").orEmpty(),
+            checkOutUntil = checkOut?.optString("until").orEmpty(),
+            latitude = coordinates?.opt("latitude")?.let { value -> (value as? Number)?.toDouble() ?: (value as? String)?.toDoubleOrNull() },
+            longitude = coordinates?.opt("longitude")?.let { value -> (value as? Number)?.toDouble() ?: (value as? String)?.toDoubleOrNull() },
+            contactPhone = contact?.optString("phone").orEmpty(),
+            contactEmail = contact?.optString("email").orEmpty(),
+            heroImage = optString("hero_image_url").ifBlank { gallery.firstOrNull().orEmpty() },
+            galleryImages = gallery,
+            featuredAmenities = optStringList("featured_amenities"),
+            generalAmenities = optStringList("general_amenities"),
+            policyNotes = optStringList("policy_notes"),
+            sourceUrl = optString("source_url")
+        )
+    }
+
+    private fun JSONObject.toFallbackHotelRoom(hotel: HotelCatalogItem, folder: String): HotelCatalogRoom {
+        val slug = optString("slug")
+        val price = optJSONObject("price")
+        val roomSize = optJSONObject("room_size")
+        val bedConfig = optJSONObject("bed_configuration")
+        val images = optImageUrlList("images", folder)
+        val roomId = "${hotel.slug}:$slug"
+        return HotelCatalogRoom(
+            id = roomId,
+            hotelId = hotel.id,
+            hotelSlug = hotel.slug,
+            roomCode = "${hotel.folderName}-$slug",
+            name = optString("name"),
+            slug = slug,
+            price = price?.optDoubleCompat("current_amount") ?: 0.0,
+            originalPrice = price?.opt("original_amount")?.let { value -> (value as? Number)?.toDouble() ?: (value as? String)?.toDoubleOrNull() },
+            currency = price?.optString("currency", "VND") ?: "VND",
+            rating = hotel.reviewScore,
+            reviewCount = hotel.reviewCount,
+            status = optString("status", "available"),
+            capacity = optIntCompat("max_capacity").takeIf { it > 0 } ?: 2,
+            images = images,
+            heroImage = optString("hero_image_url").ifBlank { images.firstOrNull().orEmpty() },
+            roomSizeSqm = roomSize?.opt("square_meters")?.let { value -> (value as? Number)?.toDouble() ?: (value as? String)?.toDoubleOrNull() },
+            roomSizeSqft = roomSize?.opt("square_feet")?.let { value -> (value as? Number)?.toDouble() ?: (value as? String)?.toDoubleOrNull() },
+            view = optString("view"),
+            breakfastIncluded = optBooleanCompat("breakfast_included", false),
+            cancellationPolicy = optString("cancellation_policy"),
+            bedSummary = bedConfig?.optString("summary").orEmpty(),
+            bedCount = optIntCompat("number_of_beds"),
+            amenities = optStringList("amenities"),
+            bathroomAmenities = optStringList("bathroom_amenities"),
+            tags = optStringList("tags"),
+            shortDescription = optString("short_description")
+        )
+    }
+
+    private fun JSONObject.optImageUrlList(key: String, folder: String): List<String> {
+        val value = opt(key)
+        return when (value) {
+            is JSONArray -> buildList {
+                for (index in 0 until value.length()) {
+                    val item = value.opt(index)
+                    val url = when (item) {
+                        is JSONObject -> item.optString("public_url")
+                            .ifBlank { item.optString("url") }
+                            .ifBlank { item.optString("local_path").takeIf { it.isNotBlank() }?.let { "file:///android_asset/$folder/$it" }.orEmpty() }
+                        is String -> item
+                        else -> ""
+                    }
+                    if (url.isNotBlank()) add(url)
+                }
+            }
+            is String -> value.split(",").map { it.trim() }.filter { it.isNotBlank() }
+            else -> emptyList()
+        }
     }
 
     private fun JSONObject.toBooking(): Booking = Booking(

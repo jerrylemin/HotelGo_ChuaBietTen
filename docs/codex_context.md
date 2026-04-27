@@ -10,7 +10,6 @@
 - State/session: `data/SessionManager.kt`, `data/SupabaseRepository.kt` auth cache.
 - Models/types: `data/model/Models.kt`.
 - Supabase REST API client/repository: `data/SupabaseRepository.kt`.
-- Payment gateway helper: `data/PayOSGateway.kt`.
 - Seed/bootstrap: `data/SeedData.kt`, `scripts/*`, `HotelList/*/data/*.json`.
 - Database migrations: `supabase/migrations/`.
 - Android resources/layouts/strings: `app/src/main/res/`.
@@ -27,32 +26,60 @@
 - Booking history loads `booking_addons` details and shows quantity, unit price, line total, and add-ons total.
 - Booking history display now shortens long hotel/room identifiers, guest ids, add-on ids, dates, and money values so cards remain readable on mobile.
 - Admin can confirm/cancel bookings from booking history. Client can cancel when the check-in date is at least 2 days away.
+- Client booking cards now show:
+  - A short booking code (BK-XXXXXX) instead of the raw UUID.
+  - A coloured stay-status badge (Đã check-in / Đã check-out / Quá hạn) when applicable.
 
 ## Current Payment Flow
 - `PaymentActivity` lists payments through `SupabaseRepository.listPayments`.
-- Client payment screen accepts booking id plus optional voucher code, validates voucher, previews room total/add-ons/subtotal/discount/final total, and then creates demo or PayOS payment.
-- PayOS return is handled in `PayOSReturnActivity`.
+- Client payment screen accepts booking id plus optional voucher code, validates voucher, previews room total/add-ons/subtotal/discount/final total, and then creates a manual payment record.
 - Payment records use the `payments` table through `SupabaseRepository.createPayment`.
 - Existing booking total is read from `bookings.total`; voucher financial fields are stored on `bookings` and `payments` when present.
-- Voucher usage is recorded in `voucher_usage` after successful demo/PayOS return and `vouchers.used_count` is incremented.
+- Voucher usage is recorded in `voucher_usage` after successful payment and `vouchers.used_count` is incremented.
 
-## Current Review Flow
-- Review UI is `ReviewActivity` with layout `activity_review.xml`.
-- Reviewable bookings for the logged-in user load through `SupabaseRepository.listReviewableBookings`.
-- Eligible booking statuses are `completed`, `checked_out`, `paid`, and `confirmed`.
-- Review creation uses `SupabaseRepository.createReviewAndRefreshRoom`, validates booking ownership/status/room, blocks duplicate user+booking reviews, inserts into `reviews`, and refreshes room rating count.
-- Review creation now falls back to legacy `reviews` schemas that do not yet have `booking_id` or `hotel_id`, so users can still submit and other users can read room reviews by `room_id`.
-- Booking cards display hotel, room, image, check-in/check-out, booking id, booking status, and reviewed/unreviewed state.
-- Review booking cards shorten hotel/room names, dates, and booking ids to avoid long wrapped identifiers.
-- Room detail review loading resolves equivalent room identifiers such as `hotel:room`, `catalog:hotel:room`, and `room_code`, so reviews written through one flow appear when another user opens the same room through another flow.
-- `listReviewableBookings` maps rooms from both `rooms` and `hotel_rooms` so imported hotel catalog bookings can be reviewed.
+## Admin Check-in / Check-out Flow (NEW – 2026-04-28)
+- **Screen**: `ui/features/CheckInOutActivity.kt`, layout: `res/layout/activity_check_in_out.xml`.
+- **Adapter**: `ui/features/AdminBookingAdapter.kt`, card layout: `res/layout/item_admin_booking_card.xml`.
+- **Filter chips**: All / Chờ nhận phòng / Đã check-in / Đã check-out / Quá hạn / Đã hủy.
+- **Flow**:
+  1. Screen auto-loads all relevant bookings via `SupabaseRepository.listAdminBookings()`.
+  2. Bookings are shown as selectable cards with: short booking code (BK-XXXXXX), room name, guest name, dates, stay-status badge.
+  3. Tapping a card highlights it and reveals the bottom action panel.
+  4. Action panel shows: booking code, room name, guest, dates, status; overdue warning if applicable.
+  5. Check-in button enabled only when `stay_status = pending_checkin`.
+  6. Check-out button enabled only when `stay_status = checked_in` or `overdue`.
+  7. Both buttons disabled for cancelled or already-checked-out bookings.
+  8. On Check-in: calls `checkInBooking()` → updates `status + stay_status = checked_in`, writes `actual_check_in_at` + `checked_in_at`.
+  9. On Check-out: calls `checkOutBooking()` → updates `status + stay_status = checked_out`, writes timestamps, also updates room status back to `available`.
+  10. List refreshes immediately after each action.
+- **Stay status resolution**: `SupabaseRepository.resolveStayStatus(booking)` — handles overdue logic at UI layer.
+- **Client sees**: Stay status badge on their booking history cards; no ability to change it.
+
+## Format Helpers (SupabaseRepository)
+- `shortBookingCode(id)` → `BK-XXXXXX` (first 6 chars of UUID, uppercased, no dashes).
+- `displayRoomName(rawId, roomName)` → strips `catalog:hotel:` prefix, converts `snake_case` to Title Case.
+- `resolveStayStatus(booking)` → returns one of: `pending_checkin | checked_in | checked_out | overdue | cancelled`.
+
+## Stay Status Values
+| Value | Meaning |
+|---|---|
+| `pending_checkin` | Booking confirmed/paid, waiting for guest arrival |
+| `checked_in` | Guest has checked in |
+| `checked_out` | Guest has checked out |
+| `overdue` | Still checked_in but checkout date has passed (UI-computed, not stored) |
+| `cancelled` | Booking was cancelled |
 
 ## Database Tables Seen In Code
 - `users`: profile, role, phone, email.
 - `rooms`: legacy room catalog.
 - `hotels`: hotel catalog.
 - `hotel_rooms`: imported hotel room catalog.
-- `bookings`: user booking records.
+- `bookings`: user booking records. **New columns (2026-04-28)**:
+  - `stay_status text default 'pending_checkin'` — tracks stay lifecycle.
+  - `checked_in_at timestamptz` — when guest actually checked in.
+  - `checked_out_at timestamptz` — when guest actually checked out.
+  - `updated_at timestamptz` — last update time.
+  - (existing) `actual_check_in_at`, `actual_check_out_at` also updated.
 - `reviews`: room reviews.
 - `issues`: issue reports.
 - `add_on_items`: admin-managed add-on items.
@@ -68,34 +95,35 @@
 ## Important Files By Concern
 - Auth/user: `ui/auth/AuthActivity.kt`, `ui/auth/LoginFragment.kt`, `ui/auth/RegisterFragment.kt`, `data/SessionManager.kt`, `data/SupabaseRepository.kt`.
 - Admin routing: `core/FeatureRegistry.kt`, `MainActivity.kt`.
+- **Admin check-in/out**: `ui/features/CheckInOutActivity.kt`, `ui/features/AdminBookingAdapter.kt`, `res/layout/activity_check_in_out.xml`, `res/layout/item_admin_booking_card.xml`.
 - Booking UI: `ui/features/RoomDetailActivity.kt`, `ui/features/BookingActivity.kt`, `ui/features/BookingHistoryActivity.kt`, `ui/features/BookingHistoryAdapter.kt`.
 - Room UI: `ui/features/RoomSearchActivity.kt`, `RoomDetailActivity.kt`, `RoomCrudActivity.kt`, `HotelSearchActivity.kt`, `HotelDetailActivity.kt`, `HotelRoomDetailActivity.kt`.
 - Review UI: `ui/features/ReviewActivity.kt`, `res/layout/activity_review.xml`.
-- Add-on UI/admin: `ui/features/AddOnItemsActivity.kt`; booking selection currently appears in `RoomDetailActivity.kt` and `BookingActivity.kt`.
-- Voucher UI/admin/client: `ui/features/VoucherActivity.kt`; booking voucher entry currently appears in `RoomDetailActivity.kt` and `BookingActivity.kt`.
-- Payment UI: `ui/features/PaymentActivity.kt`, `ui/features/PayOSReturnActivity.kt`.
-- Services/repository/API: `data/SupabaseRepository.kt`, `data/PayOSGateway.kt`.
+- Add-on UI/admin: `ui/features/AddOnItemsActivity.kt`.
+- Voucher UI/admin/client: `ui/features/VoucherActivity.kt`.
+- Payment UI: `ui/features/PaymentActivity.kt`.
+- Services/repository/API: `data/SupabaseRepository.kt`.
 - Models/interfaces: `data/model/Models.kt`.
 - Supabase schema/migrations: `supabase/migrations/*.sql`.
-- Add-on migration: `supabase/migrations/202604270002_booking_addons.sql`.
-- Voucher migration: `supabase/migrations/202604270003_booking_vouchers.sql`.
+- Stay status migration: `supabase/migrations/20260428_add_stay_status.sql`.
 
 ## How To Run
 - Open the project in Android Studio or run Gradle from repo root.
 - Build debug APK: `.\gradlew.bat assembleDebug`.
 - Full build: `.\gradlew.bat build`.
 - Unit tests: `.\gradlew.bat test`.
-- Supabase and PayOS values are read from `local.properties` into BuildConfig.
+- Supabase values are read from `local.properties` into BuildConfig (SUPABASE_URL, SUPABASE_ANON_KEY).
+- **Do NOT commit** `local.properties`, `.env`, or any secret keys.
 - Current local blocker: `local.properties` contains an Android `sdk.dir` path that does not exist on this machine. Set a valid Android SDK path or `ANDROID_HOME` before build/test.
 
 ## Fast Manual Tests
 - Auth: register/login, verify role resolution on home screen.
-- Booking: open a room detail, choose dates/guests, create booking, verify it appears in booking history.
-- Payment: open payment screen, create a demo or PayOS payment for a booking, verify payment history.
-- Review: create/confirm/complete a booking, open reviews, verify only owned eligible bookings appear, submit one review, verify duplicate is blocked.
-- Add-ons: create add-on items as admin, book as client, verify selected add-ons affect total and appear in booking history/detail after implementation.
-- Voucher: create voucher as admin/client screen, apply during booking/payment after implementation, verify discount math and persisted booking/payment fields.
-- User home cleanup: login as client and verify `Search rooms, vouchers, guests...` and `Featured poster/Create poster` are absent; login as admin and verify admin dashboard still works.
+- Booking: open a room detail, choose dates/guests, create booking, verify it appears in booking history with BK-XXXXXX code.
+- Check-in: log in as admin → Check-in & Check-out → see booking list → tap a booking → tap Check-in → verify status updates.
+- Check-out: after check-in, tap Check-out → verify status updates, room goes back to available.
+- Overdue: set a booking's checkout date in the past while stay_status=checked_in → verify the card shows '⚠ QUÁ HẠN TRẢ PHÒNG'.
+- Client view: after admin checks in → client sees 'Đã check-in' badge on their booking card.
+- Filter chips: switch between All / Chờ nhận / Đã check-in / etc. and verify list updates.
 
 ## Completion Summary
 - Initial docs commit: `d0328a4 docs sync project context`.
@@ -103,14 +131,18 @@
 - Add-ons commit: `87531e7 feat: add booking add ons`.
 - Vouchers commit: `ea85f4f feat: apply booking vouchers`.
 - User widget cleanup commit: `8aafa54 fix: remove unused user widgets`.
+- Payment flow redesign: decommissioned PayOS, implemented manual payment with booking selection.
+- **Admin check-in/out redesign (2026-04-28)**:
+  - `feat: add booking stay status flow` — Models.kt, SupabaseRepository.kt, migration.
+  - `feat: improve admin checkin checkout management` — CheckInOutActivity, AdminBookingAdapter, layouts, drawables.
+  - `feat: show stay status to clients` — BookingHistoryAdapter, item_booking_card.xml.
+  - `docs: update checkin checkout flow context` — codex_context.md, feature_progress.md.
 - Migrations created:
   - `supabase/migrations/202604270001_room_reviews_booking_context.sql`
   - `supabase/migrations/202604270002_booking_addons.sql`
   - `supabase/migrations/202604270003_booking_vouchers.sql`
   - `supabase/migrations/202604270004_create_room_reviews.sql`
-- `supabase/migrations/202604270005_booking_schema_hotfix.sql`
-- `supabase/migrations/202604270006_issue_booking_context.sql`
-- Final verification commands:
-  - `.\gradlew.bat clean`: success.
-  - `.\gradlew.bat build`: failed before compile because Android SDK path is missing/invalid.
-  - `.\gradlew.bat test`: failed before test compile because Android SDK path is missing/invalid.
+  - `supabase/migrations/202604270005_booking_schema_hotfix.sql`
+  - `supabase/migrations/202604270006_issue_booking_context.sql`
+  - `supabase/migrations/20260427_add_payment_summary_fields.sql`
+  - `supabase/migrations/20260428_add_stay_status.sql` ← **NEW**

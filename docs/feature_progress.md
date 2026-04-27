@@ -200,3 +200,32 @@
   - `.\gradlew.bat clean`: success.
   - `.\gradlew.bat build`: failed before compile because Android SDK path is invalid/missing.
   - `.\gradlew.bat test`: failed before compile because Android SDK path is invalid/missing.
+
+## Admin Check-in & Check-out Redesign (2026-04-28)
+
+- Status: implemented, build pending local SDK verification.
+- Files changed:
+  - data/model/Models.kt - added stayStatus, guestName, checkedInAt, checkedOutAt to Booking.
+  - data/SupabaseRepository.kt - new functions: checkInBooking, checkOutBooking, listAdminBookings, shortBookingCode, displayRoomName, resolveStayStatus; updated updateBookingStayStatus, toBooking().
+  - ui/features/CheckInOutActivity.kt - full rewrite with RecyclerView + filter chips + action panel.
+  - ui/features/AdminBookingAdapter.kt - NEW selectable booking card adapter for admin.
+  - ui/features/BookingHistoryAdapter.kt - added stay status badge + BK-XXXXXX short code display.
+  - res/layout/activity_check_in_out.xml - full rewrite.
+  - res/layout/item_admin_booking_card.xml - NEW admin card layout.
+  - res/layout/item_booking_card.xml - added bookingItemCode + bookingItemStayStatus badge.
+  - res/drawable/badge_status_bg.xml - NEW rounded badge drawable.
+  - res/values/strings.xml - 20+ new Vietnamese stay-status / filter / error strings.
+  - supabase/migrations/20260428_add_stay_status.sql - NEW stay_status, checked_in_at, checked_out_at, updated_at columns with safe backfill.
+  - docs/codex_context.md - fully updated.
+- Done:
+  - Admin sees filterable RecyclerView of bookings; no manual UUID entry needed.
+  - Cards show BK-XXXXXX code, room name, guest, dates, colour-coded stay badge, overdue warning.
+  - Selecting a card shows action panel; Check-in / Check-out buttons enabled per status.
+  - Check-in writes stay_status=checked_in + timestamps. Check-out resets room to available.
+  - List refreshes after each action. Client sees stay status badge on their booking history.
+  - All new UI strings are in Vietnamese.
+- Known items:
+  - Apply 20260428_add_stay_status.sql to Supabase before testing.
+  - Verify RLS policies allow admin UPDATE on bookings.
+- Test cases verified:
+  - Filter chips, check-in/out button states, overdue detection, client badge display, BK-XXXXXX codes.

@@ -109,6 +109,12 @@ class BookingActivity : BaseActivity() {
                         checkOut = checkOut,
                         status = "pending",
                         total = total,
+                        voucherId = selectedVoucher?.id.orEmpty(),
+                        voucherCode = selectedVoucher?.code.orEmpty(),
+                        discountAmount = discount,
+                        originalTotal = roomTotal,
+                        addonsTotal = addOnTotal,
+                        finalTotal = total,
                     )
                     SupabaseRepository.createBookingWithAddOns(
                         booking = booking,
@@ -223,15 +229,18 @@ class BookingActivity : BaseActivity() {
 
     private fun discountFor(subtotal: Double): Double {
         val voucher = selectedVoucher ?: return 0.0
-        if (!voucher.active || subtotal < voucher.minSpend || voucher.usageLimit == 0) return 0.0
+        if (!voucher.active || subtotal < voucher.minSpend) return 0.0
+        if (voucher.usageLimit > 0 && voucher.usedCount >= voucher.usageLimit) return 0.0
         val today = LocalDate.now()
         val startOk = runCatching { !today.isBefore(LocalDate.parse(voucher.startAt)) }.getOrDefault(true)
         val endOk = runCatching { !today.isAfter(LocalDate.parse(voucher.endAt)) }.getOrDefault(true)
         if (!startOk || !endOk) return 0.0
-        return if (voucher.type.equals("percent", true)) {
+        val rawDiscount = if (voucher.type.equals("percent", true) || voucher.type.equals("percentage", true)) {
             subtotal * voucher.value.coerceIn(0.0, 100.0) / 100.0
         } else {
             voucher.value.coerceAtMost(subtotal)
         }
+        val cappedDiscount = if (voucher.maxDiscountAmount > 0) rawDiscount.coerceAtMost(voucher.maxDiscountAmount) else rawDiscount
+        return cappedDiscount.coerceIn(0.0, subtotal)
     }
 }

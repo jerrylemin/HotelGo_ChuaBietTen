@@ -27,10 +27,11 @@
 
 ## Current Payment Flow
 - `PaymentActivity` lists payments through `SupabaseRepository.listPayments`.
-- Payment can be created by demo card flow or PayOS helper.
+- Client payment screen accepts booking id plus optional voucher code, validates voucher, previews room total/add-ons/subtotal/discount/final total, and then creates demo or PayOS payment.
 - PayOS return is handled in `PayOSReturnActivity`.
 - Payment records use the `payments` table through `SupabaseRepository.createPayment`.
-- Existing booking total is read from `bookings.total`.
+- Existing booking total is read from `bookings.total`; voucher financial fields are stored on `bookings` and `payments` when present.
+- Voucher usage is recorded in `voucher_usage` after successful demo/PayOS return and `vouchers.used_count` is incremented.
 
 ## Current Review Flow
 - Review UI is `ReviewActivity` with layout `activity_review.xml`.
@@ -52,6 +53,7 @@
 - `add_ons`: actual table used by current admin add-on repository code.
 - `booking_addons`: booking add-on line items with quantity, unit price, and total price.
 - `vouchers`: voucher definitions.
+- `voucher_usage`: voucher usage history per user/booking/payment.
 - `posters`: recommendation/search posters.
 - `notifications`: in-app notifications.
 - `notification_settings`: notification preferences.
@@ -70,6 +72,7 @@
 - Models/interfaces: `data/model/Models.kt`.
 - Supabase schema/migrations: `supabase/migrations/*.sql`.
 - Add-on migration: `supabase/migrations/202604270002_booking_addons.sql`.
+- Voucher migration: `supabase/migrations/202604270003_booking_vouchers.sql`.
 
 ## How To Run
 - Open the project in Android Studio or run Gradle from repo root.

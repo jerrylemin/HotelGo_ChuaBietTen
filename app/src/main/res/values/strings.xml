@@ -203,6 +203,7 @@
     <string name="booking_dates_format">Check-in: %1$s | Check-out: %2$s</string>
     <string name="booking_status_format">Status: %1$s</string>
     <string name="booking_total_paid">Total: %1$d VND</string>
+    <string name="booking_total_discount_detail">Room: %1$d VND\nAdd-ons: %2$d VND\nVoucher: %3$s\nDiscount: %4$d VND\nFinal total: %5$d VND</string>
     <string name="booking_addons_empty">Add-ons: none</string>
     <string name="booking_addons_format">Add-ons: %1$s</string>
     <string name="booking_addons_detail_format">Add-ons:\n%1$s\nAdd-ons total: %2$d VND</string>
@@ -298,6 +299,9 @@
     <string name="payment_history_title">Payment history</string>
     <string name="payment_history_empty">No payment history yet</string>
     <string name="payment_history_item">Booking: %1$s\nAmount: %2$d VND\nStatus: %3$s\nMethod: %4$s</string>
+    <string name="payment_history_item_discount">Booking: %1$s\nOriginal: %2$d VND\nAdd-ons: %3$d VND\nVoucher: %4$s\nDiscount: %5$d VND\nFinal: %6$d VND\nStatus: %7$s\nMethod: %8$s</string>
+    <string name="payment_summary_empty">Enter a booking and voucher code to preview the final payment total.</string>
+    <string name="payment_summary_discount">Room: %1$d VND\nAdd-ons: %2$d VND\nSubtotal: %3$d VND\nVoucher: %4$s\nDiscount: %5$d VND\nFinal total: %6$d VND</string>
     <string name="payment_status_pending">Pending</string>
     <string name="payment_status_paid">Paid</string>
     <string name="payment_status_refunded">Refunded</string>

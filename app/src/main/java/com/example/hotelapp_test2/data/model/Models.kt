@@ -97,6 +97,12 @@ data class Booking(
     val total: Double = 0.0,
     val addOns: List<String> = emptyList(),
     val addOnDetails: List<BookingAddOn> = emptyList(),
+    val voucherId: String = "",
+    val voucherCode: String = "",
+    val discountAmount: Double = 0.0,
+    val originalTotal: Double = 0.0,
+    val addonsTotal: Double = 0.0,
+    val finalTotal: Double = 0.0,
     val actualCheckInAt: Long = 0L,
     val actualCheckOutAt: Long = 0L,
     val createdAt: Long = 0L
@@ -152,13 +158,17 @@ data class IssueReport(
 data class Voucher(
     val id: String = "",
     val code: String = "",
+    val title: String = "",
+    val description: String = "",
     val type: String = "percent",
     val value: Double = 0.0,
     val minSpend: Double = 0.0,
+    val maxDiscountAmount: Double = 0.0,
     val startAt: String = "",
     val endAt: String = "",
     val active: Boolean = true,
-    val usageLimit: Int = 0
+    val usageLimit: Int = 0,
+    val usedCount: Int = 0
 )
 
 data class Poster(
@@ -203,6 +213,12 @@ data class Payment(
     val method: String = "",
     val status: String = "paid",
     val cardLast4: String = "",
+    val voucherId: String = "",
+    val voucherCode: String = "",
+    val discountAmount: Double = 0.0,
+    val originalTotal: Double = 0.0,
+    val addonsTotal: Double = 0.0,
+    val finalTotal: Double = 0.0,
     val createdAt: Long = 0L
 )
 

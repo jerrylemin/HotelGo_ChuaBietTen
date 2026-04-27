@@ -461,6 +461,36 @@ object SupabaseRepository {
     fun updateBookingStatus(bookingId: String, status: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) { patch("bookings", mapOf("id" to "eq.$bookingId"), JSONObject().put("status", status)) }
 
+    fun updateBookingPaymentSummary(
+        bookingId: String,
+        voucher: Voucher?,
+        originalTotal: Double,
+        addonsTotal: Double,
+        discountAmount: Double,
+        finalTotal: Double,
+        onSuccess: () -> Unit,
+        onError: (Exception) -> Unit
+    ) {
+        if (bookingId.isBlank()) {
+            onError(IllegalArgumentException("Missing booking id"))
+            return
+        }
+        runAsyncUnit(onSuccess, onError) {
+            val payload = JSONObject()
+                .put("total", finalTotal)
+                .put("original_total", originalTotal)
+                .put("addons_total", addonsTotal)
+                .put("discount_amount", discountAmount)
+                .put("final_total", finalTotal)
+            if (voucher != null) {
+                payload
+                    .put("voucher_id", voucher.id)
+                    .put("voucher_code", voucher.code)
+            }
+            patch("bookings", mapOf("id" to "eq.$bookingId"), payload)
+        }
+    }
+
     fun updateBookingStayStatus(bookingId: String, status: String, atMillis: Long, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
         if (bookingId.isBlank()) {
             onError(IllegalArgumentException("Missing booking id"))
@@ -628,6 +658,70 @@ object SupabaseRepository {
 
     fun getVoucherByCode(code: String, onSuccess: (Voucher?) -> Unit, onError: (Exception) -> Unit) =
         runAsync(onSuccess, onError) { select("vouchers", mapOf("select" to "*", "code" to "eq.$code", "limit" to "1")).firstObjectOrNull()?.toVoucher() }
+
+    fun incrementVoucherUsage(voucherId: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (voucherId.isBlank()) {
+            onSuccess()
+            return
+        }
+        runAsyncUnit(onSuccess, onError) {
+            val voucher = select("vouchers", mapOf("select" to "*", "id" to "eq.$voucherId", "limit" to "1")).firstObjectOrNull()?.toVoucher()
+                ?: return@runAsyncUnit
+            patch("vouchers", mapOf("id" to "eq.$voucherId"), JSONObject().put("used_count", voucher.usedCount + 1))
+        }
+    }
+
+    fun recordVoucherUsage(payment: Payment, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (payment.voucherCode.isBlank() || payment.userId.isBlank() || payment.bookingId.isBlank()) {
+            onSuccess()
+            return
+        }
+        runAsyncUnit(onSuccess, onError) {
+            val existing = select(
+                "voucher_usage",
+                mapOf(
+                    "select" to "id",
+                    "user_id" to "eq.${payment.userId}",
+                    "booking_id" to "eq.${payment.bookingId}",
+                    "limit" to "1"
+                )
+            )
+            if (existing.length() > 0) return@runAsyncUnit
+            upsert(
+                "voucher_usage",
+                JSONObject()
+                    .put("id", UUID.randomUUID().toString())
+                    .put("voucher_id", payment.voucherId)
+                    .put("voucher_code", payment.voucherCode)
+                    .put("user_id", payment.userId)
+                    .put("booking_id", payment.bookingId)
+                    .put("payment_id", payment.id)
+                    .put("discount_amount", payment.discountAmount)
+                    .put("used_at", millisToIso(System.currentTimeMillis()))
+            )
+        }
+    }
+
+    fun hasUserUsedVoucher(userId: String, voucher: Voucher, onSuccess: (Boolean) -> Unit, onError: (Exception) -> Unit) {
+        if (userId.isBlank() || (voucher.id.isBlank() && voucher.code.isBlank())) {
+            onSuccess(false)
+            return
+        }
+        runAsync(onSuccess, onError) {
+            val byId = if (voucher.id.isNotBlank()) {
+                select(
+                    "voucher_usage",
+                    mapOf("select" to "id", "user_id" to "eq.$userId", "voucher_id" to "eq.${voucher.id}", "limit" to "1")
+                ).length() > 0
+            } else {
+                false
+            }
+            byId || select(
+                "voucher_usage",
+                mapOf("select" to "id", "user_id" to "eq.$userId", "voucher_code" to "eq.${voucher.code}", "limit" to "1")
+            ).length() > 0
+        }
+    }
 
     fun deleteVoucher(voucherId: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
         if (voucherId.isBlank()) {
@@ -1365,6 +1459,12 @@ object SupabaseRepository {
         status = optString("status", "pending"),
         total = optDoubleCompat("total"),
         addOns = optStringList("add_ons"),
+        voucherId = optString("voucher_id"),
+        voucherCode = optString("voucher_code"),
+        discountAmount = optDoubleCompat("discount_amount"),
+        originalTotal = optDoubleCompat("original_total"),
+        addonsTotal = optDoubleCompat("addons_total"),
+        finalTotal = optDoubleCompat("final_total"),
         actualCheckInAt = parseTimestampMillis(opt("actual_check_in_at")),
         actualCheckOutAt = parseTimestampMillis(opt("actual_check_out_at")),
         createdAt = parseTimestampMillis(opt("created_at"))
@@ -1411,13 +1511,17 @@ object SupabaseRepository {
     private fun JSONObject.toVoucher(): Voucher = Voucher(
         id = optString("id"),
         code = optString("code"),
-        type = optString("type", "percent"),
-        value = optDoubleCompat("value"),
-        minSpend = optDoubleCompat("min_spend"),
-        startAt = optString("start_at"),
-        endAt = optString("end_at"),
-        active = optBooleanCompat("active", true),
-        usageLimit = optIntCompat("usage_limit")
+        title = optString("title").ifBlank { optString("name") },
+        description = optString("description"),
+        type = optString("discount_type").ifBlank { optString("type", "percent") },
+        value = if (has("discount_value")) optDoubleCompat("discount_value") else optDoubleCompat("value"),
+        minSpend = if (has("min_order_amount")) optDoubleCompat("min_order_amount") else optDoubleCompat("min_spend"),
+        maxDiscountAmount = optDoubleCompat("max_discount_amount"),
+        startAt = optString("start_date").ifBlank { optString("start_at") },
+        endAt = optString("end_date").ifBlank { optString("end_at") },
+        active = if (has("is_active")) optBooleanCompat("is_active", true) else optBooleanCompat("active", true),
+        usageLimit = optIntCompat("usage_limit"),
+        usedCount = optIntCompat("used_count")
     )
 
     private fun JSONObject.toPoster(): Poster = Poster(
@@ -1462,6 +1566,12 @@ object SupabaseRepository {
         method = optString("method"),
         status = optString("status", "paid"),
         cardLast4 = optString("card_last4"),
+        voucherId = optString("voucher_id"),
+        voucherCode = optString("voucher_code"),
+        discountAmount = optDoubleCompat("discount_amount"),
+        originalTotal = optDoubleCompat("original_total"),
+        addonsTotal = optDoubleCompat("addons_total"),
+        finalTotal = optDoubleCompat("final_total"),
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 
@@ -1504,6 +1614,12 @@ object SupabaseRepository {
             .put("status", booking.status)
             .put("total", booking.total)
             .put("add_ons", JSONArray(booking.addOns))
+            .put("voucher_id", booking.voucherId)
+            .put("voucher_code", booking.voucherCode)
+            .put("discount_amount", booking.discountAmount)
+            .put("original_total", booking.originalTotal)
+            .put("addons_total", booking.addonsTotal)
+            .put("final_total", booking.finalTotal)
             .put("created_at", millisToIso(booking.createdAt))
         if (booking.actualCheckInAt > 0L) json.put("actual_check_in_at", millisToIso(booking.actualCheckInAt))
         if (booking.actualCheckOutAt > 0L) json.put("actual_check_out_at", millisToIso(booking.actualCheckOutAt))
@@ -1542,6 +1658,16 @@ object SupabaseRepository {
     private fun voucherToJson(voucher: Voucher): JSONObject = JSONObject()
         .put("id", voucher.id)
         .put("code", voucher.code)
+        .put("title", voucher.title.ifBlank { voucher.code })
+        .put("description", voucher.description)
+        .put("discount_type", normalizeDiscountType(voucher.type))
+        .put("discount_value", voucher.value)
+        .put("min_order_amount", voucher.minSpend)
+        .put("max_discount_amount", voucher.maxDiscountAmount)
+        .put("start_date", normalizeDate(voucher.startAt))
+        .put("end_date", normalizeDate(voucher.endAt))
+        .put("is_active", voucher.active)
+        .put("used_count", voucher.usedCount)
         .put("type", voucher.type)
         .put("value", voucher.value)
         .put("min_spend", voucher.minSpend)
@@ -1589,6 +1715,12 @@ object SupabaseRepository {
         .put("method", payment.method)
         .put("status", payment.status)
         .put("card_last4", payment.cardLast4)
+        .put("voucher_id", payment.voucherId)
+        .put("voucher_code", payment.voucherCode)
+        .put("discount_amount", payment.discountAmount)
+        .put("original_total", payment.originalTotal)
+        .put("addons_total", payment.addonsTotal)
+        .put("final_total", payment.finalTotal)
         .put("created_at", millisToIso(payment.createdAt))
 
     private fun shortenRoomType(rawRoomName: String, fallbackType: String): String {
@@ -1617,4 +1749,10 @@ object SupabaseRepository {
     }
 
     private fun toRoomTypeKey(displayType: String): String = displayType.trim().lowercase()
+
+    private fun normalizeDiscountType(type: String): String = when (type.trim().lowercase()) {
+        "percentage", "percent" -> "percentage"
+        "fixed", "fixed_amount", "amount" -> "fixed_amount"
+        else -> type.trim().lowercase().ifBlank { "percentage" }
+    }
 }

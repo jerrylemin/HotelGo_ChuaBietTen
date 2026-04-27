@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.hotelapp_test2.MainActivity
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SupabaseRepository
+import com.example.hotelapp_test2.data.model.Booking
 import com.example.hotelapp_test2.data.model.Payment
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
@@ -50,7 +51,7 @@ class PayOSReturnActivity : BaseActivity() {
 
         val userId = SupabaseRepository.currentUser()?.uid.orEmpty()
         val paymentId = if (orderCode.isBlank()) "" else "payos_$orderCode"
-        val payment = Payment(
+        val basePayment = Payment(
             id = paymentId,
             bookingId = bookingId,
             userId = userId,
@@ -60,6 +61,22 @@ class PayOSReturnActivity : BaseActivity() {
             cardLast4 = orderCode.takeLast(4)
         )
 
+        if (userId.isNotBlank()) {
+            SupabaseRepository.listBookings(
+                userId = userId,
+                onSuccess = { bookings ->
+                    saveSuccessfulPayment(basePayment.withBookingTotals(bookings.firstOrNull { it.id == bookingId }), bookingId)
+                },
+                onError = {
+                    saveSuccessfulPayment(basePayment, bookingId)
+                }
+            )
+        } else {
+            saveSuccessfulPayment(basePayment, bookingId)
+        }
+    }
+
+    private fun saveSuccessfulPayment(payment: Payment, bookingId: String) {
         SupabaseRepository.createPayment(
             payment = payment,
             onSuccess = {
@@ -67,6 +84,8 @@ class PayOSReturnActivity : BaseActivity() {
                     bookingId = bookingId,
                     status = "paid",
                     onSuccess = {
+                        SupabaseRepository.recordVoucherUsage(payment, onSuccess = {}, onError = {})
+                        SupabaseRepository.incrementVoucherUsage(payment.voucherId, onSuccess = {}, onError = {})
                         toast(getString(R.string.payos_success))
                         goMain()
                     },
@@ -80,6 +99,18 @@ class PayOSReturnActivity : BaseActivity() {
                 toast(getString(R.string.payos_save_error))
                 goMain()
             }
+        )
+    }
+
+    private fun Payment.withBookingTotals(booking: Booking?): Payment {
+        booking ?: return this
+        return copy(
+            voucherId = booking.voucherId,
+            voucherCode = booking.voucherCode,
+            discountAmount = booking.discountAmount,
+            originalTotal = booking.originalTotal,
+            addonsTotal = booking.addonsTotal,
+            finalTotal = booking.total
         )
     }
 

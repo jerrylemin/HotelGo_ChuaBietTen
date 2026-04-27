@@ -56,8 +56,31 @@
   - Result: failed before compile because Android SDK path in `local.properties` does not exist. No code compile result was produced.
 
 ## Requirement 3 - Booking Vouchers
-- Status: not completed.
-- Existing voucher code is basic and uses `type/value/min_spend`; this still needs robust fields, validation, discount totals, persisted booking/payment discount fields, and usage tracking when supported.
+- Status: implemented, build blocked by local Android SDK path.
+- Files changed:
+  - `data/model/Models.kt`
+  - `data/SupabaseRepository.kt`
+  - `ui/features/BookingActivity.kt`
+  - `ui/features/RoomDetailActivity.kt`
+  - `ui/features/PaymentActivity.kt`
+  - `ui/features/PayOSReturnActivity.kt`
+  - `ui/features/BookingHistoryAdapter.kt`
+  - `ui/features/VoucherActivity.kt`
+  - `res/layout/activity_payment.xml`
+  - `res/values/strings.xml`
+  - `res/values-vi/strings.xml`
+  - `supabase/migrations/202604270003_booking_vouchers.sql`
+- Done:
+  - Added voucher fields: title, description, discount type/value, min order, max discount, date range, active flag, usage limit, used count.
+  - Added booking/payment fields: voucher id/code, original total, add-ons total, discount amount, final total.
+  - Added `voucher_usage` migration and sample vouchers.
+  - Payment UI accepts voucher code and shows room total, add-ons total, subtotal, voucher, discount, and final total.
+  - Validation checks active flag, start/end date, minimum order, usage limit, prior user usage, and clamps final total to zero minimum.
+  - Booking detail/history and payment history display voucher discount details when present.
+  - Demo payment and PayOS return record voucher usage and increment voucher used count.
+- Verification:
+  - Ran `.\gradlew.bat assembleDebug`.
+  - Result: failed before compile because Android SDK path in `local.properties` does not exist. No code compile result was produced.
 
 ## Requirement 4 - Remove User Widgets
 - Status: not completed.

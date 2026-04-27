@@ -79,6 +79,29 @@
                             android:inputType="numberDecimal" />
                     </com.google.android.material.textfield.TextInputLayout>
 
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/paymentVoucherCodeLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:hint="@string/voucher_code_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/paymentVoucherCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/paymentSummaryText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/payment_summary_empty"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/paymentSubmitButton"
                         android:layout_width="match_parent"

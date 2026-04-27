@@ -213,7 +213,7 @@ class VoucherActivity : BaseActivity() {
         val expiryOk = runCatching { !today.isAfter(LocalDate.parse(endAt)) }.getOrDefault(true)
         val startOk = runCatching { !today.isBefore(LocalDate.parse(startAt)) }.getOrDefault(true)
         val spendOk = total <= 0.0 || total >= minSpend
-        val limitOk = usageLimit != 0
-        return active && expiryOk && startOk && spendOk && limitOk
+        val usageOk = usageLimit <= 0 || usedCount < usageLimit
+        return active && expiryOk && startOk && spendOk && usageOk
     }
 }

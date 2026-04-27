@@ -158,6 +158,7 @@
     <string name="booking_dates_format">Nhận: %1$s | Trả: %2$s</string>
     <string name="booking_status_format">Trạng thái: %1$s</string>
     <string name="booking_total_paid">Tổng tiền: %1$d VND</string>
+    <string name="booking_total_discount_detail">Tiền phòng: %1$d VND\nMặt hàng phụ: %2$d VND\nVoucher: %3$s\nGiảm giá: %4$d VND\nTổng sau giảm: %5$d VND</string>
     <string name="booking_addons_empty">Mặt hàng phụ: không có</string>
     <string name="booking_addons_format">Mặt hàng phụ: %1$s</string>
     <string name="booking_addons_detail_format">Mặt hàng phụ:\n%1$s\nTổng mặt hàng phụ: %2$d VND</string>
@@ -254,6 +255,9 @@
     <string name="payment_history_title">Lịch sử giao dịch</string>
     <string name="payment_history_empty">Chưa có giao dịch thanh toán</string>
     <string name="payment_history_item">Đặt phòng: %1$s\nSố tiền: %2$d VND\nTrạng thái: %3$s\nPhương thức: %4$s</string>
+    <string name="payment_history_item_discount">Đặt phòng: %1$s\nGiá gốc: %2$d VND\nMặt hàng phụ: %3$d VND\nVoucher: %4$s\nGiảm giá: %5$d VND\nSau giảm: %6$d VND\nTrạng thái: %7$s\nPhương thức: %8$s</string>
+    <string name="payment_summary_empty">Nhập booking và mã voucher để xem tổng thanh toán sau giảm.</string>
+    <string name="payment_summary_discount">Tiền phòng: %1$d VND\nMặt hàng phụ: %2$d VND\nTạm tính: %3$d VND\nVoucher: %4$s\nGiảm giá: %5$d VND\nTổng sau giảm: %6$d VND</string>
     <string name="payment_status_pending">Đang chờ</string>
     <string name="payment_status_paid">Đã thanh toán</string>
     <string name="payment_status_refunded">Đã hoàn tiền</string>

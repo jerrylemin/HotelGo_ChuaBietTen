@@ -606,25 +606,47 @@ object SupabaseRepository {
                     "limit" to "1"
                 )
             ).firstObjectOrNull() ?: throw IllegalStateException("Booking is not eligible for review")
-            val existing = select(
-                "reviews",
-                mapOf("select" to "id", "user_id" to "eq.${review.userId}", "booking_id" to "eq.${booking.optString("id")}", "limit" to "1")
-            )
+            val existing = runCatching {
+                select(
+                    "reviews",
+                    mapOf("select" to "id", "user_id" to "eq.${review.userId}", "booking_id" to "eq.${booking.optString("id")}", "limit" to "1")
+                )
+            }.getOrElse { error ->
+                if (isMissingReviewContextColumn(error)) {
+                    select(
+                        "reviews",
+                        mapOf("select" to "id", "user_id" to "eq.${review.userId}", "room_id" to "eq.${review.roomId}", "limit" to "1")
+                    )
+                } else {
+                    throw error
+                }
+            }
             if (existing.length() > 0) throw IllegalStateException("Booking was already reviewed")
-            upsert("reviews", reviewToJson(review.copy(id = review.id.ifBlank { UUID.randomUUID().toString() })))
+            val normalizedReview = review.copy(id = review.id.ifBlank { UUID.randomUUID().toString() })
+            runCatching {
+                upsert("reviews", reviewToJson(normalizedReview))
+            }.getOrElse { error ->
+                if (isMissingReviewContextColumn(error)) {
+                    upsert("reviews", legacyReviewToJson(normalizedReview))
+                } else {
+                    throw error
+                }
+            }
             val reviews = select(
                 "reviews",
                 mapOf("select" to "rating", "room_id" to "eq.${review.roomId}", "limit" to "1000")
             ).toReviewList()
             if (reviews.isNotEmpty()) {
                 val average = reviews.map { it.rating.coerceIn(1, 5) }.average()
-                patch(
-                    "rooms",
-                    mapOf("id" to "eq.${review.roomId}"),
-                    JSONObject()
-                        .put("rating", average)
-                        .put("review_count", reviews.size)
-                )
+                val ratingPayload = JSONObject()
+                    .put("rating", average)
+                    .put("review_count", reviews.size)
+                runCatching {
+                    patch("rooms", mapOf("id" to "eq.${review.roomId}"), ratingPayload)
+                }
+                runCatching {
+                    patch("hotel_rooms", mapOf("id" to "eq.${review.roomId}"), ratingPayload)
+                }
             }
         }
     }
@@ -827,22 +849,22 @@ object SupabaseRepository {
             jsonBody = payload.toString(),
             headers = mapOf("Prefer" to "resolution=merge-duplicates,return=representation")
         )
-        if (response.code !in 200..299) throw IllegalStateException("Upsert $table failed: HTTP ${response.code}")
+        if (response.code !in 200..299) throw IllegalStateException("Upsert $table failed: HTTP ${response.code}${response.body.errorSuffix()}")
     }
 
     private fun patch(table: String, filters: Map<String, String>, payload: JSONObject) {
         val response = request("PATCH", "/rest/v1/$table", query = filters, jsonBody = payload.toString())
-        if (response.code !in 200..299) throw IllegalStateException("Patch $table failed: HTTP ${response.code}")
+        if (response.code !in 200..299) throw IllegalStateException("Patch $table failed: HTTP ${response.code}${response.body.errorSuffix()}")
     }
 
     private fun delete(table: String, filters: Map<String, String>) {
         val response = request("DELETE", "/rest/v1/$table", query = filters)
-        if (response.code !in 200..299) throw IllegalStateException("Delete $table failed: HTTP ${response.code}")
+        if (response.code !in 200..299) throw IllegalStateException("Delete $table failed: HTTP ${response.code}${response.body.errorSuffix()}")
     }
 
     private fun select(table: String, query: Map<String, String>): JSONArray {
         val response = request("GET", "/rest/v1/$table", query = query)
-        if (response.code !in 200..299) throw IllegalStateException("Select $table failed: HTTP ${response.code}")
+        if (response.code !in 200..299) throw IllegalStateException("Select $table failed: HTTP ${response.code}${response.body.errorSuffix()}")
         return if (response.body.isBlank()) JSONArray() else JSONArray(response.body)
     }
 
@@ -1645,6 +1667,14 @@ object SupabaseRepository {
         .put("comment", review.comment)
         .put("created_at", millisToIso(review.createdAt))
 
+    private fun legacyReviewToJson(review: Review): JSONObject = JSONObject()
+        .put("id", review.id)
+        .put("room_id", review.roomId)
+        .put("user_id", review.userId)
+        .put("rating", review.rating)
+        .put("comment", review.comment)
+        .put("created_at", millisToIso(review.createdAt))
+
     private fun issueToJson(issue: IssueReport): JSONObject = JSONObject()
         .put("id", issue.id)
         .put("user_id", issue.userId)
@@ -1754,5 +1784,16 @@ object SupabaseRepository {
         "percentage", "percent" -> "percentage"
         "fixed", "fixed_amount", "amount" -> "fixed_amount"
         else -> type.trim().lowercase().ifBlank { "percentage" }
+    }
+
+    private fun isMissingReviewContextColumn(error: Throwable): Boolean {
+        val message = error.message.orEmpty().lowercase()
+        return "booking_id" in message || "hotel_id" in message
+    }
+
+    private fun String.errorSuffix(): String {
+        if (isBlank()) return ""
+        val compact = replace(Regex("\\s+"), " ").trim()
+        return if (compact.isBlank()) "" else ": $compact"
     }
 }

@@ -1078,15 +1078,30 @@ object SupabaseRepository {
         }
 
     private fun createInAppNotification(notification: AppNotification) {
-        try {
-            upsert("notifications", notificationToJson(notification, canonical = true))
-        } catch (e: Exception) {
-            if (isSchemaMismatch(e)) upsert("notifications", notificationToJson(notification, canonical = false)) else throw e
-        }
+        upsertWithSchemaFallback("notifications", notificationPayloads(notification))
     }
 
     private fun triggerEmailNotificationIfConfigured(notification: AppNotification) {
-        // Email delivery belongs in a backend/Edge Function. The Android app only persists in-app notifications.
+        val functionName = BuildConfig.SUPABASE_NOTIFICATION_EMAIL_FUNCTION.trim()
+        if (functionName.isBlank()) return
+        val payload = JSONObject()
+            .put("notification_id", notification.id)
+            .put("user_id", notification.userId)
+            .put("user_email", notification.userEmail)
+            .put("title", notification.title)
+            .put("message", notification.body)
+            .put("type", notification.type.ifBlank { "general" })
+            .put("target_role", normalizeTargetRole(notification.targetRole))
+            .put("related_id", notification.relatedId)
+            .put("metadata", notification.metadata.ifBlank { "{}" })
+        runCatching {
+            request(
+                method = "POST",
+                path = "/functions/v1/$functionName",
+                jsonBody = payload.toString(),
+                bearer = accessToken.ifBlank { BuildConfig.SUPABASE_ANON_KEY }
+            )
+        }
     }
 
     fun markNotificationRead(notificationId: String, read: Boolean, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
@@ -1095,45 +1110,15 @@ object SupabaseRepository {
             return
         }
         runAsyncUnit(onSuccess, onError) {
-            try {
-                patch(
-                    "notifications",
-                    mapOf("id" to "eq.$notificationId"),
-                    JSONObject()
-                        .put("is_read", read)
-                        .put("read_at", if (read) millisToIso(System.currentTimeMillis()) else JSONObject.NULL)
-                )
-            } catch (e: Exception) {
-                if (!isSchemaMismatch(e)) throw e
-                patch("notifications", mapOf("id" to "eq.$notificationId"), JSONObject().put("is_read", read))
-            }
+            markNotificationReadSync(notificationId, read)
         }
     }
 
     fun markAllNotificationsRead(userId: String, role: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
         runAsyncUnit(onSuccess, onError) {
-            val normalized = if (normalizeRole(role) == "admin") "admin" else "client"
-            val filters = if (userId.isNotBlank()) {
-                mapOf("or" to "(user_id.eq.$userId,user_id.is.null)", "target_role" to "in.(all,$normalized)")
-            } else {
-                mapOf("target_role" to "in.(all,$normalized)")
-            }
-            try {
-                patch(
-                    "notifications",
-                    filters,
-                    JSONObject()
-                        .put("is_read", true)
-                        .put("read_at", millisToIso(System.currentTimeMillis()))
-                )
-            } catch (e: Exception) {
-                if (!isSchemaMismatch(e)) throw e
-                patch(
-                    "notifications",
-                    mapOf("target_role" to "in.(all,$normalized)"),
-                    JSONObject().put("is_read", true)
-                )
-            }
+            listVisibleNotificationsSync(role, userId)
+                .filter { !it.read && it.id.isNotBlank() }
+                .forEach { markNotificationReadSync(it.id, true) }
         }
     }
 
@@ -1201,19 +1186,8 @@ object SupabaseRepository {
     }
 
     fun listenNotifications(role: String, userId: String = "", onSuccess: (List<AppNotification>) -> Unit, onError: (Exception) -> Unit) {
-        val normalized = if (normalizeRole(role) == "admin") "admin" else "client"
         runAsync(onSuccess, onError) {
-            val q = linkedMapOf("select" to "*", "target_role" to "in.(all,$normalized)", "order" to "created_at.desc", "limit" to "50")
-            if (userId.isNotBlank()) q["or"] = "(user_id.eq.$userId,user_id.is.null)"
-            try {
-                select("notifications", q).toNotificationList()
-            } catch (e: Exception) {
-                if (!isSchemaMismatch(e)) throw e
-                select(
-                    "notifications",
-                    mapOf("select" to "*", "target_role" to "in.(all,$normalized)", "order" to "created_at.desc", "limit" to "50")
-                ).toNotificationList()
-            }
+            listVisibleNotificationsSync(role, userId)
         }
     }
 
@@ -1278,6 +1252,38 @@ object SupabaseRepository {
     private fun patch(table: String, filters: Map<String, String>, payload: JSONObject) {
         val response = request("PATCH", "/rest/v1/$table", query = filters, jsonBody = payload.toString())
         if (response.code !in 200..299) throw IllegalStateException("Patch $table failed: HTTP ${response.code}${response.body.toErrorSuffix()}")
+    }
+
+    private fun patchWithSchemaFallback(table: String, filters: Map<String, String>, payloads: List<JSONObject>) {
+        var lastError: Exception? = null
+        payloads.forEach { payload ->
+            try {
+                patch(table, filters, payload)
+                return
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                lastError = e
+            }
+        }
+
+        payloads.forEach { payload ->
+            val current = JSONObject(payload.toString())
+            repeat(payload.length().coerceAtLeast(1)) {
+                try {
+                    patch(table, filters, current)
+                    return
+                } catch (e: Exception) {
+                    if (!isSchemaMismatch(e)) throw e
+                    lastError = e
+                    val missingColumn = missingColumnName(e)
+                    if (missingColumn.isNullOrBlank() || !current.has(missingColumn)) {
+                        throw e
+                    }
+                    current.remove(missingColumn)
+                }
+            }
+        }
+        throw lastError ?: IllegalStateException("Patch $table failed")
     }
 
     private fun delete(table: String, filters: Map<String, String>) {
@@ -1630,6 +1636,46 @@ object SupabaseRepository {
                     .put("response", adminReply)
             )
         }
+    }
+
+    private fun listVisibleNotificationsSync(role: String, userId: String): List<AppNotification> {
+        val normalized = if (normalizeRole(role) == "admin") "admin" else "client"
+        val scoped = linkedMapOf("select" to "*", "target_role" to "in.(all,$normalized)", "order" to "created_at.desc", "limit" to "50")
+        if (userId.isNotBlank()) scoped["or"] = "(user_id.eq.$userId,user_id.is.null)"
+        return try {
+            select("notifications", scoped).toNotificationList()
+        } catch (e: Exception) {
+            if (!isSchemaMismatch(e)) throw e
+            try {
+                select(
+                    "notifications",
+                    mapOf("select" to "*", "target_role" to "in.(all,$normalized)", "order" to "created_at.desc", "limit" to "50")
+                ).toNotificationList()
+            } catch (legacyError: Exception) {
+                if (!isSchemaMismatch(legacyError)) throw legacyError
+                select("notifications", mapOf("select" to "*", "order" to "created_at.desc", "limit" to "50"))
+                    .toNotificationList()
+                    .filter { notification ->
+                        val matchesRole = notification.targetRole in setOf("all", normalized) || notification.targetRole.isBlank()
+                        val matchesUser = userId.isBlank() || notification.userId.isBlank() || notification.userId == userId
+                        matchesRole && matchesUser
+                    }
+            }
+        }
+    }
+
+    private fun markNotificationReadSync(notificationId: String, read: Boolean) {
+        val readAt = if (read) millisToIso(System.currentTimeMillis()) else JSONObject.NULL
+        patchWithSchemaFallback(
+            "notifications",
+            mapOf("id" to "eq.$notificationId"),
+            listOf(
+                JSONObject().put("is_read", read).put("read_at", readAt),
+                JSONObject().put("read", read).put("read_at", readAt),
+                JSONObject().put("is_read", read),
+                JSONObject().put("read", read)
+            )
+        )
     }
 
     private fun JSONArray.firstObjectOrNull(): JSONObject? = if (length() == 0) null else optJSONObject(0)
@@ -2094,17 +2140,17 @@ object SupabaseRepository {
     )
 
     private fun JSONObject.toNotification(): AppNotification = AppNotification(
-        id = optString("id"),
-        userId = optString("user_id"),
-        userEmail = optString("user_email"),
-        title = optString("title"),
-        body = optString("message").ifBlank { optString("body") },
-        type = optString("type"),
-        targetRole = optString("target_role", "all"),
-        read = optBooleanCompat("is_read", false),
+        id = optCleanString("id"),
+        userId = optCleanString("user_id"),
+        userEmail = optCleanString("user_email"),
+        title = optCleanString("title"),
+        body = optCleanString("message").ifBlank { optCleanString("body") },
+        type = optCleanString("type"),
+        targetRole = optCleanString("target_role", "all"),
+        read = if (has("is_read")) optBooleanCompat("is_read", false) else optBooleanCompat("read", false),
         createdAt = parseTimestampMillis(opt("created_at")),
         readAt = parseTimestampMillis(opt("read_at")),
-        relatedId = optString("related_id"),
+        relatedId = optCleanString("related_id"),
         metadata = opt("metadata")?.toString().orEmpty()
     )
 
@@ -2386,6 +2432,39 @@ object SupabaseRepository {
             json.put("body", notification.body)
         }
         return json
+    }
+
+    private fun notificationPayloads(notification: AppNotification): List<JSONObject> {
+        val createdAt = millisToIso(notification.createdAt.takeIf { it > 0L } ?: System.currentTimeMillis())
+        return listOf(
+            notificationToJson(notification, canonical = true),
+            JSONObject()
+                .put("id", notification.id)
+                .put("user_id", notification.userId.ifBlank { JSONObject.NULL })
+                .put("user_email", notification.userEmail.ifBlank { JSONObject.NULL })
+                .put("title", notification.title)
+                .put("message", notification.body)
+                .put("body", notification.body)
+                .put("type", notification.type.ifBlank { "general" })
+                .put("target_role", normalizeTargetRole(notification.targetRole))
+                .put("is_read", notification.read)
+                .put("read", notification.read)
+                .put("created_at", createdAt)
+                .put("related_id", notification.relatedId.ifBlank { JSONObject.NULL })
+                .put("metadata", notification.metadata.ifBlank { "{}" }),
+            notificationToJson(notification, canonical = false),
+            JSONObject()
+                .put("id", notification.id)
+                .put("title", notification.title)
+                .put("body", notification.body)
+                .put("target_role", normalizeTargetRole(notification.targetRole))
+                .put("read", notification.read)
+                .put("created_at", createdAt),
+            JSONObject()
+                .put("id", notification.id)
+                .put("title", notification.title)
+                .put("body", notification.body)
+        )
     }
 
     private fun notificationSettingsToJson(userId: String, settings: NotificationSettings): JSONObject = JSONObject()

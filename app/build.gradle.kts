@@ -16,6 +16,10 @@ val supabaseAuthRedirectUrl = localProperties.getProperty(
     "https://jerrylemin.github.io/HotelGo_ChuaBietTen/confirm.html"
 )
 val googleWebClientId = localProperties.getProperty("GOOGLE_WEB_CLIENT_ID", "")
+val supabaseNotificationEmailFunction = localProperties.getProperty(
+    "SUPABASE_NOTIFICATION_EMAIL_FUNCTION",
+    "send-notification-email"
+)
 
 android {
     namespace = "com.example.hotelapp_test2"
@@ -37,6 +41,7 @@ android {
         buildConfigField("String", "SUPABASE_URL", "\"$supabaseUrl\"")
         buildConfigField("String", "SUPABASE_ANON_KEY", "\"$supabaseAnonKey\"")
         buildConfigField("String", "SUPABASE_AUTH_REDIRECT_URL", "\"$supabaseAuthRedirectUrl\"")
+        buildConfigField("String", "SUPABASE_NOTIFICATION_EMAIL_FUNCTION", "\"$supabaseNotificationEmailFunction\"")
 
         buildConfigField("String", "GOOGLE_WEB_CLIENT_ID", "\"$googleWebClientId\"")
     }

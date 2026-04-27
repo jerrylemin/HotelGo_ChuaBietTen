@@ -993,17 +993,7 @@ object SupabaseRepository {
     fun createPoster(poster: Poster, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
         runAsyncUnit(onSuccess, onError) {
             val normalized = poster.copy(id = poster.id.ifBlank { UUID.randomUUID().toString() })
-            try {
-                upsert("posters", posterToJson(normalized, canonical = true))
-            } catch (e: Exception) {
-                if (!isSchemaMismatch(e)) throw e
-                try {
-                    upsert("posters", posterToJson(normalized, canonical = false))
-                } catch (legacyError: Exception) {
-                    if (!isSchemaMismatch(legacyError)) throw legacyError
-                    upsert("posters", barePosterToJson(normalized))
-                }
-            }
+            upsertWithSchemaFallback("posters", posterPayloads(normalized))
         }
 
     fun listPosters(type: String, limit: Long, onSuccess: (List<Poster>) -> Unit, onError: (Exception) -> Unit) =
@@ -1226,6 +1216,50 @@ object SupabaseRepository {
             headers = mapOf("Prefer" to "resolution=merge-duplicates,return=representation")
         )
         if (response.code !in 200..299) throw IllegalStateException("Upsert $table failed: HTTP ${response.code}${response.body.toErrorSuffix()}")
+    }
+
+    private fun upsertWithSchemaFallback(table: String, payloads: List<JSONObject>) {
+        var lastError: Exception? = null
+        payloads.forEach { payload ->
+            try {
+                upsert(table, payload)
+                return
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                lastError = e
+            }
+        }
+
+        payloads.forEach { payload ->
+            try {
+                upsertDroppingMissingColumns(table, payload)
+                return
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                lastError = e
+            }
+        }
+        throw lastError ?: IllegalStateException("Upsert $table failed")
+    }
+
+    private fun upsertDroppingMissingColumns(table: String, payload: JSONObject) {
+        val current = JSONObject(payload.toString())
+        var lastError: Exception? = null
+        repeat(payload.length().coerceAtLeast(1)) {
+            try {
+                upsert(table, current)
+                return
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                lastError = e
+                val missingColumn = missingColumnName(e)
+                if (missingColumn.isNullOrBlank() || !current.has(missingColumn)) {
+                    throw e
+                }
+                current.remove(missingColumn)
+            }
+        }
+        throw lastError ?: IllegalStateException("Upsert $table failed")
     }
 
     private fun patch(table: String, filters: Map<String, String>, payload: JSONObject) {
@@ -2139,13 +2173,33 @@ object SupabaseRepository {
         return json
     }
 
+    private fun posterPayloads(poster: Poster): List<JSONObject> = listOf(
+        posterToJson(poster, canonical = true),
+        posterToJson(poster, canonical = false),
+        minimalPosterToJson(poster, useDescription = true),
+        minimalPosterToJson(poster, useDescription = false),
+        barePosterToJson(poster)
+    )
+
+    private fun minimalPosterToJson(poster: Poster, useDescription: Boolean): JSONObject {
+        val json = JSONObject()
+            .put("id", poster.id)
+            .put("type", poster.type)
+            .put("title", poster.title)
+            .put("status", normalizeRoomRequestStatus(poster.status))
+            .put("created_at", millisToIso(poster.createdAt))
+        if (useDescription) {
+            json.put("description", poster.content)
+        } else {
+            json.put("content", poster.content)
+        }
+        return json
+    }
+
     private fun barePosterToJson(poster: Poster): JSONObject = JSONObject()
         .put("id", poster.id)
         .put("type", poster.type)
         .put("title", poster.title)
-        .put("content", poster.content)
-        .put("status", normalizeRoomRequestStatus(poster.status))
-        .put("created_at", millisToIso(poster.createdAt))
 
     private fun roomRequestToJson(request: RoomRequest): JSONObject = JSONObject()
         .put("id", request.id)
@@ -2273,6 +2327,15 @@ object SupabaseRepository {
             "42703" in message ||
             "column" in message ||
             "schema cache" in message
+    }
+
+    private fun missingColumnName(error: Throwable): String? {
+        val message = error.message.orEmpty()
+        return listOf(
+            Regex("Could not find the '([^']+)' column", RegexOption.IGNORE_CASE),
+            Regex("column\\s+\"([^\"]+)\"", RegexOption.IGNORE_CASE),
+            Regex("'([^']+)'\\s+column", RegexOption.IGNORE_CASE)
+        ).firstNotNullOfOrNull { pattern -> pattern.find(message)?.groupValues?.getOrNull(1) }
     }
 
     private fun String.errorSuffix(): String {

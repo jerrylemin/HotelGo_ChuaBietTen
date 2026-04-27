@@ -58,7 +58,7 @@
     <string name="feature_voucher_title">Vouchers</string>
     <string name="feature_voucher_subtitle">Apply and create discount codes</string>
     <string name="feature_poster_recommend_title">Recommendation poster</string>
-    <string name="feature_poster_recommend_subtitle">Publish offer posters</string>
+    <string name="feature_poster_recommend_subtitle">View hotel recommended rooms</string>
     <string name="feature_poster_search_title">Room search poster</string>
     <string name="feature_poster_search_subtitle">Post a room search request</string>
     <string name="feature_profile_title">User profile</string>
@@ -68,7 +68,7 @@
     <string name="feature_booking_history_admin_title">Client booking management</string>
     <string name="feature_booking_history_admin_subtitle">Confirm or cancel bookings</string>
     <string name="feature_booking_history_client_title">My bookings</string>
-    <string name="feature_booking_history_client_subtitle">Cancel bookings and manage refunds</string>
+    <string name="feature_booking_history_client_subtitle">View booked rooms</string>
     <string name="feature_checkin_title">Check-in &amp; Check-out</string>
     <string name="feature_checkin_subtitle">Confirm guest stays</string>
     <string name="feature_badge_placeholder">A</string>
@@ -356,7 +356,7 @@
     <string name="payment_history_empty">No payment history yet</string>
     <string name="payment_history_item">Booking: %1$s\nAmount: %2$d VND\nStatus: %3$s\nMethod: %4$s</string>
     <string name="payment_history_item_discount">Booking: %1$s\nOriginal: %2$d VND\nAdd-ons: %3$d VND\nVoucher: %4$s\nDiscount: %5$d VND\nFinal: %6$d VND\nStatus: %7$s\nMethod: %8$s</string>
-    <string name="payment_summary_empty">Enter a booking and voucher code to preview the final payment total.</string>
+    <string name="payment_summary_empty">Select a booking and voucher to preview the final payment total.</string>
     <string name="payment_summary_discount">Room: %1$d VND\nAdd-ons: %2$d VND\nSubtotal: %3$d VND\nVoucher: %4$s\nDiscount: %5$d VND\nFinal total: %6$d VND</string>
     <string name="payment_status_pending">Pending</string>
     <string name="payment_status_paid">Paid</string>
@@ -389,15 +389,16 @@
     <string name="payment_voucher_applied">Applied: %1$s (-%2$d VND)</string>
     <string name="payment_voucher_remove">Remove voucher</string>
     <string name="payment_voucher_select">Select</string>
-    <string name="payment_voucher_item">%1$s — %2$s\n%3$s</string>
+    <string name="payment_voucher_item">%1$s - %2$s\n%3$s</string>
+    <string name="payment_voucher_condition">Minimum: %1$d VND | Expires: %2$s | Discount: %3$d VND</string>
 
     <string name="payment_cash_success">Payment recorded. Pay at reception on check-in.</string>
 
-    <string name="poster_recommend_title">Create recommendation poster</string>
+    <string name="poster_recommend_title">Recommendation poster</string>
     <string name="poster_title_hint">Poster title</string>
     <string name="poster_content_hint">Highlighted content</string>
-    <string name="poster_image_hint">Image URL</string>
-    <string name="poster_room_hint">Linked room code</string>
+    <string name="poster_room_select_title">Linked room</string>
+    <string name="poster_room_empty">No rooms available</string>
     <string name="poster_active">Show to clients</string>
     <string name="poster_recommend_submit">Publish poster</string>
     <string name="poster_update">Update poster</string>
@@ -406,7 +407,7 @@
     <string name="poster_list_title">Published posters</string>
     <string name="poster_empty">No posters yet</string>
     <string name="poster_list_item">%1$s: %2$s</string>
-    <string name="poster_recommend_item_detail">%1$s\n%2$s\nLinked room: %3$s\nStatus: %4$s</string>
+    <string name="poster_recommend_item_detail">%1$s\n%2$s\nRoom: %3$s\nStatus: %4$s</string>
     <string name="poster_status_visible">Visible</string>
     <string name="poster_status_hidden">Hidden</string>
     <string name="poster_search_title">Post a room search request</string>
@@ -424,7 +425,10 @@
     <string name="poster_search_content_detail">Room type: %1$s\nBudget: %2$s\nGuests: %3$s\nDate: %4$s\nNotes: %5$s</string>
     <string name="poster_search_item_detail">%1$s\n%2$s\nStatus: %3$s\nAdmin response: %4$s</string>
     <string name="poster_response_hint">Admin response</string>
+    <string name="poster_response_save">Save response</string>
     <string name="poster_response_empty">No response yet</string>
+    <string name="poster_budget_format">Budget: %1$d VND</string>
+    <string name="common_cancel">Cancel</string>
     <string name="poster_search_notification_title">New room search request</string>
     <string name="poster_search_notification_body">A client needs a room in %1$s.</string>
     <string name="poster_response_notification_title">Room search response</string>
@@ -569,6 +573,7 @@
     <string name="error_notifications_settings">Could not load settings: %1$s</string>
     <string name="error_notifications_save">Could not save settings: %1$s</string>
     <string name="error_notifications_load">Could not load notifications: %1$s</string>
+    <string name="notifications_mark_all_read">Mark all as read</string>
     <string name="error_payment_required">Enter booking ID and amount.</string>
     <string name="error_payment_booking_not_found">Booking not found for your account.</string>
     <string name="error_payment_history">Could not load payment history: %1$s</string>

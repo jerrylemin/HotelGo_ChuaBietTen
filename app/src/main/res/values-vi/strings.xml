@@ -56,7 +56,7 @@
     <string name="feature_voucher_title">Voucher</string>
     <string name="feature_voucher_subtitle">Áp dụng và tạo mã giảm giá</string>
     <string name="feature_poster_recommend_title">Poster khuyến nghị</string>
-    <string name="feature_poster_recommend_subtitle">Đăng poster ưu đãi</string>
+    <string name="feature_poster_recommend_subtitle">Xem các phòng được khách sạn khuyến nghị</string>
     <string name="feature_poster_search_title">Poster tìm phòng</string>
     <string name="feature_poster_search_subtitle">Đăng nhu cầu tìm phòng</string>
     <string name="feature_profile_title">Hồ sơ người dùng</string>
@@ -66,7 +66,7 @@
     <string name="feature_booking_history_admin_title">Quản lý đặt phòng của khách</string>
     <string name="feature_booking_history_admin_subtitle">Xác nhận hoặc hủy đặt phòng</string>
     <string name="feature_booking_history_client_title">Phòng đã đặt của tôi</string>
-    <string name="feature_booking_history_client_subtitle">Hủy phòng và quản lý hoàn tiền</string>
+    <string name="feature_booking_history_client_subtitle">Xem các phòng đã đặt</string>
     <string name="feature_checkin_title">Check-in &amp; Check-out</string>
     <string name="feature_checkin_subtitle">Xác nhận khách lưu trú</string>
     <string name="feature_badge_placeholder">A</string>
@@ -275,7 +275,7 @@
     <string name="payment_history_empty">Chưa có giao dịch thanh toán</string>
     <string name="payment_history_item">Đặt phòng: %1$s\nSố tiền: %2$d VND\nTrạng thái: %3$s\nPhương thức: %4$s</string>
     <string name="payment_history_item_discount">Đặt phòng: %1$s\nGiá gốc: %2$d VND\nMặt hàng phụ: %3$d VND\nVoucher: %4$s\nGiảm giá: %5$d VND\nSau giảm: %6$d VND\nTrạng thái: %7$s\nPhương thức: %8$s</string>
-    <string name="payment_summary_empty">Nhập booking và mã voucher để xem tổng thanh toán sau giảm.</string>
+    <string name="payment_summary_empty">Chọn booking và voucher để xem tổng thanh toán sau giảm.</string>
     <string name="payment_summary_discount">Tiền phòng: %1$d VND\nMặt hàng phụ: %2$d VND\nTạm tính: %3$d VND\nVoucher: %4$s\nGiảm giá: %5$d VND\nTổng sau giảm: %6$d VND</string>
     <string name="payment_status_pending">Đang chờ</string>
     <string name="payment_status_paid">Đã thanh toán</string>
@@ -308,15 +308,16 @@
     <string name="payment_voucher_applied">Đã áp dụng: %1$s (-%2$d VND)</string>
     <string name="payment_voucher_remove">Bỏ voucher</string>
     <string name="payment_voucher_select">Chọn</string>
-    <string name="payment_voucher_item">%1$s — %2$s\n%3$s</string>
+    <string name="payment_voucher_item">%1$s - %2$s\n%3$s</string>
+    <string name="payment_voucher_condition">Tối thiểu: %1$d VND | Hạn dùng: %2$s | Giảm: %3$d VND</string>
 
     <string name="payment_cash_success">Đã ghi nhận thanh toán. Thanh toán tiền mặt khi nhận phòng.</string>
 
-    <string name="poster_recommend_title">Tạo poster khuyến nghị</string>
+    <string name="poster_recommend_title">Poster khuyến nghị</string>
     <string name="poster_title_hint">Tiêu đề poster</string>
     <string name="poster_content_hint">Nội dung nổi bật</string>
-    <string name="poster_image_hint">URL ảnh</string>
-    <string name="poster_room_hint">Mã phòng liên kết</string>
+    <string name="poster_room_select_title">Phòng liên kết</string>
+    <string name="poster_room_empty">Chưa có phòng để chọn</string>
     <string name="poster_active">Hiển thị cho khách</string>
     <string name="poster_recommend_submit">Đăng poster</string>
     <string name="poster_update">Cập nhật poster</string>
@@ -325,7 +326,7 @@
     <string name="poster_list_title">Poster đã đăng</string>
     <string name="poster_empty">Chưa có poster</string>
     <string name="poster_list_item">%1$s: %2$s</string>
-    <string name="poster_recommend_item_detail">%1$s\n%2$s\nPhòng liên kết: %3$s\nTrạng thái: %4$s</string>
+    <string name="poster_recommend_item_detail">%1$s\n%2$s\nPhòng: %3$s\nTrạng thái: %4$s</string>
     <string name="poster_status_visible">Đang hiển thị</string>
     <string name="poster_status_hidden">Đã ẩn</string>
     <string name="poster_search_title">Đăng poster tìm phòng</string>
@@ -343,7 +344,10 @@
     <string name="poster_search_content_detail">Loại phòng: %1$s\nNgân sách: %2$s\nSố người: %3$s\nNgày: %4$s\nGhi chú: %5$s</string>
     <string name="poster_search_item_detail">%1$s\n%2$s\nTrạng thái: %3$s\nPhản hồi admin: %4$s</string>
     <string name="poster_response_hint">Phản hồi của admin</string>
+    <string name="poster_response_save">Lưu phản hồi</string>
     <string name="poster_response_empty">Chưa có phản hồi</string>
+    <string name="poster_budget_format">Ngân sách: %1$d VND</string>
+    <string name="common_cancel">Hủy</string>
     <string name="poster_search_notification_title">Yêu cầu tìm phòng mới</string>
     <string name="poster_search_notification_body">Khách cần tìm phòng tại %1$s.</string>
     <string name="poster_response_notification_title">Phản hồi tìm phòng</string>
@@ -486,6 +490,7 @@
     <string name="error_notifications_settings">Lỗi tải cài đặt: %1$s</string>
     <string name="error_notifications_save">Lỗi lưu cài đặt: %1$s</string>
     <string name="error_notifications_load">Lỗi tải thông báo: %1$s</string>
+    <string name="notifications_mark_all_read">Đánh dấu tất cả đã đọc</string>
     <string name="error_payment_required">Nhập mã đặt phòng và số tiền.</string>
     <string name="error_payment_booking_not_found">Không tìm thấy booking thuộc tài khoản của bạn.</string>
     <string name="error_payment_history">Lỗi tải lịch sử thanh toán: %1$s</string>

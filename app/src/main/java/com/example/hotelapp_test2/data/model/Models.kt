@@ -190,6 +190,18 @@ data class Poster(
     val createdAt: Long = 0L
 )
 
+data class RoomRequest(
+    val id: String = "",
+    val userId: String = "",
+    val userEmail: String = "",
+    val requestText: String = "",
+    val budget: Double = 0.0,
+    val adminReply: String = "",
+    val status: String = "new",
+    val createdAt: Long = 0L,
+    val updatedAt: Long = 0L
+)
+
 data class AddOnItem(
     val id: String = "",
     val name: String = "",
@@ -202,11 +214,17 @@ data class AddOnItem(
 
 data class AppNotification(
     val id: String = "",
+    val userId: String = "",
+    val userEmail: String = "",
     val title: String = "",
     val body: String = "",
+    val type: String = "",
     val targetRole: String = "all",
     val read: Boolean = false,
-    val createdAt: Long = 0L
+    val createdAt: Long = 0L,
+    val readAt: Long = 0L,
+    val relatedId: String = "",
+    val metadata: String = ""
 )
 
 data class Payment(

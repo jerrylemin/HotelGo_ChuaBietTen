@@ -19,6 +19,7 @@ import com.example.hotelapp_test2.data.model.Poster
 import com.example.hotelapp_test2.data.model.Review
 import com.example.hotelapp_test2.data.model.ReviewableBooking
 import com.example.hotelapp_test2.data.model.Room
+import com.example.hotelapp_test2.data.model.RoomRequest
 import com.example.hotelapp_test2.data.model.UserProfile
 import com.example.hotelapp_test2.data.model.Voucher
 import org.json.JSONArray
@@ -896,7 +897,14 @@ object SupabaseRepository {
     }
 
     fun createVoucher(voucher: Voucher, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
-        runAsyncUnit(onSuccess, onError) { upsert("vouchers", voucherToJson(voucher.copy(id = voucher.id.ifBlank { voucher.code.ifBlank { UUID.randomUUID().toString() } }))) }
+        runAsyncUnit(onSuccess, onError) {
+            val normalized = voucher.copy(id = voucher.id.ifBlank { voucher.code.ifBlank { UUID.randomUUID().toString() } })
+            try {
+                upsert("vouchers", voucherToJson(normalized, legacy = false))
+            } catch (e: Exception) {
+                if (isSchemaMismatch(e)) upsert("vouchers", voucherToJson(normalized, legacy = true)) else throw e
+            }
+        }
 
     fun listVouchers(onSuccess: (List<Voucher>) -> Unit, onError: (Exception) -> Unit) =
         runAsync(onSuccess, onError) { select("vouchers", mapOf("select" to "*", "order" to "code.asc")).toVoucherList() }
@@ -977,7 +985,14 @@ object SupabaseRepository {
     }
 
     fun createPoster(poster: Poster, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
-        runAsyncUnit(onSuccess, onError) { upsert("posters", posterToJson(poster.copy(id = poster.id.ifBlank { UUID.randomUUID().toString() }))) }
+        runAsyncUnit(onSuccess, onError) {
+            val normalized = poster.copy(id = poster.id.ifBlank { UUID.randomUUID().toString() })
+            try {
+                upsert("posters", posterToJson(normalized, canonical = true))
+            } catch (e: Exception) {
+                if (isSchemaMismatch(e)) upsert("posters", posterToJson(normalized, canonical = false)) else throw e
+            }
+        }
 
     fun listPosters(type: String, limit: Long, onSuccess: (List<Poster>) -> Unit, onError: (Exception) -> Unit) =
         runAsync(onSuccess, onError) { select("posters", mapOf("select" to "*", "type" to "eq.$type", "order" to "created_at.desc", "limit" to limit.toString())).toPosterList() }
@@ -988,6 +1003,39 @@ object SupabaseRepository {
             return
         }
         runAsyncUnit(onSuccess, onError) { delete("posters", mapOf("id" to "eq.$posterId")) }
+    }
+
+    fun listAvailableRooms(onSuccess: (List<Room>) -> Unit, onError: (Exception) -> Unit) =
+        searchRooms("", onSuccess, onError)
+
+    fun createRoomRequest(request: RoomRequest, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
+        runAsyncUnit(onSuccess, onError) {
+            upsert("room_requests", roomRequestToJson(request.copy(id = request.id.ifBlank { UUID.randomUUID().toString() })))
+        }
+
+    fun listRoomRequests(userId: String?, onSuccess: (List<RoomRequest>) -> Unit, onError: (Exception) -> Unit) {
+        runAsync(onSuccess, onError) {
+            val q = linkedMapOf("select" to "*", "limit" to "100", "order" to "created_at.desc")
+            if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
+            select("room_requests", q).toRoomRequestList()
+        }
+    }
+
+    fun updateRoomRequest(requestId: String, status: String, adminReply: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        if (requestId.isBlank()) {
+            onError(IllegalArgumentException("Missing room request id"))
+            return
+        }
+        runAsyncUnit(onSuccess, onError) {
+            patch(
+                "room_requests",
+                mapOf("id" to "eq.$requestId"),
+                JSONObject()
+                    .put("status", normalizeRoomRequestStatus(status))
+                    .put("admin_reply", adminReply)
+                    .put("updated_at", millisToIso(System.currentTimeMillis()))
+            )
+        }
     }
 
     fun createAddOn(item: AddOnItem, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
@@ -1005,7 +1053,26 @@ object SupabaseRepository {
     }
 
     fun createNotification(notification: AppNotification, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
-        runAsyncUnit(onSuccess, onError) { upsert("notifications", notificationToJson(notification.copy(id = notification.id.ifBlank { UUID.randomUUID().toString() }))) }
+        sendNotificationToUser(notification, onSuccess, onError)
+
+    fun sendNotificationToUser(notification: AppNotification, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
+        runAsyncUnit(onSuccess, onError) {
+            val normalized = notification.copy(id = notification.id.ifBlank { UUID.randomUUID().toString() })
+            createInAppNotification(normalized)
+            triggerEmailNotificationIfConfigured(normalized)
+        }
+
+    private fun createInAppNotification(notification: AppNotification) {
+        try {
+            upsert("notifications", notificationToJson(notification, canonical = true))
+        } catch (e: Exception) {
+            if (isSchemaMismatch(e)) upsert("notifications", notificationToJson(notification, canonical = false)) else throw e
+        }
+    }
+
+    private fun triggerEmailNotificationIfConfigured(notification: AppNotification) {
+        // Email delivery belongs in a backend/Edge Function. The Android app only persists in-app notifications.
+    }
 
     fun markNotificationRead(notificationId: String, read: Boolean, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
         if (notificationId.isBlank()) {
@@ -1013,7 +1080,31 @@ object SupabaseRepository {
             return
         }
         runAsyncUnit(onSuccess, onError) {
-            patch("notifications", mapOf("id" to "eq.$notificationId"), JSONObject().put("is_read", read))
+            patch(
+                "notifications",
+                mapOf("id" to "eq.$notificationId"),
+                JSONObject()
+                    .put("is_read", read)
+                    .put("read_at", if (read) millisToIso(System.currentTimeMillis()) else JSONObject.NULL)
+            )
+        }
+    }
+
+    fun markAllNotificationsRead(userId: String, role: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
+        runAsyncUnit(onSuccess, onError) {
+            val normalized = if (normalizeRole(role) == "admin") "admin" else "client"
+            val filters = if (userId.isNotBlank()) {
+                mapOf("or" to "(user_id.eq.$userId,user_id.is.null)", "target_role" to "in.(all,$normalized)")
+            } else {
+                mapOf("target_role" to "in.(all,$normalized)")
+            }
+            patch(
+                "notifications",
+                filters,
+                JSONObject()
+                    .put("is_read", true)
+                    .put("read_at", millisToIso(System.currentTimeMillis()))
+            )
         }
     }
 
@@ -1041,42 +1132,51 @@ object SupabaseRepository {
 
     fun fetchNotificationSettings(userId: String, onSuccess: (NotificationSettings) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
-            val row = select("users", mapOf("select" to "raw", "id" to "eq.$userId", "limit" to "1")).firstObjectOrNull()
-            val raw = row?.optJSONObject("raw")
+            val row = runCatching {
+                select("notification_settings", mapOf("select" to "*", "user_id" to "eq.$userId", "limit" to "1")).firstObjectOrNull()
+            }.getOrNull()
+            val raw = row ?: runCatching {
+                select("users", mapOf("select" to "raw", "id" to "eq.$userId", "limit" to "1")).firstObjectOrNull()?.optJSONObject("raw")
+            }.getOrNull()
             NotificationSettings(
-                checkIn = raw?.optBooleanCompat("notifCheckIn", true) ?: true,
-                promo = raw?.optBooleanCompat("notifPromo", true) ?: true,
-                roomStatus = raw?.optBooleanCompat("notifRoomStatus", true) ?: true,
-                booking = raw?.optBooleanCompat("notifBooking", true) ?: true,
-                review = raw?.optBooleanCompat("notifReview", true) ?: true,
-                issue = raw?.optBooleanCompat("notifIssue", true) ?: true,
-                payment = raw?.optBooleanCompat("notifPayment", true) ?: true
+                checkIn = raw?.optBooleanCompat("check_in", raw.optBooleanCompat("notifCheckIn", true)) ?: true,
+                promo = raw?.optBooleanCompat("promo", raw.optBooleanCompat("notifPromo", true)) ?: true,
+                roomStatus = raw?.optBooleanCompat("room_status", raw.optBooleanCompat("notifRoomStatus", true)) ?: true,
+                booking = raw?.optBooleanCompat("booking", raw.optBooleanCompat("notifBooking", true)) ?: true,
+                review = raw?.optBooleanCompat("review", raw.optBooleanCompat("notifReview", true)) ?: true,
+                issue = raw?.optBooleanCompat("issue", raw.optBooleanCompat("notifIssue", true)) ?: true,
+                payment = raw?.optBooleanCompat("payment", raw.optBooleanCompat("notifPayment", true)) ?: true
             )
         }
     }
 
     fun updateNotificationSettings(userId: String, settings: NotificationSettings, onSuccess: () -> Unit, onError: (Exception) -> Unit) {
         runAsyncUnit(onSuccess, onError) {
-            val currentRaw = select("users", mapOf("select" to "raw", "id" to "eq.$userId", "limit" to "1"))
-                .firstObjectOrNull()?.optJSONObject("raw") ?: JSONObject()
-            currentRaw.put("notifCheckIn", settings.checkIn)
-            currentRaw.put("notifPromo", settings.promo)
-            currentRaw.put("notifRoomStatus", settings.roomStatus)
-            currentRaw.put("notifBooking", settings.booking)
-            currentRaw.put("notifReview", settings.review)
-            currentRaw.put("notifIssue", settings.issue)
-            currentRaw.put("notifPayment", settings.payment)
-            patch("users", mapOf("id" to "eq.$userId"), JSONObject().put("raw", currentRaw))
+            val payload = notificationSettingsToJson(userId, settings)
+            try {
+                upsert("notification_settings", payload)
+            } catch (e: Exception) {
+                if (!isSchemaMismatch(e)) throw e
+                val currentRaw = select("users", mapOf("select" to "raw", "id" to "eq.$userId", "limit" to "1"))
+                    .firstObjectOrNull()?.optJSONObject("raw") ?: JSONObject()
+                currentRaw.put("notifCheckIn", settings.checkIn)
+                currentRaw.put("notifPromo", settings.promo)
+                currentRaw.put("notifRoomStatus", settings.roomStatus)
+                currentRaw.put("notifBooking", settings.booking)
+                currentRaw.put("notifReview", settings.review)
+                currentRaw.put("notifIssue", settings.issue)
+                currentRaw.put("notifPayment", settings.payment)
+                patch("users", mapOf("id" to "eq.$userId"), JSONObject().put("raw", currentRaw))
+            }
         }
     }
 
-    fun listenNotifications(role: String, onSuccess: (List<AppNotification>) -> Unit, onError: (Exception) -> Unit) {
+    fun listenNotifications(role: String, userId: String = "", onSuccess: (List<AppNotification>) -> Unit, onError: (Exception) -> Unit) {
         val normalized = if (normalizeRole(role) == "admin") "admin" else "client"
         runAsync(onSuccess, onError) {
-            select(
-                "notifications",
-                mapOf("select" to "*", "target_role" to "in.(all,$normalized)", "order" to "created_at.desc", "limit" to "50")
-            ).toNotificationList()
+            val q = linkedMapOf("select" to "*", "target_role" to "in.(all,$normalized)", "order" to "created_at.desc", "limit" to "50")
+            if (userId.isNotBlank()) q["or"] = "(user_id.eq.$userId,user_id.is.null)"
+            select("notifications", q).toNotificationList()
         }
     }
 
@@ -1797,15 +1897,27 @@ object SupabaseRepository {
         id = optString("id"),
         type = optString("type", "recommend"),
         title = optString("title"),
-        content = optString("content"),
+        content = optString("description").ifBlank { optString("content") },
         imageUrl = optString("image_url"),
         roomId = optString("room_id"),
-        active = optBooleanCompat("active", true),
-        userId = optString("user_id"),
+        active = if (has("is_active")) optBooleanCompat("is_active", true) else optBooleanCompat("active", true),
+        userId = optString("created_by").ifBlank { optString("user_id") },
         status = optString("status", "new"),
-        response = optString("response"),
+        response = optString("admin_reply").ifBlank { optString("response") },
         role = normalizeRole(optString("role", "client")),
         createdAt = parseTimestampMillis(opt("created_at"))
+    )
+
+    private fun JSONObject.toRoomRequest(): RoomRequest = RoomRequest(
+        id = optString("id"),
+        userId = optString("user_id"),
+        userEmail = optString("user_email"),
+        requestText = optString("request_text"),
+        budget = optDoubleCompat("budget"),
+        adminReply = optString("admin_reply"),
+        status = normalizeRoomRequestStatus(optString("status", "new")),
+        createdAt = parseTimestampMillis(opt("created_at")),
+        updatedAt = parseTimestampMillis(opt("updated_at"))
     )
 
     private fun JSONObject.toAddOn(): AddOnItem = AddOnItem(
@@ -1820,11 +1932,17 @@ object SupabaseRepository {
 
     private fun JSONObject.toNotification(): AppNotification = AppNotification(
         id = optString("id"),
+        userId = optString("user_id"),
+        userEmail = optString("user_email"),
         title = optString("title"),
-        body = optString("body"),
+        body = optString("message").ifBlank { optString("body") },
+        type = optString("type"),
         targetRole = optString("target_role", "all"),
         read = optBooleanCompat("is_read", false),
-        createdAt = parseTimestampMillis(opt("created_at"))
+        createdAt = parseTimestampMillis(opt("created_at")),
+        readAt = parseTimestampMillis(opt("read_at")),
+        relatedId = optString("related_id"),
+        metadata = opt("metadata")?.toString().orEmpty()
     )
 
     private fun JSONObject.toPayment(): Payment = Payment(
@@ -1857,6 +1975,7 @@ object SupabaseRepository {
     private fun JSONArray.toIssueList(): List<IssueReport> = (0 until length()).mapNotNull { optJSONObject(it)?.toIssue() }
     private fun JSONArray.toVoucherList(): List<Voucher> = (0 until length()).mapNotNull { optJSONObject(it)?.toVoucher() }
     private fun JSONArray.toPosterList(): List<Poster> = (0 until length()).mapNotNull { optJSONObject(it)?.toPoster() }
+    private fun JSONArray.toRoomRequestList(): List<RoomRequest> = (0 until length()).mapNotNull { optJSONObject(it)?.toRoomRequest() }
     private fun JSONArray.toAddOnList(): List<AddOnItem> = (0 until length()).mapNotNull { optJSONObject(it)?.toAddOn() }
     private fun JSONArray.toNotificationList(): List<AppNotification> = (0 until length()).mapNotNull { optJSONObject(it)?.toNotification() }
     private fun JSONArray.toPaymentList(): List<Payment> = (0 until length()).mapNotNull { optJSONObject(it)?.toPayment() }
@@ -1932,40 +2051,67 @@ object SupabaseRepository {
         .put("status", normalizeIssueStatus(issue.status))
         .put("created_at", millisToIso(issue.createdAt))
 
-    private fun voucherToJson(voucher: Voucher): JSONObject = JSONObject()
-        .put("id", voucher.id)
-        .put("code", voucher.code)
-        .put("title", voucher.title.ifBlank { voucher.code })
-        .put("description", voucher.description)
-        .put("discount_type", normalizeDiscountType(voucher.type))
-        .put("discount_value", voucher.value)
-        .put("min_order_amount", voucher.minSpend)
-        .put("max_discount_amount", voucher.maxDiscountAmount)
-        .put("start_date", normalizeDate(voucher.startAt))
-        .put("end_date", normalizeDate(voucher.endAt))
-        .put("is_active", voucher.active)
-        .put("used_count", voucher.usedCount)
-        .put("type", voucher.type)
-        .put("value", voucher.value)
-        .put("min_spend", voucher.minSpend)
-        .put("start_at", normalizeDate(voucher.startAt))
-        .put("end_at", normalizeDate(voucher.endAt))
-        .put("active", voucher.active)
-        .put("usage_limit", voucher.usageLimit)
+    private fun voucherToJson(voucher: Voucher, legacy: Boolean = false): JSONObject {
+        val json = JSONObject()
+            .put("id", voucher.id)
+            .put("code", voucher.code)
+            .put("title", voucher.title.ifBlank { voucher.code })
+            .put("description", voucher.description)
+            .put("discount_type", normalizeDiscountType(voucher.type))
+            .put("discount_value", voucher.value)
+            .put("min_order_amount", voucher.minSpend)
+            .put("max_discount_amount", voucher.maxDiscountAmount)
+            .put("start_date", normalizeDate(voucher.startAt))
+            .put("end_date", normalizeDate(voucher.endAt))
+            .put("is_active", voucher.active)
+            .put("usage_limit", voucher.usageLimit)
+            .put("used_count", voucher.usedCount)
+        if (legacy) {
+            json.put("type", voucher.type)
+                .put("value", voucher.value)
+                .put("min_spend", voucher.minSpend)
+                .put("start_at", normalizeDate(voucher.startAt))
+                .put("end_at", normalizeDate(voucher.endAt))
+                .put("active", voucher.active)
+        }
+        return json
+    }
 
-    private fun posterToJson(poster: Poster): JSONObject = JSONObject()
-        .put("id", poster.id)
-        .put("type", poster.type)
-        .put("title", poster.title)
-        .put("content", poster.content)
-        .put("image_url", poster.imageUrl)
-        .put("room_id", poster.roomId)
-        .put("active", poster.active)
-        .put("user_id", poster.userId)
-        .put("status", poster.status)
-        .put("response", poster.response)
-        .put("role", normalizeRole(poster.role))
-        .put("created_at", millisToIso(poster.createdAt))
+    private fun posterToJson(poster: Poster, canonical: Boolean = true): JSONObject {
+        val json = JSONObject()
+            .put("id", poster.id)
+            .put("type", poster.type)
+            .put("title", poster.title)
+            .put("image_url", poster.imageUrl)
+            .put("room_id", poster.roomId)
+            .put("status", normalizeRoomRequestStatus(poster.status))
+            .put("created_at", millisToIso(poster.createdAt))
+        if (canonical) {
+            json.put("description", poster.content)
+                .put("is_active", poster.active)
+                .put("created_by", poster.userId)
+                .put("admin_reply", poster.response)
+                .put("updated_at", millisToIso(System.currentTimeMillis()))
+        } else {
+            json.put("content", poster.content)
+                .put("active", poster.active)
+                .put("user_id", poster.userId)
+                .put("response", poster.response)
+                .put("role", normalizeRole(poster.role))
+        }
+        return json
+    }
+
+    private fun roomRequestToJson(request: RoomRequest): JSONObject = JSONObject()
+        .put("id", request.id)
+        .put("user_id", request.userId)
+        .put("user_email", request.userEmail)
+        .put("request_text", request.requestText)
+        .put("budget", request.budget)
+        .put("admin_reply", request.adminReply)
+        .put("status", normalizeRoomRequestStatus(request.status))
+        .put("created_at", millisToIso(request.createdAt))
+        .put("updated_at", millisToIso(request.updatedAt.takeIf { it > 0L } ?: request.createdAt))
 
     private fun addOnToJson(item: AddOnItem): JSONObject = JSONObject()
         .put("id", item.id)
@@ -1976,13 +2122,38 @@ object SupabaseRepository {
         .put("category", item.category)
         .put("active", item.active)
 
-    private fun notificationToJson(notification: AppNotification): JSONObject = JSONObject()
-        .put("id", notification.id)
-        .put("title", notification.title)
-        .put("body", notification.body)
-        .put("target_role", normalizeTargetRole(notification.targetRole))
-        .put("is_read", notification.read)
-        .put("created_at", millisToIso(notification.createdAt))
+    private fun notificationToJson(notification: AppNotification, canonical: Boolean = true): JSONObject {
+        val json = JSONObject()
+            .put("id", notification.id)
+            .put("title", notification.title)
+            .put("target_role", normalizeTargetRole(notification.targetRole))
+            .put("is_read", notification.read)
+            .put("created_at", millisToIso(notification.createdAt.takeIf { it > 0L } ?: System.currentTimeMillis()))
+        if (canonical) {
+            json.put("user_id", notification.userId.ifBlank { JSONObject.NULL })
+                .put("user_email", notification.userEmail.ifBlank { JSONObject.NULL })
+                .put("message", notification.body)
+                .put("type", notification.type.ifBlank { "general" })
+                .put("read_at", if (notification.readAt > 0L) millisToIso(notification.readAt) else JSONObject.NULL)
+                .put("related_id", notification.relatedId.ifBlank { JSONObject.NULL })
+                .put("metadata", notification.metadata.ifBlank { "{}" })
+        } else {
+            json.put("body", notification.body)
+        }
+        return json
+    }
+
+    private fun notificationSettingsToJson(userId: String, settings: NotificationSettings): JSONObject = JSONObject()
+        .put("id", userId)
+        .put("user_id", userId)
+        .put("check_in", settings.checkIn)
+        .put("promo", settings.promo)
+        .put("room_status", settings.roomStatus)
+        .put("booking", settings.booking)
+        .put("review", settings.review)
+        .put("issue", settings.issue)
+        .put("payment", settings.payment)
+        .put("updated_at", millisToIso(System.currentTimeMillis()))
 
     private fun paymentToJson(payment: Payment, minimal: Boolean = false): JSONObject {
         val json = JSONObject()
@@ -2039,9 +2210,20 @@ object SupabaseRepository {
         else -> type.trim().lowercase().ifBlank { "percentage" }
     }
 
+    private fun normalizeRoomRequestStatus(status: String): String = when (status.trim().lowercase()) {
+        "processing", "in_progress", "dang_xu_ly" -> "processing"
+        "resolved", "done", "closed", "da_xu_ly" -> "resolved"
+        else -> "new"
+    }
+
     private fun isMissingReviewContextColumn(error: Throwable): Boolean {
         val message = error.message.orEmpty().lowercase()
         return "booking_id" in message || "hotel_id" in message
+    }
+
+    private fun isSchemaMismatch(error: Throwable): Boolean {
+        val message = error.message.orEmpty()
+        return "PGRST204" in message || "PGRST303" in message || "column" in message || "schema cache" in message
     }
 
     private fun String.errorSuffix(): String {

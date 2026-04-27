@@ -44,33 +44,30 @@
                         style="@style/TextAppearance.Hotel.SectionTitle"
                         android:text="@string/issue_title" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/issueRoomCodeLayout"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    <TextView
+                        android:id="@+id/issueBookingHint"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/issue_room_hint">
+                        android:text="@string/issue_booking_select_hint"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/issueRoomCode"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/issueBookingIdLayout"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    <LinearLayout
+                        android:id="@+id/issueBookingContainer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/issue_booking_hint">
+                        android:orientation="vertical" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/issueBookingId"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:id="@+id/issueSelectedBooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/issue_select_booking_first"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/issueTypeLayout"

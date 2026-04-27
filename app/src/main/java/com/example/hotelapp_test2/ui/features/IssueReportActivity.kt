@@ -2,14 +2,17 @@
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import coil.load
 import com.example.hotelapp_test2.R
 import com.example.hotelapp_test2.data.SessionManager
 import com.example.hotelapp_test2.data.SupabaseRepository
 import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Booking
 import com.example.hotelapp_test2.data.model.IssueReport
+import com.example.hotelapp_test2.data.model.Room
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
 import com.google.android.material.button.MaterialButton
@@ -20,6 +23,8 @@ class IssueReportActivity : BaseActivity() {
     private lateinit var listContainer: LinearLayout
     private lateinit var emptyText: TextView
     private var isAdmin: Boolean = false
+    private var selectedBooking: Booking? = null
+    private var selectedRoom: Room? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,8 +34,8 @@ class IssueReportActivity : BaseActivity() {
         isAdmin = role == "admin"
 
         val formCard = findViewById<MaterialCardView>(R.id.issueFormCard)
-        val roomCodeInput = findViewById<TextInputEditText>(R.id.issueRoomCode)
-        val bookingIdInput = findViewById<TextInputEditText>(R.id.issueBookingId)
+        val bookingContainer = findViewById<LinearLayout>(R.id.issueBookingContainer)
+        val selectedBookingText = findViewById<TextView>(R.id.issueSelectedBooking)
         val typeInput = findViewById<TextInputEditText>(R.id.issueType)
         val descriptionInput = findViewById<TextInputEditText>(R.id.issueDescription)
         val submitButton = findViewById<MaterialButton>(R.id.issueSubmitButton)
@@ -38,6 +43,9 @@ class IssueReportActivity : BaseActivity() {
         emptyText = findViewById(R.id.issueEmptyText)
 
         formCard.visibility = if (isAdmin) View.GONE else View.VISIBLE
+        if (!isAdmin) {
+            loadReportableBookings(bookingContainer, selectedBookingText)
+        }
 
         submitButton.setOnClickListener {
             val userId = SupabaseRepository.currentUser()?.uid.orEmpty()
@@ -45,70 +53,141 @@ class IssueReportActivity : BaseActivity() {
                 toast(getString(R.string.error_login_required))
                 return@setOnClickListener
             }
-            val roomCode = roomCodeInput.text?.toString().orEmpty().trim()
-            val bookingId = bookingIdInput.text?.toString().orEmpty().trim()
             val type = typeInput.text?.toString().orEmpty().trim()
             val description = descriptionInput.text?.toString().orEmpty().trim()
-            if (roomCode.isBlank() || bookingId.isBlank() || type.isBlank() || description.isBlank()) {
+            val booking = selectedBooking
+            val room = selectedRoom
+            if (booking == null || room == null) {
+                toast(getString(R.string.issue_select_booking_first))
+                return@setOnClickListener
+            }
+            if (type.isBlank() || description.isBlank()) {
                 toast(getString(R.string.error_issue_required))
                 return@setOnClickListener
             }
-            createIssueForBooking(
-                userId = userId,
-                roomCode = roomCode,
-                bookingId = bookingId,
-                type = type,
-                description = description,
-                onSaved = {
-                    roomCodeInput.setText("")
-                    bookingIdInput.setText("")
-                    typeInput.setText("")
-                    descriptionInput.setText("")
-                    loadIssues()
-                }
-            )
+            saveIssue(userId, room.id.ifBlank { room.code.ifBlank { booking.roomId } }, booking, type, description) {
+                selectedBooking = null
+                selectedRoom = null
+                selectedBookingText.text = getString(R.string.issue_select_booking_first)
+                typeInput.setText("")
+                descriptionInput.setText("")
+                loadReportableBookings(bookingContainer, selectedBookingText)
+                loadIssues()
+            }
         }
 
         loadIssues()
     }
 
-    private fun createIssueForBooking(
-        userId: String,
-        roomCode: String,
-        bookingId: String,
-        type: String,
-        description: String,
-        onSaved: () -> Unit
-    ) {
-        SupabaseRepository.getRoomByCode(
-            code = roomCode,
-            onSuccess = { room ->
-                if (room == null) {
-                    toast(getString(R.string.error_room_not_found, roomCode))
-                    return@getRoomByCode
+    private fun loadReportableBookings(container: LinearLayout, selectedBookingText: TextView) {
+        val userId = SupabaseRepository.currentUser()?.uid.orEmpty()
+        if (userId.isBlank()) {
+            toast(getString(R.string.error_login_required))
+            return
+        }
+        container.removeAllViews()
+        container.addView(simpleText(getString(R.string.issue_booking_loading)))
+        SupabaseRepository.listBookings(
+            userId = userId,
+            onSuccess = { bookings ->
+                val reportableBookings = bookings.filter { it.status != "cancelled" }
+                if (reportableBookings.isEmpty()) {
+                    container.removeAllViews()
+                    container.addView(simpleText(getString(R.string.issue_booking_empty)))
+                    return@listBookings
                 }
-                val resolvedRoomId = room.id.ifBlank { room.code }
-                SupabaseRepository.listBookings(
-                    userId = userId,
-                    onSuccess = { bookings ->
-                        val booking = bookings.firstOrNull {
-                            it.id == bookingId && it.roomId == resolvedRoomId && it.status != "cancelled"
+                SupabaseRepository.searchRooms(
+                    queryText = "",
+                    onSuccess = { rooms ->
+                        val roomLookup = buildMap {
+                            rooms.forEach { room ->
+                                if (room.id.isNotBlank()) put(room.id, room)
+                                if (room.code.isNotBlank()) put(room.code, room)
+                            }
                         }
-                        if (booking == null) {
-                            toast(getString(R.string.error_issue_booking_required))
-                            return@listBookings
+                        container.removeAllViews()
+                        reportableBookings.forEach { booking ->
+                            container.addView(createBookingCard(booking, roomLookup[booking.roomId], selectedBookingText))
                         }
-                        saveIssue(userId, resolvedRoomId, booking, type, description, onSaved)
-                    },
-                    onError = { error ->
-                        toast(getString(R.string.error_booking_history, error.message.orEmpty()))
                     }
-                )
+                ) { error ->
+                    container.removeAllViews()
+                    container.addView(simpleText(getString(R.string.error_room_load, error.message.orEmpty())))
+                }
             },
             onError = { error ->
-                toast(getString(R.string.error_room_load, error.message.orEmpty()))
+                container.removeAllViews()
+                container.addView(simpleText(getString(R.string.error_booking_history, error.message.orEmpty())))
             }
         )
+    }
+
+    private fun createBookingCard(booking: Booking, room: Room?, selectedBookingText: TextView): View {
+        val card = MaterialCardView(this).apply {
+            useCompatPadding = true
+            radius = resources.getDimension(R.dimen.radius_s)
+            setCardBackgroundColor(getColor(R.color.surface_card))
+            setOnClickListener {
+                selectedBooking = booking
+                selectedRoom = room ?: Room(id = booking.roomId, code = booking.roomId)
+                val roomName = roomDisplayName(room, booking)
+                selectedBookingText.text = getString(
+                    R.string.issue_selected_booking,
+                    room?.hotelName?.ifBlank { getString(R.string.common_na) } ?: getString(R.string.common_na),
+                    roomName,
+                    booking.id
+                )
+            }
+        }
+        val row = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            setPadding(
+                resources.getDimensionPixelSize(R.dimen.space_s),
+                resources.getDimensionPixelSize(R.dimen.space_s),
+                resources.getDimensionPixelSize(R.dimen.space_s),
+                resources.getDimensionPixelSize(R.dimen.space_s)
+            )
+        }
+        val image = ImageView(this).apply {
+            val size = resources.getDimensionPixelSize(R.dimen.list_thumb_m)
+            layoutParams = LinearLayout.LayoutParams(size, size)
+            scaleType = ImageView.ScaleType.CENTER_CROP
+            load(room?.images?.firstOrNull().orEmpty().ifBlank { null }) {
+                placeholder(R.mipmap.ic_launcher)
+                error(R.mipmap.ic_launcher)
+                crossfade(true)
+            }
+        }
+        val detail = TextView(this).apply {
+            layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f).also {
+                it.marginStart = resources.getDimensionPixelSize(R.dimen.space_s)
+            }
+            setTextColor(getColor(R.color.text_primary))
+            textSize = 13f
+            text = getString(
+                R.string.issue_booking_item,
+                room?.hotelName?.ifBlank { getString(R.string.common_na) } ?: getString(R.string.common_na),
+                roomDisplayName(room, booking),
+                booking.checkIn,
+                booking.checkOut,
+                booking.id,
+                bookingStatusLabel(booking.status)
+            )
+        }
+        row.addView(image)
+        row.addView(detail)
+        card.addView(row)
+        return card
+    }
+
+    private fun roomDisplayName(room: Room?, booking: Booking): String {
+        return room?.displayType?.ifBlank { room.type }?.ifBlank { room.code } ?: booking.roomId
+    }
+
+    private fun simpleText(value: String): TextView = TextView(this).apply {
+        text = value
+        setTextColor(getColor(R.color.text_secondary))
+        textSize = 13f
     }
 
     private fun saveIssue(userId: String, roomId: String, booking: Booking, type: String, description: String, onSaved: () -> Unit) {
@@ -243,5 +322,16 @@ class IssueReportActivity : BaseActivity() {
         "processing" -> getString(R.string.issue_status_processing)
         "resolved" -> getString(R.string.issue_status_resolved)
         else -> getString(R.string.issue_status_new)
+    }
+
+    private fun bookingStatusLabel(status: String): String = when (status) {
+        "pending" -> getString(R.string.booking_status_pending)
+        "confirmed" -> getString(R.string.booking_status_confirmed)
+        "paid" -> getString(R.string.booking_status_paid)
+        "checked_in" -> getString(R.string.booking_status_checked_in)
+        "checked_out" -> getString(R.string.booking_status_checked_out)
+        "completed" -> getString(R.string.booking_status_completed)
+        "cancelled" -> getString(R.string.booking_status_cancelled)
+        else -> status
     }
 }

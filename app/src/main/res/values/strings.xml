@@ -265,6 +265,12 @@
     <string name="issue_title">Report an issue</string>
     <string name="issue_room_hint">Room code</string>
     <string name="issue_booking_hint">Booking ID</string>
+    <string name="issue_booking_select_hint">Choose one of your registered rooms before sending a report.</string>
+    <string name="issue_booking_loading">Loading your rooms...</string>
+    <string name="issue_booking_empty">You do not have any booked rooms available for reports.</string>
+    <string name="issue_booking_item">Hotel: %1$s\nRoom: %2$s\nCheck-in: %3$s\nCheck-out: %4$s\nBooking: %5$s\nStatus: %6$s</string>
+    <string name="issue_select_booking_first">Select one of your booked rooms first.</string>
+    <string name="issue_selected_booking">Selected: %1$s - %2$s (%3$s)</string>
     <string name="issue_type_hint">Issue type</string>
     <string name="issue_description_hint">Detailed description</string>
     <string name="issue_submit">Submit report</string>
@@ -480,7 +486,7 @@
     <string name="error_checkout">Check-out failed: %1$s</string>
     <string name="error_filter">Filter failed: %1$s</string>
     <string name="error_issue_required">Please enter all issue details.</string>
-    <string name="error_issue_booking_required">Only booked rooms can be reported. Check the room code and booking ID.</string>
+    <string name="error_issue_booking_required">Only booked rooms can be reported.</string>
     <string name="success_issue_sent">Report submitted.</string>
     <string name="success_issue_updated">Issue status updated.</string>
     <string name="issue_response_notification_title">Issue report updated</string>

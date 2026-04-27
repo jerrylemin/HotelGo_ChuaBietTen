@@ -221,6 +221,12 @@
     <string name="issue_title">Báo cáo vấn đề</string>
     <string name="issue_room_hint">Mã phòng</string>
     <string name="issue_booking_hint">Mã đặt phòng</string>
+    <string name="issue_booking_select_hint">Chọn một phòng bạn đã đăng kí/đặt trước khi gửi báo cáo.</string>
+    <string name="issue_booking_loading">Đang tải phòng đã đăng kí...</string>
+    <string name="issue_booking_empty">Bạn chưa có phòng đã đặt để gửi báo cáo.</string>
+    <string name="issue_booking_item">Khách sạn: %1$s\nPhòng: %2$s\nNhận phòng: %3$s\nTrả phòng: %4$s\nMã đặt phòng: %5$s\nTrạng thái: %6$s</string>
+    <string name="issue_select_booking_first">Hãy chọn một phòng bạn đã đặt trước.</string>
+    <string name="issue_selected_booking">Đã chọn: %1$s - %2$s (%3$s)</string>
     <string name="issue_type_hint">Loại vấn đề</string>
     <string name="issue_description_hint">Mô tả chi tiết</string>
     <string name="issue_submit">Gửi báo cáo</string>
@@ -429,7 +435,7 @@
     <string name="error_checkout">Lỗi check-out: %1$s</string>
     <string name="error_filter">Lỗi lọc phòng: %1$s</string>
     <string name="error_issue_required">Vui lòng nhập đầy đủ thông tin.</string>
-    <string name="error_issue_booking_required">Chỉ phòng đã đặt mới được gửi báo cáo. Hãy kiểm tra mã phòng và mã đặt phòng.</string>
+    <string name="error_issue_booking_required">Chỉ phòng đã đặt mới được gửi báo cáo.</string>
     <string name="success_issue_sent">Đã gửi báo cáo.</string>
     <string name="success_issue_updated">Đã cập nhật trạng thái báo cáo.</string>
     <string name="issue_response_notification_title">Báo cáo vấn đề đã cập nhật</string>

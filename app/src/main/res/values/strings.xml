@@ -1,4 +1,4 @@
-﻿<resources>
+<resources>
     <string name="app_name">HotelGo</string>
     <string name="language_toggle_en">EN</string>
     <string name="language_toggle_vi">VN</string>
@@ -122,7 +122,7 @@
     <string name="toolbar_room_crud_subtitle">Room management</string>
     <string name="toolbar_review_subtitle">Share your experience</string>
     <string name="toolbar_issue_subtitle">Fast support</string>
-    <string name="toolbar_payment_subtitle">payOS Checkout</string>
+    <string name="toolbar_payment_subtitle">Secure checkout</string>
     <string name="toolbar_addon_subtitle">Manage extra services</string>
     <string name="toolbar_voucher_subtitle">Offers and discounts</string>
     <string name="toolbar_poster_recommend_subtitle">Highlight offers</string>
@@ -303,11 +303,11 @@
     <string name="notifications_mark_read">Mark as read</string>
     <string name="notifications_mark_unread">Mark as unread</string>
 
-    <string name="payment_title">payOS demo payment</string>
-    <string name="payment_description">Enter a booking ID. The app uses the booking total and falls back to a stable demo payment if payOS is not configured.</string>
+    <string name="payment_title">Payment</string>
+    <string name="payment_description">Enter a booking ID, choose a voucher and payment method to complete the transaction.</string>
     <string name="payment_booking_hint">Booking ID</string>
     <string name="payment_amount_hint">Amount to pay (VND)</string>
-    <string name="payment_open_payos">Confirm payment</string>
+    <string name="payment_confirm_button">Confirm payment</string>
     <string name="payment_item_booking">HotelGo room booking</string>
     <string name="payment_history_title">Payment history</string>
     <string name="payment_history_empty">No payment history yet</string>
@@ -318,12 +318,37 @@
     <string name="payment_status_pending">Pending</string>
     <string name="payment_status_paid">Paid</string>
     <string name="payment_status_refunded">Refunded</string>
-    <string name="payment_pending_payos">payOS checkout opened. The booking will be marked paid after return.</string>
     <string name="payment_already_paid">This booking has already been paid.</string>
     <string name="payment_notification_title">Payment received</string>
     <string name="payment_notification_body">Booking %1$s has been paid.</string>
     <string name="payment_client_notification_title">Payment successful</string>
     <string name="payment_client_notification_body">Your payment for booking %1$s was successful.</string>
+
+    <string name="payment_method_title">Payment method</string>
+    <string name="payment_method_cash">💵 Cash on check-in</string>
+    <string name="payment_method_qr">📱 QR Banking transfer</string>
+    <string name="payment_method_card">💳 Visa / Debit card</string>
+    <string name="payment_method_not_selected">Please select a payment method.</string>
+
+    <string name="payment_qr_title">Scan to pay via banking app</string>
+    <string name="payment_qr_bank_info">Bank: HotelGo Demo Bank\nAccount: 9876543210\nAmount: %1$d VND\nRef: %2$s</string>
+    <string name="payment_qr_confirm">Confirm transfer completed</string>
+
+    <string name="payment_card_number_hint">Card number</string>
+    <string name="payment_card_expiry_hint">MM/YY</string>
+    <string name="payment_card_cvv_hint">CVV</string>
+    <string name="payment_card_processing">Processing card payment…</string>
+    <string name="payment_card_success">Card payment successful!</string>
+
+    <string name="payment_voucher_section_title">Apply a voucher</string>
+    <string name="payment_voucher_loading">Loading available vouchers…</string>
+    <string name="payment_voucher_none">No vouchers available</string>
+    <string name="payment_voucher_applied">Applied: %1$s (-%2$d VND)</string>
+    <string name="payment_voucher_remove">Remove voucher</string>
+    <string name="payment_voucher_select">Select</string>
+    <string name="payment_voucher_item">%1$s — %2$s\n%3$s</string>
+
+    <string name="payment_cash_success">Payment recorded. Pay at reception on check-in.</string>
 
     <string name="poster_recommend_title">Create recommendation poster</string>
     <string name="poster_title_hint">Poster title</string>
@@ -511,18 +536,8 @@
     <string name="error_payment_history">Could not load payment history: %1$s</string>
     <string name="error_payment_save">Could not save payment: %1$s</string>
     <string name="error_payment_update_booking">Payment saved, but booking update failed: %1$s</string>
-    <string name="error_payment_link">Could not create payOS link: %1$s</string>
-    <string name="error_payment_url_missing">payOS did not return checkoutUrl.</string>
-    <string name="success_payment_opened">Opened the default payOS checkout.</string>
-    <string name="success_payment_demo_paid">Demo payment completed. Booking is paid.</string>
+    <string name="success_payment_completed">Payment completed. Booking is paid.</string>
     <string name="completion_payment_paid">Payment completed successfully.</string>
-    <string name="error_payos_result_missing">No payOS payment result received.</string>
-    <string name="error_payos_booking_missing">Missing booking ID from returnUrl.</string>
-    <string name="payos_cancelled">You cancelled the payOS payment.</string>
-    <string name="payos_not_complete">Payment is not complete (%1$s).</string>
-    <string name="payos_success">payOS payment completed.</string>
-    <string name="payos_update_error">Paid, but the order update failed.</string>
-    <string name="payos_save_error">Could not save payOS transaction.</string>
     <string name="error_poster_required">Please enter poster content.</string>
     <string name="success_poster_published">Poster published.</string>
     <string name="success_poster_deleted">Poster deleted.</string>

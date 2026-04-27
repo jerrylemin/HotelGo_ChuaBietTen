@@ -1,4 +1,4 @@
-﻿<resources>
+<resources>
     <string name="app_name">HotelGo</string>
     <string name="language_toggle_en">EN</string>
     <string name="language_toggle_vi">VN</string>
@@ -78,7 +78,7 @@
     <string name="toolbar_room_crud_subtitle">Quản lý phòng</string>
     <string name="toolbar_review_subtitle">Chia sẻ trải nghiệm</string>
     <string name="toolbar_issue_subtitle">Hỗ trợ nhanh</string>
-    <string name="toolbar_payment_subtitle">payOS Checkout</string>
+    <string name="toolbar_payment_subtitle">Thanh toán an toàn</string>
     <string name="toolbar_addon_subtitle">Quản lý dịch vụ thêm</string>
     <string name="toolbar_voucher_subtitle">Ưu đãi và giảm giá</string>
     <string name="toolbar_poster_recommend_subtitle">Nổi bật ưu đãi</string>
@@ -259,11 +259,11 @@
     <string name="notifications_mark_read">Đánh dấu đã đọc</string>
     <string name="notifications_mark_unread">Đánh dấu chưa đọc</string>
 
-    <string name="payment_title">Thanh toán demo payOS</string>
-    <string name="payment_description">Nhập mã đặt phòng. Ứng dụng dùng đúng tổng tiền booking và tự chuyển sang thanh toán demo nếu payOS chưa cấu hình.</string>
+    <string name="payment_title">Thanh toán</string>
+    <string name="payment_description">Nhập mã đặt phòng, chọn voucher và phương thức thanh toán để hoàn tất giao dịch.</string>
     <string name="payment_booking_hint">Mã đặt phòng</string>
     <string name="payment_amount_hint">Số tiền cần thanh toán (VND)</string>
-    <string name="payment_open_payos">Xác nhận thanh toán</string>
+    <string name="payment_confirm_button">Xác nhận thanh toán</string>
     <string name="payment_item_booking">Đặt phòng HotelGo</string>
     <string name="payment_history_title">Lịch sử giao dịch</string>
     <string name="payment_history_empty">Chưa có giao dịch thanh toán</string>
@@ -274,12 +274,37 @@
     <string name="payment_status_pending">Đang chờ</string>
     <string name="payment_status_paid">Đã thanh toán</string>
     <string name="payment_status_refunded">Đã hoàn tiền</string>
-    <string name="payment_pending_payos">Đã mở payOS. Booking sẽ chuyển sang đã thanh toán sau khi quay lại app.</string>
     <string name="payment_already_paid">Booking này đã thanh toán.</string>
     <string name="payment_notification_title">Đã nhận thanh toán</string>
     <string name="payment_notification_body">Booking %1$s đã thanh toán.</string>
     <string name="payment_client_notification_title">Thanh toán thành công</string>
     <string name="payment_client_notification_body">Bạn đã thanh toán thành công booking %1$s.</string>
+
+    <string name="payment_method_title">Phương thức thanh toán</string>
+    <string name="payment_method_cash">💵 Tiền mặt khi nhận phòng</string>
+    <string name="payment_method_qr">📱 Chuyển khoản QR Banking</string>
+    <string name="payment_method_card">💳 Thẻ Visa / Debit</string>
+    <string name="payment_method_not_selected">Vui lòng chọn phương thức thanh toán.</string>
+
+    <string name="payment_qr_title">Quét mã để thanh toán qua ngân hàng</string>
+    <string name="payment_qr_bank_info">Ngân hàng: HotelGo Demo Bank\nSố TK: 9876543210\nSố tiền: %1$d VND\nNội dung: %2$s</string>
+    <string name="payment_qr_confirm">Xác nhận đã chuyển khoản</string>
+
+    <string name="payment_card_number_hint">Số thẻ</string>
+    <string name="payment_card_expiry_hint">MM/YY</string>
+    <string name="payment_card_cvv_hint">CVV</string>
+    <string name="payment_card_processing">Đang xử lý thanh toán thẻ…</string>
+    <string name="payment_card_success">Thanh toán thẻ thành công!</string>
+
+    <string name="payment_voucher_section_title">Áp dụng voucher</string>
+    <string name="payment_voucher_loading">Đang tải voucher…</string>
+    <string name="payment_voucher_none">Không có voucher khả dụng</string>
+    <string name="payment_voucher_applied">Đã áp dụng: %1$s (-%2$d VND)</string>
+    <string name="payment_voucher_remove">Bỏ voucher</string>
+    <string name="payment_voucher_select">Chọn</string>
+    <string name="payment_voucher_item">%1$s — %2$s\n%3$s</string>
+
+    <string name="payment_cash_success">Đã ghi nhận thanh toán. Thanh toán tiền mặt khi nhận phòng.</string>
 
     <string name="poster_recommend_title">Tạo poster khuyến nghị</string>
     <string name="poster_title_hint">Tiêu đề poster</string>
@@ -460,18 +485,8 @@
     <string name="error_payment_history">Lỗi tải lịch sử thanh toán: %1$s</string>
     <string name="error_payment_save">Lỗi lưu thanh toán: %1$s</string>
     <string name="error_payment_update_booking">Đã lưu thanh toán nhưng cập nhật booking lỗi: %1$s</string>
-    <string name="error_payment_link">Tạo link payOS thất bại: %1$s</string>
-    <string name="error_payment_url_missing">Không nhận được checkoutUrl từ payOS.</string>
-    <string name="success_payment_opened">Đã chuyển sang giao diện thanh toán mặc định của payOS.</string>
-    <string name="success_payment_demo_paid">Đã thanh toán demo. Booking đã chuyển sang đã thanh toán.</string>
+    <string name="success_payment_completed">Đã thanh toán. Booking đã chuyển sang đã thanh toán.</string>
     <string name="completion_payment_paid">Bạn đã thanh toán thành công.</string>
-    <string name="error_payos_result_missing">Không nhận được kết quả thanh toán payOS.</string>
-    <string name="error_payos_booking_missing">Thiếu mã đặt phòng từ returnUrl.</string>
-    <string name="payos_cancelled">Bạn đã hủy thanh toán payOS.</string>
-    <string name="payos_not_complete">Thanh toán chưa hoàn tất (%1$s).</string>
-    <string name="payos_success">Thanh toán payOS thành công.</string>
-    <string name="payos_update_error">Đã thanh toán nhưng cập nhật đơn bị lỗi.</string>
-    <string name="payos_save_error">Lỗi lưu giao dịch payOS.</string>
     <string name="error_poster_required">Vui lòng nhập nội dung poster.</string>
     <string name="success_poster_published">Đã đăng poster.</string>
     <string name="success_poster_deleted">Đã xóa poster.</string>

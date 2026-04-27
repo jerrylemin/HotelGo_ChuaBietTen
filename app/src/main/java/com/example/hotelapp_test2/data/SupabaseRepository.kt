@@ -870,7 +870,11 @@ object SupabaseRepository {
             NotificationSettings(
                 checkIn = raw?.optBooleanCompat("notifCheckIn", true) ?: true,
                 promo = raw?.optBooleanCompat("notifPromo", true) ?: true,
-                roomStatus = raw?.optBooleanCompat("notifRoomStatus", true) ?: true
+                roomStatus = raw?.optBooleanCompat("notifRoomStatus", true) ?: true,
+                booking = raw?.optBooleanCompat("notifBooking", true) ?: true,
+                review = raw?.optBooleanCompat("notifReview", true) ?: true,
+                issue = raw?.optBooleanCompat("notifIssue", true) ?: true,
+                payment = raw?.optBooleanCompat("notifPayment", true) ?: true
             )
         }
     }
@@ -882,6 +886,10 @@ object SupabaseRepository {
             currentRaw.put("notifCheckIn", settings.checkIn)
             currentRaw.put("notifPromo", settings.promo)
             currentRaw.put("notifRoomStatus", settings.roomStatus)
+            currentRaw.put("notifBooking", settings.booking)
+            currentRaw.put("notifReview", settings.review)
+            currentRaw.put("notifIssue", settings.issue)
+            currentRaw.put("notifPayment", settings.payment)
             patch("users", mapOf("id" to "eq.$userId"), JSONObject().put("raw", currentRaw))
         }
     }

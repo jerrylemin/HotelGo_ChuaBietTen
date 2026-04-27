@@ -240,6 +240,10 @@
     <string name="issue_notification_body">Khách đã báo cáo vấn đề cho phòng %1$s</string>
 
     <string name="notifications_title">Cài đặt thông báo</string>
+    <string name="notifications_booking">Đặt phòng hoàn tất</string>
+    <string name="notifications_review">Gửi đánh giá thành công</string>
+    <string name="notifications_issue">Báo cáo vấn đề đã gửi hoặc cập nhật</string>
+    <string name="notifications_payment">Thanh toán hoàn tất</string>
     <string name="notifications_checkin">Nhắc lịch check-in</string>
     <string name="notifications_promo">Khuyến mãi mới</string>
     <string name="notifications_room_status">Cập nhật trạng thái phòng</string>

@@ -25,9 +25,13 @@ class NotificationsActivity : BaseActivity() {
         setContentView(R.layout.activity_notifications)
         setupToolbar(R.string.notifications_title, R.string.toolbar_notifications_subtitle)
 
+        val bookingSwitch = findViewById<SwitchMaterial>(R.id.notifBookingSwitch)
+        val reviewSwitch = findViewById<SwitchMaterial>(R.id.notifReviewSwitch)
+        val issueSwitch = findViewById<SwitchMaterial>(R.id.notifIssueSwitch)
+        val paymentSwitch = findViewById<SwitchMaterial>(R.id.notifPaymentSwitch)
         val checkInSwitch = findViewById<SwitchMaterial>(R.id.notifCheckInSwitch)
-        val promoSwitch = findViewById<SwitchMaterial>(R.id.notifPromoSwitch)
         val roomSwitch = findViewById<SwitchMaterial>(R.id.notifRoomSwitch)
+        val promoSwitch = findViewById<SwitchMaterial>(R.id.notifPromoSwitch)
         listContainer = findViewById(R.id.notificationListContainer)
         emptyText = findViewById(R.id.notificationEmptyText)
         unreadText = findViewById(R.id.notificationUnreadText)
@@ -42,6 +46,10 @@ class NotificationsActivity : BaseActivity() {
         SupabaseRepository.fetchNotificationSettings(
             userId = userId,
             onSuccess = { settings ->
+                bookingSwitch.isChecked = settings.booking
+                reviewSwitch.isChecked = settings.review
+                issueSwitch.isChecked = settings.issue
+                paymentSwitch.isChecked = settings.payment
                 checkInSwitch.isChecked = settings.checkIn
                 promoSwitch.isChecked = settings.promo
                 roomSwitch.isChecked = settings.roomStatus
@@ -53,7 +61,11 @@ class NotificationsActivity : BaseActivity() {
             val settings = NotificationSettings(
                 checkIn = checkInSwitch.isChecked,
                 promo = promoSwitch.isChecked,
-                roomStatus = roomSwitch.isChecked
+                roomStatus = roomSwitch.isChecked,
+                booking = bookingSwitch.isChecked,
+                review = reviewSwitch.isChecked,
+                issue = issueSwitch.isChecked,
+                payment = paymentSwitch.isChecked
             )
             SupabaseRepository.updateNotificationSettings(
                 userId = userId,
@@ -63,9 +75,17 @@ class NotificationsActivity : BaseActivity() {
             )
         }
 
-        checkInSwitch.setOnCheckedChangeListener { _, _ -> saveSettings() }
-        promoSwitch.setOnCheckedChangeListener { _, _ -> saveSettings() }
-        roomSwitch.setOnCheckedChangeListener { _, _ -> saveSettings() }
+        listOf(
+            bookingSwitch,
+            reviewSwitch,
+            issueSwitch,
+            paymentSwitch,
+            checkInSwitch,
+            roomSwitch,
+            promoSwitch
+        ).forEach { switch ->
+            switch.setOnCheckedChangeListener { _, _ -> saveSettings() }
+        }
         loadNotifications()
     }
 

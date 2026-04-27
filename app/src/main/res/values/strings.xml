@@ -284,6 +284,10 @@
     <string name="issue_notification_body">A guest reported an issue for room %1$s</string>
 
     <string name="notifications_title">Notification settings</string>
+    <string name="notifications_booking">Booking completed</string>
+    <string name="notifications_review">Review submitted</string>
+    <string name="notifications_issue">Issue report submitted or updated</string>
+    <string name="notifications_payment">Payment completed</string>
     <string name="notifications_checkin">Check-in reminders</string>
     <string name="notifications_promo">New promotions</string>
     <string name="notifications_room_status">Room status updates</string>

@@ -996,7 +996,13 @@ object SupabaseRepository {
             try {
                 upsert("posters", posterToJson(normalized, canonical = true))
             } catch (e: Exception) {
-                if (isSchemaMismatch(e)) upsert("posters", posterToJson(normalized, canonical = false)) else throw e
+                if (!isSchemaMismatch(e)) throw e
+                try {
+                    upsert("posters", posterToJson(normalized, canonical = false))
+                } catch (legacyError: Exception) {
+                    if (!isSchemaMismatch(legacyError)) throw legacyError
+                    upsert("posters", barePosterToJson(normalized))
+                }
             }
         }
 
@@ -2132,6 +2138,14 @@ object SupabaseRepository {
         }
         return json
     }
+
+    private fun barePosterToJson(poster: Poster): JSONObject = JSONObject()
+        .put("id", poster.id)
+        .put("type", poster.type)
+        .put("title", poster.title)
+        .put("content", poster.content)
+        .put("status", normalizeRoomRequestStatus(poster.status))
+        .put("created_at", millisToIso(poster.createdAt))
 
     private fun roomRequestToJson(request: RoomRequest): JSONObject = JSONObject()
         .put("id", request.id)

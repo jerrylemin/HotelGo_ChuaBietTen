@@ -1,4 +1,4 @@
-﻿package com.example.hotelapp_test2.data.model
+package com.example.hotelapp_test2.data.model
 
 data class UserProfile(
     val id: String = "",
@@ -94,6 +94,8 @@ data class Booking(
     val checkIn: String = "",
     val checkOut: String = "",
     val status: String = "pending",
+    val stayStatus: String = "",        // pending_checkin | checked_in | checked_out | cancelled | overdue
+    val guestName: String = "",         // resolved from users table for admin view
     val total: Double = 0.0,
     val addOns: List<String> = emptyList(),
     val addOnDetails: List<BookingAddOn> = emptyList(),
@@ -105,6 +107,8 @@ data class Booking(
     val finalTotal: Double = 0.0,
     val actualCheckInAt: Long = 0L,
     val actualCheckOutAt: Long = 0L,
+    val checkedInAt: Long = 0L,        // from stay_status flow
+    val checkedOutAt: Long = 0L,       // from stay_status flow
     val createdAt: Long = 0L
 )
 

@@ -503,11 +503,110 @@ object SupabaseRepository {
             return
         }
         runAsyncUnit(onSuccess, onError) {
-            val payload = JSONObject().put("status", status)
-            if (status == "checked_in") payload.put("actual_check_in_at", millisToIso(atMillis))
-            if (status == "checked_out") payload.put("actual_check_out_at", millisToIso(atMillis))
+            val payload = JSONObject().put("status", status).put("stay_status", status).put("updated_at", millisToIso(atMillis))
+            if (status == "checked_in") {
+                payload.put("actual_check_in_at", millisToIso(atMillis))
+                payload.put("checked_in_at", millisToIso(atMillis))
+            }
+            if (status == "checked_out") {
+                payload.put("actual_check_out_at", millisToIso(atMillis))
+                payload.put("checked_out_at", millisToIso(atMillis))
+            }
             patch("bookings", mapOf("id" to "eq.$bookingId"), payload)
         }
+    }
+
+    /** Check a guest in: sets stay_status=checked_in and records timestamp. */
+    fun checkInBooking(bookingId: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
+        updateBookingStayStatus(bookingId, "checked_in", System.currentTimeMillis(), onSuccess, onError)
+
+    /** Check a guest out: sets stay_status=checked_out and records timestamp. */
+    fun checkOutBooking(bookingId: String, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
+        updateBookingStayStatus(bookingId, "checked_out", System.currentTimeMillis(), onSuccess, onError)
+
+    /**
+     * Load all bookings for the admin check-in/out screen.
+     * Includes active (confirmed, paid, checked_in, checked_out) stays and optionally
+     * enriches each booking with a guestName resolved from the users table.
+     */
+    fun listAdminBookings(statusFilter: String? = null, onSuccess: (List<Booking>) -> Unit, onError: (Exception) -> Unit) {
+        runAsync(onSuccess, onError) {
+            val q = linkedMapOf<String, String>("select" to "*", "order" to "created_at.desc", "limit" to "100")
+            if (!statusFilter.isNullOrBlank() && statusFilter != "all") {
+                when (statusFilter) {
+                    "overdue" -> {
+                        // Overdue = checked_in but checkout date is in the past
+                        q["stay_status"] = "eq.checked_in"
+                    }
+                    else -> q["stay_status"] = "eq.$statusFilter"
+                }
+            } else {
+                // Admin default: show relevant statuses (exclude purely pending/unconfirmed)
+                q["status"] = "in.(confirmed,paid,checked_in,checked_out,cancelled)"
+            }
+            val bookings = select("bookings", q).toBookingList()
+            // Try to resolve guest names from users table
+            val enriched = runCatching {
+                val userIds = bookings.map { it.userId }.filter { it.isNotBlank() }.toSet()
+                if (userIds.isEmpty()) return@runCatching bookings
+                val userRows = selectAll("users", mapOf("select" to "id,name", "id" to "in.(${userIds.joinToString(",")})"))
+                val nameMap = buildMap<String, String> {
+                    for (i in 0 until userRows.length()) {
+                        val obj = userRows.optJSONObject(i) ?: continue
+                        val uid = obj.optString("id")
+                        val name = obj.optString("name")
+                        if (uid.isNotBlank()) put(uid, name)
+                    }
+                }
+                bookings.map { b -> b.copy(guestName = nameMap[b.userId].orEmpty()) }
+            }.getOrDefault(bookings)
+            attachBookingAddOns(enriched)
+        }
+    }
+
+    // ─── Format helpers ──────────────────────────────────────────────────────
+
+    /** Shorten a UUID or long ID to display as BK-XXXXXX */
+    fun shortBookingCode(id: String): String {
+        val clean = id.replace("-", "").uppercase()
+        return "BK-${clean.take(6)}"
+    }
+
+    /** Convert a snake_case room id/name to a readable title, max 5 words. */
+    fun displayRoomName(rawId: String, roomName: String = ""): String {
+        val base = roomName.ifBlank { rawId }
+        // Strip catalog prefixes like "catalog:hotel:room"
+        val stripped = base
+            .substringAfterLast(":")
+            .replace('_', ' ')
+            .replace('-', ' ')
+        val words = stripped.split(Regex("\\s+")).filter { it.isNotBlank() }.take(5)
+        return words.joinToString(" ") { word ->
+            word.lowercase().replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
+        }.ifBlank { rawId.takeLast(8) }
+    }
+
+    /**
+     * Resolves the UI-visible stay status for a booking, taking into account overdue logic.
+     * Returns one of: pending_checkin | checked_in | checked_out | overdue | cancelled
+     */
+    fun resolveStayStatus(booking: Booking): String {
+        val explicitStay = booking.stayStatus.ifBlank { booking.status }
+        if (explicitStay == "cancelled") return "cancelled"
+        if (explicitStay == "checked_out") return "checked_out"
+        if (explicitStay == "checked_in") {
+            // Check if overdue
+            val isOverdue = runCatching {
+                val checkoutDate = java.time.LocalDate.parse(booking.checkOut)
+                java.time.LocalDate.now().isAfter(checkoutDate)
+            }.getOrDefault(false)
+            return if (isOverdue) "overdue" else "checked_in"
+        }
+        // Not yet checked in
+        if (explicitStay == "pending_checkin" || explicitStay in setOf("confirmed", "paid")) {
+            return "pending_checkin"
+        }
+        return explicitStay.ifBlank { "pending_checkin" }
     }
 
     fun createReview(review: Review, onSuccess: () -> Unit, onError: (Exception) -> Unit) =
@@ -1624,6 +1723,7 @@ object SupabaseRepository {
         checkIn = optString("check_in"),
         checkOut = optString("check_out"),
         status = optString("status", "pending"),
+        stayStatus = optString("stay_status"),
         total = optDoubleCompat("total"),
         addOns = optStringList("add_ons"),
         voucherId = optString("voucher_id"),
@@ -1634,6 +1734,8 @@ object SupabaseRepository {
         finalTotal = optDoubleCompat("final_total"),
         actualCheckInAt = parseTimestampMillis(opt("actual_check_in_at")),
         actualCheckOutAt = parseTimestampMillis(opt("actual_check_out_at")),
+        checkedInAt = parseTimestampMillis(opt("checked_in_at")),
+        checkedOutAt = parseTimestampMillis(opt("checked_out_at")),
         createdAt = parseTimestampMillis(opt("created_at"))
     )
 

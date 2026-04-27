@@ -1,4 +1,4 @@
-﻿package com.example.hotelapp_test2
+package com.example.hotelapp_test2
 
 import android.content.Intent
 import android.os.Bundle
@@ -30,10 +30,7 @@ import com.google.android.material.textfield.TextInputLayout
 class MainActivity : BaseActivity() {
     private lateinit var featureAdapter: FeatureAdapter
     private var currentRole: FeatureRole = FeatureRole.CLIENT
-    private var queryText: String = ""
     private lateinit var headerTitle: TextView
-    private lateinit var searchInput: TextInputLayout
-    private lateinit var highlightCard: MaterialCardView
 
     override fun onStart() {
         super.onStart()
@@ -61,8 +58,6 @@ class MainActivity : BaseActivity() {
         setupToolbar(R.string.app_name, R.string.main_toolbar_subtitle, showBack = false)
 
         headerTitle = findViewById(R.id.headerTitle)
-        searchInput = findViewById(R.id.searchInput)
-        highlightCard = findViewById(R.id.highlightCard)
 
         featureAdapter = FeatureAdapter { feature ->
             startActivity(Intent(this, feature.activityClass))
@@ -74,15 +69,6 @@ class MainActivity : BaseActivity() {
         val spacing = resources.getDimensionPixelSize(R.dimen.space_m)
         recyclerView.addItemDecoration(GridSpacingItemDecoration(2, spacing, true))
 
-        highlightCard.setOnClickListener {
-            startActivity(Intent(this, RecommendationPosterActivity::class.java))
-        }
-
-        val searchEdit = findViewById<TextInputEditText>(R.id.searchEdit)
-        searchEdit.addTextChangedListener { text ->
-            queryText = text?.toString().orEmpty()
-            applyFilters()
-        }
 
         val profileButton = findViewById<MaterialButton>(R.id.profileButton)
         profileButton.setOnClickListener {
@@ -103,13 +89,7 @@ class MainActivity : BaseActivity() {
 
     private fun applyFilters() {
         val filtered = FeatureRegistry.items.filter { item ->
-            val matchesRole = item.roles.contains(currentRole)
-            val title = getString(item.titleRes)
-            val subtitle = getString(item.subtitleRes)
-            val matchesQuery = queryText.isBlank() ||
-                title.contains(queryText, ignoreCase = true) ||
-                subtitle.contains(queryText, ignoreCase = true)
-            matchesRole && matchesQuery
+            item.roles.contains(currentRole)
         }
         featureAdapter.submitList(filtered)
     }
@@ -145,13 +125,6 @@ class MainActivity : BaseActivity() {
     }
 
     private fun updateRoleUi() {
-        val isAdmin = currentRole == FeatureRole.ADMIN
-        searchInput.visibility = if (isAdmin) View.VISIBLE else View.GONE
-        highlightCard.visibility = if (isAdmin) View.VISIBLE else View.GONE
-        if (!isAdmin && queryText.isNotBlank()) {
-            queryText = ""
-            findViewById<TextInputEditText>(R.id.searchEdit).setText("")
-        }
         applyFilters()
     }
 }

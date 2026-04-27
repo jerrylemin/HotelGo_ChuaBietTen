@@ -17,6 +17,7 @@ import com.example.hotelapp_test2.data.model.AppNotification
 import com.example.hotelapp_test2.data.model.Booking
 import com.example.hotelapp_test2.data.model.NotificationSettings
 import com.example.hotelapp_test2.data.model.Payment
+import com.example.hotelapp_test2.data.model.Room
 import com.example.hotelapp_test2.data.model.Voucher
 import com.example.hotelapp_test2.ui.BaseActivity
 import com.example.hotelapp_test2.ui.toast
@@ -28,35 +29,59 @@ import java.time.LocalDate
 class PaymentActivity : BaseActivity() {
 
     private var selectedVoucher: Voucher? = null
-    private var availableVouchers: List<Voucher> = emptyList()
+    private var selectedBooking: Booking? = null
+    private var unpaidBookings: List<Booking> = emptyList()
+
+    // Views
+    private lateinit var bookingListCard: MaterialCardView
+    private lateinit var bookingListContainer: LinearLayout
+    private lateinit var bookingListEmpty: TextView
+    private lateinit var bookingListLoading: TextView
+    private lateinit var formCard: MaterialCardView
+    private lateinit var submitButton: MaterialButton
+    private lateinit var summaryText: TextView
+    private lateinit var statusText: TextView
+    private lateinit var methodGroup: RadioGroup
+    private lateinit var qrCard: MaterialCardView
+    private lateinit var qrImage: ImageView
+    private lateinit var qrBankInfo: TextView
+    private lateinit var cardInputContainer: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
         setupToolbar(R.string.feature_payment_title, R.string.toolbar_payment_subtitle)
+
         val isAdmin = SessionManager.getRole(this) == "admin"
+        if (isAdmin) {
+            toast("Admin does not make payments")
+            finish()
+            return
+        }
 
-        val paymentFormCard = findViewById<View>(R.id.paymentFormCard)
-        val bookingIdInput = findViewById<TextInputEditText>(R.id.paymentBookingId)
-        val amountInput = findViewById<TextInputEditText>(R.id.paymentAmount)
-        val voucherInput = findViewById<TextInputEditText>(R.id.paymentVoucherCode)
-        val submitButton = findViewById<MaterialButton>(R.id.paymentSubmitButton)
-        val summaryText = findViewById<TextView>(R.id.paymentSummaryText)
-        val statusText = findViewById<TextView>(R.id.paymentStatusText)
-        val historyText = findViewById<TextView>(R.id.paymentHistoryText)
-        val methodGroup = findViewById<RadioGroup>(R.id.paymentMethodGroup)
-        val qrCard = findViewById<MaterialCardView>(R.id.paymentQrCard)
-        val qrImage = findViewById<ImageView>(R.id.paymentQrImage)
-        val qrBankInfo = findViewById<TextView>(R.id.paymentQrBankInfo)
-        val cardInputContainer = findViewById<View>(R.id.paymentCardInputContainer)
-        val voucherLoading = findViewById<TextView>(R.id.paymentVoucherLoading)
-        val voucherListContainer = findViewById<LinearLayout>(R.id.paymentVoucherListContainer)
-        val selectedVoucherText = findViewById<TextView>(R.id.paymentSelectedVoucherText)
+        bindViews()
+        setupListeners()
+        loadUnpaidBookings()
+        loadHistory()
+    }
 
-        paymentFormCard.visibility = if (isAdmin) View.GONE else View.VISIBLE
-        amountInput.isEnabled = false
+    private fun bindViews() {
+        bookingListCard = findViewById(R.id.paymentBookingListCard)
+        bookingListContainer = findViewById(R.id.paymentBookingListContainer)
+        bookingListEmpty = findViewById(R.id.paymentBookingListEmpty)
+        bookingListLoading = findViewById(R.id.paymentBookingListLoading)
+        formCard = findViewById(R.id.paymentFormCard)
+        submitButton = findViewById(R.id.paymentSubmitButton)
+        summaryText = findViewById(R.id.paymentSummaryText)
+        statusText = findViewById(R.id.paymentStatusText)
+        methodGroup = findViewById(R.id.paymentMethodGroup)
+        qrCard = findViewById(R.id.paymentQrCard)
+        qrImage = findViewById(R.id.paymentQrImage)
+        qrBankInfo = findViewById(R.id.paymentQrBankInfo)
+        cardInputContainer = findViewById(R.id.paymentCardInputContainer)
+    }
 
-        // Payment method radio group toggles QR/Card sections
+    private fun setupListeners() {
         methodGroup.setOnCheckedChangeListener { _, checkedId ->
             qrCard.visibility = if (checkedId == R.id.radioMethodQR) View.VISIBLE else View.GONE
             cardInputContainer.visibility = if (checkedId == R.id.radioMethodCard) View.VISIBLE else View.GONE
@@ -64,220 +89,230 @@ class PaymentActivity : BaseActivity() {
                 R.id.radioMethodQR -> getString(R.string.payment_qr_confirm)
                 else -> getString(R.string.payment_confirm_button)
             }
+            updateSubmitButtonState()
         }
-
-        // Load vouchers for user
-        if (!isAdmin) {
-            loadAvailableVouchers(voucherLoading, voucherListContainer, selectedVoucherText, summaryText, amountInput)
-        }
-
-        fun loadHistory() {
-            val userId = if (isAdmin) null else SupabaseRepository.currentUser()?.uid.orEmpty()
-            SupabaseRepository.listPayments(
-                userId = userId,
-                onSuccess = { payments ->
-                    historyText.text = if (payments.isEmpty()) {
-                        getString(R.string.payment_history_empty)
-                    } else {
-                        payments.joinToString("\n\n") {
-                            if (it.voucherCode.isBlank() && it.discountAmount <= 0.0) {
-                                getString(R.string.payment_history_item, it.bookingId, it.amount.toInt(), paymentStatusLabel(it.status), it.method)
-                            } else {
-                                getString(
-                                    R.string.payment_history_item_discount,
-                                    it.bookingId,
-                                    it.originalTotal.toInt(),
-                                    it.addonsTotal.toInt(),
-                                    it.voucherCode.ifBlank { getString(R.string.common_na) },
-                                    it.discountAmount.toInt(),
-                                    it.finalTotal.toInt(),
-                                    paymentStatusLabel(it.status),
-                                    it.method
-                                )
-                            }
-                        }
-                    }
-                },
-                onError = { error -> toast(getString(R.string.error_payment_history, error.message.orEmpty())) }
-            )
-        }
-
-        loadHistory()
 
         submitButton.setOnClickListener {
-            val userId = SupabaseRepository.currentUser()?.uid.orEmpty()
-            if (userId.isBlank()) {
-                toast(getString(R.string.error_login_required))
-                return@setOnClickListener
-            }
-
-            val bookingId = bookingIdInput.text?.toString().orEmpty().trim()
-            if (bookingId.isBlank()) {
-                toast(getString(R.string.error_payment_required))
-                return@setOnClickListener
-            }
-
-            val selectedMethodId = methodGroup.checkedRadioButtonId
-            if (selectedMethodId == -1) {
-                toast(getString(R.string.payment_method_not_selected))
-                return@setOnClickListener
-            }
-
-            val method = when (selectedMethodId) {
-                R.id.radioMethodCash -> "CASH"
-                R.id.radioMethodQR -> "QR_BANKING"
-                R.id.radioMethodCard -> "CARD"
-                else -> "UNKNOWN"
-            }
-
-            submitButton.isEnabled = false
-            SupabaseRepository.listBookings(
-                userId = userId,
-                onSuccess = { bookings ->
-                    val booking = bookings.firstOrNull { it.id == bookingId }
-                    if (booking == null) {
-                        submitButton.isEnabled = true
-                        toast(getString(R.string.error_payment_booking_not_found))
-                        return@listBookings
-                    }
-                    if (booking.status == "paid") {
-                        submitButton.isEnabled = true
-                        statusText.text = getString(R.string.payment_already_paid)
-                        return@listBookings
-                    }
-
-                    // Get the voucher either from selection or from manual code input
-                    val manualCode = voucherInput.text?.toString().orEmpty().trim()
-                    val voucherToApply = selectedVoucher ?: if (manualCode.isNotBlank()) null else null
-
-                    if (manualCode.isNotBlank() && voucherToApply == null) {
-                        // Look up manual code
-                        SupabaseRepository.getVoucherByCode(
-                            code = manualCode,
-                            onSuccess = { voucher ->
-                                if (voucher == null) {
-                                    submitButton.isEnabled = true
-                                    summaryText.text = getString(R.string.voucher_invalid)
-                                    return@getVoucherByCode
-                                }
-                                processPaymentWithVoucher(booking, voucher, userId, method, submitButton, summaryText, amountInput, statusText, qrImage, qrBankInfo, qrCard) { loadHistory() }
-                            },
-                            onError = { error ->
-                                submitButton.isEnabled = true
-                                summaryText.text = getString(R.string.voucher_check_error, error.message.orEmpty())
-                            }
-                        )
-                    } else {
-                        // Use selected voucher or no voucher
-                        processPaymentWithVoucher(booking, voucherToApply, userId, method, submitButton, summaryText, amountInput, statusText, qrImage, qrBankInfo, qrCard) { loadHistory() }
-                    }
-                },
-                onError = { error ->
-                    submitButton.isEnabled = true
-                    toast(getString(R.string.error_booking_history, error.message.orEmpty()))
-                }
-            )
+            handlePaymentSubmit()
         }
     }
 
-    private fun processPaymentWithVoucher(
-        booking: Booking,
-        voucher: Voucher?,
-        userId: String,
-        method: String,
-        submitButton: MaterialButton,
-        summaryText: TextView,
-        amountInput: TextInputEditText,
-        statusText: TextView,
-        qrImage: ImageView,
-        qrBankInfo: TextView,
-        qrCard: MaterialCardView,
-        onDone: () -> Unit
-    ) {
-        if (voucher == null) {
-            val summary = summarizePayment(booking, null)
-            amountInput.setText(summary.finalTotal.toInt().toString())
-            summaryText.text = paymentSummaryText(summary)
-            processPayment(summary.booking, userId, method, submitButton, statusText, qrImage, qrBankInfo, qrCard, onDone)
+    private fun updateSubmitButtonState() {
+        submitButton.isEnabled = selectedBooking != null && methodGroup.checkedRadioButtonId != -1
+    }
+
+    private fun loadUnpaidBookings() {
+        val userId = SupabaseRepository.currentUser()?.uid ?: return
+        bookingListLoading.visibility = View.VISIBLE
+        bookingListContainer.visibility = View.GONE
+        bookingListEmpty.visibility = View.GONE
+
+        SupabaseRepository.listBookings(
+            userId = userId,
+            onSuccess = { allBookings ->
+                val unpaidStatuses = setOf("pending", "confirmed", "unpaid")
+                unpaidBookings = allBookings.filter { it.status.lowercase() in unpaidStatuses }
+                
+                bookingListLoading.visibility = View.GONE
+                if (unpaidBookings.isEmpty()) {
+                    bookingListEmpty.visibility = View.VISIBLE
+                } else {
+                    bookingListContainer.visibility = View.VISIBLE
+                    renderBookingList()
+                }
+            },
+            onError = { error ->
+                bookingListLoading.visibility = View.GONE
+                bookingListEmpty.visibility = View.VISIBLE
+                bookingListEmpty.text = error.message
+            }
+        )
+    }
+
+    private fun renderBookingList() {
+        bookingListContainer.removeAllViews()
+        for (booking in unpaidBookings) {
+            val itemView = layoutInflater.inflate(android.R.layout.simple_list_item_2, bookingListContainer, false)
+            val titleText = itemView.findViewById<TextView>(android.R.id.text1)
+            val detailText = itemView.findViewById<TextView>(android.R.id.text2)
+            
+            // Get room details
+            SupabaseRepository.getRoomByCode(booking.roomId, 
+                onSuccess = { room ->
+                    runOnUiThread {
+                        val roomName = room?.displayType ?: booking.roomId
+                        titleText.text = getString(R.string.payment_booking_item_title, booking.id.takeLast(8).uppercase())
+                        detailText.text = getString(
+                            R.string.payment_booking_item_details,
+                            roomName,
+                            booking.checkIn,
+                            booking.checkOut,
+                            booking.status
+                        )
+                    }
+                },
+                onError = {
+                    titleText.text = getString(R.string.payment_booking_item_title, booking.id.takeLast(8).uppercase())
+                    detailText.text = getString(
+                        R.string.payment_booking_item_details,
+                        booking.roomId,
+                        booking.checkIn,
+                        booking.checkOut,
+                        booking.status
+                    )
+                }
+            )
+
+            val selectButton = MaterialButton(this, null, com.google.android.material.R.attr.materialButtonOutlinedStyle).apply {
+                text = getString(R.string.payment_booking_select_btn)
+                textSize = 12f
+            }
+
+            val row = LinearLayout(this).apply {
+                orientation = LinearLayout.HORIZONTAL
+                val params = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
+                addView(itemView, params)
+                addView(selectButton, LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT).apply {
+                    gravity = android.view.Gravity.CENTER_VERTICAL
+                })
+            }
+
+            selectButton.setOnClickListener {
+                selectBooking(booking, row, bookingListContainer)
+            }
+
+            bookingListContainer.addView(row)
+        }
+    }
+
+    private fun selectBooking(booking: Booking, selectedRow: View, container: LinearLayout) {
+        selectedBooking = booking
+        formCard.visibility = View.VISIBLE
+        statusText.text = ""
+        
+        // Reset button texts
+        for (i in 0 until container.childCount) {
+            val row = container.getChildAt(i) as LinearLayout
+            val btn = row.getChildAt(1) as MaterialButton
+            btn.text = getString(R.string.payment_booking_select_btn)
+            btn.isEnabled = true
+        }
+
+        val btn = selectedRow.findViewById<MaterialButton>(selectedRow.getChildAt(1).id) ?: (selectedRow as LinearLayout).getChildAt(1) as MaterialButton
+        btn.text = getString(R.string.payment_booking_selected)
+        btn.isEnabled = false
+
+        updateSubmitButtonState()
+        
+        // Load voucher if code is present in booking, or just summarize
+        if (booking.voucherCode.isNotBlank()) {
+            SupabaseRepository.getVoucherByCode(
+                code = booking.voucherCode,
+                onSuccess = { v -> 
+                    selectedVoucher = v
+                    displaySummary()
+                },
+                onError = { displaySummary() }
+            )
         } else {
-            SupabaseRepository.hasUserUsedVoucher(
-                userId = userId,
-                voucher = voucher,
-                onSuccess = { used ->
-                    val summary = summarizePayment(booking, voucher)
-                    if (used || summary.discountAmount <= 0.0) {
-                        submitButton.isEnabled = true
-                        summaryText.text = getString(R.string.voucher_invalid)
-                    } else {
-                        amountInput.setText(summary.finalTotal.toInt().toString())
-                        summaryText.text = paymentSummaryText(summary)
-                        SupabaseRepository.updateBookingPaymentSummary(
-                            bookingId = booking.id,
-                            voucher = voucher,
-                            originalTotal = summary.originalTotal,
-                            addonsTotal = summary.addonsTotal,
-                            discountAmount = summary.discountAmount,
-                            finalTotal = summary.finalTotal,
-                            onSuccess = { processPayment(summary.booking, userId, method, submitButton, statusText, qrImage, qrBankInfo, qrCard, onDone) },
-                            onError = { error ->
-                                submitButton.isEnabled = true
-                                toast(getString(R.string.error_payment_update_booking, error.message.orEmpty()))
-                            }
-                        )
-                    }
-                },
-                onError = { error ->
-                    submitButton.isEnabled = true
-                    summaryText.text = getString(R.string.voucher_check_error, error.message.orEmpty())
-                }
-            )
+            selectedVoucher = null
+            displaySummary()
         }
     }
 
-    private fun processPayment(
-        booking: Booking,
-        userId: String,
-        method: String,
-        submitButton: MaterialButton,
-        statusText: TextView,
-        qrImage: ImageView,
-        qrBankInfo: TextView,
-        qrCard: MaterialCardView,
-        onDone: () -> Unit
-    ) {
+    private fun displaySummary() {
+        val booking = selectedBooking ?: return
+        val summary = summarizePayment(booking, selectedVoucher)
+        summaryText.text = paymentSummaryText(summary)
+    }
+
+    private fun loadHistory() {
+        val userId = SupabaseRepository.currentUser()?.uid ?: return
+        val historyText = findViewById<TextView>(R.id.paymentHistoryText)
+        SupabaseRepository.listPayments(
+            userId = userId,
+            onSuccess = { payments ->
+                historyText.text = if (payments.isEmpty()) {
+                    getString(R.string.payment_history_empty)
+                } else {
+                    payments.joinToString("\n\n") {
+                        if (it.voucherCode.isBlank() && it.discountAmount <= 0.0) {
+                            getString(R.string.payment_history_item, it.bookingId.takeLast(8).uppercase(), it.amount.toInt(), paymentStatusLabel(it.status), it.method)
+                        } else {
+                            getString(
+                                R.string.payment_history_item_discount,
+                                it.bookingId.takeLast(8).uppercase(),
+                                it.originalTotal.toInt(),
+                                it.addonsTotal.toInt(),
+                                it.voucherCode.ifBlank { getString(R.string.common_na) },
+                                it.discountAmount.toInt(),
+                                it.finalTotal.toInt(),
+                                paymentStatusLabel(it.status),
+                                it.method
+                            )
+                        }
+                    }
+                }
+            },
+            onError = { error -> toast(getString(R.string.error_payment_history, error.message.orEmpty())) }
+        )
+    }
+
+    private fun handlePaymentSubmit() {
+        val userId = SupabaseRepository.currentUser()?.uid ?: return
+        val booking = selectedBooking ?: return
+        val selectedMethodId = methodGroup.checkedRadioButtonId
+        
+        val method = when (selectedMethodId) {
+            R.id.radioMethodCash -> "CASH"
+            R.id.radioMethodQR -> "QR_BANKING"
+            R.id.radioMethodCard -> "CARD"
+            else -> return
+        }
+
+        submitButton.isEnabled = false
+        val summary = summarizePayment(booking, selectedVoucher)
+
+        SupabaseRepository.updateBookingPaymentSummary(
+            bookingId = booking.id,
+            voucher = selectedVoucher,
+            originalTotal = summary.originalTotal,
+            addonsTotal = summary.addonsTotal,
+            discountAmount = summary.discountAmount,
+            finalTotal = summary.finalTotal,
+            onSuccess = { 
+                processPayment(summary.booking, userId, method) 
+            },
+            onError = { error ->
+                submitButton.isEnabled = true
+                toast(getString(R.string.error_payment_update_booking, error.message.orEmpty()))
+            }
+        )
+    }
+
+    private fun processPayment(booking: Booking, userId: String, method: String) {
         when (method) {
             "CASH" -> {
-                completePayment(booking, userId, method, submitButton, statusText, onDone)
+                completePayment(booking, userId, method)
             }
             "QR_BANKING" -> {
-                // Show QR mock
                 val amountVnd = booking.total.toInt()
                 val ref = "BOOK-${booking.id.takeLast(8).uppercase()}"
                 qrBankInfo.text = getString(R.string.payment_qr_bank_info, amountVnd, ref)
                 generateMockQr(qrImage, "HotelGo|$ref|$amountVnd|9876543210")
                 qrCard.visibility = View.VISIBLE
-                completePayment(booking, userId, method, submitButton, statusText, onDone)
+                completePayment(booking, userId, method)
             }
             "CARD" -> {
                 statusText.text = getString(R.string.payment_card_processing)
                 Handler(Looper.getMainLooper()).postDelayed({
-                    completePayment(booking, userId, method, submitButton, statusText, onDone)
+                    completePayment(booking, userId, method)
                 }, 1500)
-            }
-            else -> {
-                completePayment(booking, userId, method, submitButton, statusText, onDone)
             }
         }
     }
 
-    private fun completePayment(
-        booking: Booking,
-        userId: String,
-        method: String,
-        submitButton: MaterialButton,
-        statusText: TextView,
-        onDone: () -> Unit
-    ) {
+    private fun completePayment(booking: Booking, userId: String, method: String) {
         val cardLast4 = if (method == "CARD") {
             val cardNum = findViewById<TextInputEditText>(R.id.paymentCardNumber)
             cardNum.text?.toString().orEmpty().replace(" ", "").takeLast(4)
@@ -299,6 +334,7 @@ class PaymentActivity : BaseActivity() {
             finalTotal = booking.total,
             createdAt = System.currentTimeMillis()
         )
+        
         SupabaseRepository.createPayment(
             payment = payment,
             onSuccess = {
@@ -310,24 +346,24 @@ class PaymentActivity : BaseActivity() {
                         SupabaseRepository.createNotification(
                             AppNotification(
                                 title = getString(R.string.payment_notification_title),
-                                body = getString(R.string.payment_notification_body, booking.id),
+                                body = getString(R.string.payment_notification_body, booking.id.takeLast(8).uppercase()),
                                 targetRole = "admin"
                             ),
-                            onSuccess = {},
-                            onError = {}
+                            onSuccess = {}, onError = {}
                         )
                         SupabaseRepository.createNotification(
                             AppNotification(
                                 title = getString(R.string.payment_client_notification_title),
-                                body = getString(R.string.payment_client_notification_body, booking.id),
+                                body = getString(R.string.payment_client_notification_body, booking.id.takeLast(8).uppercase()),
                                 targetRole = "client"
                             ),
-                            onSuccess = {},
-                            onError = {}
+                            onSuccess = {}, onError = {}
                         )
-                        SupabaseRepository.recordVoucherUsage(payment, onSuccess = {}, onError = {})
-                        SupabaseRepository.incrementVoucherUsage(booking.voucherId, onSuccess = {}, onError = {})
-                        submitButton.isEnabled = true
+                        if (booking.voucherId.isNotBlank()) {
+                            SupabaseRepository.recordVoucherUsage(payment, onSuccess = {}, onError = {})
+                            SupabaseRepository.incrementVoucherUsage(booking.voucherId, onSuccess = {}, onError = {})
+                        }
+                        
                         statusText.text = when (method) {
                             "CASH" -> getString(R.string.payment_cash_success)
                             "CARD" -> getString(R.string.payment_card_success)
@@ -337,8 +373,13 @@ class PaymentActivity : BaseActivity() {
                             NotificationSettings.CATEGORY_PAYMENT,
                             R.string.completion_title,
                             R.string.completion_payment_paid
-                        )
-                        onDone()
+                        ) {
+                            formCard.visibility = View.GONE
+                            selectedBooking = null
+                            methodGroup.clearCheck()
+                            loadUnpaidBookings()
+                            loadHistory()
+                        }
                     },
                     onError = { error ->
                         submitButton.isEnabled = true
@@ -353,13 +394,11 @@ class PaymentActivity : BaseActivity() {
         )
     }
 
-    /** Generate a simple mock QR code bitmap from the given data string */
     private fun generateMockQr(imageView: ImageView, data: String) {
         val size = 200
         val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
         val hash = data.hashCode()
         val rng = java.util.Random(hash.toLong())
-        // Draw a QR-like pattern
         val moduleSize = 8
         val modules = size / moduleSize
         for (y in 0 until modules) {
@@ -384,88 +423,6 @@ class PaymentActivity : BaseActivity() {
             }
         }
         imageView.setImageBitmap(bitmap)
-    }
-
-    /** Load available vouchers and populate the voucher list UI */
-    private fun loadAvailableVouchers(
-        loadingText: TextView,
-        container: LinearLayout,
-        selectedText: TextView,
-        summaryText: TextView,
-        amountInput: TextInputEditText
-    ) {
-        loadingText.visibility = View.VISIBLE
-        container.visibility = View.GONE
-        SupabaseRepository.listVouchers(
-            onSuccess = { vouchers ->
-                val today = LocalDate.now()
-                availableVouchers = vouchers.filter { v ->
-                    v.active &&
-                        (v.usageLimit <= 0 || v.usedCount < v.usageLimit) &&
-                        runCatching { !today.isBefore(LocalDate.parse(v.startAt)) }.getOrDefault(true) &&
-                        runCatching { !today.isAfter(LocalDate.parse(v.endAt)) }.getOrDefault(true)
-                }
-                loadingText.visibility = View.GONE
-                if (availableVouchers.isEmpty()) {
-                    loadingText.text = getString(R.string.payment_voucher_none)
-                    loadingText.visibility = View.VISIBLE
-                    return@listVouchers
-                }
-                container.visibility = View.VISIBLE
-                container.removeAllViews()
-                for (voucher in availableVouchers) {
-                    val itemView = layoutInflater.inflate(android.R.layout.simple_list_item_2, container, false)
-                    val text1 = itemView.findViewById<TextView>(android.R.id.text1)
-                    val text2 = itemView.findViewById<TextView>(android.R.id.text2)
-
-                    val discountLabel = if (voucher.type.equals("percent", true) || voucher.type.equals("percentage", true)) {
-                        "${voucher.value.toInt()}%"
-                    } else {
-                        "${voucher.value.toInt()} VND"
-                    }
-                    text1.text = "${voucher.code} — $discountLabel"
-                    text2.text = voucher.title.ifBlank { voucher.description.ifBlank { getString(R.string.voucher_active) } }
-
-                    val selectButton = MaterialButton(this, null, com.google.android.material.R.attr.materialButtonOutlinedStyle).apply {
-                        text = getString(R.string.payment_voucher_select)
-                        textSize = 12f
-                    }
-
-                    val row = LinearLayout(this).apply {
-                        orientation = LinearLayout.HORIZONTAL
-                        val params = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
-                        addView(itemView, params)
-                        addView(selectButton, LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT).apply {
-                            gravity = android.view.Gravity.CENTER_VERTICAL
-                        })
-                    }
-
-                    selectButton.setOnClickListener {
-                        selectedVoucher = voucher
-                        selectedText.text = getString(R.string.payment_voucher_applied, voucher.code, 0)
-                        selectedText.visibility = View.VISIBLE
-                        // Clear manual input when selecting from list
-                        findViewById<TextInputEditText>(R.id.paymentVoucherCode).setText("")
-                    }
-
-                    container.addView(row)
-                }
-
-                // Add a "Remove voucher" option
-                val removeButton = MaterialButton(this, null, com.google.android.material.R.attr.materialButtonOutlinedStyle).apply {
-                    text = getString(R.string.payment_voucher_remove)
-                    textSize = 12f
-                    setOnClickListener {
-                        selectedVoucher = null
-                        selectedText.visibility = View.GONE
-                    }
-                }
-                container.addView(removeButton)
-            },
-            onError = {
-                loadingText.text = getString(R.string.payment_voucher_none)
-            }
-        )
     }
 
     private data class PaymentSummary(
@@ -504,11 +461,9 @@ class PaymentActivity : BaseActivity() {
     }
 
     private fun paymentSummaryText(summary: PaymentSummary): String = getString(
-        R.string.payment_summary_discount,
+        R.string.payment_booking_item_summary,
         summary.originalTotal.toInt(),
         summary.addonsTotal.toInt(),
-        summary.subtotal.toInt(),
-        summary.voucher?.code ?: summary.booking.voucherCode.ifBlank { getString(R.string.common_na) },
         summary.discountAmount.toInt(),
         summary.finalTotal.toInt()
     )

@@ -26,9 +26,9 @@
             android:orientation="vertical"
             android:padding="@dimen/space_m">
 
-            <!-- Payment form card (hidden for admin) -->
+            <!-- Booking List Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/paymentFormCard"
+                android:id="@+id/paymentBookingListCard"
                 style="@style/Widget.Hotel.Card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -43,96 +43,57 @@
                         style="@style/TextAppearance.Hotel.SectionTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/payment_title" />
+                        android:text="@string/payment_booking_list_title" />
 
                     <TextView
+                        android:id="@+id/paymentBookingListLoading"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:text="@string/payment_description"
-                        android:textColor="@color/text_secondary" />
-
-                    <!-- Booking ID input -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/paymentBookingIdLayout"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_m"
-                        android:hint="@string/payment_booking_hint">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/paymentBookingId"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <!-- Amount (read-only) -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/paymentAmountLayout"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/payment_amount_hint">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/paymentAmount"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="numberDecimal" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <!-- Voucher selection section -->
-                    <TextView
-                        style="@style/TextAppearance.Hotel.SectionTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_m"
-                        android:text="@string/payment_voucher_section_title" />
-
-                    <TextView
-                        android:id="@+id/paymentVoucherLoading"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_xs"
-                        android:text="@string/payment_voucher_loading"
+                        android:text="@string/payment_booking_list_loading"
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
 
-                    <LinearLayout
-                        android:id="@+id/paymentVoucherListContainer"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_xs"
-                        android:orientation="vertical"
-                        android:visibility="gone" />
-
                     <TextView
-                        android:id="@+id/paymentSelectedVoucherText"
+                        android:id="@+id/paymentBookingListEmpty"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_xs"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/payment_booking_list_empty"
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp"
                         android:visibility="gone" />
 
-                    <!-- Or enter voucher code manually -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/paymentVoucherCodeLayout"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    <LinearLayout
+                        android:id="@+id/paymentBookingListContainer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_s"
-                        android:hint="@string/voucher_code_hint">
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/paymentVoucherCode"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
+            <!-- Payment form card (hidden until booking is selected) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/paymentFormCard"
+                style="@style/Widget.Hotel.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:visibility="gone">
 
-                    <!-- Payment summary -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_m">
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment_title" />
+
                     <TextView
                         android:id="@+id/paymentSummaryText"
                         android:layout_width="match_parent"
@@ -140,7 +101,7 @@
                         android:layout_marginTop="@dimen/space_s"
                         android:text="@string/payment_summary_empty"
                         android:textColor="@color/text_secondary"
-                        android:textSize="13sp" />
+                        android:textSize="14sp" />
 
                     <!-- Payment method selection -->
                     <TextView
@@ -296,6 +257,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space_m"
+                        android:enabled="false"
                         android:text="@string/payment_confirm_button" />
 
                     <!-- Status text -->

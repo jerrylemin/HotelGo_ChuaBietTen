@@ -217,8 +217,9 @@ class SearchPosterActivity : BaseActivity() {
     }
 
     private fun clientLabel(name: String, email: String, phone: String, userId: String): String {
-        val displayName = name.ifBlank { email }.ifBlank { userId.takeLast(6).ifBlank { getString(R.string.common_na) } }
+        val displayName = name.ifBlank { getString(R.string.customer_unknown) }
         val displayPhone = phone.ifBlank { getString(R.string.common_na) }
-        return getString(R.string.client_contact_format, displayName, displayPhone)
+        val displayEmail = email.ifBlank { getString(R.string.common_na) }
+        return getString(R.string.client_contact_email_format, displayName, displayPhone, displayEmail)
     }
 }

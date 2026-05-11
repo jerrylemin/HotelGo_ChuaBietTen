@@ -172,8 +172,10 @@ class RoomDetailActivity : BaseActivity() {
                 SupabaseRepository.createBookingWithAddOns(
                     booking = booking,
                     addOnSelections = addOnSelections,
-                    onSuccess = {
-                        toast(getString(R.string.success_booking_created))
+                    onSuccess = { bookingId ->
+                        val bookingCode = SupabaseRepository.shortBookingCode(bookingId)
+                        val roomCode = room.code.ifBlank { room.id }
+                        toast(getString(R.string.success_booking_created_with_code, bookingCode))
                         showCompletionPopup(
                             NotificationSettings.CATEGORY_BOOKING,
                             R.string.completion_title,
@@ -182,7 +184,7 @@ class RoomDetailActivity : BaseActivity() {
                         SupabaseRepository.createNotification(
                             AppNotification(
                                 title = getString(R.string.booking_notification_title),
-                                body = getString(R.string.booking_notification_body, room.code.ifBlank { room.id }),
+                                body = getString(R.string.booking_notification_body, bookingCode, roomCode),
                                 targetRole = "admin"
                             ),
                             onSuccess = {},
@@ -192,7 +194,7 @@ class RoomDetailActivity : BaseActivity() {
                             AppNotification(
                                 userId = userId,
                                 title = getString(R.string.booking_client_notification_title),
-                                body = getString(R.string.booking_client_notification_body, room.code.ifBlank { room.id }),
+                                body = getString(R.string.booking_client_notification_body, bookingCode, roomCode),
                                 type = "booking",
                                 targetRole = "client"
                             ),

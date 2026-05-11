@@ -166,11 +166,12 @@ class CheckInOutActivity : BaseActivity() {
             SupabaseRepository.displayRoomName(booking.roomId)
         }
 
-        val guest = booking.guestName.ifBlank {
-            getString(R.string.checkin_guest_unknown, booking.userId.take(6).uppercase())
-        }.let { name ->
-            getString(R.string.client_contact_format, name, booking.guestPhone.ifBlank { getString(R.string.common_na) })
-        }
+        val guest = getString(
+            R.string.client_contact_email_format,
+            booking.guestName.ifBlank { getString(R.string.customer_unknown) },
+            booking.guestPhone.ifBlank { getString(R.string.common_na) },
+            booking.guestEmail.ifBlank { getString(R.string.common_na) }
+        )
         val stayLabel = stayStatusDisplayLabel(stayStatus)
         actionPanelDetails.text = getString(
             R.string.checkin_action_panel_details,

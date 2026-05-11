@@ -231,11 +231,10 @@ class BookingHistoryAdapter(
             }.getOrDefault(value)
 
         private fun guestLabel(booking: Booking): String {
-            val name = booking.guestName.ifBlank {
-                booking.userId.takeLast(6).ifBlank { itemView.context.getString(R.string.common_na) }
-            }
+            val name = booking.guestName.ifBlank { itemView.context.getString(R.string.customer_unknown) }
             val phone = booking.guestPhone.ifBlank { itemView.context.getString(R.string.common_na) }
-            return itemView.context.getString(R.string.client_contact_format, name, phone)
+            val email = booking.guestEmail.ifBlank { itemView.context.getString(R.string.common_na) }
+            return itemView.context.getString(R.string.client_contact_email_format, name, phone, email)
         }
 
         private fun money(value: Double): String =

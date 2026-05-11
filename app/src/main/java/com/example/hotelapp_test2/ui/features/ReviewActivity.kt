@@ -151,7 +151,7 @@ class ReviewActivity : BaseActivity() {
                     R.string.review_selected_booking,
                     compactHotelName(room?.hotelName.orEmpty()),
                     compactRoomName(room?.displayType?.ifBlank { room.type }.orEmpty().ifBlank { booking.roomId }),
-                    shortId(booking.id)
+                    SupabaseRepository.shortBookingCode(booking.id)
                 )
                 item.existingReview?.let { review ->
                     ratingBar.rating = review.rating.coerceIn(1, 5).toFloat()
@@ -195,7 +195,7 @@ class ReviewActivity : BaseActivity() {
                 compactRoomName(room?.displayType?.ifBlank { room.type }.orEmpty().ifBlank { booking.roomId }),
                 shortDate(booking.checkIn),
                 shortDate(booking.checkOut),
-                "#${shortId(booking.id)}",
+                SupabaseRepository.shortBookingCode(booking.id),
                 statusLabel(booking.status),
                 reviewed
             )
@@ -230,12 +230,6 @@ class ReviewActivity : BaseActivity() {
         runCatching {
             LocalDate.parse(value).format(DateTimeFormatter.ofPattern("dd/MM"))
         }.getOrDefault(value)
-
-    private fun shortId(value: String): String {
-        val clean = value.trim()
-        if (clean.length <= 8) return clean
-        return clean.takeLast(6)
-    }
 
     private fun String.toDisplayWords(maxWords: Int): String =
         replace('_', ' ')

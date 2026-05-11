@@ -4,6 +4,7 @@
     <string name="language_toggle_vi">VN</string>
     <string name="language_toggle_content_description">Switch language</string>
     <string name="common_na">N/A</string>
+    <string name="customer_unknown">Customer info unavailable</string>
     <string name="common_ok">OK</string>
     <string name="notification_settings_action">Settings</string>
     <string name="completion_title">Completed</string>
@@ -37,6 +38,7 @@
     <string name="register_name_hint">Full name</string>
     <string name="register_phone_hint">Phone number</string>
     <string name="client_contact_format">%1$s - Phone: %2$s</string>
+    <string name="client_contact_email_format">%1$s\nPhone: %2$s\nEmail: %3$s</string>
     <string name="register_email_hint">Email</string>
     <string name="register_password_hint">Password</string>
     <string name="register_confirm_hint">Confirm password</string>
@@ -190,9 +192,9 @@
     <string name="booking_summary_title">Cost summary</string>
     <string name="booking_summary_placeholder">Estimated total: 1,500,000 VND</string>
     <string name="booking_notification_title">New booking</string>
-    <string name="booking_notification_body">A guest booked room %1$s</string>
+    <string name="booking_notification_body">A guest created booking %1$s for room %2$s</string>
     <string name="booking_client_notification_title">Booking created</string>
-    <string name="booking_client_notification_body">Your booking for room %1$s was created successfully.</string>
+    <string name="booking_client_notification_body">Your booking %1$s for room %2$s was created successfully.</string>
     <string name="booking_confirm_notification_title">Booking confirmed</string>
     <string name="booking_confirm_notification_body">Booking %1$s was confirmed.</string>
     <string name="booking_cancel_notification_title">Booking cancelled</string>
@@ -542,6 +544,7 @@
     <string name="error_room_search">Search failed: %1$s</string>
     <string name="error_booking_create">Booking failed: %1$s</string>
     <string name="success_booking_created">Booking created.</string>
+    <string name="success_booking_created_with_code">Booking created: %1$s</string>
     <string name="completion_booking_created">Your booking has been created successfully.</string>
     <string name="error_date_required">Please select check-in and check-out dates.</string>
     <string name="error_booking_id_missing">Booking ID not found.</string>

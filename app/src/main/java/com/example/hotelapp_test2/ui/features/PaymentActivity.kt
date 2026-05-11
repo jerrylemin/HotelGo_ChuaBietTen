@@ -166,7 +166,7 @@ class PaymentActivity : BaseActivity() {
                 onSuccess = { room ->
                     runOnUiThread {
                         val roomName = room?.displayType ?: booking.roomId
-                        titleText.text = getString(R.string.payment_booking_item_title, booking.id.takeLast(8).uppercase())
+                        titleText.text = getString(R.string.payment_booking_item_title, bookingCode(booking.id))
                         detailText.text = getString(
                             R.string.payment_booking_item_details,
                             roomName,
@@ -177,7 +177,7 @@ class PaymentActivity : BaseActivity() {
                     }
                 },
                 onError = {
-                    titleText.text = getString(R.string.payment_booking_item_title, booking.id.takeLast(8).uppercase())
+                    titleText.text = getString(R.string.payment_booking_item_title, bookingCode(booking.id))
                     detailText.text = getString(
                         R.string.payment_booking_item_details,
                         booking.roomId,
@@ -354,11 +354,11 @@ class PaymentActivity : BaseActivity() {
                 } else {
                     payments.joinToString("\n\n") {
                         if (it.voucherCode.isBlank() && it.discountAmount <= 0.0) {
-                            getString(R.string.payment_history_item, it.bookingId.takeLast(8).uppercase(), it.amount.toInt(), paymentStatusLabel(it.status), it.method)
+                            getString(R.string.payment_history_item, bookingCode(it.bookingId), it.amount.toInt(), paymentStatusLabel(it.status), it.method)
                         } else {
                             getString(
                                 R.string.payment_history_item_discount,
-                                it.bookingId.takeLast(8).uppercase(),
+                                bookingCode(it.bookingId),
                                 it.originalTotal.toInt(),
                                 it.addonsTotal.toInt(),
                                 it.voucherCode.ifBlank { getString(R.string.common_na) },
@@ -414,7 +414,7 @@ class PaymentActivity : BaseActivity() {
             }
             "QR_BANKING" -> {
                 val amountVnd = booking.total.toInt()
-                val ref = "BOOK-${booking.id.takeLast(8).uppercase()}"
+                val ref = bookingCode(booking.id)
                 qrBankInfo.text = getString(R.string.payment_qr_bank_info, amountVnd, ref)
                 generateMockQr(qrImage, "HotelGo|$ref|$amountVnd|9876543210")
                 qrCard.visibility = View.VISIBLE
@@ -463,7 +463,7 @@ class PaymentActivity : BaseActivity() {
                         SupabaseRepository.createNotification(
                             AppNotification(
                                 title = getString(R.string.payment_notification_title),
-                                body = getString(R.string.payment_notification_body, booking.id.takeLast(8).uppercase()),
+                                body = getString(R.string.payment_notification_body, bookingCode(booking.id)),
                                 targetRole = "admin"
                             ),
                             onSuccess = {}, onError = {}
@@ -472,7 +472,7 @@ class PaymentActivity : BaseActivity() {
                             AppNotification(
                                 userId = userId,
                                 title = getString(R.string.payment_client_notification_title),
-                                body = getString(R.string.payment_client_notification_body, booking.id.takeLast(8).uppercase()),
+                                body = getString(R.string.payment_client_notification_body, bookingCode(booking.id)),
                                 type = "payment",
                                 relatedId = booking.id,
                                 targetRole = "client"
@@ -611,4 +611,7 @@ class PaymentActivity : BaseActivity() {
         "refunded" -> getString(R.string.payment_status_refunded)
         else -> status
     }
+
+    private fun bookingCode(bookingId: String): String =
+        SupabaseRepository.shortBookingCode(bookingId)
 }

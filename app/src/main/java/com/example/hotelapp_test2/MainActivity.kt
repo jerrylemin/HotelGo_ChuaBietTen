@@ -58,6 +58,7 @@ class MainActivity : BaseActivity() {
         setupToolbar(R.string.app_name, R.string.main_toolbar_subtitle, showBack = false)
 
         headerTitle = findViewById(R.id.headerTitle)
+        currentRole = if (SessionManager.getRole(this) == "admin") FeatureRole.ADMIN else FeatureRole.CLIENT
 
         featureAdapter = FeatureAdapter { feature ->
             startActivity(Intent(this, feature.activityClass))

@@ -4,6 +4,7 @@
     <string name="language_toggle_vi">VN</string>
     <string name="language_toggle_content_description">Đổi ngôn ngữ</string>
     <string name="common_na">N/A</string>
+    <string name="customer_unknown">Chưa có thông tin khách</string>
     <string name="common_ok">OK</string>
     <string name="notification_settings_action">Cài đặt</string>
     <string name="completion_title">Đã hoàn thành</string>
@@ -37,6 +38,7 @@
     <string name="register_name_hint">Họ và tên</string>
     <string name="register_phone_hint">Số điện thoại</string>
     <string name="client_contact_format">%1$s - SĐT: %2$s</string>
+    <string name="client_contact_email_format">%1$s\nSĐT: %2$s\nEmail: %3$s</string>
     <string name="register_email_hint">Email</string>
     <string name="register_password_hint">Mật khẩu</string>
     <string name="register_confirm_hint">Xác nhận mật khẩu</string>
@@ -146,9 +148,9 @@
     <string name="booking_summary_title">Tóm tắt chi phí</string>
     <string name="booking_summary_placeholder">Tổng tiền dự kiến: 1.500.000 VND</string>
     <string name="booking_notification_title">Đặt phòng mới</string>
-    <string name="booking_notification_body">Khách đã đặt phòng %1$s</string>
+    <string name="booking_notification_body">Khách đã tạo đặt phòng %1$s cho phòng %2$s</string>
     <string name="booking_client_notification_title">Đặt phòng thành công</string>
-    <string name="booking_client_notification_body">Bạn đã tạo booking cho phòng %1$s thành công.</string>
+    <string name="booking_client_notification_body">Bạn đã tạo đặt phòng %1$s cho phòng %2$s thành công.</string>
     <string name="booking_confirm_notification_title">Booking đã xác nhận</string>
     <string name="booking_confirm_notification_body">Booking %1$s đã được xác nhận.</string>
     <string name="booking_cancel_notification_title">Booking đã bị hủy</string>
@@ -454,6 +456,7 @@
     <string name="error_room_search">Lỗi tìm kiếm: %1$s</string>
     <string name="error_booking_create">Lỗi đặt phòng: %1$s</string>
     <string name="success_booking_created">Đã tạo đặt phòng.</string>
+    <string name="success_booking_created_with_code">Đã tạo đặt phòng: %1$s</string>
     <string name="completion_booking_created">Bạn đã đăng kí/đặt phòng thành công.</string>
     <string name="error_date_required">Vui lòng chọn ngày nhận và trả phòng.</string>
     <string name="error_booking_id_missing">Không tìm thấy mã đặt phòng.</string>

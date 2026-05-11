@@ -86,7 +86,7 @@ class BookingHistoryActivity : BaseActivity() {
                             AppNotification(
                                 userId = booking.userId,
                                 title = getString(R.string.booking_confirm_notification_title),
-                                body = getString(R.string.booking_confirm_notification_body, booking.id),
+                                body = getString(R.string.booking_confirm_notification_body, SupabaseRepository.shortBookingCode(booking.id)),
                                 type = "booking",
                                 relatedId = booking.id,
                                 targetRole = "client"
@@ -115,7 +115,7 @@ class BookingHistoryActivity : BaseActivity() {
                             AppNotification(
                                 userId = booking.userId,
                                 title = getString(R.string.booking_cancel_notification_title),
-                                body = getString(R.string.booking_cancel_notification_body, booking.id),
+                                body = getString(R.string.booking_cancel_notification_body, SupabaseRepository.shortBookingCode(booking.id)),
                                 type = "booking",
                                 relatedId = booking.id,
                                 targetRole = "client"

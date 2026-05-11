@@ -437,7 +437,14 @@ object SupabaseRepository {
     fun listBookings(userId: String?, onSuccess: (List<Booking>) -> Unit, onError: (Exception) -> Unit) {
         runAsync(onSuccess, onError) {
             val q = linkedMapOf("select" to "*", "limit" to "50", "order" to "created_at.desc")
-            if (!userId.isNullOrBlank()) q["user_id"] = "eq.$userId"
+            if (!userId.isNullOrBlank()) {
+                val userIds = resolveCurrentUserIds(userId)
+                q["user_id"] = if (userIds.size == 1) {
+                    "eq.${userIds.first()}"
+                } else {
+                    "in.(${userIds.joinToString(",") { it.toPostgrestInValue() }})"
+                }
+            }
             attachBookingAddOns(enrichBookingsWithUsers(select("bookings", q).toBookingList()))
         }
     }
@@ -1180,8 +1187,42 @@ object SupabaseRepository {
         }
     }
 
-    private fun getUserProfileById(userId: String): UserProfile? =
-        select("users", mapOf("select" to "*", "id" to "eq.$userId", "limit" to "1")).firstObjectOrNull()?.toUserProfile()
+    private fun getUserProfileById(userId: String): UserProfile? {
+        val byId = select("users", mapOf("select" to "*", "id" to "eq.$userId", "limit" to "1"))
+            .firstObjectOrNull()
+            ?.toUserProfile()
+
+        val current = authUser ?: return byId
+        val email = current.email.trim()
+        if (current.uid != userId || email.isBlank()) return byId
+        val emailRows = select("users", mapOf("select" to "*", "email" to "eq.$email", "limit" to "20"))
+        val byEmail = buildList {
+            for (index in 0 until emailRows.length()) {
+                emailRows.optJSONObject(index)?.toUserProfile()?.let(::add)
+            }
+        }
+        val adminByEmail = byEmail.firstOrNull { it.role == "admin" }
+        if (adminByEmail != null) return adminByEmail
+
+        return byId ?: byEmail.firstOrNull()
+    }
+
+    private fun resolveCurrentUserIds(userId: String): Set<String> {
+        val ids = linkedSetOf(userId)
+        val current = authUser ?: return ids
+        val email = current.email.trim()
+        if (current.uid != userId || email.isBlank()) return ids
+
+        runCatching {
+            select("users", mapOf("select" to "id", "email" to "eq.$email", "limit" to "20"))
+        }.getOrNull()?.let { rows ->
+            for (index in 0 until rows.length()) {
+                val id = rows.optJSONObject(index)?.optCleanString("id").orEmpty()
+                if (id.isNotBlank()) ids.add(id)
+            }
+        }
+        return ids
+    }
 
     private fun upsert(table: String, payload: JSONObject) {
         val response = request(
@@ -1603,6 +1644,7 @@ object SupabaseRepository {
             val contact = contacts[booking.userId]
             booking.copy(
                 guestName = booking.guestName.ifBlank { contact?.name.orEmpty() },
+                guestEmail = booking.guestEmail.ifBlank { contact?.email.orEmpty() },
                 guestPhone = booking.guestPhone.ifBlank { contact?.phone.orEmpty() }
             )
         }
@@ -1616,6 +1658,7 @@ object SupabaseRepository {
             val contact = contacts[issue.userId]
             issue.copy(
                 userName = issue.userName.ifBlank { contact?.name.orEmpty() },
+                userEmail = issue.userEmail.ifBlank { contact?.email.orEmpty() },
                 userPhone = issue.userPhone.ifBlank { contact?.phone.orEmpty() }
             )
         }
@@ -2084,6 +2127,7 @@ object SupabaseRepository {
         status = optString("status", "pending"),
         stayStatus = optString("stay_status"),
         guestName = optCleanString("guest_name"),
+        guestEmail = optCleanString("guest_email").ifBlank { optCleanString("user_email") },
         guestPhone = optCleanString("guest_phone"),
         total = optDoubleCompat("total"),
         addOns = optStringList("add_ons"),
@@ -2136,6 +2180,7 @@ object SupabaseRepository {
         description = optString("description"),
         status = normalizeIssueStatus(optString("status", "new")),
         userName = optCleanString("user_name"),
+        userEmail = optCleanString("user_email"),
         userPhone = optCleanString("user_phone"),
         createdAt = parseTimestampMillis(opt("created_at"))
     )

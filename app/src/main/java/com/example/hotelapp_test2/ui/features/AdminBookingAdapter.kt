@@ -86,12 +86,7 @@ class AdminBookingAdapter(
             }
             roomText.text = roomLabel
 
-            // Guest name
-            val guest = booking.guestName.ifBlank {
-                ctx.getString(R.string.checkin_guest_unknown, shortId(booking.userId))
-            }.let { name ->
-                ctx.getString(R.string.client_contact_format, name, booking.guestPhone.ifBlank { ctx.getString(R.string.common_na) })
-            }
+            val guest = contactLabel(booking.guestName, booking.guestPhone, booking.guestEmail)
             guestText.text = ctx.getString(R.string.checkin_guest_label, guest)
 
             // Dates
@@ -153,9 +148,12 @@ class AdminBookingAdapter(
                 LocalDate.parse(value).format(DateTimeFormatter.ofPattern("dd/MM/yy"))
             }.getOrDefault(value)
 
-        private fun shortId(value: String): String {
-            val clean = value.replace("-", "").take(6).uppercase()
-            return if (clean.isBlank()) "?" else clean
+        private fun contactLabel(name: String, phone: String, email: String): String {
+            val ctx = itemView.context
+            val displayName = name.ifBlank { ctx.getString(R.string.customer_unknown) }
+            val displayPhone = phone.ifBlank { ctx.getString(R.string.common_na) }
+            val displayEmail = email.ifBlank { ctx.getString(R.string.common_na) }
+            return ctx.getString(R.string.client_contact_email_format, displayName, displayPhone, displayEmail)
         }
 
         private fun String.toDisplayWords(maxWords: Int): String =

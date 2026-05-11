@@ -136,7 +136,7 @@ class IssueReportActivity : BaseActivity() {
                     R.string.issue_selected_booking,
                     room?.hotelName?.ifBlank { getString(R.string.common_na) } ?: getString(R.string.common_na),
                     roomName,
-                    booking.id
+                    SupabaseRepository.shortBookingCode(booking.id)
                 )
             }
         }
@@ -171,7 +171,7 @@ class IssueReportActivity : BaseActivity() {
                 roomDisplayName(room, booking),
                 booking.checkIn,
                 booking.checkOut,
-                booking.id,
+                SupabaseRepository.shortBookingCode(booking.id),
                 bookingStatusLabel(booking.status)
             )
         }
@@ -261,12 +261,12 @@ class IssueReportActivity : BaseActivity() {
                 orientation = LinearLayout.VERTICAL
             }
             val detail = TextView(this).apply {
-                val clientLabel = clientLabel(issue.userName, issue.userPhone, issue.userId)
+                val clientLabel = clientLabel(issue.userName, issue.userEmail, issue.userPhone)
                 text = getString(
                     R.string.issue_list_item,
                     clientLabel,
                     issue.roomId.ifBlank { getString(R.string.common_na) },
-                    issue.bookingId.ifBlank { getString(R.string.common_na) },
+                    issue.bookingId.takeIf { it.isNotBlank() }?.let { SupabaseRepository.shortBookingCode(it) } ?: getString(R.string.common_na),
                     issue.title,
                     issue.description,
                     issueStatusLabel(issue.status)
@@ -332,10 +332,11 @@ class IssueReportActivity : BaseActivity() {
         else -> getString(R.string.issue_status_new)
     }
 
-    private fun clientLabel(name: String, phone: String, userId: String): String {
-        val displayName = name.ifBlank { userId.takeLast(6).ifBlank { getString(R.string.common_na) } }
+    private fun clientLabel(name: String, email: String, phone: String): String {
+        val displayName = name.ifBlank { getString(R.string.customer_unknown) }
         val displayPhone = phone.ifBlank { getString(R.string.common_na) }
-        return getString(R.string.client_contact_format, displayName, displayPhone)
+        val displayEmail = email.ifBlank { getString(R.string.common_na) }
+        return getString(R.string.client_contact_email_format, displayName, displayPhone, displayEmail)
     }
 
     private fun bookingStatusLabel(status: String): String = when (status) {

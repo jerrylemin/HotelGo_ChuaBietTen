@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_base"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_m"
+        android:layout_marginTop="@dimen/space_m"
+        android:layout_marginEnd="@dimen/space_m" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_m">
+
+            <!-- Booking List Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/paymentBookingListCard"
+                style="@style/Widget.Hotel.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_m">
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment_booking_list_title" />
+
+                    <TextView
+                        android:id="@+id/paymentBookingListLoading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/payment_booking_list_loading"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/paymentBookingListEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/payment_booking_list_empty"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/paymentBookingListContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Payment form card (hidden until booking is selected) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/paymentFormCard"
+                style="@style/Widget.Hotel.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_m">
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment_title" />
+
+                    <TextView
+                        android:id="@+id/paymentSummaryText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/payment_summary_empty"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/payment_voucher_section_title" />
+
+                    <TextView
+                        android:id="@+id/paymentVoucherStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/payment_voucher_loading"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/paymentVoucherListContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:orientation="vertical" />
+
+                    <!-- Payment method selection -->
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/payment_method_title" />
+
+                    <RadioGroup
+                        android:id="@+id/paymentMethodGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radioMethodCash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/space_s"
+                            android:paddingEnd="@dimen/space_s"
+                            android:text="@string/payment_method_cash" />
+
+                        <RadioButton
+                            android:id="@+id/radioMethodQR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/space_s"
+                            android:paddingEnd="@dimen/space_s"
+                            android:text="@string/payment_method_qr" />
+
+                        <RadioButton
+                            android:id="@+id/radioMethodCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/space_s"
+                            android:paddingEnd="@dimen/space_s"
+                            android:text="@string/payment_method_card" />
+                    </RadioGroup>
+
+                    <!-- QR Code mock (hidden by default) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/paymentQrCard"
+                        style="@style/Widget.Hotel.Card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space_m">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/payment_qr_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/paymentQrImage"
+                                android:layout_width="200dp"
+                                android:layout_height="200dp"
+                                android:layout_marginTop="@dimen/space_s"
+                                android:contentDescription="@string/payment_qr_title"
+                                android:scaleType="fitCenter" />
+
+                            <TextView
+                                android:id="@+id/paymentQrBankInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_s"
+                                android:gravity="center"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Card input mock (hidden by default) -->
+                    <LinearLayout
+                        android:id="@+id/paymentCardInputContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/payment_card_number_hint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/paymentCardNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="19"
+                                android:text="4111 1111 1111 1111" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_xs"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/space_xs"
+                                android:layout_weight="1"
+                                android:hint="@string/payment_card_expiry_hint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/paymentCardExpiry"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:text="12/28" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/payment_card_cvv_hint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/paymentCardCvv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberPassword"
+                                    android:maxLength="4"
+                                    android:text="123" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Submit button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/paymentSubmitButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:enabled="false"
+                        android:text="@string/payment_confirm_button" />
+
+                    <!-- Status text -->
+                    <TextView
+                        android:id="@+id/paymentStatusText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Payment history -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Hotel.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_m">
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment_history_title" />
+
+                    <TextView
+                        android:id="@+id/paymentHistoryText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/payment_history_empty"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

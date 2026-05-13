@@ -1,0 +1,286 @@
+package com.example.hotelapp_test2.data.model
+
+data class UserProfile(
+    val id: String = "",
+    val name: String = "",
+    val email: String = "",
+    val phone: String = "",
+    val role: String = "client",
+    val createdAt: Long = 0L
+)
+
+data class Room(
+    val id: String = "",
+    val code: String = "",
+    val type: String = "",
+    val displayType: String = "",
+    val typeKey: String = "",
+    val price: Double = 0.0,
+    val rating: Double = 0.0,
+    val reviewCount: Int = 0,
+    val status: String = "available",
+    val capacity: Int = 2,
+    val images: List<String> = emptyList(),
+    val createdAt: Long = 0L,
+    val hotelId: String = "",
+    val hotelName: String = "",
+    val area: String = "",
+    val city: String = ""
+)
+
+data class HotelCatalogItem(
+    val id: String = "",
+    val folderName: String = "",
+    val slug: String = "",
+    val name: String = "",
+    val displayName: String = "",
+    val city: String = "",
+    val area: String = "",
+    val country: String = "",
+    val addressFull: String = "",
+    val shortDescription: String = "",
+    val description: String = "",
+    val starRating: Double = 0.0,
+    val reviewScore: Double = 0.0,
+    val reviewCount: Int = 0,
+    val roomCount: Int = 0,
+    val checkInFrom: String = "",
+    val checkOutUntil: String = "",
+    val latitude: Double? = null,
+    val longitude: Double? = null,
+    val contactPhone: String = "",
+    val contactEmail: String = "",
+    val heroImage: String = "",
+    val galleryImages: List<String> = emptyList(),
+    val featuredAmenities: List<String> = emptyList(),
+    val generalAmenities: List<String> = emptyList(),
+    val policyNotes: List<String> = emptyList(),
+    val sourceUrl: String = ""
+)
+
+data class HotelCatalogRoom(
+    val id: String = "",
+    val hotelId: String = "",
+    val hotelSlug: String = "",
+    val roomCode: String = "",
+    val name: String = "",
+    val slug: String = "",
+    val price: Double = 0.0,
+    val originalPrice: Double? = null,
+    val currency: String = "VND",
+    val rating: Double = 0.0,
+    val reviewCount: Int = 0,
+    val status: String = "available",
+    val capacity: Int = 2,
+    val images: List<String> = emptyList(),
+    val heroImage: String = "",
+    val roomSizeSqm: Double? = null,
+    val roomSizeSqft: Double? = null,
+    val view: String = "",
+    val breakfastIncluded: Boolean = false,
+    val cancellationPolicy: String = "",
+    val bedSummary: String = "",
+    val bedCount: Int = 0,
+    val amenities: List<String> = emptyList(),
+    val bathroomAmenities: List<String> = emptyList(),
+    val tags: List<String> = emptyList(),
+    val shortDescription: String = ""
+)
+
+data class Booking(
+    val id: String = "",
+    val userId: String = "",
+    val roomId: String = "",
+    val checkIn: String = "",
+    val checkOut: String = "",
+    val status: String = "pending",
+    val stayStatus: String = "",        // pending_checkin | checked_in | checked_out | cancelled | overdue
+    val guestName: String = "",         // resolved from users table for admin view
+    val guestEmail: String = "",
+    val guestPhone: String = "",
+    val total: Double = 0.0,
+    val addOns: List<String> = emptyList(),
+    val addOnDetails: List<BookingAddOn> = emptyList(),
+    val voucherId: String = "",
+    val voucherCode: String = "",
+    val discountAmount: Double = 0.0,
+    val originalTotal: Double = 0.0,
+    val addonsTotal: Double = 0.0,
+    val finalTotal: Double = 0.0,
+    val actualCheckInAt: Long = 0L,
+    val actualCheckOutAt: Long = 0L,
+    val checkedInAt: Long = 0L,        // from stay_status flow
+    val checkedOutAt: Long = 0L,       // from stay_status flow
+    val createdAt: Long = 0L
+)
+
+data class BookingAddOn(
+    val id: String = "",
+    val bookingId: String = "",
+    val addOnItemId: String = "",
+    val name: String = "",
+    val description: String = "",
+    val quantity: Int = 0,
+    val unitPrice: Double = 0.0,
+    val totalPrice: Double = 0.0,
+    val createdAt: Long = 0L
+)
+
+data class BookingAddOnSelection(
+    val item: AddOnItem,
+    val quantity: Int
+) {
+    val totalPrice: Double get() = item.price * quantity.coerceAtLeast(0)
+}
+
+data class ReviewableBooking(
+    val booking: Booking = Booking(),
+    val room: Room? = null,
+    val existingReview: Review? = null
+)
+
+data class Review(
+    val id: String = "",
+    val roomId: String = "",
+    val hotelId: String = "",
+    val bookingId: String = "",
+    val userId: String = "",
+    val rating: Int = 0,
+    val comment: String = "",
+    val createdAt: Long = 0L
+)
+
+data class IssueReport(
+    val id: String = "",
+    val userId: String = "",
+    val roomId: String = "",
+    val bookingId: String = "",
+    val title: String = "",
+    val description: String = "",
+    val status: String = "new",
+    val userName: String = "",
+    val userEmail: String = "",
+    val userPhone: String = "",
+    val createdAt: Long = 0L
+)
+
+data class Voucher(
+    val id: String = "",
+    val code: String = "",
+    val title: String = "",
+    val description: String = "",
+    val type: String = "percent",
+    val value: Double = 0.0,
+    val minSpend: Double = 0.0,
+    val maxDiscountAmount: Double = 0.0,
+    val startAt: String = "",
+    val endAt: String = "",
+    val active: Boolean = true,
+    val usageLimit: Int = 0,
+    val usedCount: Int = 0
+)
+
+data class Poster(
+    val id: String = "",
+    val type: String = "recommend",
+    val title: String = "",
+    val content: String = "",
+    val imageUrl: String = "",
+    val roomId: String = "",
+    val roomName: String = "",
+    val hotelName: String = "",
+    val price: Double = 0.0,
+    val active: Boolean = true,
+    val userId: String = "",
+    val status: String = "new",
+    val response: String = "",
+    val role: String = "client",
+    val createdAt: Long = 0L
+)
+
+data class RoomRequest(
+    val id: String = "",
+    val userId: String = "",
+    val userEmail: String = "",
+    val userName: String = "",
+    val userPhone: String = "",
+    val requestText: String = "",
+    val budget: Double = 0.0,
+    val adminReply: String = "",
+    val status: String = "new",
+    val createdAt: Long = 0L,
+    val updatedAt: Long = 0L
+)
+
+data class AddOnItem(
+    val id: String = "",
+    val name: String = "",
+    val price: Double = 0.0,
+    val description: String = "",
+    val imageUrl: String = "",
+    val category: String = "snack",
+    val active: Boolean = true
+)
+
+data class AppNotification(
+    val id: String = "",
+    val userId: String = "",
+    val userEmail: String = "",
+    val title: String = "",
+    val body: String = "",
+    val type: String = "",
+    val targetRole: String = "all",
+    val read: Boolean = false,
+    val createdAt: Long = 0L,
+    val readAt: Long = 0L,
+    val relatedId: String = "",
+    val metadata: String = ""
+)
+
+data class Payment(
+    val id: String = "",
+    val bookingId: String = "",
+    val userId: String = "",
+    val amount: Double = 0.0,
+    val method: String = "",
+    val status: String = "paid",
+    val cardLast4: String = "",
+    val voucherId: String = "",
+    val voucherCode: String = "",
+    val discountAmount: Double = 0.0,
+    val originalTotal: Double = 0.0,
+    val addonsTotal: Double = 0.0,
+    val finalTotal: Double = 0.0,
+    val createdAt: Long = 0L
+)
+
+data class NotificationSettings(
+    val checkIn: Boolean = true,
+    val promo: Boolean = true,
+    val roomStatus: Boolean = true,
+    val booking: Boolean = true,
+    val review: Boolean = true,
+    val issue: Boolean = true,
+    val payment: Boolean = true
+) {
+    fun enabledFor(category: String): Boolean = when (category) {
+        CATEGORY_CHECK_IN -> checkIn
+        CATEGORY_PROMO -> promo
+        CATEGORY_ROOM_STATUS -> roomStatus
+        CATEGORY_BOOKING -> booking
+        CATEGORY_REVIEW -> review
+        CATEGORY_ISSUE -> issue
+        CATEGORY_PAYMENT -> payment
+        else -> true
+    }
+
+    companion object {
+        const val CATEGORY_CHECK_IN = "check_in"
+        const val CATEGORY_PROMO = "promo"
+        const val CATEGORY_ROOM_STATUS = "room_status"
+        const val CATEGORY_BOOKING = "booking"
+        const val CATEGORY_REVIEW = "review"
+        const val CATEGORY_ISSUE = "issue"
+        const val CATEGORY_PAYMENT = "payment"
+    }
+}

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_base"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_m"
+        android:layout_marginTop="@dimen/space_m"
+        android:layout_marginEnd="@dimen/space_m" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_m">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Hotel.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_m">
+
+                    <ImageView
+                        android:id="@+id/hotelRoomDetailHeroImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailTitle"
+                        style="@style/TextAppearance.Hotel.Display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/common_na" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailPrice"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/room_price_empty" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailInfo"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/common_na" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/hotelRoomDetailGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Hotel.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_m">
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hotel_room_detail_summary_title" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailSummary"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/common_na" />
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/hotel_room_detail_specs_title" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailSpecs"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/common_na" />
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/hotel_room_detail_cancellation_title" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailCancellation"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/common_na" />
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/hotel_room_detail_amenities_title" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailAmenities"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/common_na" />
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/hotel_room_detail_bathroom_title" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailBathroomAmenities"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/common_na" />
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/hotel_room_detail_tags_title" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailTags"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/common_na" />
+
+                    <TextView
+                        style="@style/TextAppearance.Hotel.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/review_room_detail_title" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailReviewSummary"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/review_average_empty" />
+
+                    <TextView
+                        android:id="@+id/hotelRoomDetailReviewList"
+                        style="@style/TextAppearance.Hotel.BodySmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/review_empty" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/hotelRoomDetailBookButton"
+                        style="@style/Widget.Hotel.Button.Primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/hotel_room_detail_book_button"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

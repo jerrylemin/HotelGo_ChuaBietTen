@@ -1,0 +1,19 @@
+﻿{
+    "group":  "Group06",
+    "members":  [
+                    "21127645",
+                    "21127224",
+                    "20127119"
+                ],
+    "folders":  [
+                    "AndroidSource - Android Kotlin/XML source, Gradle wrapper/config, local HotelList assets",
+                    "BackendApiScripts - Supabase migrations/functions and Python utility scripts",
+                    "DataJsonExport - source JSON datasets and consolidated generated JSON export"
+                ],
+    "excludedSensitiveFiles":  [
+                                   "local.properties",
+                                   "supabase.env",
+                                   "supabase-db-url.txt",
+                                   "firebase-service.json"
+                               ]
+}

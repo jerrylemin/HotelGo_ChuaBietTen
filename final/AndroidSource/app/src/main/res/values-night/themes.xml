@@ -1,0 +1,23 @@
+﻿<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Hotelapp_test2" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/brand_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorTertiary">@color/accent_gold</item>
+        <item name="colorOnTertiary">@color/black</item>
+        <item name="colorSurface">#1F1A16</item>
+        <item name="colorOnSurface">#F5EEE6</item>
+        <item name="colorOnSurfaceVariant">#CBBBAE</item>
+        <item name="android:colorBackground">#1A1512</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">#1A1512</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="toolbarStyle">@style/Widget.Hotel.Toolbar</item>
+        <item name="materialButtonStyle">@style/Widget.Hotel.Button.Primary</item>
+    </style>
+</resources>
+
+

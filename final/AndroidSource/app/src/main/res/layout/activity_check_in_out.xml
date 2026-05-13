@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_base"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_m"
+        android:layout_marginTop="@dimen/space_m"
+        android:layout_marginEnd="@dimen/space_m" />
+
+    <!-- Filter chips -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingStart="@dimen/space_m"
+        android:paddingEnd="@dimen/space_m"
+        android:paddingTop="@dimen/space_s"
+        android:paddingBottom="@dimen/space_s">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/filterChipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkin_filter_all"
+                android:checked="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPendingCheckin"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkin_filter_pending" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCheckedIn"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkin_filter_checked_in" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCheckedOut"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkin_filter_checked_out" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOverdue"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkin_filter_overdue" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCancelled"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkin_filter_cancelled" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <!-- Booking list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/adminBookingList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="@dimen/space_m"
+        android:paddingEnd="@dimen/space_m"
+        android:paddingTop="@dimen/space_s"
+        android:paddingBottom="@dimen/space_s"
+        android:clipToPadding="false" />
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/checkInEmptyText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/checkin_empty"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!-- Selected booking action panel (shown only when a booking is selected) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/actionPanel"
+        style="@style/Widget.Hotel.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_m"
+        android:layout_marginEnd="@dimen/space_m"
+        android:layout_marginBottom="@dimen/space_m"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_m">
+
+            <TextView
+                android:id="@+id/actionPanelTitle"
+                style="@style/TextAppearance.Hotel.SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkin_selected_booking" />
+
+            <TextView
+                android:id="@+id/actionPanelDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/actionPanelOverdue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/danger"
+                android:text="@string/checkin_overdue_warning"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/checkInButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/checkin_button"
+                    android:enabled="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/checkOutButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:layout_weight="1"
+                    style="@style/Widget.Hotel.Button.Secondary"
+                    android:text="@string/checkout_button"
+                    android:enabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

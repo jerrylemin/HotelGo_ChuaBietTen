@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "389236588120",
+    "firebase_url": "https://hotelapp-test2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hotelapp-test2",
+    "storage_bucket": "hotelapp-test2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389236588120:android:7bb943168eb2a1b183942d",
+        "android_client_info": {
+          "package_name": "com.example.hotelapp_test2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389236588120-19r6831mf33hkcqe9eteqcneqtp136vi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjb1WDn6TAVmPKZjQChpV3mT4PY3qo4TQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389236588120-19r6831mf33hkcqe9eteqcneqtp136vi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
